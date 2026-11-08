@@ -116,8 +116,8 @@ async def regenerate_sentence(thread_id: str, body: RegenerateIn, user=CurrentUs
     new = d.model_copy(update={"version": d.version + 1, "text": text, "sendable_text": verdict.cleaned_text, "evidence_labels": labels,
                                "word_count": len(verdict.cleaned_text.split())})
     await eng.bid.aupdate_state(cfg_, {"drafts": [new.model_dump()], "compliance": verdict.model_dump()}, as_node="compliance")
-    from agent.runner import _drive
     from agent.mcp_client import ToolHub
+    from agent.runner import _drive
     hub = ToolHub(user_id=user["id"], persona=user["persona"] or "aiml", trace_id=current_trace.get())
     await _drive(eng.bid, None, {"configurable": {"thread_id": thread_id, "hub": hub, "store": eng.store}}, thread_id, user["id"], None)
     p = await _pending(thread_id)

@@ -20,6 +20,8 @@ $steps = @(
   @("judge2",     "-m evals.runners.judge_calibration judge"),
   @("single",     "scripts/single_agent_proposal.py"),
   @("failures",   "-m evals.runners.failure_analysis"),
+  @("decision2",  "-m evals.runners.decision_eval --per-persona 200"),
+  @("failures2",  "-m evals.runners.failure_analysis"),
   @("rag_slow",   "-m evals.runners.rag_eval --variants C4 V8 C7"),
   @("tables",     "-m evals.runners.make_results_table")
 )

@@ -9,8 +9,7 @@ import os
 from functools import lru_cache
 from pathlib import Path
 
-from sqlalchemy import (JSON, Boolean, Column, Float, Index, Integer, MetaData, String, Table, Text, UniqueConstraint,
-                        create_engine)
+from sqlalchemy import JSON, Boolean, Column, Float, Index, Integer, MetaData, String, Table, Text, UniqueConstraint, create_engine
 from sqlalchemy.engine import Engine
 
 ROOT = Path(__file__).resolve().parents[1]

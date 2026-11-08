@@ -20,8 +20,8 @@ from sqlalchemy import and_, case, or_, select, update
 from agent.config import cfg
 from agent.graphs.bid_graph import build_bid_graph
 from agent.graphs.conversation_graph import build_conversation_graph
-from agent.memory.store import open_persistence
 from agent.mcp_client import BREAKERS, ToolHub
+from agent.memory.store import open_persistence
 from common.db import engine, jobs, pipeline, queue, runs, saved_searches, settings, users
 
 log = logging.getLogger("gigbid.worker")

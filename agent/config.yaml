@@ -91,8 +91,8 @@ rag:
 
 # ---------------------------------------------------------------- decision / pricing
 decision:
-  min_fit_bid: 0.55          # below -> skip
-  watch_band: [0.40, 0.55]   # fit inside -> watch
+  min_fit_bid: 0.45          # below -> watch/skip (tuned on dev: evals/results/failure_analysis.json sweep, F1 0.773 -> 0.829)
+  watch_band: [0.35, 0.45]   # fit inside -> watch
   max_risk_bid: 0.55         # risk score above -> skip
   scam_block: 0.6            # scam probability above -> hard skip
   ev_threshold: 1.0          # expected-value / connects-cost ratio needed to bid (before pacing)

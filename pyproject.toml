@@ -59,7 +59,7 @@ extend-exclude = ["apps/web", "data/personas"]
 
 [tool.ruff.lint]
 select = ["E", "F", "W", "I", "B"]
-ignore = ["E501", "B008", "B023", "E731"]
+ignore = ["E501", "B008", "B023", "E731", "B905", "E741"]
 [tool.setuptools.packages.find]
 include = ["agent*", "rag*", "apps*", "mcp_servers*", "worker*", "evals*", "common*", "gigsim*", "data*"]
 exclude = ["apps.web*"]

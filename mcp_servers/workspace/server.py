@@ -153,6 +153,7 @@ def main() -> None:
     a = ap.parse_args()
     if a.http:
         import uvicorn
+
         from mcp_servers.common import http_app
         uvicorn.run(http_app(mcp), host="0.0.0.0", port=a.port)
     else:

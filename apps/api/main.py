@@ -23,9 +23,9 @@ from sqlalchemy import func, select
 
 from agent.config import cfg
 from agent.mcp_client import ToolHub, server_status
+from apps.api import streaming
 from apps.api.auth.users import ensure_reviewer
 from apps.api.routers import analytics, auth, jobs, messages, proposals, runs, settings
-from apps.api import streaming
 from apps.api.schemas.models import Health
 from common.db import engine, queue
 from common.tracing import current_trace, new_trace_id
