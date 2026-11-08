@@ -1,0 +1,40 @@
+{
+ "aiml": {
+  "proposals": 150,
+  "with_unsupported_skill_claim": 30,
+  "share_unsupported": 0.2,
+  "share_generic_experience_claims": 0.5133,
+  "outcomes": {
+   "won": 6,
+   "replied": 27,
+   "ignored": 117
+  }
+ },
+ "web": {
+  "proposals": 150,
+  "with_unsupported_skill_claim": 0,
+  "share_unsupported": 0.0,
+  "share_generic_experience_claims": 0.44,
+  "outcomes": {
+   "won": 5,
+   "replied": 24,
+   "ignored": 121
+  }
+ },
+ "data": {
+  "proposals": 150,
+  "with_unsupported_skill_claim": 0,
+  "share_unsupported": 0.0,
+  "share_generic_experience_claims": 0.5467,
+  "outcomes": {
+   "won": 12,
+   "replied": 13,
+   "ignored": 125
+  }
+ },
+ "all": {
+  "proposals": 450,
+  "share_unsupported": 0.0667,
+  "share_generic_experience_claims": 0.5
+ }
+}
