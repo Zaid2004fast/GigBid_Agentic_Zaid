@@ -108,12 +108,15 @@ points over naive dense, and a cross-encoder adds ≥ 3 more at k = 5."
 | V5 multi-vector | 0.743 | 0.826 | 0.558 | 0.018 |
 | V6 contextual | 0.684 | 0.816 | 0.548 | 0.015 |
 | V7 HyDE-lite | 0.602 | 0.746 | 0.446 | 0.524 |
-| V8 corrective (LangGraph) | n/a | n/a | n/a | n/a |
+| V8 corrective (LangGraph) | 0.695 | 0.810 | 0.556 | 6.055 |
 | V9 skill graph | 0.926 | 0.970 | 0.783 | 0.030 |
+| C7 = provisional pick before measuring (contextual + decomposition + rerank + outcome + corrective) | 0.781 | 0.854 | 0.631 | 5.472 |
 | C5 = V2 + V5 + V4 + V9 (round 1 pick) | 0.933 | 0.968 | 0.802 | 0.073 |
 | **shipped** = C5 − dense | **0.949** | 0.965 | **0.830** | 0.019 |
 
-The hypothesis was **half right**. On the clean index, hybrid raised Recall@5 from
+The design we would have shipped *by default* (C7, every "advanced" component stacked) reaches only
+0.781 Recall@5 at 5.5 s p95, against
+0.949 at 0.02 s for the measured choice. The hypothesis was **half right**. On the clean index, hybrid raised Recall@5 from
 0.579 (V0e) to 0.714, but the reranker added
 nothing at k = 5 on this corpus while costing seconds on CPU. Two results were larger than anything hypothesised:
 (1) **corpus contamination**. Naive RAG retrieved past proposals (they look like job posts) instead of
@@ -170,7 +173,7 @@ to the user and for the gaps it exposes, not for reply rate.
 
 **Judge calibration.** The rubric judge (`agent/prompts/judge.md`) is used only after calibration
 against 30 human labels (`evals/runners/judge_calibration.py`). Cohen's κ =
-n/a (n = n/a). Judge scores are not used
+n/a (n = n/a; `n/a` means the author's 30 human labels are still pending, and the judge's scores are in `judge_scores.json`). Judge scores are not used
 for any decision until κ ≥ 0.4.
 
 **What ships.** BM25 + skill graph + multi-vector + outcome boost (no dense ranking, no reranker),

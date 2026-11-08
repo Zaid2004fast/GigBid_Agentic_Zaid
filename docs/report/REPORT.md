@@ -110,10 +110,13 @@ points over naive dense, and a cross-encoder adds ≥ 3 more at k = 5."
 | V7 HyDE-lite | {{rag_retrieval.json:results.V7.all.recall@5}} | {{rag_retrieval.json:results.V7.all.mrr}} | {{rag_retrieval.json:results.V7.all.ndcg@10}} | {{rag_retrieval.json:results.V7.latency_s.p95}} |
 | V8 corrective (LangGraph) | {{rag_retrieval.json:results.V8.all.recall@5}} | {{rag_retrieval.json:results.V8.all.mrr}} | {{rag_retrieval.json:results.V8.all.ndcg@10}} | {{rag_retrieval.json:results.V8.latency_s.p95}} |
 | V9 skill graph | {{rag_retrieval.json:results.V9.all.recall@5}} | {{rag_retrieval.json:results.V9.all.mrr}} | {{rag_retrieval.json:results.V9.all.ndcg@10}} | {{rag_retrieval.json:results.V9.latency_s.p95}} |
+| C7 = provisional pick before measuring (contextual + decomposition + rerank + outcome + corrective) | {{rag_retrieval.json:results.C7.all.recall@5}} | {{rag_retrieval.json:results.C7.all.mrr}} | {{rag_retrieval.json:results.C7.all.ndcg@10}} | {{rag_retrieval.json:results.C7.latency_s.p95}} |
 | C5 = V2 + V5 + V4 + V9 (round 1 pick) | {{rag_retrieval.json:results.C5.all.recall@5}} | {{rag_retrieval.json:results.C5.all.mrr}} | {{rag_retrieval.json:results.C5.all.ndcg@10}} | {{rag_retrieval.json:results.C5.latency_s.p95}} |
 | **shipped** = C5 − dense | **{{rag_retrieval.json:results.best.all.recall@5}}** | {{rag_retrieval.json:results.best.all.mrr}} | **{{rag_retrieval.json:results.best.all.ndcg@10}}** | {{rag_retrieval.json:results.best.latency_s.p95}} |
 
-The hypothesis was **half right**. On the clean index, hybrid raised Recall@5 from
+The design we would have shipped *by default* (C7, every "advanced" component stacked) reaches only
+{{rag_retrieval.json:results.C7.all.recall@5}} Recall@5 at {{rag_retrieval.json:results.C7.latency_s.p95|1}} s p95, against
+{{rag_retrieval.json:results.best.all.recall@5}} at {{rag_retrieval.json:results.best.latency_s.p95|2}} s for the measured choice. The hypothesis was **half right**. On the clean index, hybrid raised Recall@5 from
 {{rag_retrieval.json:results.V0e.all.recall@5}} (V0e) to {{rag_retrieval.json:results.V2.all.recall@5}}, but the reranker added
 nothing at k = 5 on this corpus while costing seconds on CPU. Two results were larger than anything hypothesised:
 (1) **corpus contamination**. Naive RAG retrieved past proposals (they look like job posts) instead of

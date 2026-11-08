@@ -41,3 +41,5 @@ ranking**. The round-2 ablation of this pipeline is `ablation.json`.
 **Caveat.** Gold relevance is defined by skill overlap with a project's true skills, which
 structurally favours a skill-aware retriever. The end-to-end reply-rate and unsupported-claim
 comparison (`gigsim_outcomes.json`) is the check that the retrieval gain matters downstream.
+
+**Default vs measured.** The provisional composite written before any measurement (C7: contextual chunks + decomposition + reranking + outcome + corrective) scored Recall@5 0.781 at 5.5 s p95; the measured choice scores 0.949 at 0.02 s (`rag_retrieval.json`).
