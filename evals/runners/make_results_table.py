@@ -34,8 +34,8 @@ def rag_table() -> str:
     ret = (_load("rag_retrieval.json") or {}).get("results", {})
     out = (_load("gigsim_outcomes.json") or {}).get("variants", {})
     judge = _load("judge_scores.json")
-    rows = ["| Variant | Evidence Recall@5 | MRR | nDCG@10 | Unsupported claims / proposal (before -> after verify) | Judge score | GigSim reply rate | p95 latency (s) | Cost / proposal (USD) |",
-            "|---|---|---|---|---|---|---|---|---|"]
+    rows = ["| Variant | Evidence Recall@5 | MRR | nDCG@10 | Unsupported claims / proposal (before -> after verify) | Judge score | GigSim reply rate | Retrieval p95 (s/query) | Proposal p95 (s, end to end) | Cost / proposal (USD) |",
+            "|---|---|---|---|---|---|---|---|---|---|"]
     order = [v for v in ["V0", "V0e", "V1", "V2", "V3", "V4", "V5", "V6", "V7", "V8", "V9", "C1", "C2", "C3", "C4", "best"] if v in ret or v in out]
     for v in order:
         a = ret.get(v, {}).get("all", {})
@@ -43,7 +43,17 @@ def rag_table() -> str:
         unsup = f"{f(o.get('unsupported_before'))} -> {f(o.get('unsupported_after'))}" if o else "n/a"
         rows.append(f"| {v} | {f(a.get('recall@5'))} | {f(a.get('mrr'))} | {f(a.get('ndcg@10'))} | {unsup} | "
                     f"{'see calibration' if judge and o else 'n/a'} | {f(o.get('reply_rate')) if o else 'n/a'} | "
-                    f"{f(o.get('p95_latency_s')) if o else f(ret.get(v, {}).get('latency_s', {}).get('p95'))} | {f(o.get('usd_per_proposal'), 4) if o else 'n/a'} |")
+                    f"{f(ret.get(v, {}).get('latency_s', {}).get('p95'))} | {f(o.get('p95_latency_s')) if o else 'n/a'} | "
+                    f"{f(o.get('usd_per_proposal'), 4) if o else 'n/a'} |")
+    order_extra = [v for v in ["C5", "C6", "C7"] if v in ret]
+    for v in order_extra:
+        a = ret[v]["all"]
+        rows.append(f"| {v} | {f(a.get('recall@5'))} | {f(a.get('mrr'))} | {f(a.get('ndcg@10'))} | n/a | n/a | n/a | "
+                    f"{f(ret[v].get('latency_s', {}).get('p95'))} | n/a | n/a |")
+    rows.append("")
+    rows.append("_End-to-end columns come from `gigsim_outcomes.json` (the same fixed gold-bid job set for every variant). Cost is 0 "
+                "because the evaluation ran on the deterministic offline profile; judge scores await human calibration. "
+                "`best` = BM25 + skill graph + multi-vector + outcome boost (ADR 0003)._")
     return "\n".join(rows)
 
 
