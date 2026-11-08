@@ -62,8 +62,11 @@ def check(text: str, kind: str, context: dict | None = None, rules: dict | None 
     pack = rules or load_rules()
     issues: list[ComplianceIssue] = []
     cleaned = text
-    env = {"draft": {"text": text}, "job": {}, "verification": {"unsupported_after": 0}, "price": {}} | (context or {})
-    env["draft"] = {**env.get("draft", {}), "text": text}
+    ctx = context or {}
+    env = {"verification": {"unsupported_after": 0}, "price": {}} | ctx
+    # empty defaults for any field a rule may reference (a rule must not error just because the caller has no job context)
+    env["job"] = {"screening_questions": [], "budget": {}, "category": ""} | (ctx.get("job") or {})
+    env["draft"] = {"screening_answers": []} | (ctx.get("draft") or {}) | {"text": text}
     for r in pack.get("rules", []):
         if kind not in r.get("applies_to", ["proposal", "message"]):
             continue
