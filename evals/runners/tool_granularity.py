@@ -123,12 +123,25 @@ def surface(name: str, specs: dict, role: str) -> list[dict]:
         return [as_lc(s) for s in specs.values()]
     if name == "best":
         return [as_lc({**specs[t], "description": BEST_DESCRIPTIONS[t]}) for t in ROLE_TOOLS[role]]
+    if name == "coarse_flat":   # fairer coarse design: typed, flattened optional params instead of a free "args" object
+        out = []
+        for srv, acts in COARSE.items():
+            props = {"action": {"type": "string", "enum": acts}}
+            for a in acts:
+                for k, v in (specs[a]["parameters"].get("properties") or {}).items():
+                    props.setdefault(k, {kk: vv for kk, vv in v.items() if kk in ("type", "description", "items", "enum")} or {"type": "string"})
+            out.append(as_lc({"name": srv, "description": f"{srv.capitalize()} operations. Set action to one of: {', '.join(acts)}.",
+                              "parameters": {"type": "object", "properties": props, "required": ["action"]}}))
+        return out
     return [as_lc({"name": srv, "description": f"{srv.capitalize()} operations. action is one of: {', '.join(acts)}. args holds that action's arguments.",
                    "parameters": {"type": "object", "properties": {"action": {"type": "string", "enum": acts}, "args": {"type": "object"}},
                                   "required": ["action"]}}) for srv, acts in COARSE.items()]
 
 
 def normalise(name: str, call: dict) -> tuple[str, dict]:
+    if name == "coarse_flat":
+        args = dict(call["args"])
+        return args.pop("action", ""), args
     if name == "coarse":
         return call["args"].get("action", ""), call["args"].get("args") or {}
     return call["name"], call["args"]
@@ -139,6 +152,9 @@ def arg_ok(expected: dict, got: dict) -> bool:
     return all(str(v).lower() in blob for v in expected.values())
 
 
+SURFACES = ["fine", "coarse", "coarse_flat", "best"]
+
+
 async def run(model: str, limit: int | None) -> dict:
     from langchain_ollama import ChatOllama
 
@@ -146,7 +162,7 @@ async def run(model: str, limit: int | None) -> dict:
     specs = await tool_specs()
     chat = ChatOllama(model=model, reasoning=False, temperature=0, num_ctx=8192, num_predict=200)
     res = {}
-    for sname in ("fine", "coarse", "best"):
+    for sname in SURFACES:
         recs = []
         for task, tool, args, role in TASKS[:limit]:
             tools = surface(sname, specs, role)
@@ -157,7 +173,7 @@ async def run(model: str, limit: int | None) -> dict:
                 calls = msg.tool_calls or []
                 um = msg.usage_metadata or {}
                 got_tool, got_args = normalise(sname, {"name": calls[0]["name"], "args": calls[0]["args"]}) if calls else ("", {})
-                if sname == "coarse" and calls:
+                if sname == "coarse" and calls:  # nested {action, args}
                     got_tool, got_args = calls[0]["args"].get("action", ""), calls[0]["args"].get("args") or {}
                 recs.append({"task": task, "expected": tool, "got": got_tool, "tool_ok": got_tool == tool,
                              "args_ok": got_tool == tool and arg_ok(args, got_args), "tokens": um.get("total_tokens", 0),
@@ -176,8 +192,14 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--model", default="qwen3:1.7b")
     ap.add_argument("--limit", type=int, default=None)
+    ap.add_argument("--surfaces", nargs="*", default=None, help="run only these surfaces and merge into the results file")
     a = ap.parse_args()
+    if a.surfaces:
+        SURFACES[:] = a.surfaces
     res = asyncio.run(run(a.model, a.limit))
+    p = OUT / "tool_granularity.json"
+    if a.surfaces and p.exists():
+        res = {**json.loads(p.read_text())["surfaces"], **res}
     out = {"meta": {"generated_at": time.strftime("%Y-%m-%dT%H:%M:%S"), "model": a.model, "tasks": len(TASKS[: a.limit])}, "surfaces": res}
     (OUT / "tool_granularity.json").write_text(json.dumps(out, indent=1))
 

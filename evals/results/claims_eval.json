@@ -1,0 +1,1711 @@
+{
+ "meta": {
+  "generated_at": "2026-11-08T17:23:50",
+  "per_persona": 40
+ },
+ "summary": {
+  "naive": {
+   "proposals": 120,
+   "claims_per_proposal": 4.9,
+   "unsupported_per_proposal_before": 0.4833,
+   "unsupported_per_proposal_after": 0.0,
+   "unsupported_claim_rate_before": 0.0986,
+   "partial_claim_rate": 0.0493
+  },
+  "shipped": {
+   "proposals": 120,
+   "claims_per_proposal": 2.008,
+   "unsupported_per_proposal_before": 0.0,
+   "unsupported_per_proposal_after": 0.0,
+   "unsupported_claim_rate_before": 0.0,
+   "partial_claim_rate": 0.0124
+  }
+ },
+ "records": {
+  "naive": [
+   {
+    "job_id": "dev_aiml_000",
+    "claims": 5,
+    "unsupported_before": 2,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_aiml_001",
+    "claims": 4,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 1
+   },
+   {
+    "job_id": "dev_aiml_002",
+    "claims": 6,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_aiml_005",
+    "claims": 4,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_aiml_006",
+    "claims": 8,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 1
+   },
+   {
+    "job_id": "dev_aiml_007",
+    "claims": 3,
+    "unsupported_before": 1,
+    "unsupported_after": 0,
+    "partial": 1
+   },
+   {
+    "job_id": "dev_aiml_008",
+    "claims": 4,
+    "unsupported_before": 1,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_aiml_009",
+    "claims": 6,
+    "unsupported_before": 2,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_aiml_010",
+    "claims": 6,
+    "unsupported_before": 2,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_aiml_011",
+    "claims": 4,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_aiml_012",
+    "claims": 6,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 1
+   },
+   {
+    "job_id": "dev_aiml_013",
+    "claims": 4,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_aiml_015",
+    "claims": 5,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_aiml_017",
+    "claims": 4,
+    "unsupported_before": 1,
+    "unsupported_after": 0,
+    "partial": 1
+   },
+   {
+    "job_id": "dev_aiml_018",
+    "claims": 4,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_aiml_020",
+    "claims": 7,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_aiml_021",
+    "claims": 6,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_aiml_022",
+    "claims": 5,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 1
+   },
+   {
+    "job_id": "dev_aiml_023",
+    "claims": 6,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_aiml_025",
+    "claims": 6,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 1
+   },
+   {
+    "job_id": "dev_aiml_026",
+    "claims": 5,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_aiml_027",
+    "claims": 7,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_aiml_029",
+    "claims": 4,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_aiml_031",
+    "claims": 7,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_aiml_032",
+    "claims": 5,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_aiml_033",
+    "claims": 3,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_aiml_035",
+    "claims": 5,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 1
+   },
+   {
+    "job_id": "dev_aiml_036",
+    "claims": 3,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_aiml_037",
+    "claims": 3,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 1
+   },
+   {
+    "job_id": "dev_aiml_038",
+    "claims": 4,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_aiml_041",
+    "claims": 5,
+    "unsupported_before": 1,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_aiml_044",
+    "claims": 5,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_aiml_045",
+    "claims": 5,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_aiml_046",
+    "claims": 8,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_aiml_047",
+    "claims": 6,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_aiml_048",
+    "claims": 3,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_aiml_049",
+    "claims": 3,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_aiml_050",
+    "claims": 6,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_aiml_051",
+    "claims": 3,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_aiml_055",
+    "claims": 3,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_web_000",
+    "claims": 6,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_web_001",
+    "claims": 6,
+    "unsupported_before": 3,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_web_002",
+    "claims": 5,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_web_003",
+    "claims": 5,
+    "unsupported_before": 1,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_web_005",
+    "claims": 3,
+    "unsupported_before": 1,
+    "unsupported_after": 0,
+    "partial": 1
+   },
+   {
+    "job_id": "dev_web_006",
+    "claims": 5,
+    "unsupported_before": 1,
+    "unsupported_after": 0,
+    "partial": 1
+   },
+   {
+    "job_id": "dev_web_007",
+    "claims": 6,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_web_009",
+    "claims": 5,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_web_010",
+    "claims": 6,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_web_011",
+    "claims": 3,
+    "unsupported_before": 2,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_web_014",
+    "claims": 4,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 1
+   },
+   {
+    "job_id": "dev_web_015",
+    "claims": 3,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 1
+   },
+   {
+    "job_id": "dev_web_016",
+    "claims": 4,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_web_018",
+    "claims": 5,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_web_019",
+    "claims": 7,
+    "unsupported_before": 2,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_web_020",
+    "claims": 5,
+    "unsupported_before": 2,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_web_021",
+    "claims": 5,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_web_022",
+    "claims": 7,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_web_023",
+    "claims": 5,
+    "unsupported_before": 2,
+    "unsupported_after": 0,
+    "partial": 1
+   },
+   {
+    "job_id": "dev_web_024",
+    "claims": 5,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_web_027",
+    "claims": 3,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_web_030",
+    "claims": 7,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_web_032",
+    "claims": 6,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_web_033",
+    "claims": 5,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_web_034",
+    "claims": 4,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_web_035",
+    "claims": 6,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 1
+   },
+   {
+    "job_id": "dev_web_036",
+    "claims": 5,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_web_038",
+    "claims": 4,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 1
+   },
+   {
+    "job_id": "dev_web_040",
+    "claims": 6,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 1
+   },
+   {
+    "job_id": "dev_web_042",
+    "claims": 7,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_web_043",
+    "claims": 4,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_web_044",
+    "claims": 3,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_web_046",
+    "claims": 8,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_web_047",
+    "claims": 3,
+    "unsupported_before": 1,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_web_050",
+    "claims": 5,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_web_051",
+    "claims": 4,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_web_054",
+    "claims": 4,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 1
+   },
+   {
+    "job_id": "dev_web_055",
+    "claims": 5,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_web_056",
+    "claims": 3,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 1
+   },
+   {
+    "job_id": "dev_web_057",
+    "claims": 4,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_data_001",
+    "claims": 6,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_data_002",
+    "claims": 5,
+    "unsupported_before": 1,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_data_003",
+    "claims": 5,
+    "unsupported_before": 3,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_data_007",
+    "claims": 5,
+    "unsupported_before": 2,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_data_009",
+    "claims": 6,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_data_010",
+    "claims": 5,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 1
+   },
+   {
+    "job_id": "dev_data_012",
+    "claims": 3,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_data_013",
+    "claims": 7,
+    "unsupported_before": 1,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_data_014",
+    "claims": 7,
+    "unsupported_before": 2,
+    "unsupported_after": 0,
+    "partial": 2
+   },
+   {
+    "job_id": "dev_data_015",
+    "claims": 4,
+    "unsupported_before": 2,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_data_016",
+    "claims": 3,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_data_020",
+    "claims": 5,
+    "unsupported_before": 1,
+    "unsupported_after": 0,
+    "partial": 1
+   },
+   {
+    "job_id": "dev_data_021",
+    "claims": 3,
+    "unsupported_before": 1,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_data_022",
+    "claims": 4,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_data_023",
+    "claims": 6,
+    "unsupported_before": 2,
+    "unsupported_after": 0,
+    "partial": 1
+   },
+   {
+    "job_id": "dev_data_024",
+    "claims": 4,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_data_027",
+    "claims": 9,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_data_028",
+    "claims": 6,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_data_029",
+    "claims": 8,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_data_030",
+    "claims": 5,
+    "unsupported_before": 2,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_data_031",
+    "claims": 4,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 1
+   },
+   {
+    "job_id": "dev_data_032",
+    "claims": 5,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_data_033",
+    "claims": 3,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_data_034",
+    "claims": 8,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_data_038",
+    "claims": 4,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_data_039",
+    "claims": 3,
+    "unsupported_before": 1,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_data_041",
+    "claims": 5,
+    "unsupported_before": 2,
+    "unsupported_after": 0,
+    "partial": 1
+   },
+   {
+    "job_id": "dev_data_042",
+    "claims": 5,
+    "unsupported_before": 1,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_data_043",
+    "claims": 4,
+    "unsupported_before": 2,
+    "unsupported_after": 0,
+    "partial": 1
+   },
+   {
+    "job_id": "dev_data_045",
+    "claims": 6,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_data_047",
+    "claims": 7,
+    "unsupported_before": 3,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_data_048",
+    "claims": 6,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_data_049",
+    "claims": 4,
+    "unsupported_before": 1,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_data_050",
+    "claims": 4,
+    "unsupported_before": 2,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_data_051",
+    "claims": 4,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_data_053",
+    "claims": 4,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_data_054",
+    "claims": 4,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 1
+   },
+   {
+    "job_id": "dev_data_055",
+    "claims": 3,
+    "unsupported_before": 2,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_data_057",
+    "claims": 4,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 1
+   },
+   {
+    "job_id": "dev_data_058",
+    "claims": 3,
+    "unsupported_before": 2,
+    "unsupported_after": 0,
+    "partial": 0
+   }
+  ],
+  "shipped": [
+   {
+    "job_id": "dev_aiml_000",
+    "claims": 1,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_aiml_001",
+    "claims": 3,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_aiml_002",
+    "claims": 3,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_aiml_005",
+    "claims": 3,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_aiml_006",
+    "claims": 4,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_aiml_007",
+    "claims": 1,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_aiml_008",
+    "claims": 2,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_aiml_009",
+    "claims": 2,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_aiml_010",
+    "claims": 1,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_aiml_011",
+    "claims": 2,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_aiml_012",
+    "claims": 2,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_aiml_013",
+    "claims": 1,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_aiml_015",
+    "claims": 2,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_aiml_017",
+    "claims": 1,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_aiml_018",
+    "claims": 1,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_aiml_020",
+    "claims": 3,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_aiml_021",
+    "claims": 4,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_aiml_022",
+    "claims": 3,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_aiml_023",
+    "claims": 2,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_aiml_025",
+    "claims": 2,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_aiml_026",
+    "claims": 3,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_aiml_027",
+    "claims": 3,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_aiml_029",
+    "claims": 2,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_aiml_031",
+    "claims": 4,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_aiml_032",
+    "claims": 2,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_aiml_033",
+    "claims": 2,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_aiml_035",
+    "claims": 2,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_aiml_036",
+    "claims": 2,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_aiml_037",
+    "claims": 2,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_aiml_038",
+    "claims": 3,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_aiml_041",
+    "claims": 2,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_aiml_044",
+    "claims": 1,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_aiml_045",
+    "claims": 3,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_aiml_046",
+    "claims": 2,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_aiml_047",
+    "claims": 2,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_aiml_048",
+    "claims": 2,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_aiml_049",
+    "claims": 1,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_aiml_050",
+    "claims": 3,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_aiml_051",
+    "claims": 2,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_aiml_055",
+    "claims": 2,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_web_000",
+    "claims": 3,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_web_001",
+    "claims": 1,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_web_002",
+    "claims": 3,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_web_003",
+    "claims": 1,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_web_005",
+    "claims": 1,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_web_006",
+    "claims": 2,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_web_007",
+    "claims": 2,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_web_009",
+    "claims": 3,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_web_010",
+    "claims": 2,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_web_011",
+    "claims": 1,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_web_014",
+    "claims": 1,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_web_015",
+    "claims": 2,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_web_016",
+    "claims": 2,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_web_018",
+    "claims": 2,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_web_019",
+    "claims": 2,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_web_020",
+    "claims": 2,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_web_021",
+    "claims": 3,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_web_022",
+    "claims": 3,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_web_023",
+    "claims": 1,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_web_024",
+    "claims": 1,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_web_027",
+    "claims": 2,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_web_030",
+    "claims": 1,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_web_032",
+    "claims": 3,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_web_033",
+    "claims": 2,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_web_034",
+    "claims": 2,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_web_035",
+    "claims": 1,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_web_036",
+    "claims": 3,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_web_038",
+    "claims": 2,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_web_040",
+    "claims": 2,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_web_042",
+    "claims": 3,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_web_043",
+    "claims": 2,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_web_044",
+    "claims": 2,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_web_046",
+    "claims": 3,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_web_047",
+    "claims": 1,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_web_050",
+    "claims": 1,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_web_051",
+    "claims": 3,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_web_054",
+    "claims": 1,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_web_055",
+    "claims": 3,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_web_056",
+    "claims": 2,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_web_057",
+    "claims": 2,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_data_001",
+    "claims": 2,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_data_002",
+    "claims": 2,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_data_003",
+    "claims": 1,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_data_007",
+    "claims": 1,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_data_009",
+    "claims": 3,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_data_010",
+    "claims": 2,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_data_012",
+    "claims": 3,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_data_013",
+    "claims": 3,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_data_014",
+    "claims": 2,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 1
+   },
+   {
+    "job_id": "dev_data_015",
+    "claims": 1,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_data_016",
+    "claims": 2,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_data_020",
+    "claims": 1,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_data_021",
+    "claims": 1,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_data_022",
+    "claims": 2,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_data_023",
+    "claims": 0,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_data_024",
+    "claims": 3,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_data_027",
+    "claims": 3,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_data_028",
+    "claims": 3,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_data_029",
+    "claims": 2,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_data_030",
+    "claims": 2,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_data_031",
+    "claims": 1,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_data_032",
+    "claims": 3,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_data_033",
+    "claims": 2,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_data_034",
+    "claims": 3,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_data_038",
+    "claims": 2,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_data_039",
+    "claims": 1,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_data_041",
+    "claims": 2,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 1
+   },
+   {
+    "job_id": "dev_data_042",
+    "claims": 2,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_data_043",
+    "claims": 1,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_data_045",
+    "claims": 3,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_data_047",
+    "claims": 2,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_data_048",
+    "claims": 2,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_data_049",
+    "claims": 2,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_data_050",
+    "claims": 0,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_data_051",
+    "claims": 1,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_data_053",
+    "claims": 2,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_data_054",
+    "claims": 2,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 1
+   },
+   {
+    "job_id": "dev_data_055",
+    "claims": 1,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_data_057",
+    "claims": 2,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   },
+   {
+    "job_id": "dev_data_058",
+    "claims": 1,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partial": 0
+   }
+  ],
+  "llm": []
+ }
+}

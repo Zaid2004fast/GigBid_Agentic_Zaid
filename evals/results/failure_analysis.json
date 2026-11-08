@@ -1,0 +1,253 @@
+{
+ "jobs": 600,
+ "failed_jobs": 142,
+ "taxonomy": {
+  "wrong skip": {
+   "count": 104,
+   "examples": [
+    {
+     "job_id": "dev_aiml_006",
+     "persona": "aiml",
+     "kind": "fit",
+     "fit": 0.538,
+     "action": "watch",
+     "reasons": [
+      "borderline fit 0.54"
+     ],
+     "trace_id": "f8f2a53f956c4d418253a518eeb97346"
+    },
+    {
+     "job_id": "dev_aiml_011",
+     "persona": "aiml",
+     "kind": "fit",
+     "fit": 0.5,
+     "action": "watch",
+     "reasons": [
+      "borderline fit 0.50"
+     ],
+     "trace_id": "ea38fd7add9b4f919bcf8f5d5c1603f0"
+    },
+    {
+     "job_id": "dev_aiml_013",
+     "persona": "aiml",
+     "kind": "fit",
+     "fit": 0.25,
+     "action": "skip",
+     "reasons": [
+      "fit 0.25 below 0.4: gaps Looking for someone experience, Ideally you know gradient boos, Ideally you know image preproc"
+     ],
+     "trace_id": "03ef5b7f9c534eeb80f5d2c64c45e2c0"
+    }
+   ]
+  },
+  "missed evidence": {
+   "count": 104,
+   "examples": [
+    {
+     "job_id": "dev_aiml_006",
+     "persona": "aiml",
+     "kind": "fit",
+     "fit": 0.538,
+     "action": "watch",
+     "reasons": [
+      "borderline fit 0.54"
+     ],
+     "trace_id": "f8f2a53f956c4d418253a518eeb97346"
+    },
+    {
+     "job_id": "dev_aiml_011",
+     "persona": "aiml",
+     "kind": "fit",
+     "fit": 0.5,
+     "action": "watch",
+     "reasons": [
+      "borderline fit 0.50"
+     ],
+     "trace_id": "ea38fd7add9b4f919bcf8f5d5c1603f0"
+    },
+    {
+     "job_id": "dev_aiml_013",
+     "persona": "aiml",
+     "kind": "fit",
+     "fit": 0.25,
+     "action": "skip",
+     "reasons": [
+      "fit 0.25 below 0.4: gaps Looking for someone experience, Ideally you know gradient boos, Ideally you know image preproc"
+     ],
+     "trace_id": "03ef5b7f9c534eeb80f5d2c64c45e2c0"
+    }
+   ]
+  },
+  "mispriced": {
+   "count": 30,
+   "examples": [
+    {
+     "job_id": "dev_aiml_017",
+     "persona": "aiml",
+     "kind": "partial",
+     "fit": 0.667,
+     "action": "bid",
+     "reasons": [
+      "fit 0.67, p(reply)=0.06 (prior), EV $14 for 6 Connects (pacing off)"
+     ],
+     "trace_id": "6e0661448d954d058301d6cc070377ba"
+    },
+    {
+     "job_id": "dev_aiml_049",
+     "persona": "aiml",
+     "kind": "fit",
+     "fit": 0.667,
+     "action": "bid",
+     "reasons": [
+      "fit 0.67, p(reply)=0.06 (prior), EV $16 for 6 Connects (pacing off)"
+     ],
+     "trace_id": "fa7d2b1edeb74e789076b5ad91abd899"
+    },
+    {
+     "job_id": "dev_aiml_078",
+     "persona": "aiml",
+     "kind": "fit",
+     "fit": 0.75,
+     "action": "bid",
+     "reasons": [
+      "fit 0.75, p(reply)=0.14 (prior), EV $58 for 6 Connects (pacing off)"
+     ],
+     "trace_id": "2640de73f7084547bae8460310ca69dc"
+    }
+   ]
+  },
+  "scam missed": {
+   "count": 6,
+   "examples": [
+    {
+     "job_id": "dev_aiml_077",
+     "persona": "aiml",
+     "kind": "scam",
+     "fit": 1.0,
+     "action": "bid",
+     "reasons": [
+      "fit 1.00, p(reply)=0.22 (prior), EV $56 for 6 Connects (pacing off)"
+     ],
+     "trace_id": "0c5955a783404dec8fc61abd1a42caff"
+    },
+    {
+     "job_id": "dev_aiml_085",
+     "persona": "aiml",
+     "kind": "scam",
+     "fit": 1.0,
+     "action": "bid",
+     "reasons": [
+      "fit 1.00, p(reply)=0.10 (prior), EV $19 for 6 Connects (pacing off)"
+     ],
+     "trace_id": "df0c2d50abb44758854ea0f5e9a1d75d"
+    },
+    {
+     "job_id": "dev_aiml_167",
+     "persona": "aiml",
+     "kind": "scam",
+     "fit": 1.0,
+     "action": "bid",
+     "reasons": [
+      "fit 1.00, p(reply)=0.08 (prior), EV $27 for 6 Connects (pacing off)"
+     ],
+     "trace_id": "b0916d8000c5481ca32be8bbb547890b"
+    }
+   ]
+  },
+  "wrong bid": {
+   "count": 2,
+   "examples": [
+    {
+     "job_id": "dev_aiml_008",
+     "persona": "aiml",
+     "kind": "partial",
+     "fit": 0.6,
+     "action": "bid",
+     "reasons": [
+      "fit 0.60, p(reply)=0.20 (prior), EV $31 for 6 Connects (pacing off)"
+     ],
+     "trace_id": "6cdd378fa29b4cae9947b27af372d8d3"
+    },
+    {
+     "job_id": "dev_aiml_166",
+     "persona": "aiml",
+     "kind": "partial",
+     "fit": 1.0,
+     "action": "bid",
+     "reasons": [
+      "fit 1.00, p(reply)=0.21 (prior), EV $47 for 6 Connects (pacing off)"
+     ],
+     "trace_id": "a5ccb41ebd474689a4db7d5fb9871de2"
+    }
+   ]
+  }
+ },
+ "fix_fit_threshold_sweep": [
+  {
+   "min_fit_bid": 0.45,
+   "precision": 0.8941,
+   "recall": 0.7729,
+   "f1": 0.8291,
+   "accuracy": 0.8433,
+   "tp": 228,
+   "fp": 27,
+   "fn": 67,
+   "tn": 278
+  },
+  {
+   "min_fit_bid": 0.5,
+   "precision": 0.8917,
+   "recall": 0.7254,
+   "f1": 0.8,
+   "accuracy": 0.8217,
+   "tp": 214,
+   "fp": 26,
+   "fn": 81,
+   "tn": 279
+  },
+  {
+   "min_fit_bid": 0.55,
+   "precision": 0.9598,
+   "recall": 0.6475,
+   "f1": 0.7733,
+   "accuracy": 0.8133,
+   "tp": 191,
+   "fp": 8,
+   "fn": 104,
+   "tn": 297
+  },
+  {
+   "min_fit_bid": 0.6,
+   "precision": 0.9565,
+   "recall": 0.5966,
+   "f1": 0.7349,
+   "accuracy": 0.7883,
+   "tp": 176,
+   "fp": 8,
+   "fn": 119,
+   "tn": 297
+  },
+  {
+   "min_fit_bid": 0.65,
+   "precision": 0.9615,
+   "recall": 0.5085,
+   "f1": 0.6652,
+   "accuracy": 0.7483,
+   "tp": 150,
+   "fp": 6,
+   "fn": 145,
+   "tn": 299
+  },
+  {
+   "min_fit_bid": 0.7,
+   "precision": 0.9512,
+   "recall": 0.3966,
+   "f1": 0.5598,
+   "accuracy": 0.6933,
+   "tp": 117,
+   "fp": 6,
+   "fn": 178,
+   "tn": 299
+  }
+ ]
+}

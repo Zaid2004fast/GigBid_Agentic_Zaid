@@ -1,0 +1,2478 @@
+{
+ "meta": {
+  "generated_at": "2026-11-08T17:07:06",
+  "profile": "offline",
+  "jobs": 60,
+  "note": "fixed set = first N gold-bid dev jobs per persona; same jobs for every variant"
+ },
+ "variants": {
+  "V0": {
+   "summary": {
+    "jobs": 60,
+    "proposals": 39,
+    "submitted": 39,
+    "unsupported_before": 1.8462,
+    "unsupported_after": 0.0,
+    "partial_claims": 0.0,
+    "reply_rate": 0.5128,
+    "hire_rate": 0.3333,
+    "p95_latency_s": 27.939,
+    "usd_per_proposal": 0.0,
+    "wall_s": 247.0
+   },
+   "records": [
+    {
+     "job_id": "dev_aiml_001",
+     "persona": "aiml",
+     "action": "bid",
+     "replied": true,
+     "hired": true,
+     "unsupported_before": 2,
+     "unsupported_after": 0,
+     "proposal_latency_s": 26.784
+    },
+    {
+     "job_id": "dev_aiml_002",
+     "persona": "aiml",
+     "action": "bid",
+     "replied": false,
+     "hired": false,
+     "unsupported_before": 2,
+     "unsupported_after": 0,
+     "proposal_latency_s": 26.396
+    },
+    {
+     "job_id": "dev_aiml_005",
+     "persona": "aiml",
+     "action": "bid",
+     "replied": true,
+     "hired": false,
+     "unsupported_before": 1,
+     "unsupported_after": 0,
+     "proposal_latency_s": 25.639
+    },
+    {
+     "job_id": "dev_aiml_006",
+     "persona": "aiml",
+     "action": "watch",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_aiml_011",
+     "persona": "aiml",
+     "action": "watch",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_aiml_012",
+     "persona": "aiml",
+     "action": "bid",
+     "replied": false,
+     "hired": false,
+     "unsupported_before": 2,
+     "unsupported_after": 0,
+     "proposal_latency_s": 16.211
+    },
+    {
+     "job_id": "dev_aiml_013",
+     "persona": "aiml",
+     "action": "skip",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_aiml_015",
+     "persona": "aiml",
+     "action": "watch",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_aiml_017",
+     "persona": "aiml",
+     "action": "bid",
+     "replied": false,
+     "hired": false,
+     "unsupported_before": 2,
+     "unsupported_after": 0,
+     "proposal_latency_s": 20.749
+    },
+    {
+     "job_id": "dev_aiml_018",
+     "persona": "aiml",
+     "action": "skip",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_aiml_020",
+     "persona": "aiml",
+     "action": "watch",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_aiml_021",
+     "persona": "aiml",
+     "action": "bid",
+     "replied": false,
+     "hired": false,
+     "unsupported_before": 3,
+     "unsupported_after": 0,
+     "proposal_latency_s": 21.652
+    },
+    {
+     "job_id": "dev_aiml_022",
+     "persona": "aiml",
+     "action": "bid",
+     "replied": false,
+     "hired": false,
+     "unsupported_before": 2,
+     "unsupported_after": 0,
+     "proposal_latency_s": 20.523
+    },
+    {
+     "job_id": "dev_aiml_023",
+     "persona": "aiml",
+     "action": "watch",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_aiml_025",
+     "persona": "aiml",
+     "action": "bid",
+     "replied": false,
+     "hired": false,
+     "unsupported_before": 2,
+     "unsupported_after": 0,
+     "proposal_latency_s": 22.229
+    },
+    {
+     "job_id": "dev_aiml_026",
+     "persona": "aiml",
+     "action": "bid",
+     "replied": false,
+     "hired": false,
+     "unsupported_before": 2,
+     "unsupported_after": 0,
+     "proposal_latency_s": 20.458
+    },
+    {
+     "job_id": "dev_aiml_027",
+     "persona": "aiml",
+     "action": "bid",
+     "replied": true,
+     "hired": false,
+     "unsupported_before": 3,
+     "unsupported_after": 0,
+     "proposal_latency_s": 24.315
+    },
+    {
+     "job_id": "dev_aiml_029",
+     "persona": "aiml",
+     "action": "watch",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_aiml_031",
+     "persona": "aiml",
+     "action": "bid",
+     "replied": true,
+     "hired": true,
+     "unsupported_before": 3,
+     "unsupported_after": 0,
+     "proposal_latency_s": 21.386
+    },
+    {
+     "job_id": "dev_aiml_032",
+     "persona": "aiml",
+     "action": "bid",
+     "replied": false,
+     "hired": false,
+     "unsupported_before": 2,
+     "unsupported_after": 0,
+     "proposal_latency_s": 22.357
+    },
+    {
+     "job_id": "dev_web_000",
+     "persona": "web",
+     "action": "bid",
+     "replied": false,
+     "hired": false,
+     "unsupported_before": 3,
+     "unsupported_after": 0,
+     "proposal_latency_s": 17.924
+    },
+    {
+     "job_id": "dev_web_002",
+     "persona": "web",
+     "action": "bid",
+     "replied": true,
+     "hired": false,
+     "unsupported_before": 2,
+     "unsupported_after": 0,
+     "proposal_latency_s": 16.499
+    },
+    {
+     "job_id": "dev_web_007",
+     "persona": "web",
+     "action": "skip",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_web_009",
+     "persona": "web",
+     "action": "bid",
+     "replied": false,
+     "hired": false,
+     "unsupported_before": 2,
+     "unsupported_after": 0,
+     "proposal_latency_s": 15.374
+    },
+    {
+     "job_id": "dev_web_010",
+     "persona": "web",
+     "action": "skip",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_web_014",
+     "persona": "web",
+     "action": "bid",
+     "replied": true,
+     "hired": true,
+     "unsupported_before": 1,
+     "unsupported_after": 0,
+     "proposal_latency_s": 13.218
+    },
+    {
+     "job_id": "dev_web_015",
+     "persona": "web",
+     "action": "bid",
+     "replied": true,
+     "hired": true,
+     "unsupported_before": 1,
+     "unsupported_after": 0,
+     "proposal_latency_s": 14.106
+    },
+    {
+     "job_id": "dev_web_016",
+     "persona": "web",
+     "action": "bid",
+     "replied": true,
+     "hired": true,
+     "unsupported_before": 1,
+     "unsupported_after": 0,
+     "proposal_latency_s": 18.39
+    },
+    {
+     "job_id": "dev_web_018",
+     "persona": "web",
+     "action": "skip",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_web_021",
+     "persona": "web",
+     "action": "bid",
+     "replied": true,
+     "hired": true,
+     "unsupported_before": 1,
+     "unsupported_after": 0,
+     "proposal_latency_s": 20.351
+    },
+    {
+     "job_id": "dev_web_022",
+     "persona": "web",
+     "action": "watch",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_web_024",
+     "persona": "web",
+     "action": "skip",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_web_027",
+     "persona": "web",
+     "action": "bid",
+     "replied": true,
+     "hired": false,
+     "unsupported_before": 1,
+     "unsupported_after": 0,
+     "proposal_latency_s": 16.767
+    },
+    {
+     "job_id": "dev_web_030",
+     "persona": "web",
+     "action": "skip",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_web_032",
+     "persona": "web",
+     "action": "bid",
+     "replied": true,
+     "hired": false,
+     "unsupported_before": 2,
+     "unsupported_after": 0,
+     "proposal_latency_s": 14.536
+    },
+    {
+     "job_id": "dev_web_033",
+     "persona": "web",
+     "action": "watch",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_web_034",
+     "persona": "web",
+     "action": "bid",
+     "replied": false,
+     "hired": false,
+     "unsupported_before": 1,
+     "unsupported_after": 0,
+     "proposal_latency_s": 11.431
+    },
+    {
+     "job_id": "dev_web_035",
+     "persona": "web",
+     "action": "skip",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_web_036",
+     "persona": "web",
+     "action": "bid",
+     "replied": true,
+     "hired": false,
+     "unsupported_before": 3,
+     "unsupported_after": 0,
+     "proposal_latency_s": 26.836
+    },
+    {
+     "job_id": "dev_web_038",
+     "persona": "web",
+     "action": "bid",
+     "replied": true,
+     "hired": true,
+     "unsupported_before": 1,
+     "unsupported_after": 0,
+     "proposal_latency_s": 19.663
+    },
+    {
+     "job_id": "dev_data_001",
+     "persona": "data",
+     "action": "skip",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_data_009",
+     "persona": "data",
+     "action": "bid",
+     "replied": true,
+     "hired": true,
+     "unsupported_before": 1,
+     "unsupported_after": 0,
+     "proposal_latency_s": 27.824
+    },
+    {
+     "job_id": "dev_data_010",
+     "persona": "data",
+     "action": "watch",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_data_012",
+     "persona": "data",
+     "action": "bid",
+     "replied": true,
+     "hired": true,
+     "unsupported_before": 2,
+     "unsupported_after": 0,
+     "proposal_latency_s": 26.57
+    },
+    {
+     "job_id": "dev_data_013",
+     "persona": "data",
+     "action": "bid",
+     "replied": false,
+     "hired": false,
+     "unsupported_before": 2,
+     "unsupported_after": 0,
+     "proposal_latency_s": 28.972
+    },
+    {
+     "job_id": "dev_data_016",
+     "persona": "data",
+     "action": "bid",
+     "replied": true,
+     "hired": false,
+     "unsupported_before": 1,
+     "unsupported_after": 0,
+     "proposal_latency_s": 25.149
+    },
+    {
+     "job_id": "dev_data_022",
+     "persona": "data",
+     "action": "bid",
+     "replied": false,
+     "hired": false,
+     "unsupported_before": 1,
+     "unsupported_after": 0,
+     "proposal_latency_s": 25.011
+    },
+    {
+     "job_id": "dev_data_024",
+     "persona": "data",
+     "action": "bid",
+     "replied": false,
+     "hired": false,
+     "unsupported_before": 2,
+     "unsupported_after": 0,
+     "proposal_latency_s": 31.675
+    },
+    {
+     "job_id": "dev_data_027",
+     "persona": "data",
+     "action": "bid",
+     "replied": true,
+     "hired": true,
+     "unsupported_before": 3,
+     "unsupported_after": 0,
+     "proposal_latency_s": 24.46
+    },
+    {
+     "job_id": "dev_data_028",
+     "persona": "data",
+     "action": "bid",
+     "replied": false,
+     "hired": false,
+     "unsupported_before": 3,
+     "unsupported_after": 0,
+     "proposal_latency_s": 23.083
+    },
+    {
+     "job_id": "dev_data_029",
+     "persona": "data",
+     "action": "watch",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_data_031",
+     "persona": "data",
+     "action": "bid",
+     "replied": false,
+     "hired": false,
+     "unsupported_before": 1,
+     "unsupported_after": 0,
+     "proposal_latency_s": 20.208
+    },
+    {
+     "job_id": "dev_data_032",
+     "persona": "data",
+     "action": "bid",
+     "replied": false,
+     "hired": false,
+     "unsupported_before": 2,
+     "unsupported_after": 0,
+     "proposal_latency_s": 23.139
+    },
+    {
+     "job_id": "dev_data_033",
+     "persona": "data",
+     "action": "bid",
+     "replied": false,
+     "hired": false,
+     "unsupported_before": 1,
+     "unsupported_after": 0,
+     "proposal_latency_s": 22.565
+    },
+    {
+     "job_id": "dev_data_034",
+     "persona": "data",
+     "action": "bid",
+     "replied": false,
+     "hired": false,
+     "unsupported_before": 2,
+     "unsupported_after": 0,
+     "proposal_latency_s": 21.714
+    },
+    {
+     "job_id": "dev_data_038",
+     "persona": "data",
+     "action": "watch",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_data_045",
+     "persona": "data",
+     "action": "bid",
+     "replied": true,
+     "hired": true,
+     "unsupported_before": 2,
+     "unsupported_after": 0,
+     "proposal_latency_s": 22.949
+    },
+    {
+     "job_id": "dev_data_048",
+     "persona": "data",
+     "action": "bid",
+     "replied": true,
+     "hired": true,
+     "unsupported_before": 2,
+     "unsupported_after": 0,
+     "proposal_latency_s": 19.249
+    },
+    {
+     "job_id": "dev_data_051",
+     "persona": "data",
+     "action": "skip",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_data_053",
+     "persona": "data",
+     "action": "bid",
+     "replied": true,
+     "hired": true,
+     "unsupported_before": 2,
+     "unsupported_after": 0,
+     "proposal_latency_s": 18.581
+    }
+   ]
+  },
+  "V2": {
+   "summary": {
+    "jobs": 60,
+    "proposals": 39,
+    "submitted": 39,
+    "unsupported_before": 0.0513,
+    "unsupported_after": 0.0,
+    "partial_claims": 0.0,
+    "reply_rate": 0.7179,
+    "hire_rate": 0.5641,
+    "p95_latency_s": 30.61,
+    "usd_per_proposal": 0.0,
+    "wall_s": 215.4
+   },
+   "records": [
+    {
+     "job_id": "dev_aiml_001",
+     "persona": "aiml",
+     "action": "bid",
+     "replied": true,
+     "hired": true,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 25.263
+    },
+    {
+     "job_id": "dev_aiml_002",
+     "persona": "aiml",
+     "action": "bid",
+     "replied": true,
+     "hired": true,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 25.595
+    },
+    {
+     "job_id": "dev_aiml_005",
+     "persona": "aiml",
+     "action": "bid",
+     "replied": true,
+     "hired": true,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 25.422
+    },
+    {
+     "job_id": "dev_aiml_006",
+     "persona": "aiml",
+     "action": "watch",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_aiml_011",
+     "persona": "aiml",
+     "action": "watch",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_aiml_012",
+     "persona": "aiml",
+     "action": "bid",
+     "replied": true,
+     "hired": true,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 21.704
+    },
+    {
+     "job_id": "dev_aiml_013",
+     "persona": "aiml",
+     "action": "skip",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_aiml_015",
+     "persona": "aiml",
+     "action": "watch",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_aiml_017",
+     "persona": "aiml",
+     "action": "bid",
+     "replied": true,
+     "hired": false,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 33.855
+    },
+    {
+     "job_id": "dev_aiml_018",
+     "persona": "aiml",
+     "action": "skip",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_aiml_020",
+     "persona": "aiml",
+     "action": "watch",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_aiml_021",
+     "persona": "aiml",
+     "action": "bid",
+     "replied": true,
+     "hired": true,
+     "unsupported_before": 1,
+     "unsupported_after": 0,
+     "proposal_latency_s": 34.656
+    },
+    {
+     "job_id": "dev_aiml_022",
+     "persona": "aiml",
+     "action": "bid",
+     "replied": true,
+     "hired": true,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 30.249
+    },
+    {
+     "job_id": "dev_aiml_023",
+     "persona": "aiml",
+     "action": "watch",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_aiml_025",
+     "persona": "aiml",
+     "action": "bid",
+     "replied": true,
+     "hired": false,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 25.686
+    },
+    {
+     "job_id": "dev_aiml_026",
+     "persona": "aiml",
+     "action": "bid",
+     "replied": true,
+     "hired": true,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 21.622
+    },
+    {
+     "job_id": "dev_aiml_027",
+     "persona": "aiml",
+     "action": "bid",
+     "replied": false,
+     "hired": false,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 15.484
+    },
+    {
+     "job_id": "dev_aiml_029",
+     "persona": "aiml",
+     "action": "watch",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_aiml_031",
+     "persona": "aiml",
+     "action": "bid",
+     "replied": true,
+     "hired": false,
+     "unsupported_before": 1,
+     "unsupported_after": 0,
+     "proposal_latency_s": 12.023
+    },
+    {
+     "job_id": "dev_aiml_032",
+     "persona": "aiml",
+     "action": "bid",
+     "replied": true,
+     "hired": false,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 11.353
+    },
+    {
+     "job_id": "dev_web_000",
+     "persona": "web",
+     "action": "bid",
+     "replied": true,
+     "hired": true,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 12.43
+    },
+    {
+     "job_id": "dev_web_002",
+     "persona": "web",
+     "action": "bid",
+     "replied": true,
+     "hired": true,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 13.184
+    },
+    {
+     "job_id": "dev_web_007",
+     "persona": "web",
+     "action": "skip",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_web_009",
+     "persona": "web",
+     "action": "bid",
+     "replied": true,
+     "hired": true,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 10.622
+    },
+    {
+     "job_id": "dev_web_010",
+     "persona": "web",
+     "action": "skip",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_web_014",
+     "persona": "web",
+     "action": "bid",
+     "replied": false,
+     "hired": false,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 6.825
+    },
+    {
+     "job_id": "dev_web_015",
+     "persona": "web",
+     "action": "bid",
+     "replied": true,
+     "hired": false,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 6.135
+    },
+    {
+     "job_id": "dev_web_016",
+     "persona": "web",
+     "action": "bid",
+     "replied": true,
+     "hired": true,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 8.636
+    },
+    {
+     "job_id": "dev_web_018",
+     "persona": "web",
+     "action": "skip",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_web_021",
+     "persona": "web",
+     "action": "bid",
+     "replied": true,
+     "hired": true,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 10.293
+    },
+    {
+     "job_id": "dev_web_022",
+     "persona": "web",
+     "action": "watch",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_web_024",
+     "persona": "web",
+     "action": "skip",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_web_027",
+     "persona": "web",
+     "action": "bid",
+     "replied": true,
+     "hired": true,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 15.968
+    },
+    {
+     "job_id": "dev_web_030",
+     "persona": "web",
+     "action": "skip",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_web_032",
+     "persona": "web",
+     "action": "bid",
+     "replied": true,
+     "hired": true,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 17.077
+    },
+    {
+     "job_id": "dev_web_033",
+     "persona": "web",
+     "action": "watch",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_web_034",
+     "persona": "web",
+     "action": "bid",
+     "replied": true,
+     "hired": true,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 19.625
+    },
+    {
+     "job_id": "dev_web_035",
+     "persona": "web",
+     "action": "skip",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_web_036",
+     "persona": "web",
+     "action": "bid",
+     "replied": true,
+     "hired": true,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 18.943
+    },
+    {
+     "job_id": "dev_web_038",
+     "persona": "web",
+     "action": "bid",
+     "replied": false,
+     "hired": false,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 17.974
+    },
+    {
+     "job_id": "dev_data_001",
+     "persona": "data",
+     "action": "skip",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_data_009",
+     "persona": "data",
+     "action": "bid",
+     "replied": false,
+     "hired": false,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 19.25
+    },
+    {
+     "job_id": "dev_data_010",
+     "persona": "data",
+     "action": "watch",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_data_012",
+     "persona": "data",
+     "action": "bid",
+     "replied": true,
+     "hired": true,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 19.077
+    },
+    {
+     "job_id": "dev_data_013",
+     "persona": "data",
+     "action": "bid",
+     "replied": false,
+     "hired": false,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 19.77
+    },
+    {
+     "job_id": "dev_data_016",
+     "persona": "data",
+     "action": "bid",
+     "replied": false,
+     "hired": false,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 18.897
+    },
+    {
+     "job_id": "dev_data_022",
+     "persona": "data",
+     "action": "bid",
+     "replied": true,
+     "hired": true,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 17.481
+    },
+    {
+     "job_id": "dev_data_024",
+     "persona": "data",
+     "action": "bid",
+     "replied": true,
+     "hired": true,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 19.795
+    },
+    {
+     "job_id": "dev_data_027",
+     "persona": "data",
+     "action": "bid",
+     "replied": true,
+     "hired": true,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 22.11
+    },
+    {
+     "job_id": "dev_data_028",
+     "persona": "data",
+     "action": "bid",
+     "replied": true,
+     "hired": true,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 20.29
+    },
+    {
+     "job_id": "dev_data_029",
+     "persona": "data",
+     "action": "watch",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_data_031",
+     "persona": "data",
+     "action": "bid",
+     "replied": false,
+     "hired": false,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 22.233
+    },
+    {
+     "job_id": "dev_data_032",
+     "persona": "data",
+     "action": "bid",
+     "replied": false,
+     "hired": false,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 24.897
+    },
+    {
+     "job_id": "dev_data_033",
+     "persona": "data",
+     "action": "bid",
+     "replied": false,
+     "hired": false,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 23.338
+    },
+    {
+     "job_id": "dev_data_034",
+     "persona": "data",
+     "action": "bid",
+     "replied": true,
+     "hired": true,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 25.508
+    },
+    {
+     "job_id": "dev_data_038",
+     "persona": "data",
+     "action": "watch",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_data_045",
+     "persona": "data",
+     "action": "bid",
+     "replied": false,
+     "hired": false,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 17.424
+    },
+    {
+     "job_id": "dev_data_048",
+     "persona": "data",
+     "action": "bid",
+     "replied": true,
+     "hired": false,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 16.247
+    },
+    {
+     "job_id": "dev_data_051",
+     "persona": "data",
+     "action": "skip",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_data_053",
+     "persona": "data",
+     "action": "bid",
+     "replied": false,
+     "hired": false,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 11.95
+    }
+   ]
+  },
+  "C1": {
+   "summary": {
+    "jobs": 60,
+    "proposals": 39,
+    "submitted": 38,
+    "unsupported_before": 0.0513,
+    "unsupported_after": 0.0,
+    "partial_claims": 0.0,
+    "reply_rate": 0.6842,
+    "hire_rate": 0.4737,
+    "p95_latency_s": 35.882,
+    "usd_per_proposal": 0.0,
+    "wall_s": 227.2
+   },
+   "records": [
+    {
+     "job_id": "dev_aiml_001",
+     "persona": "aiml",
+     "action": "bid",
+     "replied": true,
+     "hired": true,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 13.575
+    },
+    {
+     "job_id": "dev_aiml_002",
+     "persona": "aiml",
+     "action": "bid",
+     "replied": true,
+     "hired": false,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 15.139
+    },
+    {
+     "job_id": "dev_aiml_005",
+     "persona": "aiml",
+     "action": "bid",
+     "replied": true,
+     "hired": true,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 13.952
+    },
+    {
+     "job_id": "dev_aiml_006",
+     "persona": "aiml",
+     "action": "watch",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_aiml_011",
+     "persona": "aiml",
+     "action": "watch",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_aiml_012",
+     "persona": "aiml",
+     "action": "bid",
+     "replied": true,
+     "hired": true,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 15.772
+    },
+    {
+     "job_id": "dev_aiml_013",
+     "persona": "aiml",
+     "action": "skip",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_aiml_015",
+     "persona": "aiml",
+     "action": "watch",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_aiml_017",
+     "persona": "aiml",
+     "action": "bid",
+     "replied": true,
+     "hired": true,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 21.882
+    },
+    {
+     "job_id": "dev_aiml_018",
+     "persona": "aiml",
+     "action": "skip",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_aiml_020",
+     "persona": "aiml",
+     "action": "watch",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_aiml_021",
+     "persona": "aiml",
+     "action": "bid",
+     "replied": true,
+     "hired": true,
+     "unsupported_before": 1,
+     "unsupported_after": 0,
+     "proposal_latency_s": 23.724
+    },
+    {
+     "job_id": "dev_aiml_022",
+     "persona": "aiml",
+     "action": "bid",
+     "replied": true,
+     "hired": true,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 22.993
+    },
+    {
+     "job_id": "dev_aiml_023",
+     "persona": "aiml",
+     "action": "watch",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_aiml_025",
+     "persona": "aiml",
+     "action": "bid",
+     "replied": true,
+     "hired": false,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 37.361
+    },
+    {
+     "job_id": "dev_aiml_026",
+     "persona": "aiml",
+     "action": "bid",
+     "replied": true,
+     "hired": true,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 37.9
+    },
+    {
+     "job_id": "dev_aiml_027",
+     "persona": "aiml",
+     "action": "bid",
+     "replied": true,
+     "hired": false,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 35.621
+    },
+    {
+     "job_id": "dev_aiml_029",
+     "persona": "aiml",
+     "action": "watch",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_aiml_031",
+     "persona": "aiml",
+     "action": "bid",
+     "replied": true,
+     "hired": false,
+     "unsupported_before": 1,
+     "unsupported_after": 0,
+     "proposal_latency_s": 20.895
+    },
+    {
+     "job_id": "dev_aiml_032",
+     "persona": "aiml",
+     "action": "bid",
+     "replied": true,
+     "hired": true,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 19.185
+    },
+    {
+     "job_id": "dev_web_000",
+     "persona": "web",
+     "action": "bid",
+     "replied": true,
+     "hired": true,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 18.428
+    },
+    {
+     "job_id": "dev_web_002",
+     "persona": "web",
+     "action": "bid",
+     "replied": true,
+     "hired": true,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 18.326
+    },
+    {
+     "job_id": "dev_web_007",
+     "persona": "web",
+     "action": "skip",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_web_009",
+     "persona": "web",
+     "action": "bid",
+     "replied": false,
+     "hired": false,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 18.423
+    },
+    {
+     "job_id": "dev_web_010",
+     "persona": "web",
+     "action": "skip",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_web_014",
+     "persona": "web",
+     "action": "bid",
+     "replied": false,
+     "hired": false,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 15.633
+    },
+    {
+     "job_id": "dev_web_015",
+     "persona": "web",
+     "action": "bid",
+     "replied": true,
+     "hired": false,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 18.449
+    },
+    {
+     "job_id": "dev_web_016",
+     "persona": "web",
+     "action": "bid",
+     "replied": false,
+     "hired": false,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 21.045
+    },
+    {
+     "job_id": "dev_web_018",
+     "persona": "web",
+     "action": "skip",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_web_021",
+     "persona": "web",
+     "action": "bid",
+     "replied": false,
+     "hired": false,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 21.717
+    },
+    {
+     "job_id": "dev_web_022",
+     "persona": "web",
+     "action": "watch",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_web_024",
+     "persona": "web",
+     "action": "skip",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_web_027",
+     "persona": "web",
+     "action": "bid",
+     "replied": true,
+     "hired": false,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 20.154
+    },
+    {
+     "job_id": "dev_web_030",
+     "persona": "web",
+     "action": "skip",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_web_032",
+     "persona": "web",
+     "action": "bid",
+     "replied": true,
+     "hired": true,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 20.345
+    },
+    {
+     "job_id": "dev_web_033",
+     "persona": "web",
+     "action": "watch",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_web_034",
+     "persona": "web",
+     "action": "bid",
+     "replied": true,
+     "hired": true,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 16.474
+    },
+    {
+     "job_id": "dev_web_035",
+     "persona": "web",
+     "action": "skip",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_web_036",
+     "persona": "web",
+     "action": "bid",
+     "replied": true,
+     "hired": false,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 16.218
+    },
+    {
+     "job_id": "dev_web_038",
+     "persona": "web",
+     "action": "bid",
+     "replied": true,
+     "hired": true,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 14.572
+    },
+    {
+     "job_id": "dev_data_001",
+     "persona": "data",
+     "action": "skip",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_data_009",
+     "persona": "data",
+     "action": "bid",
+     "replied": true,
+     "hired": true,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 15.737
+    },
+    {
+     "job_id": "dev_data_010",
+     "persona": "data",
+     "action": "watch",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_data_012",
+     "persona": "data",
+     "action": "bid",
+     "replied": true,
+     "hired": true,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 13.209
+    },
+    {
+     "job_id": "dev_data_013",
+     "persona": "data",
+     "action": "bid",
+     "replied": false,
+     "hired": false,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 14.156
+    },
+    {
+     "job_id": "dev_data_016",
+     "persona": "data",
+     "action": "bid",
+     "replied": false,
+     "hired": false,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 12.872
+    },
+    {
+     "job_id": "dev_data_022",
+     "persona": "data",
+     "action": "bid",
+     "replied": true,
+     "hired": false,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 16.605
+    },
+    {
+     "job_id": "dev_data_024",
+     "persona": "data",
+     "action": "bid",
+     "replied": false,
+     "hired": false,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 19.056
+    },
+    {
+     "job_id": "dev_data_027",
+     "persona": "data",
+     "action": "bid",
+     "replied": false,
+     "hired": false,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 19.662
+    },
+    {
+     "job_id": "dev_data_028",
+     "persona": "data",
+     "action": "bid",
+     "replied": true,
+     "hired": true,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 19.438
+    },
+    {
+     "job_id": "dev_data_029",
+     "persona": "data",
+     "action": "watch",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_data_031",
+     "persona": "data",
+     "action": "bid",
+     "replied": false,
+     "hired": false,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 15.501
+    },
+    {
+     "job_id": "dev_data_032",
+     "persona": "data",
+     "action": "bid",
+     "replied": true,
+     "hired": true,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 18.162
+    },
+    {
+     "job_id": "dev_data_033",
+     "persona": "data",
+     "action": "bid",
+     "replied": false,
+     "hired": false,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 17.553
+    },
+    {
+     "job_id": "dev_data_034",
+     "persona": "data",
+     "action": "bid",
+     "replied": false,
+     "hired": false,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 19.724
+    },
+    {
+     "job_id": "dev_data_038",
+     "persona": "data",
+     "action": "watch",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_data_045",
+     "persona": "data",
+     "action": "bid",
+     "replied": false,
+     "hired": false,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 25.621
+    },
+    {
+     "job_id": "dev_data_048",
+     "persona": "data",
+     "action": "bid",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 20.919
+    },
+    {
+     "job_id": "dev_data_051",
+     "persona": "data",
+     "action": "skip",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_data_053",
+     "persona": "data",
+     "action": "bid",
+     "replied": true,
+     "hired": true,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 21.567
+    }
+   ]
+  },
+  "best": {
+   "summary": {
+    "jobs": 60,
+    "proposals": 39,
+    "submitted": 38,
+    "unsupported_before": 0.0513,
+    "unsupported_after": 0.0,
+    "partial_claims": 0.0,
+    "reply_rate": 0.7105,
+    "hire_rate": 0.5526,
+    "p95_latency_s": 33.52,
+    "usd_per_proposal": 0.0,
+    "wall_s": 294.1
+   },
+   "records": [
+    {
+     "job_id": "dev_aiml_001",
+     "persona": "aiml",
+     "action": "bid",
+     "replied": true,
+     "hired": true,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 33.853
+    },
+    {
+     "job_id": "dev_aiml_002",
+     "persona": "aiml",
+     "action": "bid",
+     "replied": true,
+     "hired": true,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 30.976
+    },
+    {
+     "job_id": "dev_aiml_005",
+     "persona": "aiml",
+     "action": "bid",
+     "replied": true,
+     "hired": false,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 31.178
+    },
+    {
+     "job_id": "dev_aiml_006",
+     "persona": "aiml",
+     "action": "watch",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_aiml_011",
+     "persona": "aiml",
+     "action": "watch",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_aiml_012",
+     "persona": "aiml",
+     "action": "bid",
+     "replied": true,
+     "hired": true,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 30.572
+    },
+    {
+     "job_id": "dev_aiml_013",
+     "persona": "aiml",
+     "action": "skip",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_aiml_015",
+     "persona": "aiml",
+     "action": "watch",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_aiml_017",
+     "persona": "aiml",
+     "action": "bid",
+     "replied": true,
+     "hired": true,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 35.987
+    },
+    {
+     "job_id": "dev_aiml_018",
+     "persona": "aiml",
+     "action": "skip",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_aiml_020",
+     "persona": "aiml",
+     "action": "watch",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_aiml_021",
+     "persona": "aiml",
+     "action": "bid",
+     "replied": true,
+     "hired": false,
+     "unsupported_before": 1,
+     "unsupported_after": 0,
+     "proposal_latency_s": 33.208
+    },
+    {
+     "job_id": "dev_aiml_022",
+     "persona": "aiml",
+     "action": "bid",
+     "replied": true,
+     "hired": true,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 31.333
+    },
+    {
+     "job_id": "dev_aiml_023",
+     "persona": "aiml",
+     "action": "watch",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_aiml_025",
+     "persona": "aiml",
+     "action": "bid",
+     "replied": true,
+     "hired": false,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 27.494
+    },
+    {
+     "job_id": "dev_aiml_026",
+     "persona": "aiml",
+     "action": "bid",
+     "replied": true,
+     "hired": true,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 27.935
+    },
+    {
+     "job_id": "dev_aiml_027",
+     "persona": "aiml",
+     "action": "bid",
+     "replied": false,
+     "hired": false,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 31.429
+    },
+    {
+     "job_id": "dev_aiml_029",
+     "persona": "aiml",
+     "action": "watch",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_aiml_031",
+     "persona": "aiml",
+     "action": "bid",
+     "replied": false,
+     "hired": false,
+     "unsupported_before": 1,
+     "unsupported_after": 0,
+     "proposal_latency_s": 33.413
+    },
+    {
+     "job_id": "dev_aiml_032",
+     "persona": "aiml",
+     "action": "bid",
+     "replied": true,
+     "hired": true,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 27.291
+    },
+    {
+     "job_id": "dev_web_000",
+     "persona": "web",
+     "action": "bid",
+     "replied": false,
+     "hired": false,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 24.885
+    },
+    {
+     "job_id": "dev_web_002",
+     "persona": "web",
+     "action": "bid",
+     "replied": true,
+     "hired": false,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 32.956
+    },
+    {
+     "job_id": "dev_web_007",
+     "persona": "web",
+     "action": "skip",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_web_009",
+     "persona": "web",
+     "action": "bid",
+     "replied": true,
+     "hired": true,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 30.517
+    },
+    {
+     "job_id": "dev_web_010",
+     "persona": "web",
+     "action": "skip",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_web_014",
+     "persona": "web",
+     "action": "bid",
+     "replied": false,
+     "hired": false,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 27.058
+    },
+    {
+     "job_id": "dev_web_015",
+     "persona": "web",
+     "action": "bid",
+     "replied": true,
+     "hired": true,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 27.286
+    },
+    {
+     "job_id": "dev_web_016",
+     "persona": "web",
+     "action": "bid",
+     "replied": true,
+     "hired": true,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 32.438
+    },
+    {
+     "job_id": "dev_web_018",
+     "persona": "web",
+     "action": "skip",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_web_021",
+     "persona": "web",
+     "action": "bid",
+     "replied": true,
+     "hired": true,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 33.461
+    },
+    {
+     "job_id": "dev_web_022",
+     "persona": "web",
+     "action": "watch",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_web_024",
+     "persona": "web",
+     "action": "skip",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_web_027",
+     "persona": "web",
+     "action": "bid",
+     "replied": false,
+     "hired": false,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 22.506
+    },
+    {
+     "job_id": "dev_web_030",
+     "persona": "web",
+     "action": "skip",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_web_032",
+     "persona": "web",
+     "action": "bid",
+     "replied": true,
+     "hired": false,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 22.936
+    },
+    {
+     "job_id": "dev_web_033",
+     "persona": "web",
+     "action": "watch",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_web_034",
+     "persona": "web",
+     "action": "bid",
+     "replied": true,
+     "hired": true,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 21.72
+    },
+    {
+     "job_id": "dev_web_035",
+     "persona": "web",
+     "action": "skip",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_web_036",
+     "persona": "web",
+     "action": "bid",
+     "replied": true,
+     "hired": true,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 28.776
+    },
+    {
+     "job_id": "dev_web_038",
+     "persona": "web",
+     "action": "bid",
+     "replied": true,
+     "hired": false,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 27.317
+    },
+    {
+     "job_id": "dev_data_001",
+     "persona": "data",
+     "action": "skip",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_data_009",
+     "persona": "data",
+     "action": "bid",
+     "replied": true,
+     "hired": true,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 24.486
+    },
+    {
+     "job_id": "dev_data_010",
+     "persona": "data",
+     "action": "watch",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_data_012",
+     "persona": "data",
+     "action": "bid",
+     "replied": true,
+     "hired": true,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 22.038
+    },
+    {
+     "job_id": "dev_data_013",
+     "persona": "data",
+     "action": "bid",
+     "replied": false,
+     "hired": false,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 21.445
+    },
+    {
+     "job_id": "dev_data_016",
+     "persona": "data",
+     "action": "bid",
+     "replied": false,
+     "hired": false,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 20.457
+    },
+    {
+     "job_id": "dev_data_022",
+     "persona": "data",
+     "action": "bid",
+     "replied": true,
+     "hired": true,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 18.387
+    },
+    {
+     "job_id": "dev_data_024",
+     "persona": "data",
+     "action": "bid",
+     "replied": false,
+     "hired": false,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 21.847
+    },
+    {
+     "job_id": "dev_data_027",
+     "persona": "data",
+     "action": "bid",
+     "replied": true,
+     "hired": true,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 20.422
+    },
+    {
+     "job_id": "dev_data_028",
+     "persona": "data",
+     "action": "bid",
+     "replied": true,
+     "hired": true,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 21.327
+    },
+    {
+     "job_id": "dev_data_029",
+     "persona": "data",
+     "action": "watch",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_data_031",
+     "persona": "data",
+     "action": "bid",
+     "replied": false,
+     "hired": false,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 16.764
+    },
+    {
+     "job_id": "dev_data_032",
+     "persona": "data",
+     "action": "bid",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 13.886
+    },
+    {
+     "job_id": "dev_data_033",
+     "persona": "data",
+     "action": "bid",
+     "replied": true,
+     "hired": true,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 18.996
+    },
+    {
+     "job_id": "dev_data_034",
+     "persona": "data",
+     "action": "bid",
+     "replied": true,
+     "hired": true,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 19.825
+    },
+    {
+     "job_id": "dev_data_038",
+     "persona": "data",
+     "action": "watch",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_data_045",
+     "persona": "data",
+     "action": "bid",
+     "replied": false,
+     "hired": false,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 18.149
+    },
+    {
+     "job_id": "dev_data_048",
+     "persona": "data",
+     "action": "bid",
+     "replied": false,
+     "hired": false,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 13.66
+    },
+    {
+     "job_id": "dev_data_051",
+     "persona": "data",
+     "action": "skip",
+     "replied": null,
+     "hired": null,
+     "unsupported_before": null,
+     "unsupported_after": null,
+     "proposal_latency_s": null
+    },
+    {
+     "job_id": "dev_data_053",
+     "persona": "data",
+     "action": "bid",
+     "replied": true,
+     "hired": true,
+     "unsupported_before": 0,
+     "unsupported_after": 0,
+     "proposal_latency_s": 10.444
+    }
+   ]
+  }
+ }
+}

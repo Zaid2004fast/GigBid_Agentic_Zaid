@@ -1,0 +1,373 @@
+{
+ "meta": {
+  "generated_at": "2026-11-08T17:39:22",
+  "pairs": 87,
+  "A": "evidence_first",
+  "B": "question_first"
+ },
+ "reply_rate": {
+  "A": 0.6897,
+  "B": 0.7356
+ },
+ "two_proportion_z": {
+  "z": 0.6701,
+  "p_value": 0.50279
+ },
+ "mcnemar_exact": {
+  "A_only": 15,
+  "B_only": 19,
+  "p_value": 0.60759
+ },
+ "bayes_p_B_better": 0.7416,
+ "decision": "B beats A; McNemar p=0.60759 (not significant at 0.05)",
+ "pairs_detail": {
+  "dev_aiml_001": [
+   true,
+   false
+  ],
+  "dev_aiml_002": [
+   true,
+   true
+  ],
+  "dev_aiml_005": [
+   true,
+   false
+  ],
+  "dev_aiml_006": [
+   true,
+   false
+  ],
+  "dev_aiml_012": [
+   true,
+   true
+  ],
+  "dev_aiml_015": [
+   true,
+   true
+  ],
+  "dev_aiml_017": [
+   true,
+   false
+  ],
+  "dev_aiml_020": [
+   false,
+   true
+  ],
+  "dev_aiml_021": [
+   true,
+   true
+  ],
+  "dev_aiml_025": [
+   true,
+   false
+  ],
+  "dev_aiml_026": [
+   true,
+   false
+  ],
+  "dev_aiml_027": [
+   false,
+   true
+  ],
+  "dev_aiml_029": [
+   false,
+   false
+  ],
+  "dev_aiml_031": [
+   false,
+   true
+  ],
+  "dev_aiml_035": [
+   false,
+   false
+  ],
+  "dev_aiml_036": [
+   true,
+   true
+  ],
+  "dev_aiml_037": [
+   true,
+   true
+  ],
+  "dev_aiml_038": [
+   true,
+   true
+  ],
+  "dev_aiml_041": [
+   true,
+   true
+  ],
+  "dev_aiml_045": [
+   false,
+   true
+  ],
+  "dev_aiml_047": [
+   true,
+   true
+  ],
+  "dev_aiml_048": [
+   true,
+   true
+  ],
+  "dev_aiml_050": [
+   false,
+   true
+  ],
+  "dev_aiml_051": [
+   true,
+   true
+  ],
+  "dev_aiml_055": [
+   false,
+   false
+  ],
+  "dev_aiml_056": [
+   true,
+   true
+  ],
+  "dev_aiml_060": [
+   true,
+   true
+  ],
+  "dev_aiml_062": [
+   true,
+   true
+  ],
+  "dev_data_009": [
+   true,
+   true
+  ],
+  "dev_data_010": [
+   true,
+   true
+  ],
+  "dev_data_012": [
+   true,
+   true
+  ],
+  "dev_data_013": [
+   false,
+   true
+  ],
+  "dev_data_016": [
+   false,
+   true
+  ],
+  "dev_data_022": [
+   true,
+   true
+  ],
+  "dev_data_024": [
+   false,
+   true
+  ],
+  "dev_data_027": [
+   true,
+   true
+  ],
+  "dev_data_028": [
+   true,
+   false
+  ],
+  "dev_data_031": [
+   false,
+   false
+  ],
+  "dev_data_032": [
+   true,
+   true
+  ],
+  "dev_data_033": [
+   true,
+   true
+  ],
+  "dev_data_034": [
+   true,
+   false
+  ],
+  "dev_data_038": [
+   false,
+   true
+  ],
+  "dev_data_045": [
+   false,
+   true
+  ],
+  "dev_data_048": [
+   false,
+   false
+  ],
+  "dev_data_053": [
+   true,
+   false
+  ],
+  "dev_data_054": [
+   false,
+   false
+  ],
+  "dev_data_057": [
+   true,
+   true
+  ],
+  "dev_data_059": [
+   false,
+   true
+  ],
+  "dev_data_062": [
+   true,
+   true
+  ],
+  "dev_data_064": [
+   true,
+   true
+  ],
+  "dev_data_065": [
+   false,
+   true
+  ],
+  "dev_data_066": [
+   true,
+   true
+  ],
+  "dev_data_069": [
+   false,
+   true
+  ],
+  "dev_data_071": [
+   true,
+   false
+  ],
+  "dev_data_077": [
+   false,
+   false
+  ],
+  "dev_data_081": [
+   false,
+   true
+  ],
+  "dev_data_085": [
+   true,
+   true
+  ],
+  "dev_data_086": [
+   true,
+   true
+  ],
+  "dev_data_088": [
+   true,
+   true
+  ],
+  "dev_data_094": [
+   true,
+   true
+  ],
+  "dev_web_002": [
+   true,
+   true
+  ],
+  "dev_web_009": [
+   true,
+   true
+  ],
+  "dev_web_014": [
+   false,
+   true
+  ],
+  "dev_web_015": [
+   true,
+   true
+  ],
+  "dev_web_016": [
+   true,
+   true
+  ],
+  "dev_web_021": [
+   true,
+   false
+  ],
+  "dev_web_022": [
+   false,
+   true
+  ],
+  "dev_web_027": [
+   false,
+   true
+  ],
+  "dev_web_032": [
+   true,
+   true
+  ],
+  "dev_web_033": [
+   true,
+   true
+  ],
+  "dev_web_034": [
+   true,
+   true
+  ],
+  "dev_web_036": [
+   true,
+   true
+  ],
+  "dev_web_038": [
+   true,
+   true
+  ],
+  "dev_web_043": [
+   true,
+   true
+  ],
+  "dev_web_044": [
+   true,
+   true
+  ],
+  "dev_web_046": [
+   false,
+   false
+  ],
+  "dev_web_051": [
+   true,
+   false
+  ],
+  "dev_web_055": [
+   true,
+   true
+  ],
+  "dev_web_056": [
+   true,
+   true
+  ],
+  "dev_web_057": [
+   true,
+   true
+  ],
+  "dev_web_058": [
+   true,
+   true
+  ],
+  "dev_web_059": [
+   false,
+   true
+  ],
+  "dev_web_061": [
+   true,
+   false
+  ],
+  "dev_web_076": [
+   true,
+   false
+  ],
+  "dev_web_077": [
+   true,
+   false
+  ],
+  "dev_web_080": [
+   false,
+   true
+  ],
+  "dev_web_082": [
+   true,
+   true
+  ]
+ }
+}

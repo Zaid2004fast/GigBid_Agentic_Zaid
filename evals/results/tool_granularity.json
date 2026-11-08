@@ -1,0 +1,1481 @@
+{
+ "meta": {
+  "generated_at": "2026-11-08T18:31:30",
+  "model": "qwen3:1.7b",
+  "tasks": 40
+ },
+ "surfaces": {
+  "fine": {
+   "tool_selection_accuracy": 0.875,
+   "argument_accuracy": 0.875,
+   "tokens_per_task": 2250.3,
+   "n": 40,
+   "records": [
+    {
+     "task": "Find portfolio evidence that I have built Celery background workers.",
+     "expected": "search_evidence",
+     "got": "find_winning_proposals",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 2241,
+     "latency_s": 56.49
+    },
+    {
+     "task": "Do I have proof of FAISS vector search work in my portfolio?",
+     "expected": "search_evidence",
+     "got": "search_evidence",
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 2241,
+     "latency_s": 6.38
+    },
+    {
+     "task": "Look for evidence of dbt modelling experience.",
+     "expected": "search_evidence",
+     "got": "search_evidence",
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 2248,
+     "latency_s": 7.2
+    },
+    {
+     "task": "Is there anything in my portfolio about Stripe subscription billing?",
+     "expected": "search_evidence",
+     "got": "search_evidence",
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 2237,
+     "latency_s": 5.32
+    },
+    {
+     "task": "Search my work for Tableau dashboards.",
+     "expected": "search_evidence",
+     "got": "search_jobs",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 2234,
+     "latency_s": 5.74
+    },
+    {
+     "task": "Have I done RAG for a client in the legal industry?",
+     "expected": "have_i_done",
+     "got": "have_i_done",
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 2243,
+     "latency_s": 5.79
+    },
+    {
+     "task": "Have I ever used Airflow for a fintech client?",
+     "expected": "have_i_done",
+     "got": "have_i_done",
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 2244,
+     "latency_s": 5.98
+    },
+    {
+     "task": "Which skills can my portfolio actually prove?",
+     "expected": "list_skills",
+     "got": "list_skills",
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 2230,
+     "latency_s": 4.5
+    },
+    {
+     "task": "List every skill I have evidence for.",
+     "expected": "list_skills",
+     "got": "list_skills",
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 2226,
+     "latency_s": 3.83
+    },
+    {
+     "task": "Open the full case study 'docs-assistant'.",
+     "expected": "get_case_study",
+     "got": "get_case_study",
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 2235,
+     "latency_s": 5.16
+    },
+    {
+     "task": "Load the case study with id churn-model so I can quote its result.",
+     "expected": "get_case_study",
+     "got": "get_case_study",
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 2240,
+     "latency_s": 5.19
+    },
+    {
+     "task": "Show me past proposals that won for an NLP classification job.",
+     "expected": "find_winning_proposals",
+     "got": "find_winning_proposals",
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 2242,
+     "latency_s": 5.61
+    },
+    {
+     "task": "Get the full text of evidence items aiml:cs:docs-assistant and aiml:cv:docs-assistant.",
+     "expected": "get_evidence",
+     "got": "get_evidence",
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 2267,
+     "latency_s": 8.89
+    },
+    {
+     "task": "Search open jobs that mention LangGraph.",
+     "expected": "search_jobs",
+     "got": "search_jobs",
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 2244,
+     "latency_s": 6.42
+    },
+    {
+     "task": "Find new Data Analytics jobs.",
+     "expected": "search_jobs",
+     "got": "search_jobs",
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 2258,
+     "latency_s": 8.66
+    },
+    {
+     "task": "Look for jobs asking for Next.js.",
+     "expected": "search_jobs",
+     "got": "search_jobs",
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 2238,
+     "latency_s": 5.39
+    },
+    {
+     "task": "Get the details of job dev_aiml_010.",
+     "expected": "get_job",
+     "got": "get_job",
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 2244,
+     "latency_s": 5.67
+    },
+    {
+     "task": "What are the screening questions on job live_0042?",
+     "expected": "get_job",
+     "got": "get_job",
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 2242,
+     "latency_s": 5.45
+    },
+    {
+     "task": "Check the hiring history of client cl_0012.",
+     "expected": "get_client_history",
+     "got": "get_client_history",
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 2242,
+     "latency_s": 5.97
+    },
+    {
+     "task": "Is client cl_0300 payment verified and do they hire?",
+     "expected": "get_client_history",
+     "got": "get_client_history",
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 2244,
+     "latency_s": 7.15
+    },
+    {
+     "task": "How many Connects do I have left this week?",
+     "expected": "get_connects_balance",
+     "got": "get_connects_balance",
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 2231,
+     "latency_s": 4.79
+    },
+    {
+     "task": "What's my Connects balance?",
+     "expected": "get_connects_balance",
+     "got": "get_connects_balance",
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 2227,
+     "latency_s": 5.14
+    },
+    {
+     "task": "What do Web Development fixed-price jobs usually pay?",
+     "expected": "get_market_stats",
+     "got": "get_market_stats",
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 2282,
+     "latency_s": 19.54
+    },
+    {
+     "task": "Give me hourly rate percentiles for AI & Machine Learning.",
+     "expected": "get_market_stats",
+     "got": "",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 2243,
+     "latency_s": 6.87
+    },
+    {
+     "task": "What does a proposal cost in Connects under the current platform policy?",
+     "expected": "get_policy",
+     "got": "get_policy",
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 2236,
+     "latency_s": 4.99
+    },
+    {
+     "task": "Which platform rules are in force right now?",
+     "expected": "get_policy",
+     "got": "",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 2227,
+     "latency_s": 4.06
+    },
+    {
+     "task": "List my client conversations.",
+     "expected": "list_threads",
+     "got": "list_threads",
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 2231,
+     "latency_s": 4.9
+    },
+    {
+     "task": "Read the messages in thread th_dev_web_003.",
+     "expected": "list_messages",
+     "got": "list_messages",
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 2242,
+     "latency_s": 6.37
+    },
+    {
+     "task": "What did the client say in thread th_live_0007?",
+     "expected": "list_messages",
+     "got": "list_messages",
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 2244,
+     "latency_s": 6.64
+    },
+    {
+     "task": "When am I free for a 30 minute interview this week?",
+     "expected": "free_slots",
+     "got": "free_slots",
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 2257,
+     "latency_s": 9.21
+    },
+    {
+     "task": "Find three free slots for a call in the next 5 days.",
+     "expected": "free_slots",
+     "got": "free_slots",
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 2257,
+     "latency_s": 8.28
+    },
+    {
+     "task": "Put a tentative hold on my calendar at 2026-11-10T11:00:00+05:00 for the client interview (key hold-abc-123).",
+     "expected": "create_interview_hold",
+     "got": "create_interview_hold",
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 2319,
+     "latency_s": 14.9
+    },
+    {
+     "task": "Draft an email to Sara with subject 'Kickoff' saying we start Monday (key email-xyz-987).",
+     "expected": "create_email_draft",
+     "got": "create_email_draft",
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 2275,
+     "latency_s": 9.7
+    },
+    {
+     "task": "Send the approved message 'Thanks, Tuesday works' to thread th_dev_aiml_002 (key msg-key-0001).",
+     "expected": "send_message",
+     "got": "send_message",
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 2287,
+     "latency_s": 10.84
+    },
+    {
+     "task": "Create a proposal draft for job dev_web_001 at $900 with the approved cover letter (key draft-key-001).",
+     "expected": "create_proposal_draft",
+     "got": "create_proposal_draft",
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 2282,
+     "latency_s": 12.25
+    },
+    {
+     "task": "Submit approved proposal prop_123abc for job dev_web_001 (key submit-key-001).",
+     "expected": "submit_proposal",
+     "got": "submit_proposal",
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 2282,
+     "latency_s": 12.26
+    },
+    {
+     "task": "Preview what submitting proposal prop_9 for job dev_data_004 would cost, without submitting (key submit-key-002).",
+     "expected": "submit_proposal",
+     "got": "submit_proposal",
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 2288,
+     "latency_s": 12.6
+    },
+    {
+     "task": "What events happened on my proposals since time 0?",
+     "expected": "list_events",
+     "got": "list_events",
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 2233,
+     "latency_s": 4.21
+    },
+    {
+     "task": "Have any clients viewed or replied to my proposals?",
+     "expected": "list_events",
+     "got": "find_winning_proposals",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 2245,
+     "latency_s": 6.26
+    },
+    {
+     "task": "Find evidence for 'background job queue with retries'.",
+     "expected": "search_evidence",
+     "got": "search_evidence",
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 2283,
+     "latency_s": 12.49
+    }
+   ]
+  },
+  "coarse": {
+   "tool_selection_accuracy": 0.0,
+   "argument_accuracy": 0.0,
+   "tokens_per_task": 486.5,
+   "n": 40,
+   "records": [
+    {
+     "task": "Find portfolio evidence that I have built Celery background workers.",
+     "expected": "search_evidence",
+     "got": "",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 479,
+     "latency_s": 8.94
+    },
+    {
+     "task": "Do I have proof of FAISS vector search work in my portfolio?",
+     "expected": "search_evidence",
+     "got": "",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 476,
+     "latency_s": 2.44
+    },
+    {
+     "task": "Look for evidence of dbt modelling experience.",
+     "expected": "search_evidence",
+     "got": "",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 480,
+     "latency_s": 3.05
+    },
+    {
+     "task": "Is there anything in my portfolio about Stripe subscription billing?",
+     "expected": "search_evidence",
+     "got": "",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 470,
+     "latency_s": 2.09
+    },
+    {
+     "task": "Search my work for Tableau dashboards.",
+     "expected": "search_evidence",
+     "got": "",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 473,
+     "latency_s": 2.72
+    },
+    {
+     "task": "Have I done RAG for a client in the legal industry?",
+     "expected": "have_i_done",
+     "got": "",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 476,
+     "latency_s": 2.59
+    },
+    {
+     "task": "Have I ever used Airflow for a fintech client?",
+     "expected": "have_i_done",
+     "got": "",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 510,
+     "latency_s": 5.54
+    },
+    {
+     "task": "Which skills can my portfolio actually prove?",
+     "expected": "list_skills",
+     "got": "",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 454,
+     "latency_s": 0.86
+    },
+    {
+     "task": "List every skill I have evidence for.",
+     "expected": "list_skills",
+     "got": "",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 467,
+     "latency_s": 1.99
+    },
+    {
+     "task": "Open the full case study 'docs-assistant'.",
+     "expected": "get_case_study",
+     "got": "",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 475,
+     "latency_s": 2.68
+    },
+    {
+     "task": "Load the case study with id churn-model so I can quote its result.",
+     "expected": "get_case_study",
+     "got": "",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 479,
+     "latency_s": 2.68
+    },
+    {
+     "task": "Show me past proposals that won for an NLP classification job.",
+     "expected": "find_winning_proposals",
+     "got": "",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 480,
+     "latency_s": 2.85
+    },
+    {
+     "task": "Get the full text of evidence items aiml:cs:docs-assistant and aiml:cv:docs-assistant.",
+     "expected": "get_evidence",
+     "got": "",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 506,
+     "latency_s": 4.18
+    },
+    {
+     "task": "Search open jobs that mention LangGraph.",
+     "expected": "search_jobs",
+     "got": "",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 470,
+     "latency_s": 2.25
+    },
+    {
+     "task": "Find new Data Analytics jobs.",
+     "expected": "search_jobs",
+     "got": "",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 486,
+     "latency_s": 3.89
+    },
+    {
+     "task": "Look for jobs asking for Next.js.",
+     "expected": "search_jobs",
+     "got": "",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 470,
+     "latency_s": 2.41
+    },
+    {
+     "task": "Get the details of job dev_aiml_010.",
+     "expected": "get_job",
+     "got": "",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 483,
+     "latency_s": 3.24
+    },
+    {
+     "task": "What are the screening questions on job live_0042?",
+     "expected": "get_job",
+     "got": "",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 481,
+     "latency_s": 2.8
+    },
+    {
+     "task": "Check the hiring history of client cl_0012.",
+     "expected": "get_client_history",
+     "got": "",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 481,
+     "latency_s": 3.81
+    },
+    {
+     "task": "Is client cl_0300 payment verified and do they hire?",
+     "expected": "get_client_history",
+     "got": "",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 505,
+     "latency_s": 5.83
+    },
+    {
+     "task": "How many Connects do I have left this week?",
+     "expected": "get_connects_balance",
+     "got": "",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 474,
+     "latency_s": 2.48
+    },
+    {
+     "task": "What's my Connects balance?",
+     "expected": "get_connects_balance",
+     "got": "",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 466,
+     "latency_s": 2.07
+    },
+    {
+     "task": "What do Web Development fixed-price jobs usually pay?",
+     "expected": "get_market_stats",
+     "got": "",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 516,
+     "latency_s": 6.3
+    },
+    {
+     "task": "Give me hourly rate percentiles for AI & Machine Learning.",
+     "expected": "get_market_stats",
+     "got": "",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 488,
+     "latency_s": 4.1
+    },
+    {
+     "task": "What does a proposal cost in Connects under the current platform policy?",
+     "expected": "get_policy",
+     "got": "",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 497,
+     "latency_s": 5.6
+    },
+    {
+     "task": "Which platform rules are in force right now?",
+     "expected": "get_policy",
+     "got": "",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 471,
+     "latency_s": 2.72
+    },
+    {
+     "task": "List my client conversations.",
+     "expected": "list_threads",
+     "got": "",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 468,
+     "latency_s": 2.54
+    },
+    {
+     "task": "Read the messages in thread th_dev_web_003.",
+     "expected": "list_messages",
+     "got": "",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 480,
+     "latency_s": 3.12
+    },
+    {
+     "task": "What did the client say in thread th_live_0007?",
+     "expected": "list_messages",
+     "got": "",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 482,
+     "latency_s": 3.47
+    },
+    {
+     "task": "When am I free for a 30 minute interview this week?",
+     "expected": "free_slots",
+     "got": "",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 488,
+     "latency_s": 3.94
+    },
+    {
+     "task": "Find three free slots for a call in the next 5 days.",
+     "expected": "free_slots",
+     "got": "",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 475,
+     "latency_s": 2.59
+    },
+    {
+     "task": "Put a tentative hold on my calendar at 2026-11-10T11:00:00+05:00 for the client interview (key hold-abc-123).",
+     "expected": "create_interview_hold",
+     "got": "",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 553,
+     "latency_s": 7.92
+    },
+    {
+     "task": "Draft an email to Sara with subject 'Kickoff' saying we start Monday (key email-xyz-987).",
+     "expected": "create_email_draft",
+     "got": "",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 506,
+     "latency_s": 5.29
+    },
+    {
+     "task": "Send the approved message 'Thanks, Tuesday works' to thread th_dev_aiml_002 (key msg-key-0001).",
+     "expected": "send_message",
+     "got": "",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 523,
+     "latency_s": 6.39
+    },
+    {
+     "task": "Create a proposal draft for job dev_web_001 at $900 with the approved cover letter (key draft-key-001).",
+     "expected": "create_proposal_draft",
+     "got": "",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 520,
+     "latency_s": 5.3
+    },
+    {
+     "task": "Submit approved proposal prop_123abc for job dev_web_001 (key submit-key-001).",
+     "expected": "submit_proposal",
+     "got": "",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 512,
+     "latency_s": 4.84
+    },
+    {
+     "task": "Preview what submitting proposal prop_9 for job dev_data_004 would cost, without submitting (key submit-key-002).",
+     "expected": "submit_proposal",
+     "got": "",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 520,
+     "latency_s": 5.33
+    },
+    {
+     "task": "What events happened on my proposals since time 0?",
+     "expected": "list_events",
+     "got": "",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 473,
+     "latency_s": 2.6
+    },
+    {
+     "task": "Have any clients viewed or replied to my proposals?",
+     "expected": "list_events",
+     "got": "",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 472,
+     "latency_s": 2.4
+    },
+    {
+     "task": "Find evidence for 'background job queue with retries'.",
+     "expected": "search_evidence",
+     "got": "",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 476,
+     "latency_s": 2.73
+    }
+   ]
+  },
+  "best": {
+   "tool_selection_accuracy": 0.95,
+   "argument_accuracy": 0.95,
+   "tokens_per_task": 579.7,
+   "n": 40,
+   "records": [
+    {
+     "task": "Find portfolio evidence that I have built Celery background workers.",
+     "expected": "search_evidence",
+     "got": "search_evidence",
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 633,
+     "latency_s": 11.33
+    },
+    {
+     "task": "Do I have proof of FAISS vector search work in my portfolio?",
+     "expected": "search_evidence",
+     "got": "have_i_done",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 627,
+     "latency_s": 3.58
+    },
+    {
+     "task": "Look for evidence of dbt modelling experience.",
+     "expected": "search_evidence",
+     "got": "search_evidence",
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 622,
+     "latency_s": 3.42
+    },
+    {
+     "task": "Is there anything in my portfolio about Stripe subscription billing?",
+     "expected": "search_evidence",
+     "got": "search_evidence",
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 617,
+     "latency_s": 2.9
+    },
+    {
+     "task": "Search my work for Tableau dashboards.",
+     "expected": "search_evidence",
+     "got": "search_evidence",
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 634,
+     "latency_s": 4.54
+    },
+    {
+     "task": "Have I done RAG for a client in the legal industry?",
+     "expected": "have_i_done",
+     "got": "have_i_done",
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 623,
+     "latency_s": 3.25
+    },
+    {
+     "task": "Have I ever used Airflow for a fintech client?",
+     "expected": "have_i_done",
+     "got": "have_i_done",
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 624,
+     "latency_s": 3.5
+    },
+    {
+     "task": "Which skills can my portfolio actually prove?",
+     "expected": "list_skills",
+     "got": "list_skills",
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 606,
+     "latency_s": 2.04
+    },
+    {
+     "task": "List every skill I have evidence for.",
+     "expected": "list_skills",
+     "got": "list_skills",
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 606,
+     "latency_s": 2.26
+    },
+    {
+     "task": "Open the full case study 'docs-assistant'.",
+     "expected": "get_case_study",
+     "got": "get_case_study",
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 646,
+     "latency_s": 6.11
+    },
+    {
+     "task": "Load the case study with id churn-model so I can quote its result.",
+     "expected": "get_case_study",
+     "got": "get_case_study",
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 651,
+     "latency_s": 2.72
+    },
+    {
+     "task": "Show me past proposals that won for an NLP classification job.",
+     "expected": "find_winning_proposals",
+     "got": "find_winning_proposals",
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 653,
+     "latency_s": 3.03
+    },
+    {
+     "task": "Get the full text of evidence items aiml:cs:docs-assistant and aiml:cv:docs-assistant.",
+     "expected": "get_evidence",
+     "got": "get_evidence",
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 549,
+     "latency_s": 6.59
+    },
+    {
+     "task": "Search open jobs that mention LangGraph.",
+     "expected": "search_jobs",
+     "got": "search_jobs",
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 308,
+     "latency_s": 5.32
+    },
+    {
+     "task": "Find new Data Analytics jobs.",
+     "expected": "search_jobs",
+     "got": "search_jobs",
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 313,
+     "latency_s": 2.84
+    },
+    {
+     "task": "Look for jobs asking for Next.js.",
+     "expected": "search_jobs",
+     "got": "search_jobs",
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 308,
+     "latency_s": 2.34
+    },
+    {
+     "task": "Get the details of job dev_aiml_010.",
+     "expected": "get_job",
+     "got": "get_job",
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 321,
+     "latency_s": 3.29
+    },
+    {
+     "task": "What are the screening questions on job live_0042?",
+     "expected": "get_job",
+     "got": "get_job",
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 391,
+     "latency_s": 10.49
+    },
+    {
+     "task": "Check the hiring history of client cl_0012.",
+     "expected": "get_client_history",
+     "got": "get_client_history",
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 279,
+     "latency_s": 5.81
+    },
+    {
+     "task": "Is client cl_0300 payment verified and do they hire?",
+     "expected": "get_client_history",
+     "got": "get_client_history",
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 281,
+     "latency_s": 3.14
+    },
+    {
+     "task": "How many Connects do I have left this week?",
+     "expected": "get_connects_balance",
+     "got": "get_connects_balance",
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 289,
+     "latency_s": 5.12
+    },
+    {
+     "task": "What's my Connects balance?",
+     "expected": "get_connects_balance",
+     "got": "get_connects_balance",
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 285,
+     "latency_s": 2.16
+    },
+    {
+     "task": "What do Web Development fixed-price jobs usually pay?",
+     "expected": "get_market_stats",
+     "got": "get_market_stats",
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 299,
+     "latency_s": 2.95
+    },
+    {
+     "task": "Give me hourly rate percentiles for AI & Machine Learning.",
+     "expected": "get_market_stats",
+     "got": "get_market_stats",
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 304,
+     "latency_s": 3.27
+    },
+    {
+     "task": "What does a proposal cost in Connects under the current platform policy?",
+     "expected": "get_policy",
+     "got": "",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 298,
+     "latency_s": 2.54
+    },
+    {
+     "task": "Which platform rules are in force right now?",
+     "expected": "get_policy",
+     "got": "get_policy",
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 285,
+     "latency_s": 1.9
+    },
+    {
+     "task": "List my client conversations.",
+     "expected": "list_threads",
+     "got": "list_threads",
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 829,
+     "latency_s": 13.31
+    },
+    {
+     "task": "Read the messages in thread th_dev_web_003.",
+     "expected": "list_messages",
+     "got": "list_messages",
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 848,
+     "latency_s": 3.39
+    },
+    {
+     "task": "What did the client say in thread th_live_0007?",
+     "expected": "list_messages",
+     "got": "list_messages",
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 850,
+     "latency_s": 3.38
+    },
+    {
+     "task": "When am I free for a 30 minute interview this week?",
+     "expected": "free_slots",
+     "got": "free_slots",
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 866,
+     "latency_s": 5.08
+    },
+    {
+     "task": "Find three free slots for a call in the next 5 days.",
+     "expected": "free_slots",
+     "got": "free_slots",
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 875,
+     "latency_s": 6.24
+    },
+    {
+     "task": "Put a tentative hold on my calendar at 2026-11-10T11:00:00+05:00 for the client interview (key hold-abc-123).",
+     "expected": "create_interview_hold",
+     "got": "create_interview_hold",
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 925,
+     "latency_s": 10.69
+    },
+    {
+     "task": "Draft an email to Sara with subject 'Kickoff' saying we start Monday (key email-xyz-987).",
+     "expected": "create_email_draft",
+     "got": "create_email_draft",
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 881,
+     "latency_s": 7.11
+    },
+    {
+     "task": "Send the approved message 'Thanks, Tuesday works' to thread th_dev_aiml_002 (key msg-key-0001).",
+     "expected": "send_message",
+     "got": "send_message",
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 893,
+     "latency_s": 6.4
+    },
+    {
+     "task": "Create a proposal draft for job dev_web_001 at $900 with the approved cover letter (key draft-key-001).",
+     "expected": "create_proposal_draft",
+     "got": "create_proposal_draft",
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 615,
+     "latency_s": 12.11
+    },
+    {
+     "task": "Submit approved proposal prop_123abc for job dev_web_001 (key submit-key-001).",
+     "expected": "submit_proposal",
+     "got": "submit_proposal",
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 615,
+     "latency_s": 6.41
+    },
+    {
+     "task": "Preview what submitting proposal prop_9 for job dev_data_004 would cost, without submitting (key submit-key-002).",
+     "expected": "submit_proposal",
+     "got": "submit_proposal",
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 621,
+     "latency_s": 6.26
+    },
+    {
+     "task": "What events happened on my proposals since time 0?",
+     "expected": "list_events",
+     "got": "list_events",
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 839,
+     "latency_s": 2.69
+    },
+    {
+     "task": "Have any clients viewed or replied to my proposals?",
+     "expected": "list_events",
+     "got": "list_events",
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 847,
+     "latency_s": 3.53
+    },
+    {
+     "task": "Find evidence for 'background job queue with retries'.",
+     "expected": "search_evidence",
+     "got": "search_evidence",
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 633,
+     "latency_s": 7.24
+    }
+   ]
+  },
+  "coarse_flat": {
+   "tool_selection_accuracy": 0.0,
+   "argument_accuracy": 0.0,
+   "tokens_per_task": 695.4,
+   "n": 40,
+   "records": [
+    {
+     "task": "Find portfolio evidence that I have built Celery background workers.",
+     "expected": "search_evidence",
+     "got": "",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 683,
+     "latency_s": 54.23
+    },
+    {
+     "task": "Do I have proof of FAISS vector search work in my portfolio?",
+     "expected": "search_evidence",
+     "got": "",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 694,
+     "latency_s": 10.96
+    },
+    {
+     "task": "Look for evidence of dbt modelling experience.",
+     "expected": "search_evidence",
+     "got": "",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 685,
+     "latency_s": 51.47
+    },
+    {
+     "task": "Is there anything in my portfolio about Stripe subscription billing?",
+     "expected": "search_evidence",
+     "got": "get_evidence",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 691,
+     "latency_s": 9.48
+    },
+    {
+     "task": "Search my work for Tableau dashboards.",
+     "expected": "search_evidence",
+     "got": "",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 683,
+     "latency_s": 65.69
+    },
+    {
+     "task": "Have I done RAG for a client in the legal industry?",
+     "expected": "have_i_done",
+     "got": "",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 689,
+     "latency_s": 11.57
+    },
+    {
+     "task": "Have I ever used Airflow for a fintech client?",
+     "expected": "have_i_done",
+     "got": "",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 708,
+     "latency_s": 15.44
+    },
+    {
+     "task": "Which skills can my portfolio actually prove?",
+     "expected": "list_skills",
+     "got": "",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 672,
+     "latency_s": 10.0
+    },
+    {
+     "task": "List every skill I have evidence for.",
+     "expected": "list_skills",
+     "got": "",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 671,
+     "latency_s": 32.87
+    },
+    {
+     "task": "Open the full case study 'docs-assistant'.",
+     "expected": "get_case_study",
+     "got": "",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 679,
+     "latency_s": 70.2
+    },
+    {
+     "task": "Load the case study with id churn-model so I can quote its result.",
+     "expected": "get_case_study",
+     "got": "",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 684,
+     "latency_s": 6.75
+    },
+    {
+     "task": "Show me past proposals that won for an NLP classification job.",
+     "expected": "find_winning_proposals",
+     "got": "",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 684,
+     "latency_s": 21.08
+    },
+    {
+     "task": "Get the full text of evidence items aiml:cs:docs-assistant and aiml:cv:docs-assistant.",
+     "expected": "get_evidence",
+     "got": "",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 714,
+     "latency_s": 44.04
+    },
+    {
+     "task": "Search open jobs that mention LangGraph.",
+     "expected": "search_jobs",
+     "got": "",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 682,
+     "latency_s": 6.64
+    },
+    {
+     "task": "Find new Data Analytics jobs.",
+     "expected": "search_jobs",
+     "got": "",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 680,
+     "latency_s": 32.75
+    },
+    {
+     "task": "Look for jobs asking for Next.js.",
+     "expected": "search_jobs",
+     "got": "",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 682,
+     "latency_s": 7.7
+    },
+    {
+     "task": "Get the details of job dev_aiml_010.",
+     "expected": "get_job",
+     "got": "",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 688,
+     "latency_s": 32.18
+    },
+    {
+     "task": "What are the screening questions on job live_0042?",
+     "expected": "get_job",
+     "got": "",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 692,
+     "latency_s": 6.99
+    },
+    {
+     "task": "Check the hiring history of client cl_0012.",
+     "expected": "get_client_history",
+     "got": "",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 686,
+     "latency_s": 22.55
+    },
+    {
+     "task": "Is client cl_0300 payment verified and do they hire?",
+     "expected": "get_client_history",
+     "got": "",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 696,
+     "latency_s": 7.24
+    },
+    {
+     "task": "How many Connects do I have left this week?",
+     "expected": "get_connects_balance",
+     "got": "",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 695,
+     "latency_s": 11.53
+    },
+    {
+     "task": "What's my Connects balance?",
+     "expected": "get_connects_balance",
+     "got": "",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 675,
+     "latency_s": 19.38
+    },
+    {
+     "task": "What do Web Development fixed-price jobs usually pay?",
+     "expected": "get_market_stats",
+     "got": "",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 747,
+     "latency_s": 36.26
+    },
+    {
+     "task": "Give me hourly rate percentiles for AI & Machine Learning.",
+     "expected": "get_market_stats",
+     "got": "",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 682,
+     "latency_s": 23.75
+    },
+    {
+     "task": "What does a proposal cost in Connects under the current platform policy?",
+     "expected": "get_policy",
+     "got": "",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 746,
+     "latency_s": 52.83
+    },
+    {
+     "task": "Which platform rules are in force right now?",
+     "expected": "get_policy",
+     "got": "",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 678,
+     "latency_s": 19.84
+    },
+    {
+     "task": "List my client conversations.",
+     "expected": "list_threads",
+     "got": "",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 673,
+     "latency_s": 14.42
+    },
+    {
+     "task": "Read the messages in thread th_dev_web_003.",
+     "expected": "list_messages",
+     "got": "",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 686,
+     "latency_s": 4.13
+    },
+    {
+     "task": "What did the client say in thread th_live_0007?",
+     "expected": "list_messages",
+     "got": "",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 687,
+     "latency_s": 13.34
+    },
+    {
+     "task": "When am I free for a 30 minute interview this week?",
+     "expected": "free_slots",
+     "got": "",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 688,
+     "latency_s": 43.42
+    },
+    {
+     "task": "Find three free slots for a call in the next 5 days.",
+     "expected": "free_slots",
+     "got": "",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 695,
+     "latency_s": 38.57
+    },
+    {
+     "task": "Put a tentative hold on my calendar at 2026-11-10T11:00:00+05:00 for the client interview (key hold-abc-123).",
+     "expected": "create_interview_hold",
+     "got": "",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 752,
+     "latency_s": 12.82
+    },
+    {
+     "task": "Draft an email to Sara with subject 'Kickoff' saying we start Monday (key email-xyz-987).",
+     "expected": "create_email_draft",
+     "got": "",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 710,
+     "latency_s": 16.49
+    },
+    {
+     "task": "Send the approved message 'Thanks, Tuesday works' to thread th_dev_aiml_002 (key msg-key-0001).",
+     "expected": "send_message",
+     "got": "",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 728,
+     "latency_s": 88.54
+    },
+    {
+     "task": "Create a proposal draft for job dev_web_001 at $900 with the approved cover letter (key draft-key-001).",
+     "expected": "create_proposal_draft",
+     "got": "",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 733,
+     "latency_s": 10.9
+    },
+    {
+     "task": "Submit approved proposal prop_123abc for job dev_web_001 (key submit-key-001).",
+     "expected": "submit_proposal",
+     "got": "",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 722,
+     "latency_s": 16.08
+    },
+    {
+     "task": "Preview what submitting proposal prop_9 for job dev_data_004 would cost, without submitting (key submit-key-002).",
+     "expected": "submit_proposal",
+     "got": "",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 722,
+     "latency_s": 14.89
+    },
+    {
+     "task": "What events happened on my proposals since time 0?",
+     "expected": "list_events",
+     "got": "",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 686,
+     "latency_s": 13.95
+    },
+    {
+     "task": "Have any clients viewed or replied to my proposals?",
+     "expected": "list_events",
+     "got": "",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 678,
+     "latency_s": 18.64
+    },
+    {
+     "task": "Find evidence for 'background job queue with retries'.",
+     "expected": "search_evidence",
+     "got": "",
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 689,
+     "latency_s": 30.1
+    }
+   ]
+  }
+ }
+}
