@@ -1,0 +1,294 @@
+{
+  "id": "aiml",
+  "name": "Ayesha Raza",
+  "title": "AI/ML Engineer",
+  "github": "ayesha-ml",
+  "floor_hourly": 45,
+  "min_fixed": 400,
+  "skills": [
+    "python",
+    "pytorch",
+    "scikit-learn",
+    "huggingface",
+    "langchain",
+    "langgraph",
+    "rag",
+    "qdrant",
+    "faiss",
+    "openai-api",
+    "lora",
+    "opencv",
+    "yolo",
+    "mlflow",
+    "nlp",
+    "forecasting",
+    "fastapi",
+    "docker",
+    "pandas",
+    "sql"
+  ],
+  "category": "AI & Machine Learning",
+  "projects": [
+    {
+      "key": "docs-assistant",
+      "title": "Internal knowledge assistant for a edtech company",
+      "skills": [
+        "python",
+        "langchain",
+        "rag",
+        "qdrant",
+        "fastapi",
+        "openai-api",
+        "docker"
+      ],
+      "industry": "edtech",
+      "has_repo": true
+    },
+    {
+      "key": "invoice-extractor",
+      "title": "Invoice data extraction pipeline for a e-commerce firm",
+      "skills": [
+        "python",
+        "opencv",
+        "pytorch",
+        "fastapi",
+        "docker",
+        "nlp"
+      ],
+      "industry": "e-commerce",
+      "has_repo": true
+    },
+    {
+      "key": "churn-model",
+      "title": "Customer churn prediction for a edtech subscription business",
+      "skills": [
+        "python",
+        "scikit-learn",
+        "pandas",
+        "mlflow",
+        "sql"
+      ],
+      "industry": "edtech",
+      "has_repo": false
+    },
+    {
+      "key": "ticket-triage",
+      "title": "Support ticket triage with a fine-tuned language model (media)",
+      "skills": [
+        "huggingface",
+        "lora",
+        "pytorch",
+        "nlp",
+        "python",
+        "qdrant"
+      ],
+      "industry": "media",
+      "has_repo": true
+    },
+    {
+      "key": "shelf-vision",
+      "title": "Real-time shelf monitoring with computer vision for media retail",
+      "skills": [
+        "yolo",
+        "opencv",
+        "pytorch",
+        "docker"
+      ],
+      "industry": "media",
+      "has_repo": false
+    },
+    {
+      "key": "semantic-search",
+      "title": "Semantic product search for a legal marketplace",
+      "skills": [
+        "python",
+        "faiss",
+        "huggingface",
+        "fastapi",
+        "nlp"
+      ],
+      "industry": "legal",
+      "has_repo": false
+    },
+    {
+      "key": "agent-workflow",
+      "title": "Multi-agent document review workflow for a real estate team",
+      "skills": [
+        "langgraph",
+        "python",
+        "openai-api",
+        "fastapi",
+        "rag",
+        "opencv"
+      ],
+      "industry": "real estate",
+      "has_repo": true
+    },
+    {
+      "key": "demand-forecast",
+      "title": "Weekly demand forecasting for a logistics distributor",
+      "skills": [
+        "forecasting",
+        "python",
+        "pandas",
+        "mlflow"
+      ],
+      "industry": "logistics",
+      "has_repo": true
+    },
+    {
+      "key": "sentiment-api",
+      "title": "Review sentiment API for a fintech brand",
+      "skills": [
+        "nlp",
+        "huggingface",
+        "fastapi",
+        "docker",
+        "rag"
+      ],
+      "industry": "fintech",
+      "has_repo": true
+    },
+    {
+      "key": "rag-eval",
+      "title": "Evaluation harness for an LLM chatbot (legal)",
+      "skills": [
+        "python",
+        "rag",
+        "langchain",
+        "pandas",
+        "lora"
+      ],
+      "industry": "legal",
+      "has_repo": true
+    },
+    {
+      "key": "docs-assistant-e-commerce",
+      "title": "Internal knowledge assistant for a e-commerce company",
+      "skills": [
+        "python",
+        "langchain",
+        "rag",
+        "qdrant",
+        "fastapi",
+        "openai-api"
+      ],
+      "industry": "e-commerce",
+      "has_repo": false
+    },
+    {
+      "key": "invoice-extractor-media",
+      "title": "Invoice data extraction pipeline for a media firm",
+      "skills": [
+        "python",
+        "opencv",
+        "pytorch",
+        "fastapi",
+        "docker"
+      ],
+      "industry": "media",
+      "has_repo": true
+    },
+    {
+      "key": "churn-model-fintech",
+      "title": "Customer churn prediction for a fintech subscription business",
+      "skills": [
+        "python",
+        "scikit-learn",
+        "pandas",
+        "mlflow",
+        "sql"
+      ],
+      "industry": "fintech",
+      "has_repo": false
+    },
+    {
+      "key": "ticket-triage-saas",
+      "title": "Support ticket triage with a fine-tuned language model (SaaS)",
+      "skills": [
+        "huggingface",
+        "lora",
+        "pytorch",
+        "nlp",
+        "python",
+        "langchain"
+      ],
+      "industry": "SaaS",
+      "has_repo": true
+    },
+    {
+      "key": "shelf-vision-healthcare",
+      "title": "Real-time shelf monitoring with computer vision for healthcare retail",
+      "skills": [
+        "yolo",
+        "opencv",
+        "pytorch",
+        "docker"
+      ],
+      "industry": "healthcare",
+      "has_repo": false
+    },
+    {
+      "key": "semantic-search-logistics",
+      "title": "Semantic product search for a logistics marketplace",
+      "skills": [
+        "python",
+        "faiss",
+        "huggingface",
+        "fastapi"
+      ],
+      "industry": "logistics",
+      "has_repo": true
+    },
+    {
+      "key": "agent-workflow-logistics",
+      "title": "Multi-agent document review workflow for a logistics team",
+      "skills": [
+        "langgraph",
+        "python",
+        "openai-api",
+        "fastapi",
+        "rag",
+        "pandas"
+      ],
+      "industry": "logistics",
+      "has_repo": true
+    },
+    {
+      "key": "demand-forecast-manufacturing",
+      "title": "Weekly demand forecasting for a manufacturing distributor",
+      "skills": [
+        "forecasting",
+        "python",
+        "pandas",
+        "mlflow"
+      ],
+      "industry": "manufacturing",
+      "has_repo": true
+    },
+    {
+      "key": "sentiment-api-healthcare",
+      "title": "Review sentiment API for a healthcare brand",
+      "skills": [
+        "nlp",
+        "huggingface",
+        "fastapi",
+        "docker"
+      ],
+      "industry": "healthcare",
+      "has_repo": false
+    },
+    {
+      "key": "rag-eval-media",
+      "title": "Evaluation harness for an LLM chatbot (media)",
+      "skills": [
+        "python",
+        "rag",
+        "langchain",
+        "pandas"
+      ],
+      "industry": "media",
+      "has_repo": true
+    }
+  ]
+}

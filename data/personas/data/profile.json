@@ -1,0 +1,221 @@
+{
+  "id": "data",
+  "name": "Sara Ahmed",
+  "title": "Data Analyst",
+  "github": "sara-analytics",
+  "floor_hourly": 30,
+  "min_fixed": 250,
+  "skills": [
+    "sql",
+    "dbt",
+    "snowflake",
+    "bigquery",
+    "airflow",
+    "tableau",
+    "powerbi",
+    "pandas",
+    "excel",
+    "ab-testing",
+    "etl",
+    "google-analytics",
+    "python"
+  ],
+  "category": "Data Analytics",
+  "projects": [
+    {
+      "key": "sales-dashboard",
+      "title": "Executive sales dashboard for a media company",
+      "skills": [
+        "tableau",
+        "sql",
+        "snowflake",
+        "excel",
+        "airflow"
+      ],
+      "industry": "media",
+      "has_repo": true
+    },
+    {
+      "key": "warehouse-models",
+      "title": "Warehouse modelling with dbt for a real estate startup",
+      "skills": [
+        "dbt",
+        "snowflake",
+        "sql",
+        "airflow"
+      ],
+      "industry": "real estate",
+      "has_repo": true
+    },
+    {
+      "key": "marketing-attribution",
+      "title": "Marketing funnel and attribution analysis (e-commerce)",
+      "skills": [
+        "google-analytics",
+        "bigquery",
+        "sql",
+        "python"
+      ],
+      "industry": "e-commerce",
+      "has_repo": true
+    },
+    {
+      "key": "ab-test-review",
+      "title": "Checkout A/B test analysis for an manufacturing retailer",
+      "skills": [
+        "ab-testing",
+        "python",
+        "pandas",
+        "sql"
+      ],
+      "industry": "manufacturing",
+      "has_repo": true
+    },
+    {
+      "key": "finance-reporting",
+      "title": "Monthly finance reporting automation for a fintech firm",
+      "skills": [
+        "excel",
+        "powerbi",
+        "sql",
+        "etl"
+      ],
+      "industry": "fintech",
+      "has_repo": true
+    },
+    {
+      "key": "crm-pipeline",
+      "title": "CRM to warehouse ETL pipeline for a real estate sales team",
+      "skills": [
+        "etl",
+        "airflow",
+        "python",
+        "bigquery"
+      ],
+      "industry": "real estate",
+      "has_repo": false
+    },
+    {
+      "key": "ops-kpis",
+      "title": "Operations KPI dashboard for a manufacturing business",
+      "skills": [
+        "powerbi",
+        "sql",
+        "excel",
+        "pandas"
+      ],
+      "industry": "manufacturing",
+      "has_repo": false
+    },
+    {
+      "key": "data-cleanup",
+      "title": "Customer data cleanup and dedup for a real estate company",
+      "skills": [
+        "pandas",
+        "python",
+        "excel",
+        "etl"
+      ],
+      "industry": "real estate",
+      "has_repo": false
+    },
+    {
+      "key": "sales-dashboard-media",
+      "title": "Executive sales dashboard for a media company",
+      "skills": [
+        "tableau",
+        "sql",
+        "snowflake",
+        "excel",
+        "dbt"
+      ],
+      "industry": "media",
+      "has_repo": true
+    },
+    {
+      "key": "warehouse-models-logistics",
+      "title": "Warehouse modelling with dbt for a logistics startup",
+      "skills": [
+        "dbt",
+        "snowflake",
+        "sql",
+        "airflow"
+      ],
+      "industry": "logistics",
+      "has_repo": true
+    },
+    {
+      "key": "marketing-attribution-manufacturing",
+      "title": "Marketing funnel and attribution analysis (manufacturing)",
+      "skills": [
+        "google-analytics",
+        "bigquery",
+        "sql",
+        "python"
+      ],
+      "industry": "manufacturing",
+      "has_repo": false
+    },
+    {
+      "key": "ab-test-review-real-estate",
+      "title": "Checkout A/B test analysis for an real estate retailer",
+      "skills": [
+        "ab-testing",
+        "python",
+        "pandas",
+        "sql"
+      ],
+      "industry": "real estate",
+      "has_repo": false
+    },
+    {
+      "key": "finance-reporting-logistics",
+      "title": "Monthly finance reporting automation for a logistics firm",
+      "skills": [
+        "excel",
+        "powerbi",
+        "sql",
+        "etl",
+        "bigquery"
+      ],
+      "industry": "logistics",
+      "has_repo": false
+    },
+    {
+      "key": "crm-pipeline-legal",
+      "title": "CRM to warehouse ETL pipeline for a legal sales team",
+      "skills": [
+        "etl",
+        "airflow",
+        "python",
+        "bigquery"
+      ],
+      "industry": "legal",
+      "has_repo": false
+    },
+    {
+      "key": "ops-kpis-fintech",
+      "title": "Operations KPI dashboard for a fintech business",
+      "skills": [
+        "powerbi",
+        "sql",
+        "excel",
+        "pandas"
+      ],
+      "industry": "fintech",
+      "has_repo": true
+    },
+    {
+      "key": "data-cleanup-saas",
+      "title": "Customer data cleanup and dedup for a SaaS company",
+      "skills": [
+        "pandas",
+        "python",
+        "excel",
+        "snowflake"
+      ],
+      "industry": "SaaS",
+      "has_repo": false
+    }
+  ]
+}

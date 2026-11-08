@@ -1,0 +1,80 @@
+# Policy-as-code for the Compliance Guard. Adding a platform rule = adding an entry here.
+# check types:
+#   forbid_regex  - any match violates; action redact removes the match, block stops the draft
+#   expr          - safe boolean expression over {draft, job, verification, price}; false violates
+# applies_to: proposal | message
+version: 1
+rules:
+  - id: P1-contact
+    policy: P-1
+    applies_to: [proposal, message]
+    check:
+      type: forbid_regex
+      patterns:
+        - '[\w.+-]+@[\w-]+\.[\w.]+'
+        - '(?<!\$)(?<![\d,.])\+?\d[\d\s().-]{8,}\d'
+        - '\b(whats\s?app|telegram|skype|signal app|wa\.me|t\.me|discord)\b'
+    action: redact
+    message: Off-platform contact details removed (policy P-1).
+
+  - id: P1-payment
+    policy: P-1
+    applies_to: [proposal, message]
+    check:
+      type: forbid_regex
+      patterns:
+        - '\b(pay|payment|paid)\b[^.]{0,40}\b(outside|off)[- ]?(the )?(platform|upwork|gigsim)\b'
+        - '\b(crypto|usdt|bitcoin|gift ?cards?|western union|bank transfer)\b'
+    action: block
+    message: Mentions off-platform payment (policy P-1).
+
+  - id: P3-guarantee
+    policy: P-3
+    applies_to: [proposal, message]
+    check:
+      type: forbid_regex
+      patterns:
+        - '\bguarantee(d|s)?\b'
+        - '\b100\s?% (success|results|satisfaction)\b'
+        - '\brisk[- ]free\b'
+        - '\bmoney[- ]back\b'
+    action: redact
+    message: Outcome guarantee removed (policy P-3).
+
+  - id: P2-unsupported
+    policy: P-2
+    applies_to: [proposal]
+    check:
+      type: expr
+      expr: "verification.unsupported_after == 0"
+    action: block
+    message: Draft still contains claims not backed by portfolio evidence (policy P-2).
+
+  - id: P5-links
+    policy: P-5
+    applies_to: [proposal]
+    check:
+      type: expr
+      expr: "count_links(draft.text) <= 2"
+    action: block
+    message: Too many external links (policy P-5).
+
+  - id: P6-free-work
+    policy: P-6
+    applies_to: [proposal, message]
+    check:
+      type: forbid_regex
+      patterns:
+        - '\b(i will|i''ll|happy to) (build|do|complete) (the|a) (full|complete|whole) [^.]{0,40}(for free|free of charge|unpaid)\b'
+    action: block
+    message: Offers substantial unpaid work (policy P-6).
+
+  - id: P4-prompt-leak
+    policy: P-4
+    applies_to: [proposal, message]
+    check:
+      type: forbid_regex
+      patterns:
+        - '\b(system prompt|hidden instructions|as an ai (language )?model)\b'
+    action: block
+    message: Draft leaks automation internals (policy P-4).

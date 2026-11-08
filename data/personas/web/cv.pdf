@@ -1,0 +1,42 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [5 0 R 7 0 R] /Count 2 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Length 3620 >>
+stream
+BT /F1 10 Tf 14 TL 50 800 Td (# Bilal Khan - Full-Stack Web Developer) Tj T* () Tj T* (GitHub: github.com/bilal-builds) Tj T* () Tj T* (## Summary) Tj T* (Full-Stack Web Developer focused on shipping reliable, measurable results for clients.) Tj T* () Tj T* (## Skills) Tj T* (React, Next.js, TypeScript, Node.js, Express, Django, FastAPI, PostgreSQL, Redis, Celery,) Tj T* (GraphQL, Tailwind CSS, Stripe payments, WebSockets \(and more\)) Tj T* () Tj T* (## Selected projects) Tj T* (- Media upload and processing backend for a legal startup \(2026\): an upload service with) Tj T* (background processing and S3 storage; p95 upload latency down to 6 seconds. Tools: Django,) Tj T* (Celery, Redis. [github.com/bilal-builds/upload-pipeline]) Tj T* (- Containerised cloud migration for a fintech company \(2026\): moved a monolith to containers on) Tj T* (AWS with CI/CD; hosting cost down 69%. Tools: Docker, AWS, PostgreSQL. [github.com/bilal-) Tj T* (builds/devops-migration]) Tj T* (- Real-time support chat for a real estate platform \(2026\): live chat with typing indicators) Tj T* (and presence; handles 150000 concurrent users. Tools: WebSockets, Node.js, Redis.) Tj T* ([github.com/bilal-builds/realtime-chat-real-estate]) Tj T* (- GraphQL API consolidation for a manufacturing product \(2026\): one typed API replacing 2) Tj T* (legacy REST services; page payloads 78% smaller. Tools: GraphQL, Node.js, TypeScript.) Tj T* ([github.com/bilal-builds/graphql-api-manufacturing]) Tj T* (- Content portal with admin panel for a media publisher \(2025\): an editorial CMS with custom) Tj T* (workflows; editors publish 55% faster. Tools: Django, PostgreSQL, React. [github.com/bilal-) Tj T* (builds/cms-portal]) Tj T* (- Analytics dashboard SaaS for SaaS teams \(2025\): a multi-tenant dashboard with role-based) Tj T* (access; onboarded 1200 paying teams. Tools: React, TypeScript, Next.js. [github.com/bilal-) Tj T* (builds/saas-dashboard-saas]) Tj T* (- Checkout and subscription billing for an media store \(2025\): a new checkout with) Tj T* (subscriptions and dunning emails; checkout conversion up 65%. Tools: React, Stripe payments,) Tj T* (Node.js. [github.com/bilal-builds/checkout-revamp-media]) Tj T* (- Containerised cloud migration for a real estate company \(2025\): moved a monolith to) Tj T* (containers on AWS with CI/CD; hosting cost down 44%. Tools: Docker, AWS, PostgreSQL.) Tj T* ([portfolio/devops-migration-real-estate]) Tj T* (- Analytics dashboard SaaS for SaaS teams \(2024\): a multi-tenant dashboard with role-based) Tj T* (access; onboarded 800 paying teams. Tools: React, TypeScript, Next.js. [github.com/bilal-) Tj T* (builds/saas-dashboard]) Tj T* (- Checkout and subscription billing for an real estate store \(2024\): a new checkout with) Tj T* (subscriptions and dunning emails; checkout conversion up 67%. Tools: React, Stripe payments,) Tj T* (Node.js. [github.com/bilal-builds/checkout-revamp]) Tj T* (- Booking and scheduling web app for a legal clinic network \(2024\): online booking with) Tj T* (reminders and deposits; no-shows down 80%. Tools: Next.js, TypeScript, PostgreSQL.) Tj T* ([github.com/bilal-builds/booking-app]) Tj T* (- Content portal with admin panel for a edtech publisher \(2024\): an editorial CMS with custom) Tj T* (workflows; editors publish 58% faster. Tools: Django, PostgreSQL, React. [github.com/bilal-) Tj T* (builds/cms-portal-edtech]) Tj T* (- Async internal API for a SaaS operations team \(2023\): a typed internal API with caching and) Tj T* (background jobs; API p95 at 50 ms. Tools: FastAPI, Python, PostgreSQL. [github.com/bilal-) Tj T* ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 4 0 R /Resources << /Font << /F1 3 0 R >> >> >>
+endobj
+6 0 obj
+<< /Length 1278 >>
+stream
+BT /F1 10 Tf 14 TL 50 800 Td (builds/internal-api]) Tj T* (- Media upload and processing backend for a logistics startup \(2023\): an upload service with) Tj T* (background processing and S3 storage; p95 upload latency down to 3 seconds. Tools: Django,) Tj T* (Celery, Redis. [github.com/bilal-builds/upload-pipeline-logistics]) Tj T* (- Async internal API for a logistics operations team \(2023\): a typed internal API with caching) Tj T* (and background jobs; API p95 at 70 ms. Tools: FastAPI, Python, PostgreSQL. [portfolio/internal-) Tj T* (api-logistics]) Tj T* (- Real-time support chat for a edtech platform \(2022\): live chat with typing indicators and) Tj T* (presence; handles 20000 concurrent users. Tools: WebSockets, Node.js, Redis. [github.com/bilal-) Tj T* (builds/realtime-chat]) Tj T* (- GraphQL API consolidation for a SaaS product \(2022\): one typed API replacing 6 legacy REST) Tj T* (services; page payloads 86% smaller. Tools: GraphQL, Node.js, TypeScript. [github.com/bilal-) Tj T* (builds/graphql-api]) Tj T* (- Booking and scheduling web app for a legal clinic network \(2022\): online booking with) Tj T* (reminders and deposits; no-shows down 91%. Tools: Next.js, TypeScript, PostgreSQL.) Tj T* ([github.com/bilal-builds/booking-app-legal]) Tj T* ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 6 0 R /Resources << /Font << /F1 3 0 R >> >> >>
+endobj
+xref
+0 8
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000121 00000 n 
+0000000191 00000 n 
+0000003863 00000 n 
+0000003989 00000 n 
+0000005319 00000 n 
+trailer << /Size 8 /Root 1 0 R >>
+startxref
+5445
+%%EOF

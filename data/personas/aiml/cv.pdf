@@ -1,0 +1,42 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [5 0 R 7 0 R] /Count 2 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Length 3861 >>
+stream
+BT /F1 10 Tf 14 TL 50 800 Td (# Ayesha Raza - AI/ML Engineer) Tj T* () Tj T* (GitHub: github.com/ayesha-ml) Tj T* () Tj T* (## Summary) Tj T* (AI/ML Engineer focused on shipping reliable, measurable results for clients.) Tj T* () Tj T* (## Skills) Tj T* (Python, PyTorch, scikit-learn, Hugging Face Transformers, LangChain, LangGraph, RAG, Qdrant,) Tj T* (FAISS, OpenAI API, LoRA fine-tuning, OpenCV, YOLO object detection, MLflow, NLP, Time-series) Tj T* (forecasting, FastAPI \(and more\)) Tj T* () Tj T* (## Selected projects) Tj T* (- Invoice data extraction pipeline for a e-commerce firm \(2026\): an OCR and layout model that) Tj T* (extracts line items from scanned invoices; reduced manual entry by 66% across 800 invoices a) Tj T* (month. Tools: Python, OpenCV, PyTorch. [github.com/ayesha-ml/invoice-extractor]) Tj T* (- Real-time shelf monitoring with computer vision for media retail \(2026\): a detector that) Tj T* (flags empty shelves from store cameras; 71% detection mAP at 8 frames per second. Tools: YOLO) Tj T* (object detection, OpenCV, PyTorch. [portfolio/shelf-vision]) Tj T* (- Weekly demand forecasting for a logistics distributor \(2026\): store-level demand forecasts) Tj T* (with holiday effects; forecast error \(MAPE\) reduced to 67%. Tools: Time-series forecasting,) Tj T* (Python, pandas. [github.com/ayesha-ml/demand-forecast]) Tj T* (- Internal knowledge assistant for a e-commerce company \(2026\): a chat assistant that answers) Tj T* (staff questions from 800 internal documents; cut average search time from 5 minutes to 6) Tj T* (seconds. Tools: Python, LangChain, RAG. [portfolio/docs-assistant-e-commerce]) Tj T* (- Weekly demand forecasting for a manufacturing distributor \(2026\): store-level demand) Tj T* (forecasts with holiday effects; forecast error \(MAPE\) reduced to 78%. Tools: Time-series) Tj T* (forecasting, Python, pandas. [github.com/ayesha-ml/demand-forecast-manufacturing]) Tj T* (- Review sentiment API for a healthcare brand \(2026\): an API that scores customer reviews and) Tj T* (extracts complaint themes; processes 20000 reviews per day. Tools: NLP, Hugging Face) Tj T* (Transformers, FastAPI. [portfolio/sentiment-api-healthcare]) Tj T* (- Evaluation harness for an LLM chatbot \(legal\) \(2025\): an offline evaluation set and metrics) Tj T* (for answer faithfulness; caught 59% of regressions before release. Tools: Python, RAG,) Tj T* (LangChain. [github.com/ayesha-ml/rag-eval]) Tj T* (- Evaluation harness for an LLM chatbot \(media\) \(2025\): an offline evaluation set and metrics) Tj T* (for answer faithfulness; caught 76% of regressions before release. Tools: Python, RAG,) Tj T* (LangChain. [github.com/ayesha-ml/rag-eval-media]) Tj T* (- Support ticket triage with a fine-tuned language model \(media\) \(2024\): a fine-tuned) Tj T* (classifier that routes tickets to the right queue; routing accuracy of 83% on 800 tickets.) Tj T* (Tools: Hugging Face Transformers, LoRA fine-tuning, PyTorch. [github.com/ayesha-ml/ticket-) Tj T* (triage]) Tj T* (- Multi-agent document review workflow for a real estate team \(2024\): agents that review) Tj T* (contracts and flag risky clauses with human approval; review time down 90%. Tools: LangGraph,) Tj T* (Python, OpenAI API. [github.com/ayesha-ml/agent-workflow]) Tj T* (- Invoice data extraction pipeline for a media firm \(2024\): an OCR and layout model that) Tj T* (extracts line items from scanned invoices; reduced manual entry by 53% across 800 invoices a) Tj T* (month. Tools: Python, OpenCV, PyTorch. [github.com/ayesha-ml/invoice-extractor-media]) Tj T* (- Customer churn prediction for a fintech subscription business \(2024\): a churn model with) Tj T* (weekly scoring and retention playbooks; raised retention-campaign precision to 40%. Tools:) Tj T* (Python, scikit-learn, pandas. [portfolio/churn-model-fintech]) Tj T* ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 4 0 R /Resources << /Font << /F1 3 0 R >> >> >>
+endobj
+6 0 obj
+<< /Length 2198 >>
+stream
+BT /F1 10 Tf 14 TL 50 800 Td (- Real-time shelf monitoring with computer vision for healthcare retail \(2024\): a detector that) Tj T* (flags empty shelves from store cameras; 40% detection mAP at 4 frames per second. Tools: YOLO) Tj T* (object detection, OpenCV, PyTorch. [portfolio/shelf-vision-healthcare]) Tj T* (- Customer churn prediction for a edtech subscription business \(2023\): a churn model with) Tj T* (weekly scoring and retention playbooks; raised retention-campaign precision to 34%. Tools:) Tj T* (Python, scikit-learn, pandas. [portfolio/churn-model]) Tj T* (- Semantic product search for a legal marketplace \(2023\): embedding-based search over 20000) Tj T* (products; search click-through up 44%. Tools: Python, FAISS, Hugging Face Transformers.) Tj T* ([portfolio/semantic-search]) Tj T* (- Support ticket triage with a fine-tuned language model \(SaaS\) \(2023\): a fine-tuned classifier) Tj T* (that routes tickets to the right queue; routing accuracy of 43% on 800 tickets. Tools: Hugging) Tj T* (Face Transformers, LoRA fine-tuning, PyTorch. [github.com/ayesha-ml/ticket-triage-saas]) Tj T* (- Multi-agent document review workflow for a logistics team \(2023\): agents that review) Tj T* (contracts and flag risky clauses with human approval; review time down 87%. Tools: LangGraph,) Tj T* (Python, OpenAI API. [github.com/ayesha-ml/agent-workflow-logistics]) Tj T* (- Internal knowledge assistant for a edtech company \(2022\): a chat assistant that answers staff) Tj T* (questions from 1200 internal documents; cut average search time from 7 minutes to 16 seconds.) Tj T* (Tools: Python, LangChain, RAG. [github.com/ayesha-ml/docs-assistant]) Tj T* (- Review sentiment API for a fintech brand \(2022\): an API that scores customer reviews and) Tj T* (extracts complaint themes; processes 800 reviews per day. Tools: NLP, Hugging Face) Tj T* (Transformers, FastAPI. [github.com/ayesha-ml/sentiment-api]) Tj T* (- Semantic product search for a logistics marketplace \(2022\): embedding-based search over 1200) Tj T* (products; search click-through up 33%. Tools: Python, FAISS, Hugging Face Transformers.) Tj T* ([github.com/ayesha-ml/semantic-search-logistics]) Tj T* ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 6 0 R /Resources << /Font << /F1 3 0 R >> >> >>
+endobj
+xref
+0 8
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000121 00000 n 
+0000000191 00000 n 
+0000004104 00000 n 
+0000004230 00000 n 
+0000006480 00000 n 
+trailer << /Size 8 /Root 1 0 R >>
+startxref
+6606
+%%EOF

@@ -1,0 +1,266 @@
+{
+  "id": "web",
+  "name": "Bilal Khan",
+  "title": "Full-Stack Web Developer",
+  "github": "bilal-builds",
+  "floor_hourly": 35,
+  "min_fixed": 300,
+  "skills": [
+    "react",
+    "nextjs",
+    "typescript",
+    "nodejs",
+    "express",
+    "django",
+    "fastapi",
+    "postgres",
+    "redis",
+    "celery",
+    "graphql",
+    "tailwind",
+    "stripe",
+    "websockets",
+    "docker",
+    "aws",
+    "python"
+  ],
+  "category": "Web Development",
+  "projects": [
+    {
+      "key": "saas-dashboard",
+      "title": "Analytics dashboard SaaS for SaaS teams",
+      "skills": [
+        "react",
+        "typescript",
+        "nextjs",
+        "postgres",
+        "tailwind"
+      ],
+      "industry": "SaaS",
+      "has_repo": true
+    },
+    {
+      "key": "upload-pipeline",
+      "title": "Media upload and processing backend for a legal startup",
+      "skills": [
+        "django",
+        "celery",
+        "redis",
+        "postgres",
+        "aws"
+      ],
+      "industry": "legal",
+      "has_repo": true
+    },
+    {
+      "key": "checkout-revamp",
+      "title": "Checkout and subscription billing for an real estate store",
+      "skills": [
+        "react",
+        "stripe",
+        "nodejs",
+        "express",
+        "postgres",
+        "celery"
+      ],
+      "industry": "real estate",
+      "has_repo": true
+    },
+    {
+      "key": "realtime-chat",
+      "title": "Real-time support chat for a edtech platform",
+      "skills": [
+        "websockets",
+        "nodejs",
+        "redis",
+        "react"
+      ],
+      "industry": "edtech",
+      "has_repo": true
+    },
+    {
+      "key": "graphql-api",
+      "title": "GraphQL API consolidation for a SaaS product",
+      "skills": [
+        "graphql",
+        "nodejs",
+        "typescript",
+        "postgres",
+        "express"
+      ],
+      "industry": "SaaS",
+      "has_repo": true
+    },
+    {
+      "key": "booking-app",
+      "title": "Booking and scheduling web app for a legal clinic network",
+      "skills": [
+        "nextjs",
+        "typescript",
+        "postgres",
+        "tailwind",
+        "stripe",
+        "nodejs"
+      ],
+      "industry": "legal",
+      "has_repo": true
+    },
+    {
+      "key": "internal-api",
+      "title": "Async internal API for a SaaS operations team",
+      "skills": [
+        "fastapi",
+        "python",
+        "postgres",
+        "docker",
+        "redis",
+        "websockets"
+      ],
+      "industry": "SaaS",
+      "has_repo": true
+    },
+    {
+      "key": "devops-migration",
+      "title": "Containerised cloud migration for a fintech company",
+      "skills": [
+        "docker",
+        "aws",
+        "postgres",
+        "nodejs",
+        "nextjs"
+      ],
+      "industry": "fintech",
+      "has_repo": true
+    },
+    {
+      "key": "cms-portal",
+      "title": "Content portal with admin panel for a media publisher",
+      "skills": [
+        "django",
+        "postgres",
+        "react",
+        "tailwind"
+      ],
+      "industry": "media",
+      "has_repo": true
+    },
+    {
+      "key": "saas-dashboard-saas",
+      "title": "Analytics dashboard SaaS for SaaS teams",
+      "skills": [
+        "react",
+        "typescript",
+        "nextjs",
+        "postgres",
+        "tailwind"
+      ],
+      "industry": "SaaS",
+      "has_repo": true
+    },
+    {
+      "key": "upload-pipeline-logistics",
+      "title": "Media upload and processing backend for a logistics startup",
+      "skills": [
+        "django",
+        "celery",
+        "redis",
+        "postgres",
+        "aws"
+      ],
+      "industry": "logistics",
+      "has_repo": true
+    },
+    {
+      "key": "checkout-revamp-media",
+      "title": "Checkout and subscription billing for an media store",
+      "skills": [
+        "react",
+        "stripe",
+        "nodejs",
+        "express",
+        "postgres",
+        "typescript"
+      ],
+      "industry": "media",
+      "has_repo": true
+    },
+    {
+      "key": "realtime-chat-real-estate",
+      "title": "Real-time support chat for a real estate platform",
+      "skills": [
+        "websockets",
+        "nodejs",
+        "redis",
+        "react",
+        "fastapi"
+      ],
+      "industry": "real estate",
+      "has_repo": true
+    },
+    {
+      "key": "graphql-api-manufacturing",
+      "title": "GraphQL API consolidation for a manufacturing product",
+      "skills": [
+        "graphql",
+        "nodejs",
+        "typescript",
+        "postgres"
+      ],
+      "industry": "manufacturing",
+      "has_repo": true
+    },
+    {
+      "key": "booking-app-legal",
+      "title": "Booking and scheduling web app for a legal clinic network",
+      "skills": [
+        "nextjs",
+        "typescript",
+        "postgres",
+        "tailwind",
+        "stripe",
+        "python"
+      ],
+      "industry": "legal",
+      "has_repo": true
+    },
+    {
+      "key": "internal-api-logistics",
+      "title": "Async internal API for a logistics operations team",
+      "skills": [
+        "fastapi",
+        "python",
+        "postgres",
+        "docker",
+        "redis",
+        "nextjs"
+      ],
+      "industry": "logistics",
+      "has_repo": false
+    },
+    {
+      "key": "devops-migration-real-estate",
+      "title": "Containerised cloud migration for a real estate company",
+      "skills": [
+        "docker",
+        "aws",
+        "postgres",
+        "nodejs"
+      ],
+      "industry": "real estate",
+      "has_repo": false
+    },
+    {
+      "key": "cms-portal-edtech",
+      "title": "Content portal with admin panel for a edtech publisher",
+      "skills": [
+        "django",
+        "postgres",
+        "react",
+        "tailwind",
+        "redis"
+      ],
+      "industry": "edtech",
+      "has_repo": true
+    }
+  ]
+}

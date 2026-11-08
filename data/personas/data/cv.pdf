@@ -1,0 +1,42 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [5 0 R 7 0 R] /Count 2 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Length 3488 >>
+stream
+BT /F1 10 Tf 14 TL 50 800 Td (# Sara Ahmed - Data Analyst) Tj T* () Tj T* (GitHub: github.com/sara-analytics) Tj T* () Tj T* (## Summary) Tj T* (Data Analyst focused on shipping reliable, measurable results for clients.) Tj T* () Tj T* (## Skills) Tj T* (SQL, dbt, Snowflake, BigQuery, Apache Airflow, Tableau, Power BI, pandas, Excel, A/B testing) Tj T* (\(and more\)) Tj T* () Tj T* (## Selected projects) Tj T* (- Checkout A/B test analysis for an manufacturing retailer \(2026\): a rigorous readout of a) Tj T* (pricing-page experiment; identified a 76% conversion lift. Tools: A/B testing, Python, pandas.) Tj T* ([github.com/sara-analytics/ab-test-review]) Tj T* (- CRM to warehouse ETL pipeline for a legal sales team \(2026\): hourly syncs from the CRM into) Tj T* (BigQuery; 20000 records synced daily. Tools: ETL pipelines, Apache Airflow, Python.) Tj T* ([portfolio/crm-pipeline-legal]) Tj T* (- Customer data cleanup and dedup for a SaaS company \(2026\): a reproducible cleaning notebook) Tj T* (for 800 customer rows; duplicate rate cut to 5%. Tools: pandas, Python, Excel. [portfolio/data-) Tj T* (cleanup-saas]) Tj T* (- Warehouse modelling with dbt for a real estate startup \(2025\): 150000 tested dbt models with) Tj T* (documented lineage; data incidents down 24%. Tools: dbt, Snowflake, SQL. [github.com/sara-) Tj T* (analytics/warehouse-models]) Tj T* (- CRM to warehouse ETL pipeline for a real estate sales team \(2025\): hourly syncs from the CRM) Tj T* (into BigQuery; 1200 records synced daily. Tools: ETL pipelines, Apache Airflow, Python.) Tj T* ([portfolio/crm-pipeline]) Tj T* (- Operations KPI dashboard for a manufacturing business \(2025\): a KPI dashboard with targets) Tj T* (and alerts; 77% fewer missed SLAs. Tools: Power BI, SQL, Excel. [portfolio/ops-kpis]) Tj T* (- Customer data cleanup and dedup for a real estate company \(2025\): a reproducible cleaning) Tj T* (notebook for 20000 customer rows; duplicate rate cut to 9%. Tools: pandas, Python, Excel.) Tj T* ([portfolio/data-cleanup]) Tj T* (- Checkout A/B test analysis for an real estate retailer \(2025\): a rigorous readout of a) Tj T* (pricing-page experiment; identified a 54% conversion lift. Tools: A/B testing, Python, pandas.) Tj T* ([portfolio/ab-test-review-real-estate]) Tj T* (- Monthly finance reporting automation for a logistics firm \(2025\): automated board reports in) Tj T* (Power BI; close process 8 days shorter. Tools: Excel, Power BI, SQL. [portfolio/finance-) Tj T* (reporting-logistics]) Tj T* (- Executive sales dashboard for a media company \(2024\): a drill-down dashboard replacing 8) Tj T* (weekly spreadsheets; reporting time down 64%. Tools: Tableau, SQL, Snowflake. [github.com/sara-) Tj T* (analytics/sales-dashboard]) Tj T* (- Executive sales dashboard for a media company \(2024\): a drill-down dashboard replacing 9) Tj T* (weekly spreadsheets; reporting time down 56%. Tools: Tableau, SQL, Snowflake. [github.com/sara-) Tj T* (analytics/sales-dashboard-media]) Tj T* (- Warehouse modelling with dbt for a logistics startup \(2024\): 150000 tested dbt models with) Tj T* (documented lineage; data incidents down 64%. Tools: dbt, Snowflake, SQL. [github.com/sara-) Tj T* (analytics/warehouse-models-logistics]) Tj T* (- Monthly finance reporting automation for a fintech firm \(2023\): automated board reports in) Tj T* (Power BI; close process 3 days shorter. Tools: Excel, Power BI, SQL. [github.com/sara-) Tj T* (analytics/finance-reporting]) Tj T* ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 4 0 R /Resources << /Font << /F1 3 0 R >> >> >>
+endobj
+6 0 obj
+<< /Length 769 >>
+stream
+BT /F1 10 Tf 14 TL 50 800 Td (- Marketing funnel and attribution analysis \(manufacturing\) \(2023\): a funnel model from GA4) Tj T* (exports in BigQuery; reallocated 27% of ad spend. Tools: Google Analytics, BigQuery, SQL.) Tj T* ([portfolio/marketing-attribution-manufacturing]) Tj T* (- Operations KPI dashboard for a fintech business \(2023\): a KPI dashboard with targets and) Tj T* (alerts; 71% fewer missed SLAs. Tools: Power BI, SQL, Excel. [github.com/sara-analytics/ops-) Tj T* (kpis-fintech]) Tj T* (- Marketing funnel and attribution analysis \(e-commerce\) \(2022\): a funnel model from GA4) Tj T* (exports in BigQuery; reallocated 25% of ad spend. Tools: Google Analytics, BigQuery, SQL.) Tj T* ([github.com/sara-analytics/marketing-attribution]) Tj T* ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 6 0 R /Resources << /Font << /F1 3 0 R >> >> >>
+endobj
+xref
+0 8
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000121 00000 n 
+0000000191 00000 n 
+0000003731 00000 n 
+0000003857 00000 n 
+0000004677 00000 n 
+trailer << /Size 8 /Root 1 0 R >>
+startxref
+4803
+%%EOF
