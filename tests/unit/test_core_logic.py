@@ -32,7 +32,9 @@ def test_connects_cost_flat_and_tiered():
 def test_pacing_raises_threshold_when_budget_is_short():
     hist = [float(x) for x in range(1, 101)]
     base, _ = paced_threshold(hist, {}, 6, {"pacing": False})
-    tight, why = paced_threshold(hist, {"allowance": 120, "spent": 114, "balance": 6}, 6, {"pacing": True})
+    import datetime as dt
+    monday_noon = dt.datetime(2026, 11, 2, 12, 0)   # early in the week: many candidates still expected
+    tight, why = paced_threshold(hist, {"allowance": 120, "spent": 114, "balance": 6}, 6, {"pacing": True}, now=monday_noon)
     assert tight > base and "affordable" in why
 
 

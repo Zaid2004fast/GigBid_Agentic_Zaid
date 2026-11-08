@@ -56,13 +56,13 @@ def budget_ok(spec: JobSpec, settings: dict) -> bool:
     return True
 
 
-def paced_threshold(history: list[float], balance: dict, avg_cost: float, settings: dict) -> tuple[float, str]:
+def paced_threshold(history: list[float], balance: dict, avg_cost: float, settings: dict, now: dt.datetime | None = None) -> tuple[float, str]:
     base = cfg("decision.ev_threshold", 1.0)
     if not settings.get("pacing", True) or not balance:
         return base, "pacing off"
     allowance = max(1, balance.get("allowance", 100))
     spent = balance.get("spent", 0)
-    now = dt.datetime.now()
+    now = now or dt.datetime.now()
     elapsed = max(0.05, (now.weekday() * 24 + now.hour) / (7 * 24))
     remaining_bids = max(0.0, (allowance - spent) / max(1, avg_cost))
     expected_candidates = (len(history) / max(elapsed, 0.05)) * (1 - elapsed) if history else 0
