@@ -1,0 +1,157 @@
+# GigBid runtime configuration. Every model, threshold, budget and rule lives here,
+# never in code.  Values of the form ${VAR:-default} are read from the environment.
+
+active_profile: ${GIGBID_PROFILE:-open}
+
+marketplace:
+  mode: ${MARKETPLACE_MODE:-gigsim}          # gigsim | upwork_live  (R1: one port, two adapters)
+  gigsim_url: ${GIGSIM_URL:-http://localhost:8100}
+  upwork_mcp_url: https://mcp.upwork.com/mcp
+  live_scout_interval_minutes: 240            # justified in docs/RUNBOOK.md
+  gigsim_scout_interval_minutes: 30
+
+mcp:
+  transport: ${MCP_TRANSPORT:-inprocess}      # inprocess (tests/evals) | http (docker / prod)
+  servers:
+    portfolio:   {url: "${PORTFOLIO_MCP_URL:-http://localhost:8201/mcp}", timeout_s: 120}
+    marketplace: {url: "${MARKETPLACE_MCP_URL:-http://localhost:8202/mcp}", timeout_s: 20}
+    workspace:   {url: "${WORKSPACE_MCP_URL:-http://localhost:8203/mcp}"}
+    github:      {command: "npx", args: ["-y", "@modelcontextprotocol/server-github"], enabled: ${GITHUB_MCP_ENABLED:-false}}
+  timeout_s: 20
+  retries: 3
+  backoff_base_s: 0.5
+  circuit_breaker: {failures_to_open: 3, cooldown_s: 30}
+  # A6 client discipline: each agent sees only these tools (filtered by name)
+  allowlists:
+    scout:      [search_jobs, get_job]
+    risk:       [get_client_history]
+    matcher:    [search_evidence, list_skills, have_i_done, find_winning_proposals]
+    pricing:    [get_market_stats, get_connects_balance, get_policy]
+    writer:     [search_evidence, get_case_study, get_evidence, find_winning_proposals]
+    verifier:   [search_evidence, get_evidence]
+    critic:     [search_evidence, get_evidence]
+    liaison:    [list_threads, list_messages, send_message, free_slots, create_interview_hold, create_email_draft]
+    submitter:  [create_proposal_draft, submit_proposal]
+
+# ---------------------------------------------------------------- models
+# Route by node: cheap frequent nodes -> small model; writer/critic -> strongest affordable.
+profiles:
+  offline:   # deterministic, zero-cost; used by CI and as last-resort fallback
+    default: {provider: heuristic, model: rules-v1}
+    nodes: {}
+  open:
+    default: {provider: ollama, model: "${OLLAMA_SMALL_MODEL:-qwen3:1.7b}"}
+    nodes:
+      analyst:    {provider: ollama, model: "${OLLAMA_SMALL_MODEL:-qwen3:1.7b}", fallback: {provider: heuristic, model: rules-v1}}
+      risk:       {provider: ollama, model: "${OLLAMA_SMALL_MODEL:-qwen3:1.7b}", fallback: {provider: heuristic, model: rules-v1}}
+      intent:     {provider: ollama, model: "${OLLAMA_SMALL_MODEL:-qwen3:1.7b}", fallback: {provider: heuristic, model: rules-v1}}
+      compliance: {provider: heuristic, model: rules-v1}
+      writer:     {provider: "${WRITER_PROVIDER:-groq}", model: "${WRITER_MODEL:-openai/gpt-oss-120b}", fallback: {provider: ollama, model: "${OLLAMA_SMALL_MODEL:-qwen3:1.7b}"}}
+      critic:     {provider: "${WRITER_PROVIDER:-groq}", model: "${CRITIC_MODEL:-openai/gpt-oss-20b}", fallback: {provider: heuristic, model: rules-v1}}
+      verifier:   {provider: heuristic, model: rules-v1}
+      liaison:    {provider: "${WRITER_PROVIDER:-groq}", model: "${WRITER_MODEL:-openai/gpt-oss-120b}", fallback: {provider: heuristic, model: rules-v1}}
+      judge:      {provider: "${WRITER_PROVIDER:-groq}", model: "${JUDGE_MODEL:-openai/gpt-oss-120b}"}
+  open_local:  # second open configuration compared on the dev set (fully local, no network)
+    default: {provider: ollama, model: "${OLLAMA_SMALL_MODEL:-qwen3:1.7b}"}
+    nodes:
+      compliance: {provider: heuristic, model: rules-v1}
+      verifier:   {provider: heuristic, model: rules-v1}
+  paid:      # optional; only where it beats `open` enough to justify its cost
+    default: {provider: groq, model: openai/gpt-oss-20b}
+    nodes:
+      writer: {provider: openai, model: gpt-5-mini, fallback: {provider: groq, model: openai/gpt-oss-120b}}
+      critic: {provider: openai, model: gpt-5-mini}
+
+providers:
+  ollama: {base_url: "${OLLAMA_BASE_URL:-http://localhost:11434}"}
+  groq:   {base_url: https://api.groq.com/openai/v1, api_key_env: GROQ_API_KEY}
+  openrouter: {base_url: https://openrouter.ai/api/v1, api_key_env: OPENROUTER_API_KEY}
+  openai: {base_url: https://api.openai.com/v1, api_key_env: OPENAI_API_KEY}
+
+# USD per 1M tokens (input, output). Local models cost 0 USD; we report tokens/s + hardware instead.
+pricing_usd_per_mtok:
+  "openai/gpt-oss-20b": [0.075, 0.30]
+  "openai/gpt-oss-120b": [0.15, 0.60]
+  "gpt-5-mini": [0.25, 2.00]
+  default_local: [0.0, 0.0]
+
+embeddings: {provider: "${EMBED_PROVIDER:-fastembed}", model: "BAAI/bge-small-en-v1.5"}   # open model in every profile
+reranker:   {provider: "${RERANK_PROVIDER:-fastembed}", model: "Xenova/ms-marco-MiniLM-L-6-v2"}
+
+# ---------------------------------------------------------------- RAG
+rag:
+  # Chosen by measurement (see evals/results/rag_variants.json and docs/adr/0003-rag-choice.md)
+  variant: ${RAG_VARIANT:-best}
+  k: 8
+  chunk_size: 450
+  chunk_overlap: 60
+  rrf_k: 60
+  outcome_boost: 0.15
+  corrective: {min_score: 0.0, max_requery: 1}
+
+# ---------------------------------------------------------------- decision / pricing
+decision:
+  min_fit_bid: 0.55          # below -> skip
+  watch_band: [0.40, 0.55]   # fit inside -> watch
+  max_risk_bid: 0.55         # risk score above -> skip
+  scam_block: 0.6            # scam probability above -> hard skip
+  ev_threshold: 1.0          # expected-value / connects-cost ratio needed to bid (before pacing)
+  pacing_strength: 1.5       # how hard the threshold rises when spending ahead of schedule
+  avg_contract_value_usd: {"AI & Machine Learning": 1800, "Web Development": 1400, "Data Analytics": 900, "Other": 600}
+  connect_price_usd: 0.15
+
+pricing:
+  # Connects cost model. v1 = flat. The 2 Nov "platform policy update" is absorbed here
+  # (see docs/EXTENSION.md#change-request and the diff in the report).
+  connects:
+    formula: flat                  # flat | tiered
+    flat: 6
+    tiers:                         # used when formula == tiered (GigSim policy v2)
+      - {max_budget: 500, cost: 4}
+      - {max_budget: 2000, cost: 8}
+      - {max_budget: 1.0e12, cost: 12}
+    sync_from_marketplace: true    # prefer the live value from get_policy() when available
+  undercut_ceiling_ratio: 0.95
+  market_percentile_target: 0.55
+
+# ---------------------------------------------------------------- writer / critic / loops
+writer:
+  target_words: [120, 230]
+  max_evidence_per_claim: 2
+critic:
+  max_revisions: 2
+  min_personalisation: 0.5
+budgets:
+  per_thread_steps: 40
+  per_thread_tokens: 60000
+  declared:                       # R8 / E5 declared budgets
+    p95_latency_s_job_analysed: 20
+    p95_latency_s_proposal: 60
+    usd_per_job_analysed: 0.002
+    usd_per_proposal: 0.01
+
+node_timeouts_s:            # C7 per-node timeouts (LangGraph add_node(timeout=...))
+  default: 180
+  intake: 60
+  analyst: 120
+  risk: 90
+  matcher: 120
+  decide: 60
+  writer: 240
+  critic: 150
+  submit: 90
+
+autonomy:
+  default_level: suggest          # suggest | auto_skip   (never auto_send)
+  auto_skip_below_fit: 0.25
+
+memory:
+  style_promotion: {min_occurrences: 3, min_distinct_jobs: 2, max_age_days: 60}
+  outcome_promotion: {min_samples: 5, prior_alpha: 1, prior_beta: 3}
+
+guardrails:
+  datamark: "^"                   # spotlighting marker interleaved into untrusted text
+  injection_block_threshold: 0.5
+  pii_mask: true
+
+policy_pack: data/policy_pack/rules.yaml
