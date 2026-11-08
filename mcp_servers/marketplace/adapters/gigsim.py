@@ -42,6 +42,10 @@ class GigSimAdapter:
         self._client: httpx.AsyncClient | None = None
 
     def client(self) -> httpx.AsyncClient:
+        loop = asyncio.get_running_loop()
+        if self._client is not None and getattr(self, "_loop", None) is not loop:
+            self._client = None   # an httpx client is bound to the loop that created it
+        self._loop = loop
         if self._client is None or self._client.is_closed:
             if self.base == "inprocess":   # tests / evals: GigSim app in the same process
                 from gigsim.app import app as gigsim_app

@@ -1,0 +1,666 @@
+{
+ "find_winning_proposals": {
+  "annotations": {
+   "destructiveHint": false,
+   "idempotentHint": true,
+   "openWorldHint": false,
+   "readOnlyHint": true
+  },
+  "input": {
+   "properties": {
+    "job_summary": {
+     "maxLength": 600,
+     "minLength": 3,
+     "title": "Job Summary",
+     "type": "string"
+    },
+    "k": {
+     "default": 2,
+     "maximum": 5,
+     "minimum": 1,
+     "title": "K",
+     "type": "integer"
+    }
+   },
+   "required": [
+    "job_summary"
+   ],
+   "title": "find_winning_proposalsArguments",
+   "type": "object"
+  },
+  "output": {
+   "properties": {
+    "items": {
+     "items": {
+      "additionalProperties": true,
+      "type": "object"
+     },
+     "title": "Items",
+     "type": "array"
+    }
+   },
+   "required": [
+    "items"
+   ],
+   "title": "WinningProposals",
+   "type": "object"
+  }
+ },
+ "get_case_study": {
+  "annotations": {
+   "destructiveHint": false,
+   "idempotentHint": true,
+   "openWorldHint": false,
+   "readOnlyHint": true
+  },
+  "input": {
+   "properties": {
+    "id": {
+     "description": "Project key or item id (persona:cs:key)",
+     "maxLength": 120,
+     "minLength": 1,
+     "title": "Id",
+     "type": "string"
+    }
+   },
+   "required": [
+    "id"
+   ],
+   "title": "get_case_studyArguments",
+   "type": "object"
+  },
+  "output": {
+   "properties": {
+    "client_industry": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Client Industry"
+    },
+    "date": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Date"
+    },
+    "id": {
+     "title": "Id",
+     "type": "string"
+    },
+    "markdown": {
+     "title": "Markdown",
+     "type": "string"
+    },
+    "project": {
+     "title": "Project",
+     "type": "string"
+    },
+    "related_items": {
+     "items": {
+      "type": "string"
+     },
+     "title": "Related Items",
+     "type": "array"
+    },
+    "skills": {
+     "items": {
+      "type": "string"
+     },
+     "title": "Skills",
+     "type": "array"
+    },
+    "title": {
+     "title": "Title",
+     "type": "string"
+    }
+   },
+   "required": [
+    "id",
+    "title",
+    "project",
+    "client_industry",
+    "date",
+    "skills",
+    "markdown",
+    "related_items"
+   ],
+   "title": "CaseStudy",
+   "type": "object"
+  }
+ },
+ "get_evidence": {
+  "annotations": {
+   "destructiveHint": false,
+   "idempotentHint": true,
+   "openWorldHint": false,
+   "readOnlyHint": true
+  },
+  "input": {
+   "properties": {
+    "item_ids": {
+     "description": "Evidence item ids to load",
+     "items": {
+      "type": "string"
+     },
+     "maxItems": 10,
+     "minItems": 1,
+     "title": "Item Ids",
+     "type": "array"
+    }
+   },
+   "required": [
+    "item_ids"
+   ],
+   "title": "get_evidenceArguments",
+   "type": "object"
+  },
+  "output": {
+   "$defs": {
+    "EvidenceDetail": {
+     "properties": {
+      "industry": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "Industry"
+      },
+      "item_id": {
+       "title": "Item Id",
+       "type": "string"
+      },
+      "project": {
+       "title": "Project",
+       "type": "string"
+      },
+      "project_skills": {
+       "items": {
+        "type": "string"
+       },
+       "title": "Project Skills",
+       "type": "array"
+      },
+      "text": {
+       "title": "Text",
+       "type": "string"
+      },
+      "title": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "Title"
+      },
+      "type": {
+       "title": "Type",
+       "type": "string"
+      }
+     },
+     "required": [
+      "item_id",
+      "type",
+      "project",
+      "title",
+      "text",
+      "project_skills",
+      "industry"
+     ],
+     "title": "EvidenceDetail",
+     "type": "object"
+    }
+   },
+   "properties": {
+    "items": {
+     "items": {
+      "$ref": "#/$defs/EvidenceDetail"
+     },
+     "title": "Items",
+     "type": "array"
+    }
+   },
+   "required": [
+    "items"
+   ],
+   "title": "EvidenceBundle",
+   "type": "object"
+  }
+ },
+ "have_i_done": {
+  "annotations": {
+   "destructiveHint": false,
+   "idempotentHint": true,
+   "openWorldHint": false,
+   "readOnlyHint": true
+  },
+  "input": {
+   "properties": {
+    "industry": {
+     "anyOf": [
+      {
+       "maxLength": 40,
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Industry"
+    },
+    "skill": {
+     "maxLength": 60,
+     "minLength": 1,
+     "title": "Skill",
+     "type": "string"
+    }
+   },
+   "required": [
+    "skill"
+   ],
+   "title": "have_i_doneArguments",
+   "type": "object"
+  },
+  "output": {
+   "properties": {
+    "answer": {
+     "title": "Answer",
+     "type": "boolean"
+    },
+    "industry": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Industry"
+    },
+    "projects": {
+     "items": {
+      "additionalProperties": true,
+      "type": "object"
+     },
+     "title": "Projects",
+     "type": "array"
+    },
+    "skill": {
+     "title": "Skill",
+     "type": "string"
+    }
+   },
+   "required": [
+    "skill",
+    "industry",
+    "answer",
+    "projects"
+   ],
+   "title": "HaveIDone",
+   "type": "object"
+  }
+ },
+ "list_skills": {
+  "annotations": {
+   "destructiveHint": false,
+   "idempotentHint": true,
+   "openWorldHint": false,
+   "readOnlyHint": true
+  },
+  "input": {
+   "properties": {},
+   "title": "list_skillsArguments",
+   "type": "object"
+  },
+  "output": {
+   "$defs": {
+    "SkillEntry": {
+     "properties": {
+      "name": {
+       "title": "Name",
+       "type": "string"
+      },
+      "projects": {
+       "items": {
+        "type": "string"
+       },
+       "title": "Projects",
+       "type": "array"
+      },
+      "skill": {
+       "title": "Skill",
+       "type": "string"
+      },
+      "strength": {
+       "description": "Sum of independent sources confirming the skill",
+       "title": "Strength",
+       "type": "number"
+      }
+     },
+     "required": [
+      "skill",
+      "name",
+      "projects",
+      "strength"
+     ],
+     "title": "SkillEntry",
+     "type": "object"
+    }
+   },
+   "properties": {
+    "persona": {
+     "title": "Persona",
+     "type": "string"
+    },
+    "skills": {
+     "items": {
+      "$ref": "#/$defs/SkillEntry"
+     },
+     "title": "Skills",
+     "type": "array"
+    }
+   },
+   "required": [
+    "persona",
+    "skills"
+   ],
+   "title": "SkillList",
+   "type": "object"
+  }
+ },
+ "search_evidence": {
+  "annotations": {
+   "destructiveHint": false,
+   "idempotentHint": true,
+   "openWorldHint": false,
+   "readOnlyHint": true
+  },
+  "input": {
+   "$defs": {
+    "EvidenceFilters": {
+     "properties": {
+      "industry": {
+       "anyOf": [
+        {
+         "maxLength": 40,
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "default": null,
+       "title": "Industry"
+      },
+      "outcome": {
+       "anyOf": [
+        {
+         "enum": [
+          "won",
+          "replied",
+          "ignored"
+         ],
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "default": null,
+       "title": "Outcome"
+      },
+      "persona": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "default": null,
+       "description": "Portfolio owner id; defaults to the caller's persona",
+       "title": "Persona"
+      },
+      "since": {
+       "anyOf": [
+        {
+         "pattern": "^\\d{4}(-\\d{2})?$",
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "default": null,
+       "description": "Only evidence dated on/after YYYY or YYYY-MM",
+       "title": "Since"
+      },
+      "types": {
+       "anyOf": [
+        {
+         "items": {
+          "enum": [
+           "case_study",
+           "cv",
+           "repo_readme",
+           "repo_code",
+           "review",
+           "proposal"
+          ],
+          "type": "string"
+         },
+         "type": "array"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "default": null,
+       "description": "Restrict to these evidence types",
+       "title": "Types"
+      }
+     },
+     "title": "EvidenceFilters",
+     "type": "object"
+    }
+   },
+   "properties": {
+    "filters": {
+     "anyOf": [
+      {
+       "$ref": "#/$defs/EvidenceFilters"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null
+    },
+    "k": {
+     "default": 5,
+     "maximum": 20,
+     "minimum": 1,
+     "title": "K",
+     "type": "integer"
+    },
+    "requirement": {
+     "description": "One job requirement, e.g. 'Celery background workers'",
+     "maxLength": 400,
+     "minLength": 2,
+     "title": "Requirement",
+     "type": "string"
+    }
+   },
+   "required": [
+    "requirement"
+   ],
+   "title": "search_evidenceArguments",
+   "type": "object"
+  },
+  "output": {
+   "$defs": {
+    "EvidenceItem": {
+     "properties": {
+      "client_industry": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "default": null,
+       "title": "Client Industry"
+      },
+      "date": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "Date"
+      },
+      "item_id": {
+       "description": "Stable id, e.g. aiml:cs:docs-assistant; use with get_case_study or resources",
+       "title": "Item Id",
+       "type": "string"
+      },
+      "outcome": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "default": null,
+       "description": "For past proposals: won | replied | ignored",
+       "title": "Outcome"
+      },
+      "project": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "Project"
+      },
+      "score": {
+       "title": "Score",
+       "type": "number"
+      },
+      "snippet": {
+       "title": "Snippet",
+       "type": "string"
+      },
+      "source": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "Source"
+      },
+      "support": {
+       "description": "0-1: share of the requirement's skills this project is proven to have",
+       "title": "Support",
+       "type": "number"
+      },
+      "title": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "Title"
+      },
+      "type": {
+       "title": "Type",
+       "type": "string"
+      }
+     },
+     "required": [
+      "item_id",
+      "type",
+      "source",
+      "date",
+      "project",
+      "title",
+      "snippet",
+      "score",
+      "support"
+     ],
+     "title": "EvidenceItem",
+     "type": "object"
+    }
+   },
+   "properties": {
+    "items": {
+     "items": {
+      "$ref": "#/$defs/EvidenceItem"
+     },
+     "title": "Items",
+     "type": "array"
+    },
+    "requirement": {
+     "title": "Requirement",
+     "type": "string"
+    },
+    "status": {
+     "enum": [
+      "supported",
+      "partial",
+      "none"
+     ],
+     "title": "Status",
+     "type": "string"
+    },
+    "variant": {
+     "title": "Variant",
+     "type": "string"
+    }
+   },
+   "required": [
+    "requirement",
+    "variant",
+    "status",
+    "items"
+   ],
+   "title": "SearchEvidenceResult",
+   "type": "object"
+  }
+ }
+}

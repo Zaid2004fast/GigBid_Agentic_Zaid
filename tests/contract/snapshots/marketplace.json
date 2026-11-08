@@ -1,0 +1,616 @@
+{
+ "create_proposal_draft": {
+  "annotations": {
+   "destructiveHint": false,
+   "idempotentHint": true,
+   "openWorldHint": true,
+   "readOnlyHint": false
+  },
+  "input": {
+   "$defs": {
+    "ProposalDraftIn": {
+     "properties": {
+      "bid_amount": {
+       "exclusiveMinimum": 0,
+       "maximum": 1000000,
+       "title": "Bid Amount",
+       "type": "number"
+      },
+      "cover_letter": {
+       "maxLength": 5000,
+       "minLength": 50,
+       "title": "Cover Letter",
+       "type": "string"
+      },
+      "dry_run": {
+       "default": false,
+       "title": "Dry Run",
+       "type": "boolean"
+      },
+      "idempotency_key": {
+       "description": "Unique per logical action; retries with the same key are no-ops",
+       "maxLength": 128,
+       "minLength": 8,
+       "pattern": "^[A-Za-z0-9:_\\-.]+$",
+       "title": "Idempotency Key",
+       "type": "string"
+      },
+      "job_id": {
+       "maxLength": 64,
+       "minLength": 3,
+       "title": "Job Id",
+       "type": "string"
+      },
+      "screening_answers": {
+       "items": {
+        "type": "string"
+       },
+       "maxItems": 10,
+       "title": "Screening Answers",
+       "type": "array"
+      }
+     },
+     "required": [
+      "job_id",
+      "cover_letter",
+      "bid_amount",
+      "idempotency_key"
+     ],
+     "title": "ProposalDraftIn",
+     "type": "object"
+    }
+   },
+   "properties": {
+    "proposal": {
+     "$ref": "#/$defs/ProposalDraftIn"
+    }
+   },
+   "required": [
+    "proposal"
+   ],
+   "title": "create_proposal_draftArguments",
+   "type": "object"
+  },
+  "output": {
+   "properties": {
+    "connects_balance_after": {
+     "anyOf": [
+      {
+       "type": "integer"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Connects Balance After"
+    },
+    "connects_cost": {
+     "default": 0,
+     "title": "Connects Cost",
+     "type": "integer"
+    },
+    "idempotency_key": {
+     "title": "Idempotency Key",
+     "type": "string"
+    },
+    "preview": {
+     "additionalProperties": true,
+     "description": "Exactly what is/would be sent",
+     "title": "Preview",
+     "type": "object"
+    },
+    "result": {
+     "additionalProperties": true,
+     "title": "Result",
+     "type": "object"
+    },
+    "status": {
+     "enum": [
+      "dry_run",
+      "draft_created",
+      "submitted",
+      "sent",
+      "replayed"
+     ],
+     "title": "Status",
+     "type": "string"
+    }
+   },
+   "required": [
+    "status",
+    "idempotency_key"
+   ],
+   "title": "WriteResult",
+   "type": "object"
+  }
+ },
+ "get_client_history": {
+  "annotations": {
+   "destructiveHint": false,
+   "idempotentHint": true,
+   "openWorldHint": true,
+   "readOnlyHint": true
+  },
+  "input": {
+   "properties": {
+    "client_id": {
+     "maxLength": 64,
+     "minLength": 3,
+     "title": "Client Id",
+     "type": "string"
+    }
+   },
+   "required": [
+    "client_id"
+   ],
+   "title": "get_client_historyArguments",
+   "type": "object"
+  },
+  "output": {
+   "additionalProperties": true,
+   "title": "get_client_historyDictOutput",
+   "type": "object"
+  }
+ },
+ "get_connects_balance": {
+  "annotations": {
+   "destructiveHint": false,
+   "idempotentHint": true,
+   "openWorldHint": true,
+   "readOnlyHint": true
+  },
+  "input": {
+   "properties": {},
+   "title": "get_connects_balanceArguments",
+   "type": "object"
+  },
+  "output": {
+   "additionalProperties": true,
+   "title": "get_connects_balanceDictOutput",
+   "type": "object"
+  }
+ },
+ "get_job": {
+  "annotations": {
+   "destructiveHint": false,
+   "idempotentHint": true,
+   "openWorldHint": true,
+   "readOnlyHint": true
+  },
+  "input": {
+   "properties": {
+    "job_id": {
+     "maxLength": 64,
+     "minLength": 3,
+     "title": "Job Id",
+     "type": "string"
+    }
+   },
+   "required": [
+    "job_id"
+   ],
+   "title": "get_jobArguments",
+   "type": "object"
+  },
+  "output": {
+   "additionalProperties": true,
+   "title": "get_jobDictOutput",
+   "type": "object"
+  }
+ },
+ "get_market_stats": {
+  "annotations": {
+   "destructiveHint": false,
+   "idempotentHint": true,
+   "openWorldHint": true,
+   "readOnlyHint": true
+  },
+  "input": {
+   "properties": {
+    "budget_type": {
+     "default": "fixed",
+     "enum": [
+      "fixed",
+      "hourly"
+     ],
+     "title": "Budget Type",
+     "type": "string"
+    },
+    "category": {
+     "maxLength": 60,
+     "minLength": 2,
+     "title": "Category",
+     "type": "string"
+    }
+   },
+   "required": [
+    "category"
+   ],
+   "title": "get_market_statsArguments",
+   "type": "object"
+  },
+  "output": {
+   "additionalProperties": true,
+   "title": "get_market_statsDictOutput",
+   "type": "object"
+  }
+ },
+ "get_policy": {
+  "annotations": {
+   "destructiveHint": false,
+   "idempotentHint": true,
+   "openWorldHint": true,
+   "readOnlyHint": true
+  },
+  "input": {
+   "properties": {},
+   "title": "get_policyArguments",
+   "type": "object"
+  },
+  "output": {
+   "additionalProperties": true,
+   "title": "get_policyDictOutput",
+   "type": "object"
+  }
+ },
+ "list_events": {
+  "annotations": {
+   "destructiveHint": false,
+   "idempotentHint": true,
+   "openWorldHint": true,
+   "readOnlyHint": true
+  },
+  "input": {
+   "properties": {
+    "since": {
+     "default": -1e+18,
+     "title": "Since",
+     "type": "number"
+    }
+   },
+   "title": "list_eventsArguments",
+   "type": "object"
+  },
+  "output": {
+   "additionalProperties": true,
+   "title": "list_eventsDictOutput",
+   "type": "object"
+  }
+ },
+ "list_messages": {
+  "annotations": {
+   "destructiveHint": false,
+   "idempotentHint": true,
+   "openWorldHint": true,
+   "readOnlyHint": true
+  },
+  "input": {
+   "properties": {
+    "thread_id": {
+     "maxLength": 80,
+     "minLength": 3,
+     "title": "Thread Id",
+     "type": "string"
+    }
+   },
+   "required": [
+    "thread_id"
+   ],
+   "title": "list_messagesArguments",
+   "type": "object"
+  },
+  "output": {
+   "additionalProperties": true,
+   "title": "list_messagesDictOutput",
+   "type": "object"
+  }
+ },
+ "list_threads": {
+  "annotations": {
+   "destructiveHint": false,
+   "idempotentHint": true,
+   "openWorldHint": true,
+   "readOnlyHint": true
+  },
+  "input": {
+   "properties": {},
+   "title": "list_threadsArguments",
+   "type": "object"
+  },
+  "output": {
+   "additionalProperties": true,
+   "title": "list_threadsDictOutput",
+   "type": "object"
+  }
+ },
+ "search_jobs": {
+  "annotations": {
+   "destructiveHint": false,
+   "idempotentHint": true,
+   "openWorldHint": true,
+   "readOnlyHint": true
+  },
+  "input": {
+   "properties": {
+    "category": {
+     "default": "",
+     "maxLength": 60,
+     "title": "Category",
+     "type": "string"
+    },
+    "limit": {
+     "default": 20,
+     "maximum": 100,
+     "minimum": 1,
+     "title": "Limit",
+     "type": "integer"
+    },
+    "query": {
+     "default": "",
+     "maxLength": 200,
+     "title": "Query",
+     "type": "string"
+    },
+    "since": {
+     "anyOf": [
+      {
+       "type": "number"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "description": "only jobs posted after this sim time",
+     "title": "Since"
+    },
+    "skills": {
+     "default": "",
+     "description": "comma-separated",
+     "maxLength": 200,
+     "title": "Skills",
+     "type": "string"
+    },
+    "split": {
+     "default": "live",
+     "enum": [
+      "live",
+      "dev"
+     ],
+     "title": "Split",
+     "type": "string"
+    }
+   },
+   "title": "search_jobsArguments",
+   "type": "object"
+  },
+  "output": {
+   "additionalProperties": true,
+   "title": "search_jobsDictOutput",
+   "type": "object"
+  }
+ },
+ "send_message": {
+  "annotations": {
+   "destructiveHint": true,
+   "idempotentHint": true,
+   "openWorldHint": true,
+   "readOnlyHint": false
+  },
+  "input": {
+   "$defs": {
+    "MessageIn": {
+     "properties": {
+      "dry_run": {
+       "default": false,
+       "title": "Dry Run",
+       "type": "boolean"
+      },
+      "idempotency_key": {
+       "description": "Unique per logical action; retries with the same key are no-ops",
+       "maxLength": 128,
+       "minLength": 8,
+       "pattern": "^[A-Za-z0-9:_\\-.]+$",
+       "title": "Idempotency Key",
+       "type": "string"
+      },
+      "text": {
+       "maxLength": 3000,
+       "minLength": 1,
+       "title": "Text",
+       "type": "string"
+      },
+      "thread_id": {
+       "maxLength": 80,
+       "minLength": 3,
+       "title": "Thread Id",
+       "type": "string"
+      }
+     },
+     "required": [
+      "thread_id",
+      "text",
+      "idempotency_key"
+     ],
+     "title": "MessageIn",
+     "type": "object"
+    }
+   },
+   "properties": {
+    "message": {
+     "$ref": "#/$defs/MessageIn"
+    }
+   },
+   "required": [
+    "message"
+   ],
+   "title": "send_messageArguments",
+   "type": "object"
+  },
+  "output": {
+   "properties": {
+    "connects_balance_after": {
+     "anyOf": [
+      {
+       "type": "integer"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Connects Balance After"
+    },
+    "connects_cost": {
+     "default": 0,
+     "title": "Connects Cost",
+     "type": "integer"
+    },
+    "idempotency_key": {
+     "title": "Idempotency Key",
+     "type": "string"
+    },
+    "preview": {
+     "additionalProperties": true,
+     "description": "Exactly what is/would be sent",
+     "title": "Preview",
+     "type": "object"
+    },
+    "result": {
+     "additionalProperties": true,
+     "title": "Result",
+     "type": "object"
+    },
+    "status": {
+     "enum": [
+      "dry_run",
+      "draft_created",
+      "submitted",
+      "sent",
+      "replayed"
+     ],
+     "title": "Status",
+     "type": "string"
+    }
+   },
+   "required": [
+    "status",
+    "idempotency_key"
+   ],
+   "title": "WriteResult",
+   "type": "object"
+  }
+ },
+ "submit_proposal": {
+  "annotations": {
+   "destructiveHint": true,
+   "idempotentHint": true,
+   "openWorldHint": true,
+   "readOnlyHint": false
+  },
+  "input": {
+   "$defs": {
+    "SubmitIn": {
+     "properties": {
+      "dry_run": {
+       "default": false,
+       "title": "Dry Run",
+       "type": "boolean"
+      },
+      "idempotency_key": {
+       "description": "Unique per logical action; retries with the same key are no-ops",
+       "maxLength": 128,
+       "minLength": 8,
+       "pattern": "^[A-Za-z0-9:_\\-.]+$",
+       "title": "Idempotency Key",
+       "type": "string"
+      },
+      "job_id": {
+       "maxLength": 64,
+       "minLength": 3,
+       "title": "Job Id",
+       "type": "string"
+      },
+      "proposal_id": {
+       "maxLength": 64,
+       "minLength": 3,
+       "title": "Proposal Id",
+       "type": "string"
+      }
+     },
+     "required": [
+      "proposal_id",
+      "job_id",
+      "idempotency_key"
+     ],
+     "title": "SubmitIn",
+     "type": "object"
+    }
+   },
+   "properties": {
+    "submission": {
+     "$ref": "#/$defs/SubmitIn"
+    }
+   },
+   "required": [
+    "submission"
+   ],
+   "title": "submit_proposalArguments",
+   "type": "object"
+  },
+  "output": {
+   "properties": {
+    "connects_balance_after": {
+     "anyOf": [
+      {
+       "type": "integer"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Connects Balance After"
+    },
+    "connects_cost": {
+     "default": 0,
+     "title": "Connects Cost",
+     "type": "integer"
+    },
+    "idempotency_key": {
+     "title": "Idempotency Key",
+     "type": "string"
+    },
+    "preview": {
+     "additionalProperties": true,
+     "description": "Exactly what is/would be sent",
+     "title": "Preview",
+     "type": "object"
+    },
+    "result": {
+     "additionalProperties": true,
+     "title": "Result",
+     "type": "object"
+    },
+    "status": {
+     "enum": [
+      "dry_run",
+      "draft_created",
+      "submitted",
+      "sent",
+      "replayed"
+     ],
+     "title": "Status",
+     "type": "string"
+    }
+   },
+   "required": [
+    "status",
+    "idempotency_key"
+   ],
+   "title": "WriteResult",
+   "type": "object"
+  }
+ }
+}
