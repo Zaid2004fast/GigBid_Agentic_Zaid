@@ -1,0 +1,30 @@
+{
+ "meta": {
+  "generated_at": "2026-11-08T16:25:35",
+  "jobs": 60,
+  "gigsim_policy": 2,
+  "p7_rule_present": true
+ },
+ "connects_cost_prediction_errors": {
+  "before_config_only": 60,
+  "after_synced_from_get_policy": 0
+ },
+ "missing_answer_proposals": {
+  "n": 60,
+  "blocked_by_compliance_before": 0,
+  "rejected_by_gigsim_before": 60,
+  "blocked_by_compliance_after": 60,
+  "rejected_by_gigsim_after": 0
+ },
+ "diff": {
+  "commit": "3080b70",
+  "files": [
+   "agent/config.yaml",
+   "data/policy_pack/policy.md",
+   "data/policy_pack/rules.yaml"
+  ],
+  "lines_added": 16,
+  "lines_removed": 3,
+  "code_files_touched": []
+ }
+}
