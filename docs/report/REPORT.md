@@ -189,7 +189,22 @@ applied to every final proposal (`multiagent_compare.json`).
 | (b) langgraph-supervisor | {{multiagent_compare.json:systems.supervisor.summary.bid_skip_accuracy}} | {{multiagent_compare.json:systems.supervisor.summary.scams_bid_on|int}} | {{multiagent_compare.json:systems.supervisor.summary.unsupported_per_proposal}} | {{multiagent_compare.json:systems.supervisor.summary.compliance_violations_sent|int}} | {{multiagent_compare.json:systems.supervisor.summary.reply_rate}} | {{multiagent_compare.json:systems.supervisor.summary.tokens_per_job|0}} | {{multiagent_compare.json:systems.supervisor.summary.p95_latency_s|1}} |
 | (c) GigBid graph | {{multiagent_compare.json:systems.graph.summary.bid_skip_accuracy}} | {{multiagent_compare.json:systems.graph.summary.scams_bid_on|int}} | {{multiagent_compare.json:systems.graph.summary.unsupported_per_proposal}} | {{multiagent_compare.json:systems.graph.summary.compliance_violations_sent|int}} | {{multiagent_compare.json:systems.graph.summary.reply_rate}} | {{multiagent_compare.json:systems.graph.summary.tokens_per_job|0}} | {{multiagent_compare.json:systems.graph.summary.p95_latency_s|1}} |
 
-<!--C-CONCLUSION-->
+**Reading.** The graph wins on every axis that matters for the product: no scams bid on, no unsupported claims,
+and about 10× lower latency. **Fairness caveat:** the graph ran on the deterministic `offline` profile, which is how it
+is evaluated in CI, while (a) and (b) need an LLM for every step. The comparison is therefore "a designed pipeline
+vs a capable-model-free agent", and part of the graph's advantage is not needing the small model to reason. The
+ReAct agent bid on almost everything: it skipped only when the post screamed scam, and still bid on 4 scams with
+off-platform payment requests. The supervisor submitted 13 proposals and earned no replies. Our hypothesis, not yet verified because
+the runner did not keep the texts, is that its final message is the supervisor's own hand-off summary rather than
+the writer agent's proposal; we parse the last message when no JSON is produced.
+
+**Where (a) wins.** On 2 jobs ReAct was right and the graph was wrong. In both, the graph skipped a job the persona
+should bid on because requirements phrased without a taxonomy skill were scored as only partly evidenced (the
+same failure mode as §8). An agent that reads the whole post and says "yes, I can do this" is right more often on
+vague, capability-style posts, but for the wrong reason: it says yes to everything. **Would we ship (a)?** Not as the
+decision-maker, since unsupported claims and scam bids are disqualifying for a tool that writes in the user's name.
+A single tool-using agent is, however, a good *interactive* assistant inside the proposal studio ("find more proof
+for this requirement"), where a human reviews each step.
 
 ## 6. The change request
 

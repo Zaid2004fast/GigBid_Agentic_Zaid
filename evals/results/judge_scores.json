@@ -1,0 +1,126 @@
+{
+ "model": "qwen3:1.7b",
+ "prompt_version": "judge-v2",
+ "scores": {
+  "j00": {
+   "score": 3,
+   "raw": "SCORE: 3 - The proposal is generally relevant to the project but lacks specific details about the client's requirements, particularly regarding server-rendered pages with file-based routing for SEO. It also does not address the technical specifics of the requested features, such as the Python API wi"
+  },
+  "j01": {
+   "score": 4,
+   "raw": "SCORE: 4 - The proposal is good but has one weakness: while it demonstrates relevant experience with pandas, BigQuery, and A/B testing, it does not fully address the requirement of \"scripting the whole backend end to end\" in production, which is a key component of the job description."
+  },
+  "j02": {
+   "score": 5,
+   "raw": "SCORE: 5 - The proposal is specific to the client's requirements, demonstrates concrete achievements with measurable results, and clearly outlines a plan for a production-ready feature with a clear win question."
+  },
+  "j03": {
+   "score": 5,
+   "raw": "SCORE: 5 - The proposal is specific to the client's needs, clearly outlines the required technologies (Lambda and Celery), provides concrete results from similar projects, and ends with a compelling question about the client's current setup and what would make the first milestone a clear win."
+  },
+  "j04": {
+   "score": 5,
+   "raw": "SCORE: 5 - Your proposal is highly specific to the client's needs, clearly outlines the required technologies (Next.js, TS, React, Celery), and provides concrete results from previous projects. It ends with a compelling question about the client's current setup and what would make the first mileston"
+  },
+  "j05": {
+   "score": 5,
+   "raw": "SCORE: 5 - The proposal is highly specific to the client's needs, demonstrating relevant experience with Power BI, Airflow, and SQL, and clearly outlines a plan for a proof of concept with milestones. It also includes a strong commitment to delivering results and a clear question about the client's "
+  },
+  "j06": {
+   "score": 4,
+   "raw": "SCORE: 4 - The proposal is specific to the client's problem, but it lacks concrete details about the current setup and does not fully address the need for a cloud warehouse with separate compute warehouses per team. It also does not clearly outline how the first milestone would be a clear win."
+  },
+  "j07": {
+   "score": 4,
+   "raw": "SCORE: 4 - The proposal is specific to the client's needs, highlighting time-series forecasting and text classification, and demonstrates relevant experience with similar projects. However, it lacks details about the client's current setup and specific requirements for the first milestone, which wou"
+  },
+  "j08": {
+   "score": 3,
+   "raw": "SCORE: 3 - The proposal is generally relevant to the project but lacks specificity about the client's current setup and the exact requirements for the first milestone. It mentions a past success but does not address the specific need for background workers processing uploads off the request path, wh"
+  },
+  "j09": {
+   "score": 3,
+   "raw": "SCORE: 3 - The proposal is relevant to the job requirement but lacks specific details about the current setup and how the first milestone would deliver a clear win. It also does not address the specific need for approximate nearest-neighbour search over millions of embeddings in memory."
+  },
+  "j10": {
+   "score": 4,
+   "raw": "SCORE: 4 - The proposal is good but has a weakness in not mentioning the JavaScript runtime requirement, which is a key component of the job description."
+  },
+  "j11": {
+   "score": 4,
+   "raw": "SCORE: 4 - The proposal is strong but has a minor weakness in addressing the specific requirement for a stateful graph of cooperating agents with checkpoints. The candidate demonstrates relevant experience with FastAPI, Pandas, and LangGraph, and provides concrete results from previous projects. How"
+  },
+  "j12": {
+   "score": 4,
+   "raw": "SCORE: 4 - The proposal is specific to the client's needs, with concrete examples of previous work and a clear plan for the first milestone. However, it lacks detailed information about the client's current setup and does not fully address the requirement for live updates without polling."
+  },
+  "j13": {
+   "score": 4,
+   "raw": "SCORE: 4 - The proposal is strong but lacks specific details about the client's current setup and how the first milestone would be structured in terms of strictly typed front-end and API contracts. It mentions experience but does not provide concrete evidence of current setup or how the first milest"
+  },
+  "j14": {
+   "score": 4,
+   "raw": "SCORE: 4 - The proposal is specific to the client's problem, with concrete examples of past work using Airflow and ETL, but it lacks details about the client's current setup and specific requirements for the first milestone."
+  },
+  "j15": {
+   "score": 5,
+   "raw": "SCORE: 5 - Your proposal is specific to the client's problem, clearly outlines the use of YOLO and pandas, provides concrete results, and ends with a compelling question about the client's current setup."
+  },
+  "j16": {
+   "score": 4,
+   "raw": "SCORE: 4 - The proposal is strong but has a minor weakness: while the candidate has experience with dbt, Django, and data cleaning, they mention they have not yet applied their skills to a production environment, which is a key requirement for the job. The proposal outlines a clear plan with milesto"
+  },
+  "j17": {
+   "score": 3,
+   "raw": "SCORE: 3 - The proposal is generally specific to the client's needs but lacks concrete details about containerization and the actual timeline for the first milestone. It also does not clearly address how the first milestone would be reviewed or how the containerization plan would be implemented."
+  },
+  "j18": {
+   "score": 4,
+   "raw": "SCORE: 4 - The proposal is specific to the client's needs, highlighting relevant skills (GA4, BigQuery, SQL) and past successful projects with measurable results. However, it slightly underemphasizes the AWS component and lacks clarity on the current setup, which limits the proposal's overall streng"
+  },
+  "j19": {
+   "score": 4,
+   "raw": "SCORE: 4 - The proposal is specific to the client's needs, highlights relevant experience, and outlines a clear plan for delivering an MVP. However, it lacks details about the current setup and specific requirements for the first milestone, which would make it more compelling."
+  },
+  "j20": {
+   "score": 3,
+   "raw": "SCORE: 3 - The proposal is relevant to the client's needs but lacks specificity regarding the measured conversion lift and the actual implementation details. It mentions the client's goals but does not clearly outline how the automated pipeline will be built or how it will be delivered in milestones"
+  },
+  "j21": {
+   "score": 4,
+   "raw": "SCORE: 4 - The proposal is well-structured and demonstrates relevant experience with YOLOv8, LangGraph, and PyTorch, but it lacks specific details about the current setup and how the first milestone would be a clear win for the client."
+  },
+  "j22": {
+   "score": 4,
+   "raw": "SCORE: 4 - The proposal is specific to the client's needs, demonstrating relevant experience with React, Stripe, and Redis. However, it lacks clarity on the current setup and does not fully address the client's request for a \"clear win\" in the first milestone."
+  },
+  "j23": {
+   "score": 4,
+   "raw": "SCORE: 4 - The proposal is specific to the client's problem, with relevant experience in A/B testing, BigQuery, and SQL. However, it lacks clarity on the exact requirements for the first milestone and does not fully address the \"moved data from the CRM into the warehouse every hour\" task."
+  },
+  "j24": {
+   "score": 4,
+   "raw": "SCORE: 4 - The proposal is specific to the client's problem, with concrete examples of previous work and a clear plan for the first milestone. However, it lacks details about the current setup and does not fully address the client's request for a reviewable step."
+  },
+  "j25": {
+   "score": 5,
+   "raw": "SCORE: 5 - The proposal is specific to the client's problem, demonstrating a clear understanding of the required technologies (FAISS, Python, PyTorch, LangChain) and providing concrete results from previous projects. It outlines a clear plan for delivering a production-ready feature in milestones an"
+  },
+  "j26": {
+   "score": 3,
+   "raw": "SCORE: 3 - The proposal is generally specific to the client's problem but lacks detailed information about the client's current setup and how the first milestone would be delivered. It also does not clearly address the requirement for hosted on Amazon's cloud with object storage and serverless funct"
+  },
+  "j27": {
+   "score": 4,
+   "raw": "SCORE: 4 - The proposal is specific to the client's problem, with concrete examples of previous work and a clear plan for the first milestone. However, it lacks details on how the classified free-text support tickets by intent will be implemented, which is a key requirement for the project."
+  },
+  "j28": {
+   "score": 3,
+   "raw": "SCORE: 3 - The proposal is generally specific to the client's problem but lacks detailed information about the client's current setup and how the first milestone would be achieved. It also does not clearly address the need for a relational database with migrations and indexes tuned for slow queries."
+  },
+  "j29": {
+   "score": 4,
+   "raw": "SCORE: 4 - The proposal is strong but lacks specific details about the client's current setup and how the first milestone would be a clear win. It mentions experience with similar projects but does not provide concrete insights into the client's existing infrastructure or specific requirements for t"
+  }
+ }
+}
