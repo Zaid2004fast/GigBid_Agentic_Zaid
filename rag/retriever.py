@@ -14,11 +14,11 @@ VARIANT_MODULES = {
     "V5": "v5_multivector", "V6": "v6_contextual", "V7": "v7_hyde", "V8": "v8_corrective", "V9": "v9_skill_graph",
 }
 
-# "best" = the shipped composite; components listed so ablation can drop one at a time.
-BEST = PipelineSpec("best", chunks="ctx", decompose=True, bm25=True, rerank=True, multivector=False,
-                    outcome=True, corrective=True)
-ABLATION_FLAGS = {"decompose": False, "bm25": False, "rerank": False, "outcome": False, "corrective": False,
-                  "chunks": "struct"}
+# "best" = the shipped composite, chosen by measurement (evals/results/rag_retrieval*.json, ADR 0003):
+# C5 = hybrid BM25+dense (V2) + multi-vector projects (V5) + outcome boost (V4) + skill graph (V9).
+BEST = PipelineSpec("best", bm25=True, multivector=True, outcome=True, graph=True)
+# ablation: drop one component at a time
+ABLATION_FLAGS = {"bm25": False, "multivector": False, "outcome": False, "graph": False, "dense": False}
 
 
 # Composite candidates assembled from components that helped individually (see rag_retrieval.json).
@@ -27,6 +27,10 @@ CANDIDATES = {
     "C2": PipelineSpec("C2", bm25=True, multivector=True, outcome=True, decompose=True),       # + V1
     "C3": PipelineSpec("C3", bm25=True, multivector=True, outcome=True, decompose=True, corrective=True),  # + V8 (no rerank)
     "C4": PipelineSpec("C4", bm25=True, multivector=True, outcome=True, rerank=True),          # C1 + V3
+    "C5": PipelineSpec("C5", bm25=True, multivector=True, outcome=True, graph=True),           # C1 + V9 skill graph
+    "C6": PipelineSpec("C6", bm25=True, graph=True, decompose=True, corrective=True),          # V9 + V8-style refusal
+    # the provisional composite before measurement (contextual + decomposition + rerank + outcome + corrective)
+    "C7": PipelineSpec("C7", chunks="ctx", decompose=True, bm25=True, rerank=True, outcome=True, corrective=True),
 }
 
 

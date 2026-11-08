@@ -1,9 +1,33 @@
 # ADR 0003 - Shipped retrieval design is chosen by measurement
 
-**Decision.** `rag.variant` ships the variant with the best evidence Recall@5 / nDCG@10 on the dev
-set at acceptable latency, as recorded in `evals/results/rag_retrieval.json` and the ablation in
-`evals/results/ablation.json`. See `docs/report/REPORT.md` §4 for the decision paragraph.
+**Status:** accepted · **Date:** 2026-11-08 · **Evidence:** `evals/results/rag_retrieval.json`, `evals/results/ablation.json`
 
-**Notable negative results.** Cross-encoder reranking (MiniLM) and HyDE-lite did not beat plain
-hybrid retrieval on this corpus, and contextual chunk headers hurt recall slightly, so they are not
-in the shipped pipeline even though they are implemented.
+**Context.** We implemented V0 to V9, a control V0e (naive dense over evidence only) and composites
+C1 to C7, and evaluated them all on every dev job with gold evidence (about 470 jobs, three
+personas), using Recall@5, MRR, nDCG@10 and p95 latency.
+
+**Decision.** Ship **C5 = hybrid BM25+dense with RRF (V2) + multi-vector project aggregation (V5) +
+outcome-aware boost (V4) + skill-graph fusion (V9)**, as `rag.variant: best`.
+
+**Why.**
+
+- The skill graph was the largest single gain (V9 ≫ every similarity-only variant). Portfolio
+  questions are structured ("which project proves skill X?"), and the graph answers them with an
+  explicit path: project → skill confirmed by case study / CV / code.
+- Multi-vector aggregation rescues repos whose README is vague but whose code is specific.
+- C5 is also fast (no cross-encoder), well inside the 20 s per-job budget on a CPU-only host.
+
+**Negative results (implemented, measured, not shipped).**
+
+- Cross-encoder reranking (MiniLM-L6) did not beat plain hybrid and cost ~5 s p95 per job on CPU.
+- HyDE-lite (taxonomy pseudo-proposal) and contextual chunk headers lowered recall.
+- Requirement decomposition lowered Recall@5 versus whole-post hybrid (C2 < C1). Per-requirement
+  lists fused with RRF over-weight generic requirements such as "Python". We still decompose for
+  the requirement-to-evidence *matrix* (one search per requirement), which is a UI and grounding
+  need, not a recall need.
+- V0 (naive dense over everything) retrieved past proposals instead of evidence (Recall@5 ≈ 0).
+  The V0e control shows corpus contamination, not chunking, caused most of that failure.
+
+**Caveat.** Gold relevance is defined by skill overlap with a project's true skills, which
+structurally favours a skill-aware retriever. The end-to-end reply-rate and unsupported-claim
+comparison (`gigsim_outcomes.json`) is the check that the retrieval gain matters downstream.

@@ -1,0 +1,357 @@
+{
+ "scenario": "6_client_reply",
+ "thread_id": "conv:demo-user:th_dev_aiml_031:c7ff08",
+ "trace_id": "a9e22e45251e4b678c7ea744d8e3c2f8",
+ "status": "sent",
+ "progress": [
+  "Liaison: 1 messages, latest from client: Thanks, your experience looks relevant. Could we schedule a short call this week",
+  "Guard: injection score 0.00",
+  "Intent: interview_request (0.80)",
+  "Workspace: 3 free slots",
+  "Reply drafted (interview_request)",
+  "Compliance: ok",
+  "Human: approve",
+  "Message sent; tentative hold evt_246c305ec5"
+ ],
+ "decision": null,
+ "spans": [
+  {
+   "span_id": "92cdf827eb7e4ac3",
+   "trace_id": "a9e22e45251e4b678c7ea744d8e3c2f8",
+   "parent_id": null,
+   "user_id": "demo-user",
+   "thread_id": "conv:demo-user:th_dev_aiml_031:c7ff08",
+   "name": "node:liaison_fetch",
+   "kind": "node",
+   "start": 1794137837.308507,
+   "end": 1794137837.3882217,
+   "status": "ok",
+   "attrs": {
+    "node": "liaison_fetch",
+    "output_keys": [
+     "last_client_message",
+     "messages",
+     "progress"
+    ]
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "9bcb3b908cd84872",
+   "trace_id": "a9e22e45251e4b678c7ea744d8e3c2f8",
+   "parent_id": "92cdf827eb7e4ac3",
+   "user_id": "demo-user",
+   "thread_id": "conv:demo-user:th_dev_aiml_031:c7ff08",
+   "name": "tool:list_messages",
+   "kind": "tool",
+   "start": 1794137837.3105266,
+   "end": 1794137837.3660548,
+   "status": "ok",
+   "attrs": {
+    "server": "marketplace",
+    "tool": "list_messages",
+    "args": {
+     "thread_id": "th_dev_aiml_031"
+    },
+    "agent": "liaison",
+    "attempt": 0,
+    "result": {
+     "thread_id": "th_dev_aiml_031",
+     "messages": [
+      {
+       "id": "msg_8b5b5fb05b",
+       "at": 59900.97208356857,
+       "from": "client",
+       "text": "Thanks, your experience looks relevant. Could we schedule a short call this week?"
+      }
+     ]
+    }
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "ab115a90e20749c9",
+   "trace_id": "a9e22e45251e4b678c7ea744d8e3c2f8",
+   "parent_id": null,
+   "user_id": "demo-user",
+   "thread_id": "conv:demo-user:th_dev_aiml_031:c7ff08",
+   "name": "node:liaison_guard",
+   "kind": "node",
+   "start": 1794137837.4467354,
+   "end": 1794137837.4477324,
+   "status": "ok",
+   "attrs": {
+    "node": "liaison_guard",
+    "output_keys": [
+     "injection",
+     "progress"
+    ]
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "9ed066657a294bb1",
+   "trace_id": "a9e22e45251e4b678c7ea744d8e3c2f8",
+   "parent_id": null,
+   "user_id": "demo-user",
+   "thread_id": "conv:demo-user:th_dev_aiml_031:c7ff08",
+   "name": "node:intent",
+   "kind": "node",
+   "start": 1794137837.5151432,
+   "end": 1794137837.5252266,
+   "status": "ok",
+   "attrs": {
+    "node": "intent",
+    "output_keys": [
+     "intent",
+     "progress"
+    ]
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "fcf42d4453424114",
+   "trace_id": "a9e22e45251e4b678c7ea744d8e3c2f8",
+   "parent_id": "1a8b67b531eb4adf",
+   "user_id": "demo-user",
+   "thread_id": "conv:demo-user:th_dev_aiml_031:c7ff08",
+   "name": "tool:free_slots",
+   "kind": "tool",
+   "start": 1794137837.6001036,
+   "end": 1794137838.3411222,
+   "status": "ok",
+   "attrs": {
+    "server": "workspace",
+    "tool": "free_slots",
+    "args": {
+     "days": 5,
+     "duration_minutes": 30,
+     "timezone": "Asia/Karachi",
+     "max_slots": 3
+    },
+    "agent": "liaison",
+    "attempt": 0,
+    "result": {
+     "timezone": "Asia/Karachi",
+     "slots": [
+      {
+       "start": "[PHONE]T11:00:00+05:00",
+       "end": "[PHONE]T11:30:00+05:00",
+       "label": "Mon 09 Nov, 11:00 (Asia/Karachi)"
+      },
+      {
+       "start": "[PHONE]T11:00:00+05:00",
+       "end": "[PHONE]T11:30:00+05:00",
+       "label": "Tue 10 Nov, 11:00 (Asia/Karachi)"
+      },
+      {
+       "start": "[PHONE]T11:00:00+05:00",
+       "end": "[PHONE]T11:30:00+05:00",
+       "label": "Wed 11 Nov, 11:00 (Asia/Karachi)"
+      }
+     ]
+    }
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "1a8b67b531eb4adf",
+   "trace_id": "a9e22e45251e4b678c7ea744d8e3c2f8",
+   "parent_id": null,
+   "user_id": "demo-user",
+   "thread_id": "conv:demo-user:th_dev_aiml_031:c7ff08",
+   "name": "node:slots",
+   "kind": "node",
+   "start": 1794137837.6001036,
+   "end": 1794137838.365067,
+   "status": "ok",
+   "attrs": {
+    "node": "slots",
+    "output_keys": [
+     "progress",
+     "slots"
+    ]
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "fb45cf76767240cc",
+   "trace_id": "a9e22e45251e4b678c7ea744d8e3c2f8",
+   "parent_id": null,
+   "user_id": "demo-user",
+   "thread_id": "conv:demo-user:th_dev_aiml_031:c7ff08",
+   "name": "node:liaison_draft",
+   "kind": "node",
+   "start": 1794137838.4177623,
+   "end": 1794137838.4258187,
+   "status": "ok",
+   "attrs": {
+    "node": "liaison_draft",
+    "output_keys": [
+     "progress",
+     "reply"
+    ]
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "df58b3de41a3493e",
+   "trace_id": "a9e22e45251e4b678c7ea744d8e3c2f8",
+   "parent_id": null,
+   "user_id": "demo-user",
+   "thread_id": "conv:demo-user:th_dev_aiml_031:c7ff08",
+   "name": "node:liaison_compliance",
+   "kind": "node",
+   "start": 1794137838.506374,
+   "end": 1794137838.5073726,
+   "status": "ok",
+   "attrs": {
+    "node": "liaison_compliance",
+    "output_keys": [
+     "compliance",
+     "progress",
+     "reply",
+     "status"
+    ],
+    "status": "awaiting_approval"
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "3fd00fad75b0479d",
+   "trace_id": "a9e22e45251e4b678c7ea744d8e3c2f8",
+   "parent_id": "7cf83c41317c413b",
+   "user_id": "demo-user",
+   "thread_id": "conv:demo-user:th_dev_aiml_031:c7ff08",
+   "name": "tool:send_message",
+   "kind": "tool",
+   "start": 1794137838.6201057,
+   "end": 1794137838.8603082,
+   "status": "ok",
+   "attrs": {
+    "server": "marketplace",
+    "tool": "send_message",
+    "args": {
+     "message": {
+      "thread_id": "th_dev_aiml_031",
+      "text": "Thanks, happy to talk! I'm free at: Mon 09 Nov, 11:00 (Asia/Karachi); Tue 10 Nov, 11:00 (Asia/Karachi); Wed 11 Nov, 11:00 (Asia/Karachi). Let me know which works and I'll keep it on my calendar here.",
+      "idempotency_key": "conv:demo-user:th_dev_aiml_031:c7ff08:cefde16cd717:msg",
+      "dry_run": false
+     }
+    },
+    "agent": "liaison",
+    "attempt": 0,
+    "result": {
+     "status": "sent",
+     "preview": {
+      "thread_id": "th_dev_aiml_031",
+      "text": "Thanks, happy to talk! I'm free at: Mon 09 Nov, 11:00 (Asia/Karachi); Tue 10 Nov, 11:00 (Asia/Karachi); Wed 11 Nov, 11:00 (Asia/Karachi). Let me know which works and I'll keep it on my calendar here."
+     },
+     "connects_cost": 0,
+     "connects_balance_after": null,
+     "result": {
+      "message_id": "msg_003405efc5",
+      "status": "sent"
+     },
+     "idempotency_key": "conv:demo-user:th_dev_aiml_031:c7ff08:cefde16cd717:msg"
+    }
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "7cf83c41317c413b",
+   "trace_id": "a9e22e45251e4b678c7ea744d8e3c2f8",
+   "parent_id": null,
+   "user_id": "demo-user",
+   "thread_id": "conv:demo-user:th_dev_aiml_031:c7ff08",
+   "name": "node:liaison_send",
+   "kind": "node",
+   "start": 1794137838.6201057,
+   "end": 1794137838.990481,
+   "status": "ok",
+   "attrs": {
+    "node": "liaison_send",
+    "output_keys": [
+     "progress",
+     "sent",
+     "status"
+    ],
+    "status": "sent"
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "b23f8c2a78774b2b",
+   "trace_id": "a9e22e45251e4b678c7ea744d8e3c2f8",
+   "parent_id": "7cf83c41317c413b",
+   "user_id": "demo-user",
+   "thread_id": "conv:demo-user:th_dev_aiml_031:c7ff08",
+   "name": "tool:create_interview_hold",
+   "kind": "tool",
+   "start": 1794137838.903335,
+   "end": 1794137838.9705234,
+   "status": "ok",
+   "attrs": {
+    "server": "workspace",
+    "tool": "create_interview_hold",
+    "args": {
+     "hold": {
+      "start": "[PHONE]T11:00:00+05:00",
+      "duration_minutes": 30,
+      "title": "Interview: dev_aiml_031",
+      "idempotency_key": "conv:demo-user:th_dev_aiml_031:c7ff08:cefde16cd717:hold"
+     }
+    },
+    "agent": "liaison",
+    "attempt": 0,
+    "result": {
+     "event_id": "evt_246c305ec5",
+     "start": "[PHONE]T11:00:00+05:00",
+     "end": "[PHONE]T11:30:00+05:00",
+     "status": "tentative"
+    }
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  }
+ ],
+ "intent": {
+  "intent": "interview_request",
+  "confidence": 0.8,
+  "summary": "Thanks, your experience looks relevant. Could we schedule a short call this week?",
+  "requested_rate": null
+ },
+ "reply": "Thanks, happy to talk! I'm free at: Mon 09 Nov, 11:00 (Asia/Karachi); Tue 10 Nov, 11:00 (Asia/Karachi); Wed 11 Nov, 11:00 (Asia/Karachi). Let me know which works and I'll keep it on my calendar here."
+}

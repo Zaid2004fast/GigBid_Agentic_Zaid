@@ -1,0 +1,60 @@
+---
+config:
+  flowchart:
+    curve: linear
+---
+graph TD;
+	__start__([<p>__start__</p>]):::first
+	intake(intake)
+	analyst(analyst)
+	risk(risk)
+	matcher(matcher)
+	reconcile(reconcile)
+	decide(decide)
+	pricing(pricing)
+	writer(writer)
+	verifier(verifier)
+	critic(critic)
+	compliance(compliance)
+	preview(preview)
+	approval(approval)
+	apply_edit(apply_edit)
+	submit(submit)
+	reject(reject)
+	__end__([<p>__end__</p>]):::last
+	__start__ --> intake;
+	analyst --> reconcile;
+	apply_edit -.-> __end__;
+	apply_edit -.-> preview;
+	approval -. &nbsp;end&nbsp; .-> __end__;
+	approval -.-> apply_edit;
+	approval -.-> reject;
+	approval -.-> submit;
+	compliance -.-> __end__;
+	compliance -.-> preview;
+	critic -. &nbsp;end&nbsp; .-> __end__;
+	critic -.-> compliance;
+	critic -.-> writer;
+	decide -.-> __end__;
+	decide -.-> pricing;
+	intake -.-> __end__;
+	intake -.-> analyst;
+	intake -.-> matcher;
+	intake -.-> risk;
+	matcher --> reconcile;
+	preview -.-> __end__;
+	preview -.-> approval;
+	pricing -.-> __end__;
+	pricing -.-> writer;
+	reconcile -.-> __end__;
+	reconcile -.-> decide;
+	risk --> reconcile;
+	verifier -.-> __end__;
+	verifier -.-> critic;
+	writer -.-> __end__;
+	writer -.-> verifier;
+	reject --> __end__;
+	submit --> __end__;
+	classDef default fill:#f2f0ff,line-height:1.2
+	classDef first fill-opacity:0
+	classDef last fill:#bfb6fc

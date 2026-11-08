@@ -1,7 +1,7 @@
 {
  "scenario": "5_crash_and_resume",
- "thread_id": "bid:demo-user:dev_aiml_011:bbf03e",
- "trace_id": "69376a60df534281b1e4623187effd7a",
+ "thread_id": "bid:demo-user:dev_aiml_011:7542e0",
+ "trace_id": "8f1cb5fa21d1418280457ef4c22e7595",
  "status": "submitted",
  "progress": [
   "Scout: job dev_aiml_011 'AI & Machine Learning freelancer - a proof of concept' taken in",
@@ -15,9 +15,9 @@
   "Verifier: 3 claims, unsupported 0->0, 0 rewritten, 0 removed",
   "Critic: pass (score 1.00)",
   "Compliance: allowed (no issues)",
-  "Dry run: 6 Connects, balance after 108",
+  "Dry run: 6 Connects, balance after 99988",
   "Human: approve",
-  "Submitted proposal prop_e49702a9c7 (submitted, 6 Connects)"
+  "Submitted proposal prop_fc1d38671f (submitted, 6 Connects)"
  ],
  "decision": {
   "job_id": "dev_aiml_011",
@@ -33,15 +33,15 @@
  },
  "spans": [
   {
-   "span_id": "c0360d55736944f9",
-   "trace_id": "69376a60df534281b1e4623187effd7a",
+   "span_id": "d21858fc9f4e46b8",
+   "trace_id": "8f1cb5fa21d1418280457ef4c22e7595",
    "parent_id": null,
    "user_id": "demo-user",
-   "thread_id": "bid:demo-user:dev_aiml_011:bbf03e",
+   "thread_id": "bid:demo-user:dev_aiml_011:7542e0",
    "name": "node:intake",
    "kind": "node",
-   "start": 1794136552.263341,
-   "end": 1794136552.263341,
+   "start": 1794137642.5309098,
+   "end": 1794137642.5309098,
    "status": "ok",
    "attrs": {
     "node": "intake",
@@ -61,15 +61,15 @@
    "model": null
   },
   {
-   "span_id": "fcaf9845bda946c9",
-   "trace_id": "69376a60df534281b1e4623187effd7a",
+   "span_id": "fda6829a0fe844e4",
+   "trace_id": "8f1cb5fa21d1418280457ef4c22e7595",
    "parent_id": null,
    "user_id": "demo-user",
-   "thread_id": "bid:demo-user:dev_aiml_011:bbf03e",
+   "thread_id": "bid:demo-user:dev_aiml_011:7542e0",
    "name": "node:analyst",
    "kind": "node",
-   "start": 1794136552.3044717,
-   "end": 1794136552.317334,
+   "start": 1794137642.5805004,
+   "end": 1794137642.5963542,
    "status": "ok",
    "attrs": {
     "node": "analyst",
@@ -84,15 +84,15 @@
    "model": null
   },
   {
-   "span_id": "5fbca7cba79c498d",
-   "trace_id": "69376a60df534281b1e4623187effd7a",
-   "parent_id": "151aa9cf91ac4db6",
+   "span_id": "20f5bce1e0ae431b",
+   "trace_id": "8f1cb5fa21d1418280457ef4c22e7595",
+   "parent_id": "de41bdad1aab49d0",
    "user_id": "demo-user",
-   "thread_id": "bid:demo-user:dev_aiml_011:bbf03e",
+   "thread_id": "bid:demo-user:dev_aiml_011:7542e0",
    "name": "tool:get_client_history",
    "kind": "tool",
-   "start": 1794136552.3057365,
-   "end": 1794136552.460428,
+   "start": 1794137642.5825112,
+   "end": 1794137642.7863193,
    "status": "ok",
    "attrs": {
     "server": "marketplace",
@@ -127,15 +127,15 @@
    "model": null
   },
   {
-   "span_id": "151aa9cf91ac4db6",
-   "trace_id": "69376a60df534281b1e4623187effd7a",
+   "span_id": "de41bdad1aab49d0",
+   "trace_id": "8f1cb5fa21d1418280457ef4c22e7595",
    "parent_id": null,
    "user_id": "demo-user",
-   "thread_id": "bid:demo-user:dev_aiml_011:bbf03e",
+   "thread_id": "bid:demo-user:dev_aiml_011:7542e0",
    "name": "node:risk",
    "kind": "node",
-   "start": 1794136552.3057365,
-   "end": 1794136552.5323074,
+   "start": 1794137642.5825112,
+   "end": 1794137642.8012068,
    "status": "ok",
    "attrs": {
     "node": "risk",
@@ -151,15 +151,15 @@
    "model": null
   },
   {
-   "span_id": "245e13f848854349",
-   "trace_id": "69376a60df534281b1e4623187effd7a",
+   "span_id": "6a1f7542ad9c48e2",
+   "trace_id": "8f1cb5fa21d1418280457ef4c22e7595",
    "parent_id": null,
    "user_id": "demo-user",
-   "thread_id": "bid:demo-user:dev_aiml_011:bbf03e",
+   "thread_id": "bid:demo-user:dev_aiml_011:7542e0",
    "name": "node:matcher",
    "kind": "node",
-   "start": 1794136552.3132908,
-   "end": 1794136561.2785628,
+   "start": 1794137642.5923269,
+   "end": 1794137656.432082,
    "status": "ok",
    "attrs": {
     "node": "matcher",
@@ -175,15 +175,15 @@
    "model": null
   },
   {
-   "span_id": "4ac31e5c997b49a9",
-   "trace_id": "69376a60df534281b1e4623187effd7a",
-   "parent_id": "245e13f848854349",
+   "span_id": "8c3b8a383d624b23",
+   "trace_id": "8f1cb5fa21d1418280457ef4c22e7595",
+   "parent_id": "6a1f7542ad9c48e2",
    "user_id": "demo-user",
-   "thread_id": "bid:demo-user:dev_aiml_011:bbf03e",
+   "thread_id": "bid:demo-user:dev_aiml_011:7542e0",
    "name": "tool:search_evidence",
    "kind": "tool",
-   "start": 1794136552.326235,
-   "end": 1794136559.5460117,
+   "start": 1794137642.6101892,
+   "end": 1794137654.3373404,
    "status": "ok",
    "attrs": {
     "server": "portfolio",
@@ -260,15 +260,15 @@
    "model": null
   },
   {
-   "span_id": "9ed74962a1f44f88",
-   "trace_id": "69376a60df534281b1e4623187effd7a",
-   "parent_id": "245e13f848854349",
+   "span_id": "b644264016274a68",
+   "trace_id": "8f1cb5fa21d1418280457ef4c22e7595",
+   "parent_id": "6a1f7542ad9c48e2",
    "user_id": "demo-user",
-   "thread_id": "bid:demo-user:dev_aiml_011:bbf03e",
+   "thread_id": "bid:demo-user:dev_aiml_011:7542e0",
    "name": "tool:search_evidence",
    "kind": "tool",
-   "start": 1794136552.3312523,
-   "end": 1794136555.6581697,
+   "start": 1794137642.6142266,
+   "end": 1794137647.4427388,
    "status": "ok",
    "attrs": {
     "server": "portfolio",
@@ -306,15 +306,15 @@
    "model": null
   },
   {
-   "span_id": "328c2662c0bc417c",
-   "trace_id": "69376a60df534281b1e4623187effd7a",
-   "parent_id": "245e13f848854349",
+   "span_id": "5a88384324aa496b",
+   "trace_id": "8f1cb5fa21d1418280457ef4c22e7595",
+   "parent_id": "6a1f7542ad9c48e2",
    "user_id": "demo-user",
-   "thread_id": "bid:demo-user:dev_aiml_011:bbf03e",
+   "thread_id": "bid:demo-user:dev_aiml_011:7542e0",
    "name": "tool:search_evidence",
    "kind": "tool",
-   "start": 1794136552.3370237,
-   "end": 1794136561.2407436,
+   "start": 1794137642.6220322,
+   "end": 1794137656.3191612,
    "status": "ok",
    "attrs": {
     "server": "portfolio",
@@ -391,15 +391,15 @@
    "model": null
   },
   {
-   "span_id": "974c1f48a74b4b83",
-   "trace_id": "69376a60df534281b1e4623187effd7a",
-   "parent_id": "245e13f848854349",
+   "span_id": "1efbdd35349a4676",
+   "trace_id": "8f1cb5fa21d1418280457ef4c22e7595",
+   "parent_id": "6a1f7542ad9c48e2",
    "user_id": "demo-user",
-   "thread_id": "bid:demo-user:dev_aiml_011:bbf03e",
+   "thread_id": "bid:demo-user:dev_aiml_011:7542e0",
    "name": "tool:search_evidence",
    "kind": "tool",
-   "start": 1794136552.3410532,
-   "end": 1794136558.0291483,
+   "start": 1794137642.630105,
+   "end": 1794137651.8339784,
    "status": "ok",
    "attrs": {
     "server": "portfolio",
@@ -418,15 +418,15 @@
    "model": null
   },
   {
-   "span_id": "94953c176c924fcc",
-   "trace_id": "69376a60df534281b1e4623187effd7a",
-   "parent_id": "245e13f848854349",
+   "span_id": "3df7a8b226724c5d",
+   "trace_id": "8f1cb5fa21d1418280457ef4c22e7595",
+   "parent_id": "6a1f7542ad9c48e2",
    "user_id": "demo-user",
-   "thread_id": "bid:demo-user:dev_aiml_011:bbf03e",
+   "thread_id": "bid:demo-user:dev_aiml_011:7542e0",
    "name": "tool:find_winning_proposals",
    "kind": "tool",
-   "start": 1794136561.2475631,
-   "end": 1794136561.2725637,
+   "start": 1794137656.3487597,
+   "end": 1794137656.4076757,
    "status": "ok",
    "attrs": {
     "server": "portfolio",
@@ -458,15 +458,15 @@
    "model": null
   },
   {
-   "span_id": "7687a28bd56544c7",
-   "trace_id": "69376a60df534281b1e4623187effd7a",
+   "span_id": "4daaf42d367647cc",
+   "trace_id": "8f1cb5fa21d1418280457ef4c22e7595",
    "parent_id": null,
    "user_id": "demo-user",
-   "thread_id": "bid:demo-user:dev_aiml_011:bbf03e",
+   "thread_id": "bid:demo-user:dev_aiml_011:7542e0",
    "name": "node:reconcile",
    "kind": "node",
-   "start": 1794136561.3162286,
-   "end": 1794136561.3162286,
+   "start": 1794137656.5150473,
+   "end": 1794137656.5150473,
    "status": "ok",
    "attrs": {
     "node": "reconcile",
@@ -480,15 +480,15 @@
    "model": null
   },
   {
-   "span_id": "1e7b2a7313534d4c",
-   "trace_id": "69376a60df534281b1e4623187effd7a",
+   "span_id": "32fe95ce8e33441a",
+   "trace_id": "8f1cb5fa21d1418280457ef4c22e7595",
    "parent_id": null,
    "user_id": "demo-user",
-   "thread_id": "bid:demo-user:dev_aiml_011:bbf03e",
+   "thread_id": "bid:demo-user:dev_aiml_011:7542e0",
    "name": "node:decide",
    "kind": "node",
-   "start": 1794136561.344239,
-   "end": 1794136561.4419217,
+   "start": 1794137656.564624,
+   "end": 1794137656.6481693,
    "status": "ok",
    "attrs": {
     "node": "decide",
@@ -505,15 +505,15 @@
    "model": null
   },
   {
-   "span_id": "4d3111d895234999",
-   "trace_id": "69376a60df534281b1e4623187effd7a",
-   "parent_id": "1e7b2a7313534d4c",
+   "span_id": "9f2047de0f4744aa",
+   "trace_id": "8f1cb5fa21d1418280457ef4c22e7595",
+   "parent_id": "32fe95ce8e33441a",
    "user_id": "demo-user",
-   "thread_id": "bid:demo-user:dev_aiml_011:bbf03e",
+   "thread_id": "bid:demo-user:dev_aiml_011:7542e0",
    "name": "tool:get_policy",
    "kind": "tool",
-   "start": 1794136561.3452384,
-   "end": 1794136561.405583,
+   "start": 1794137656.566636,
+   "end": 1794137656.6351485,
    "status": "ok",
    "attrs": {
     "server": "marketplace",
@@ -542,15 +542,38 @@
    "model": null
   },
   {
-   "span_id": "84d070a77c744160",
-   "trace_id": "69376a60df534281b1e4623187effd7a",
-   "parent_id": "5dbd8a3382fa40dc",
+   "span_id": "065ddd2f5d6143f1",
+   "trace_id": "8f1cb5fa21d1418280457ef4c22e7595",
+   "parent_id": null,
    "user_id": "demo-user",
-   "thread_id": "bid:demo-user:dev_aiml_011:bbf03e",
+   "thread_id": "bid:demo-user:dev_aiml_011:7542e0",
+   "name": "node:pricing",
+   "kind": "node",
+   "start": 1794137656.7081642,
+   "end": 1794137656.8080947,
+   "status": "ok",
+   "attrs": {
+    "node": "pricing",
+    "output_keys": [
+     "price",
+     "progress"
+    ]
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "62d3aa36b43b4617",
+   "trace_id": "8f1cb5fa21d1418280457ef4c22e7595",
+   "parent_id": "065ddd2f5d6143f1",
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_011:7542e0",
    "name": "tool:get_market_stats",
    "kind": "tool",
-   "start": 1794136561.5297034,
-   "end": 1794136561.5751736,
+   "start": 1794137656.7087464,
+   "end": 1794137656.7843938,
    "status": "ok",
    "attrs": {
     "server": "marketplace",
@@ -579,38 +602,15 @@
    "model": null
   },
   {
-   "span_id": "5dbd8a3382fa40dc",
-   "trace_id": "69376a60df534281b1e4623187effd7a",
-   "parent_id": null,
+   "span_id": "36d6ee0182ba41aa",
+   "trace_id": "8f1cb5fa21d1418280457ef4c22e7595",
+   "parent_id": "11e617e7744445cc",
    "user_id": "demo-user",
-   "thread_id": "bid:demo-user:dev_aiml_011:bbf03e",
-   "name": "node:pricing",
-   "kind": "node",
-   "start": 1794136561.5297034,
-   "end": 1794136561.5874724,
-   "status": "ok",
-   "attrs": {
-    "node": "pricing",
-    "output_keys": [
-     "price",
-     "progress"
-    ]
-   },
-   "tokens_in": 0,
-   "tokens_out": 0,
-   "cost_usd": 0.0,
-   "model": null
-  },
-  {
-   "span_id": "a62af395cf4a4eb7",
-   "trace_id": "69376a60df534281b1e4623187effd7a",
-   "parent_id": "af75ed13810f4153",
-   "user_id": "demo-user",
-   "thread_id": "bid:demo-user:dev_aiml_011:bbf03e",
+   "thread_id": "bid:demo-user:dev_aiml_011:7542e0",
    "name": "tool:get_evidence",
    "kind": "tool",
-   "start": 1794136561.6708279,
-   "end": 1794136561.7579646,
+   "start": 1794137656.9123394,
+   "end": 1794137657.0914414,
    "status": "ok",
    "attrs": {
     "server": "portfolio",
@@ -632,15 +632,15 @@
    "model": null
   },
   {
-   "span_id": "af75ed13810f4153",
-   "trace_id": "69376a60df534281b1e4623187effd7a",
+   "span_id": "11e617e7744445cc",
+   "trace_id": "8f1cb5fa21d1418280457ef4c22e7595",
    "parent_id": null,
    "user_id": "demo-user",
-   "thread_id": "bid:demo-user:dev_aiml_011:bbf03e",
+   "thread_id": "bid:demo-user:dev_aiml_011:7542e0",
    "name": "node:writer",
    "kind": "node",
-   "start": 1794136561.6708279,
-   "end": 1794136561.9366972,
+   "start": 1794137656.9123394,
+   "end": 1794137657.115847,
    "status": "ok",
    "attrs": {
     "node": "writer",
@@ -656,15 +656,15 @@
    "model": null
   },
   {
-   "span_id": "5707b1c04f31489e",
-   "trace_id": "69376a60df534281b1e4623187effd7a",
+   "span_id": "1efbbbf151e94d10",
+   "trace_id": "8f1cb5fa21d1418280457ef4c22e7595",
    "parent_id": null,
    "user_id": "demo-user",
-   "thread_id": "bid:demo-user:dev_aiml_011:bbf03e",
+   "thread_id": "bid:demo-user:dev_aiml_011:7542e0",
    "name": "node:verifier",
    "kind": "node",
-   "start": 1794136562.035262,
-   "end": 1794136562.2708995,
+   "start": 1794137657.1702354,
+   "end": 1794137657.6681762,
    "status": "ok",
    "attrs": {
     "node": "verifier",
@@ -680,15 +680,15 @@
    "model": null
   },
   {
-   "span_id": "8c0489ea3d514d5b",
-   "trace_id": "69376a60df534281b1e4623187effd7a",
-   "parent_id": "5707b1c04f31489e",
+   "span_id": "3ad3a6bb2a1f45e8",
+   "trace_id": "8f1cb5fa21d1418280457ef4c22e7595",
+   "parent_id": "1efbbbf151e94d10",
    "user_id": "demo-user",
-   "thread_id": "bid:demo-user:dev_aiml_011:bbf03e",
+   "thread_id": "bid:demo-user:dev_aiml_011:7542e0",
    "name": "tool:get_evidence",
    "kind": "tool",
-   "start": 1794136562.0372767,
-   "end": 1794136562.111719,
+   "start": 1794137657.1756556,
+   "end": 1794137657.3368955,
    "status": "ok",
    "attrs": {
     "server": "portfolio",
@@ -728,15 +728,15 @@
    "model": null
   },
   {
-   "span_id": "69690201c3d5497e",
-   "trace_id": "69376a60df534281b1e4623187effd7a",
-   "parent_id": "5707b1c04f31489e",
+   "span_id": "72da10374a234cbb",
+   "trace_id": "8f1cb5fa21d1418280457ef4c22e7595",
+   "parent_id": "1efbbbf151e94d10",
    "user_id": "demo-user",
-   "thread_id": "bid:demo-user:dev_aiml_011:bbf03e",
+   "thread_id": "bid:demo-user:dev_aiml_011:7542e0",
    "name": "tool:get_evidence",
    "kind": "tool",
-   "start": 1794136562.1335232,
-   "end": 1794136562.1924975,
+   "start": 1794137657.3662605,
+   "end": 1794137657.4680018,
    "status": "ok",
    "attrs": {
     "server": "portfolio",
@@ -775,15 +775,15 @@
    "model": null
   },
   {
-   "span_id": "c43fdbce3e094708",
-   "trace_id": "69376a60df534281b1e4623187effd7a",
-   "parent_id": "5707b1c04f31489e",
+   "span_id": "63fcd3ecba464e47",
+   "trace_id": "8f1cb5fa21d1418280457ef4c22e7595",
+   "parent_id": "1efbbbf151e94d10",
    "user_id": "demo-user",
-   "thread_id": "bid:demo-user:dev_aiml_011:bbf03e",
+   "thread_id": "bid:demo-user:dev_aiml_011:7542e0",
    "name": "tool:get_evidence",
    "kind": "tool",
-   "start": 1794136562.2022626,
-   "end": 1794136562.2584682,
+   "start": 1794137657.4993382,
+   "end": 1794137657.6097906,
    "status": "ok",
    "attrs": {
     "server": "portfolio",
@@ -820,15 +820,15 @@
    "model": null
   },
   {
-   "span_id": "c2a20fe4470a4d41",
-   "trace_id": "69376a60df534281b1e4623187effd7a",
+   "span_id": "6a4061a950ab4b20",
+   "trace_id": "8f1cb5fa21d1418280457ef4c22e7595",
    "parent_id": null,
    "user_id": "demo-user",
-   "thread_id": "bid:demo-user:dev_aiml_011:bbf03e",
+   "thread_id": "bid:demo-user:dev_aiml_011:7542e0",
    "name": "node:critic",
    "kind": "node",
-   "start": 1794136562.317314,
-   "end": 1794136562.3183172,
+   "start": 1794137657.7465065,
+   "end": 1794137657.7475042,
    "status": "ok",
    "attrs": {
     "node": "critic",
@@ -843,15 +843,15 @@
    "model": null
   },
   {
-   "span_id": "ffb616c240014640",
-   "trace_id": "69376a60df534281b1e4623187effd7a",
+   "span_id": "dda3cdb807ea42b6",
+   "trace_id": "8f1cb5fa21d1418280457ef4c22e7595",
    "parent_id": null,
    "user_id": "demo-user",
-   "thread_id": "bid:demo-user:dev_aiml_011:bbf03e",
+   "thread_id": "bid:demo-user:dev_aiml_011:7542e0",
    "name": "node:compliance",
    "kind": "node",
-   "start": 1794136562.3646657,
-   "end": 1794136562.3707025,
+   "start": 1794137657.827481,
+   "end": 1794137657.8462968,
    "status": "ok",
    "attrs": {
     "node": "compliance",
@@ -867,40 +867,15 @@
    "model": null
   },
   {
-   "span_id": "bac55d5c9f004acf",
-   "trace_id": "69376a60df534281b1e4623187effd7a",
-   "parent_id": null,
+   "span_id": "7af84d12e0cf4d2f",
+   "trace_id": "8f1cb5fa21d1418280457ef4c22e7595",
+   "parent_id": "19bf0a29ed914ee2",
    "user_id": "demo-user",
-   "thread_id": "bid:demo-user:dev_aiml_011:bbf03e",
-   "name": "node:preview",
-   "kind": "node",
-   "start": 1794136562.4122071,
-   "end": 1794136562.502081,
-   "status": "ok",
-   "attrs": {
-    "node": "preview",
-    "output_keys": [
-     "preview",
-     "progress",
-     "status"
-    ],
-    "status": "awaiting_approval"
-   },
-   "tokens_in": 0,
-   "tokens_out": 0,
-   "cost_usd": 0.0,
-   "model": null
-  },
-  {
-   "span_id": "73fb445532014174",
-   "trace_id": "69376a60df534281b1e4623187effd7a",
-   "parent_id": "bac55d5c9f004acf",
-   "user_id": "demo-user",
-   "thread_id": "bid:demo-user:dev_aiml_011:bbf03e",
+   "thread_id": "bid:demo-user:dev_aiml_011:7542e0",
    "name": "tool:create_proposal_draft",
    "kind": "tool",
-   "start": 1794136562.4132204,
-   "end": 1794136562.486887,
+   "start": 1794137657.9261422,
+   "end": 1794137658.0506256,
    "status": "ok",
    "attrs": {
     "server": "marketplace",
@@ -915,7 +890,7 @@
        "About 30 hours per week, with overlap in your working hours for calls.",
        "I work in short milestones with a written scope per milestone, so changes are agreed, priced and reviewed weekly instead of piling up."
       ],
-      "idempotency_key": "bid:demo-user:dev_aiml_011:bbf03e:v1:7371ac2e6ea2:draft",
+      "idempotency_key": "bid:demo-user:dev_aiml_011:7542e0:v1:7371ac2e6ea2:draft",
       "dry_run": true
      }
     },
@@ -936,9 +911,9 @@
       "policy_version": 1
      },
      "connects_cost": 6,
-     "connects_balance_after": 108,
+     "connects_balance_after": 99988,
      "result": {},
-     "idempotency_key": "bid:demo-user:dev_aiml_011:bbf03e:v1:7371ac2e6ea2:draft"
+     "idempotency_key": "bid:demo-user:dev_aiml_011:7542e0:v1:7371ac2e6ea2:draft"
     }
    },
    "tokens_in": 0,
@@ -947,15 +922,40 @@
    "model": null
   },
   {
-   "span_id": "0e33031087b04c77",
-   "trace_id": "69376a60df534281b1e4623187effd7a",
-   "parent_id": "c7e52883b41c447c",
+   "span_id": "19bf0a29ed914ee2",
+   "trace_id": "8f1cb5fa21d1418280457ef4c22e7595",
+   "parent_id": null,
    "user_id": "demo-user",
-   "thread_id": "bid:demo-user:dev_aiml_011:bbf03e",
+   "thread_id": "bid:demo-user:dev_aiml_011:7542e0",
+   "name": "node:preview",
+   "kind": "node",
+   "start": 1794137657.9261422,
+   "end": 1794137658.075559,
+   "status": "ok",
+   "attrs": {
+    "node": "preview",
+    "output_keys": [
+     "preview",
+     "progress",
+     "status"
+    ],
+    "status": "awaiting_approval"
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "c01a1a6618b645fd",
+   "trace_id": "8f1cb5fa21d1418280457ef4c22e7595",
+   "parent_id": "5387f830b36d4cd9",
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_011:7542e0",
    "name": "tool:create_proposal_draft",
    "kind": "tool",
-   "start": 1794136562.8308282,
-   "end": 1794136563.0551264,
+   "start": 1794137658.6164205,
+   "end": 1794137658.8314087,
    "status": "ok",
    "attrs": {
     "server": "marketplace",
@@ -970,7 +970,7 @@
        "About 30 hours per week, with overlap in your working hours for calls.",
        "I work in short milestones with a written scope per milestone, so changes are agreed, priced and reviewed weekly instead of piling up."
       ],
-      "idempotency_key": "bid:demo-user:dev_aiml_011:bbf03e:v1:7371ac2e6ea2:draft"
+      "idempotency_key": "bid:demo-user:dev_aiml_011:7542e0:v1:7371ac2e6ea2:draft"
      }
     },
     "agent": "submitter",
@@ -992,11 +992,11 @@
      "connects_cost": 6,
      "connects_balance_after": null,
      "result": {
-      "proposal_id": "prop_e49702a9c7",
+      "proposal_id": "prop_fc1d38671f",
       "status": "draft",
       "connects_cost": 6
      },
-     "idempotency_key": "bid:demo-user:dev_aiml_011:bbf03e:v1:7371ac2e6ea2:draft"
+     "idempotency_key": "bid:demo-user:dev_aiml_011:7542e0:v1:7371ac2e6ea2:draft"
     }
    },
    "tokens_in": 0,
@@ -1005,15 +1005,15 @@
    "model": null
   },
   {
-   "span_id": "c7e52883b41c447c",
-   "trace_id": "69376a60df534281b1e4623187effd7a",
+   "span_id": "5387f830b36d4cd9",
+   "trace_id": "8f1cb5fa21d1418280457ef4c22e7595",
    "parent_id": null,
    "user_id": "demo-user",
-   "thread_id": "bid:demo-user:dev_aiml_011:bbf03e",
+   "thread_id": "bid:demo-user:dev_aiml_011:7542e0",
    "name": "node:submit",
    "kind": "node",
-   "start": 1794136562.8308282,
-   "end": 1794136563.3104453,
+   "start": 1794137658.6164205,
+   "end": 1794137659.1622155,
    "status": "ok",
    "attrs": {
     "node": "submit",
@@ -1030,24 +1030,24 @@
    "model": null
   },
   {
-   "span_id": "34ccbbf6ea6d4777",
-   "trace_id": "69376a60df534281b1e4623187effd7a",
-   "parent_id": "c7e52883b41c447c",
+   "span_id": "cafca4017c1f46dd",
+   "trace_id": "8f1cb5fa21d1418280457ef4c22e7595",
+   "parent_id": "5387f830b36d4cd9",
    "user_id": "demo-user",
-   "thread_id": "bid:demo-user:dev_aiml_011:bbf03e",
+   "thread_id": "bid:demo-user:dev_aiml_011:7542e0",
    "name": "tool:submit_proposal",
    "kind": "tool",
-   "start": 1794136563.0653002,
-   "end": 1794136563.2987728,
+   "start": 1794137658.8554125,
+   "end": 1794137659.1010273,
    "status": "ok",
    "attrs": {
     "server": "marketplace",
     "tool": "submit_proposal",
     "args": {
      "submission": {
-      "proposal_id": "prop_e49702a9c7",
+      "proposal_id": "prop_fc1d38671f",
       "job_id": "dev_aiml_011",
-      "idempotency_key": "bid:demo-user:dev_aiml_011:bbf03e:v1:7371ac2e6ea2:submit"
+      "idempotency_key": "bid:demo-user:dev_aiml_011:7542e0:v1:7371ac2e6ea2:submit"
      }
     },
     "agent": "submitter",
@@ -1055,18 +1055,18 @@
     "result": {
      "status": "submitted",
      "preview": {
-      "proposal_id": "prop_e49702a9c7",
+      "proposal_id": "prop_fc1d38671f",
       "job_id": "dev_aiml_011"
      },
      "connects_cost": 6,
-     "connects_balance_after": 108,
+     "connects_balance_after": 99988,
      "result": {
-      "proposal_id": "prop_e49702a9c7",
+      "proposal_id": "prop_fc1d38671f",
       "status": "submitted",
       "connects_spent": 6,
-      "balance": 108
+      "balance": 99988
      },
-     "idempotency_key": "bid:demo-user:dev_aiml_011:bbf03e:v1:7371ac2e6ea2:submit"
+     "idempotency_key": "bid:demo-user:dev_aiml_011:7542e0:v1:7371ac2e6ea2:submit"
     }
    },
    "tokens_in": 0,

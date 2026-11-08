@@ -1,0 +1,40 @@
+---
+config:
+  flowchart:
+    curve: linear
+---
+graph TD;
+	__start__([<p>__start__</p>]):::first
+	fetch(fetch)
+	guard(guard)
+	intent(intent)
+	slots(slots)
+	draft(draft)
+	compliance(compliance)
+	approval(approval)
+	edit(edit)
+	send(send)
+	__end__([<p>__end__</p>]):::last
+	__start__ --> fetch;
+	approval -.-> __end__;
+	approval -.-> edit;
+	approval -.-> send;
+	compliance -.-> __end__;
+	compliance -.-> approval;
+	draft -.-> __end__;
+	draft -.-> compliance;
+	edit -.-> __end__;
+	edit -.-> approval;
+	fetch -.-> __end__;
+	fetch -.-> guard;
+	guard -.-> __end__;
+	guard -.-> intent;
+	intent -.-> __end__;
+	intent -.-> draft;
+	intent -.-> slots;
+	slots -.-> __end__;
+	slots -.-> draft;
+	send --> __end__;
+	classDef default fill:#f2f0ff,line-height:1.2
+	classDef first fill-opacity:0
+	classDef last fill:#bfb6fc
