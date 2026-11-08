@@ -81,8 +81,10 @@ def make_chat(spec: dict):
     key = os.getenv(p.get("api_key_env", ""), "")
     if not key:
         raise RuntimeError(f"{p.get('api_key_env')} not set for provider {prov}")
+    extra = {"reasoning_effort": spec.get("reasoning_effort", "low")} if "gpt-oss" in spec["model"] else {}
     return ChatOpenAI(model=spec["model"], base_url=p["base_url"], api_key=key, temperature=spec.get("temperature", 0.2),
-                      max_tokens=spec.get("max_tokens", 1200), timeout=60, max_retries=1)
+                      max_tokens=spec.get("max_tokens", 3000), timeout=90, **extra,
+                      max_retries=int(os.getenv("LLM_MAX_RETRIES", "4")))   # 429s on free tiers carry a retry-after
 
 
 def _usage_from(msg, spec: dict, node: str, t0: float, pv: str) -> Usage:
@@ -107,8 +109,8 @@ async def structured(node: str, prompt: str, schema: type[T], heuristic: Callabl
         try:
             chat = make_chat(s)
             sys_msg, user_msg = p.render(**variables)
-            runnable = chat.with_structured_output(schema, method="json_schema" if s["provider"] == "ollama" else "function_calling",
-                                                   include_raw=True)
+            # strict JSON-schema output works on Ollama, Groq (gpt-oss) and OpenAI; tool-call style was flaky on Groq
+            runnable = chat.with_structured_output(schema, method="json_schema", include_raw=True)
             out = await asyncio.wait_for(runnable.ainvoke([("system", sys_msg), ("user", user_msg)]), timeout_s)
             if out.get("parsed") is None:
                 raise ValueError(f"unparseable output: {out.get('parsing_error')}")

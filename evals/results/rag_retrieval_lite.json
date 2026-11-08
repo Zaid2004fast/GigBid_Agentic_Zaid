@@ -1,0 +1,76 @@
+{
+ "meta": {
+  "generated_at": "2026-11-08T22:56:59",
+  "limit_per_persona": null,
+  "embedding": "BAAI/bge-small-en-v1.5",
+  "reranker": "Xenova/ms-marco-MiniLM-L-6-v2"
+ },
+ "results": {
+  "best": {
+   "persona:aiml": {
+    "recall@5": 0.9432,
+    "mrr": 0.9588,
+    "ndcg@10": 0.8119,
+    "n": 161
+   },
+   "all": {
+    "recall@5": 0.9491,
+    "mrr": 0.9649,
+    "ndcg@10": 0.8309,
+    "n": 494
+   },
+   "kind:fit": {
+    "recall@5": 0.9511,
+    "mrr": 0.9662,
+    "ndcg@10": 0.8099,
+    "n": 276
+   },
+   "req>=4": {
+    "recall@5": 0.9623,
+    "mrr": 0.978,
+    "ndcg@10": 0.8011,
+    "n": 247
+   },
+   "kind:scam": {
+    "recall@5": 0.9516,
+    "mrr": 0.9613,
+    "ndcg@10": 0.8121,
+    "n": 124
+   },
+   "kind:partial": {
+    "recall@5": 0.9399,
+    "mrr": 0.9658,
+    "ndcg@10": 0.9172,
+    "n": 94
+   },
+   "implicit": {
+    "recall@5": 0.9397,
+    "mrr": 0.9624,
+    "ndcg@10": 0.8158,
+    "n": 146
+   },
+   "vague": {
+    "recall@5": 0.9356,
+    "mrr": 0.9674,
+    "ndcg@10": 0.7845,
+    "n": 45
+   },
+   "persona:web": {
+    "recall@5": 0.96,
+    "mrr": 0.9639,
+    "ndcg@10": 0.8325,
+    "n": 170
+   },
+   "persona:data": {
+    "recall@5": 0.9436,
+    "mrr": 0.9719,
+    "ndcg@10": 0.8479,
+    "n": 163
+   },
+   "latency_s": {
+    "p50": 0.0043,
+    "p95": 0.0192
+   }
+  }
+ }
+}

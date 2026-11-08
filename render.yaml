@@ -1,0 +1,24 @@
+# Render Blueprint: one free web service running UI + API + worker + GigSim + MCP (in-process).
+services:
+  - type: web
+    name: gigbid
+    runtime: docker
+    plan: free
+    dockerfilePath: ./infra/docker/render.Dockerfile
+    healthCheckPath: /api/health
+    envVars:
+      - {key: GIGBID_PROFILE, value: open}
+      - {key: SMALL_PROVIDER, value: groq}
+      - {key: SMALL_MODEL, value: openai/gpt-oss-20b}
+      - {key: WRITER_PROVIDER, value: groq}
+      - {key: WRITER_MODEL, value: openai/gpt-oss-120b}
+      - {key: CRITIC_MODEL, value: openai/gpt-oss-20b}
+      - {key: GIGBID_ENV, value: prod}
+      - {key: WORKER_CONCURRENCY, value: "1"}     # stays under Groq free-tier tokens/minute
+      - {key: COOKIE_SECURE, value: "1"}
+      - {key: REVIEWER_PERSONA, value: aiml}
+      - {key: REVIEWER_EMAIL, value: reviewer@gigbid.dev}
+      - {key: GROQ_API_KEY, sync: false}
+      - {key: SECRET_KEY, sync: false}
+      - {key: TOKEN_ENC_KEY, sync: false}
+      - {key: REVIEWER_PASSWORD, sync: false}

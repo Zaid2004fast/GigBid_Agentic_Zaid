@@ -45,7 +45,7 @@ async def lifespan(app: FastAPI):
     await Engine.get()
     task = None
     if not os.getenv("REDIS_URL") and os.getenv("GIGBID_INPROCESS_WORKER", "1") == "1":
-        task = asyncio.create_task(local_worker(_stop))
+        task = asyncio.create_task(local_worker(_stop, concurrency=int(os.getenv("WORKER_CONCURRENCY", "2"))))
     yield
     _stop.set()
     if task:

@@ -1,11 +1,18 @@
 # Deploying the public link
 
-The deployed link must work on the **open** profile, and free hosts have no GPU. The
-single-container image (`infra/docker/allinone.Dockerfile`) therefore runs API + UI +
-worker + GigSim + MCP servers in one process with SQLite, and calls a hosted open-model
-provider (Groq: `openai/gpt-oss-120b` / `gpt-oss-20b`). Embeddings and the reranker run
-on CPU inside the container. Without a `GROQ_API_KEY` it still works, falling back to the
-deterministic offline path.
+**Shipped host: Render (free).** Hugging Face now requires a PRO plan for Docker Spaces, so the free deployment uses Render with
+`render.yaml` + `infra/docker/render.Dockerfile` (lite mode: no local embedding model). Measured on the dev set, the shipped
+retrieval scores the same in lite mode (`evals/results/rag_retrieval_lite.json`: Recall@5 0.949 vs 0.949). Measured locally: peak memory
+~200 MB (limit 512 MB); with `WORKER_CONCURRENCY=1` every Groq call succeeded (analyst 19/19, writer 10/10, critic 10/10) within the
+free-tier rate limit.
+
+## Render
+
+1. render.com → sign in with GitHub → **New → Blueprint** → pick this repository → Render reads `render.yaml`.
+2. When asked, paste the four secrets (`GROQ_API_KEY`, `SECRET_KEY`, `TOKEN_ENC_KEY`, `REVIEWER_PASSWORD`).
+3. Wait for the build (~10 min). The URL is `https://gigbid-<suffix>.onrender.com`.
+4. The free plan sleeps after 15 minutes idle; the first request wakes it (~1 min). Data lives on the instance's disk and resets on redeploy;
+   the reviewer account is re-created automatically on start.
 
 ## Option A - Hugging Face Spaces (free, 16 GB RAM CPU)
 
