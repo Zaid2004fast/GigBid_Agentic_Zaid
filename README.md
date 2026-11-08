@@ -1,6 +1,6 @@
 # GigBid: a multi-agent freelancer copilot that never sends anything you didn't approve
 
-> **Live demo:** `<deployed URL>` (reviewer login in the private submission comment) ·
+> **Live demo:** https://gigbid.onrender.com (reviewer login in the private submission comment; free hosting, so the first visit can take ~1 minute to wake) ·
 > **Demo video (3 min):** `<link>` · **Write-up:** `<link>` · **Portfolio MCP server:** [`mcp_servers/portfolio`](mcp_servers/portfolio/README.md)
 
 <!-- demo GIF: docs/images/demo.gif (record with the screen recorder while running `python scripts/run.py dev`) -->

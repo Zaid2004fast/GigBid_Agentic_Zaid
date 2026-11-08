@@ -16,6 +16,8 @@ SIGNALS = {
     "free_work": (r"\b(for free|unpaid|free (test|sample)|test task[^.]{0,60}free|complete a (small )?test (task|project)|"
                   r"best free submission|free sample)\b", 0.55, "high"),
     "off_platform_contact": (r"\b(telegram|whatsapp|whats app|skype|wa\.me|t\.me|message me directly|contact me (directly|on))\b|"
+                             r"\b(external|outside|another|third[- ]party|private|personal)\s+(messaging|chat|messenger)\s*(app|platform|channel)?\b|"
+                             r"\bcontact (me|us|the client)\b[^.]{0,30}\b(off[- ]platform|outside|externally|elsewhere)\b|\boff[- ]platform\b|"
                              r"[\w.+-]+@[\w-]+\.[\w.]+", 0.6, "high"),
     "off_platform_payment": (r"\b(crypto|usdt|bitcoin|btc|gift ?cards?|western union|outside the platform|avoid (the )?fees|"
                              r"bank details)\b", 0.7, "high"),

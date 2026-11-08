@@ -14,6 +14,7 @@ rules:
         - '[\w.+-]+@[\w-]+\.[\w.]+'
         - '(?<!\$)(?<![\d,.])\+?\d[\d\s().-]{8,}\d'
         - '\b(whats\s?app|telegram|skype|signal app|wa\.me|t\.me|discord)\b'
+        - '\b(external|outside|third[- ]party|private|personal)\s+(messaging|chat|messenger)\s*(app|platform|channel)\b'
     action: redact
     message: Off-platform contact details removed (policy P-1).
 

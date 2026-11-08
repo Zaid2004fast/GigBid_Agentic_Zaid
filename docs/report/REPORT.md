@@ -291,6 +291,10 @@ the post at all, only a structured summary.
 - The Job Analyst reads the post, so an attack could distort its summary (for example, add a fake
   requirement).
 - Contact details written in disguise ("name at gmail dot com") pass the rule check.
+- Our patterns can overfit to our own data. When we ran the instructor's starter-kit sample through GigBid,
+  the phrase "contact the client on an external messaging app" was missed at first, because we only listed
+  app names. We broadened the patterns (still 0 good jobs blocked) and added the sample as a permanent test
+  (`docs/STARTER_KIT_MAPPING.md`).
 - Scam detection is not perfect, but a missed scam still reaches the human with a risk warning and
   is never sent automatically.
 
