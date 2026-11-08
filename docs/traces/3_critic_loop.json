@@ -1,0 +1,1494 @@
+{
+ "scenario": "3_critic_loop",
+ "thread_id": "bid:demo-user:dev_aiml_001:bf2ebf",
+ "trace_id": "d2b554d2d9fc4866aa08717097532469",
+ "status": "awaiting_approval",
+ "progress": [
+  "Scout: job dev_aiml_001 'LoRA fine-tuning expert needed for media project' taken in",
+  "Job Analyst: 7 requirements, budget fixed 1830.0",
+  "Risk Assessor: low risk, scam p=0.00",
+  "Fit Matcher: fit 1.00 (3/3 requirements evidenced)",
+  "Reconcile: analyst and matcher agree on requirements",
+  "Decision: BID - fit 1.00, p(reply)=0.34 (prior), EV $184 for 6 Connects (pacing off)",
+  "Pricing: fixed $1649 (market fixed p25/p50/p75 = 880/1130/1385 (246 jobs))",
+  "Writer: draft v1 (63 words, 3 evidence items, qwen3:1.7b)",
+  "Verifier: 2 claims, unsupported 0->0, 0 rewritten, 1 removed",
+  "Critic: revise (score 0.26): too short (44 words); no question back to the client; Generic opening: The proposal lacks personalization and specific reference to the client's deliverables (e.g., LoRA fine-tuning, PEFT, Pandas, Faiss).; Claims without citations: The statements about improving answer faithfulness and search click-through are not supported by any evidence or references.",
+  "Writer: draft v2 (70 words, 3 evidence items, qwen3:1.7b)",
+  "Verifier: 2 claims, unsupported 0->0, 1 rewritten, 0 removed",
+  "Critic: revise (score 0.26): too short (61 words); no question back to the client; Generic opening: The proposal lacks personalization and specific reference to the client's deliverables (e.g., LoRA fine-tuning, PEFT, Pandas, Faiss).; No question back to the client: The proposal does not address the screening questions explicitly, such as 'Which tools would you use for this and why?' or 'Describe a similar project you delivered and its result.'",
+  "Writer: draft v3 (85 words, 3 evidence items, qwen3:1.7b)",
+  "Verifier: 4 claims, unsupported 0->0, 0 rewritten, 1 removed",
+  "Critic: accept with issues (score 0.29): too short (65 words); no question back to the client; Generic opening: The draft starts with 'In, I evaluated...' which is too generic and lacks personalization to the client's specific project.; No personalized touch: The proposal does not reference the client's deliverables (e.g., LoRA fine-tuning, PEFT, Pandas, Faiss) or their specific requirements.",
+  "Compliance: allowed (no issues)",
+  "Dry run: 6 Connects, balance after 99994"
+ ],
+ "decision": {
+  "job_id": "dev_aiml_001",
+  "action": "bid",
+  "reasons": [
+   "fit 1.00, p(reply)=0.34 (prior), EV $184 for 6 Connects (pacing off)"
+  ],
+  "expected_value_usd": 184.21,
+  "p_reply": 0.3355,
+  "connects_cost": 6,
+  "pacing_threshold": 1.0,
+  "auto": false
+ },
+ "spans": [
+  {
+   "span_id": "b0812565c9c44d45",
+   "trace_id": "d2b554d2d9fc4866aa08717097532469",
+   "parent_id": null,
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_001:bf2ebf",
+   "name": "node:intake",
+   "kind": "node",
+   "start": 1794149695.6597018,
+   "end": 1794149695.6597018,
+   "status": "ok",
+   "attrs": {
+    "node": "intake",
+    "output_keys": [
+     "job",
+     "job_id",
+     "progress",
+     "revision",
+     "settings",
+     "status"
+    ],
+    "status": "analysing"
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "78af044a65d34d03",
+   "trace_id": "d2b554d2d9fc4866aa08717097532469",
+   "parent_id": null,
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_001:bf2ebf",
+   "name": "node:analyst",
+   "kind": "node",
+   "start": 1794149695.973782,
+   "end": 1794149729.2341018,
+   "status": "ok",
+   "attrs": {
+    "node": "analyst",
+    "output_keys": [
+     "job_spec",
+     "progress"
+    ]
+   },
+   "tokens_in": 448,
+   "tokens_out": 103,
+   "cost_usd": 0.0,
+   "model": "qwen3:1.7b"
+  },
+  {
+   "span_id": "7b5de1c8b9d24f02",
+   "trace_id": "d2b554d2d9fc4866aa08717097532469",
+   "parent_id": "977563b0b95a4e2e",
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_001:bf2ebf",
+   "name": "tool:get_client_history",
+   "kind": "tool",
+   "start": 1794149695.985002,
+   "end": 1794149700.618597,
+   "status": "ok",
+   "attrs": {
+    "server": "marketplace",
+    "tool": "get_client_history",
+    "args": {
+     "client_id": "cl_0266"
+    },
+    "agent": "risk",
+    "attempt": 0,
+    "result": {
+     "id": "cl_0266",
+     "name": "Quarry Group",
+     "country": "UK",
+     "industry": "media",
+     "payment_verified": true,
+     "member_since": 2024,
+     "total_spent": 15000,
+     "jobs_posted": 66,
+     "hire_rate": 0.43,
+     "avg_rating": 4.7,
+     "freelancer_reviews": [
+      {
+       "rating": 5.0,
+       "text": "Clear brief, paid promptly."
+      },
+      {
+       "rating": 5.0,
+       "text": "Clear brief, paid promptly."
+      },
+      {
+       "rating": 3.0,
+       "text": "Asked for lots of unpaid extra work."
+      },
+      {
+       "rating": 4.5,
+       "text": "Clear brief, paid promptly."
+      },
+      {
+       "rating": 4.5,
+       "text": "Great to work with."
+      }
+     ]
+    }
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "977563b0b95a4e2e",
+   "trace_id": "d2b554d2d9fc4866aa08717097532469",
+   "parent_id": null,
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_001:bf2ebf",
+   "name": "node:risk",
+   "kind": "node",
+   "start": 1794149695.985002,
+   "end": 1794149700.641678,
+   "status": "ok",
+   "attrs": {
+    "node": "risk",
+    "output_keys": [
+     "client",
+     "progress",
+     "risk"
+    ]
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "d30df07ca39d4d29",
+   "trace_id": "d2b554d2d9fc4866aa08717097532469",
+   "parent_id": null,
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_001:bf2ebf",
+   "name": "node:matcher",
+   "kind": "node",
+   "start": 1794149697.236255,
+   "end": 1794149701.3591895,
+   "status": "ok",
+   "attrs": {
+    "node": "matcher",
+    "output_keys": [
+     "evidence",
+     "fit",
+     "progress"
+    ]
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "b47a40fd5b5e4611",
+   "trace_id": "d2b554d2d9fc4866aa08717097532469",
+   "parent_id": "d30df07ca39d4d29",
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_001:bf2ebf",
+   "name": "tool:search_evidence",
+   "kind": "tool",
+   "start": 1794149700.5239947,
+   "end": 1794149701.3096228,
+   "status": "ok",
+   "attrs": {
+    "server": "portfolio",
+    "tool": "search_evidence",
+    "args": {
+     "requirement": "PEFT",
+     "k": 4
+    },
+    "agent": "matcher",
+    "attempt": 0,
+    "result": {
+     "requirement": "PEFT",
+     "variant": "best",
+     "status": "supported",
+     "items": [
+      {
+       "item_id": "aiml:repo:rag-eval",
+       "type": "repo_code",
+       "source": "repo:rag-eval/src/main.py",
+       "date": "",
+       "outcome": null,
+       "project": "rag-eval",
+       "title": "rag-eval/src/main.py",
+       "client_industry": "",
+       "snippet": "from peft import LoraConfig, get_peft_model\n",
+       "score": 0.0318,
+       "support": 1.0
+      },
+      {
+       "item_id": "aiml:cs:rag-eval",
+       "type": "case_study",
+       "source": "rag-eval.md",
+       "date": "2025-06",
+       "outcome": null,
+       "project": "rag-eval",
+       "title": "Evaluation harness for an LLM chatbot (legal)",
+       "client_industry": "legal",
+       "snippet": "# Evaluation harness for an LLM chatbot (legal)\n\n## Context\nDriftwood Legal needed an offline evaluation set and metrics for answer faithfulness. The existing process was slow and error-prone.\n\n## What I built\nI designed and delivered an offline evaluation set and metrics for answer faithfulness. The stack: Python, answers grounded in the company's own documents with citations, LangChain, cleaned ",
+       "score": 0.0313,
+       "support": 1.0
+      },
+      {
+       "item_id": "aiml:repo:ticket-triage",
+       "type": "repo_code",
+       "source": "repo:ticket-triage/src/main.py",
+       "date": "",
+       "outcome": null,
+       "project": "ticket-triage",
+       "title": "ticket-triage/src/main.py",
+       "client_industry": "",
+       "snippet": "from peft import LoraConfig, get_peft_model",
+       "score": 0.0309,
+       "support": 1.0
+      },
+      {
+       "item_id": "aiml:cv:rag-eval",
+       "type": "cv",
+       "source": "cv.pdf",
+       "date": "2025",
+       "outcome": null,
+       "project": "rag-eval",
+       "title": "Evaluation harness for an LLM chatbot",
+       "client_industry": "legal",
+       "snippet": "Evaluation harness for an LLM chatbot (legal) (2025): an offline evaluation set and metrics for answer faithfulness; caught 59% of regressions before release. Tools: Python, RAG, LangChain. [github.com/ayesha-ml/rag-eval]",
+       "score": 0.0305,
+       "support": 1.0
+      }
+     ]
+    }
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "05e9fc4091784b6f",
+   "trace_id": "d2b554d2d9fc4866aa08717097532469",
+   "parent_id": "d30df07ca39d4d29",
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_001:bf2ebf",
+   "name": "tool:search_evidence",
+   "kind": "tool",
+   "start": 1794149700.5779638,
+   "end": 1794149701.3135843,
+   "status": "ok",
+   "attrs": {
+    "server": "portfolio",
+    "tool": "search_evidence",
+    "args": {
+     "requirement": "Pandas",
+     "k": 4
+    },
+    "agent": "matcher",
+    "attempt": 0,
+    "result": {
+     "requirement": "Pandas",
+     "variant": "best",
+     "status": "supported",
+     "items": [
+      {
+       "item_id": "aiml:repo:demand-forecast",
+       "type": "repo_code",
+       "source": "repo:demand-forecast/src/main.py",
+       "date": "",
+       "outcome": null,
+       "project": "demand-forecast",
+       "title": "demand-forecast/src/main.py",
+       "client_industry": "",
+       "snippet": "import pandas as pd\ndf = pd.read_csv(path)",
+       "score": 0.0323,
+       "support": 1.0
+      },
+      {
+       "item_id": "aiml:cs:demand-forecast",
+       "type": "case_study",
+       "source": "demand-forecast.md",
+       "date": "2026-04",
+       "outcome": null,
+       "project": "demand-forecast",
+       "title": "Weekly demand forecasting for a logistics distributor",
+       "client_industry": "logistics",
+       "snippet": "# Weekly demand forecasting for a logistics distributor\n\n## Context\nLumen Logistics needed store-level demand forecasts with holiday effects. The existing process was slow and error-prone.\n\n## What I built\nI designed and delivered store-level demand forecasts with holiday effects. The stack: predicted weekly demand per store with seasonality and holidays, scripting the whole backend end to end, cl",
+       "score": 0.0315,
+       "support": 1.0
+      },
+      {
+       "item_id": "aiml:repo:demand-forecast-manufacturing",
+       "type": "repo_code",
+       "source": "repo:demand-forecast-manufacturing/src/main.py",
+       "date": "",
+       "outcome": null,
+       "project": "demand-forecast-manufacturing",
+       "title": "demand-forecast-manufacturing/src/main.py",
+       "client_industry": "",
+       "snippet": "import pandas as pd\ndf = pd.read_csv(path)",
+       "score": 0.0313,
+       "support": 1.0
+      },
+      {
+       "item_id": "aiml:repo:agent-workflow-logistics",
+       "type": "repo_code",
+       "source": "repo:agent-workflow-logistics/src/main.py",
+       "date": "",
+       "outcome": null,
+       "project": "agent-workflow-logistics",
+       "title": "agent-workflow-logistics/src/main.py",
+       "client_industry": "",
+       "snippet": "import pandas as pd\ndf = pd.read_csv(path)\n",
+       "score": 0.0311,
+       "support": 1.0
+      }
+     ]
+    }
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "ca799796e7b14b2d",
+   "trace_id": "d2b554d2d9fc4866aa08717097532469",
+   "parent_id": "d30df07ca39d4d29",
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_001:bf2ebf",
+   "name": "tool:search_evidence",
+   "kind": "tool",
+   "start": 1794149700.5799599,
+   "end": 1794149701.3197224,
+   "status": "ok",
+   "attrs": {
+    "server": "portfolio",
+    "tool": "search_evidence",
+    "args": {
+     "requirement": "faiss",
+     "k": 4
+    },
+    "agent": "matcher",
+    "attempt": 0,
+    "result": "{\"requirement\": \"faiss\", \"variant\": \"best\", \"status\": \"supported\", \"items\": [{\"item_id\": \"aiml:repo:semantic-search-logistics\", \"type\": \"repo_code\", \"source\": \"repo:semantic-search-logistics/src/main.py\", \"date\": \"\", \"outcome\": null, \"project\": \"semantic-search-logistics\", \"title\": \"semantic-search-logistics/src/main.py\", \"client_industry\": \"\", \"snippet\": \"import faiss\\nindex = faiss.IndexFlatIP(dim)\", \"score\": 0.0336, \"support\": 1.0}, {\"item_id\": \"aiml:cs:semantic-search-logistics\", \"type\": \"case_study\", \"source\": \"semantic-search-logistics.md\", \"date\": \"2022-09\", \"outcome\": null, \"project\": \"semantic-search-logistics\", \"title\": \"Semantic product search for a logistics marketplace\", \"client_industry\": \"logistics\", \"snippet\": \"# Semantic product search for a logistics marketplace\\n\\n## Context\\nCorvid Logistics needed embedding-based search over 1200 products. The existing process was slow and error-prone.\\n\\n## What I built\\nI designed and delivered embedding-based search over 1200 products. The stack: Python, approximate nearest-neighbour search over millions of embeddings in memory, transformers, an async Python API with a\", \"score\": 0.0336, \"support\": 1.0}, {\"item_id\": \"aiml:cv:semantic-search-logistics\", \"type\": \"cv\", \"source\": \"cv.pdf\", \"date\": \"2022\", \"outcome\": null, \"project\": \"semantic-search-logistics\", \"title\": \"Semantic product search for a logistics marketplace\", \"client_industry\": \"logistics\", \"snippet\": \"Semantic product search for a logistics marketplace (2022): embedding-based search over 1200 products; search click-through up 33%. Tools: Python, FAISS, Hugging Face Transformers. [github.com/ayesha-ml/semantic-search-logistics]\", \"score\": 0.0328, \"support\": 1.0}, {\"item_id\": \"aiml:cv:semantic-search\", \"type\": \"cv\", \"source\": \"cv.pdf\", \"date\": \"2023\", \"outcome\": null, \"project\": \"semantic-search\", \"title\": \"Semantic product search for a legal marketplace\", \"client_industry\": \"legal\", \"snippet\": \"Semantic product search for a legal marketplace (2023)...(truncated)"
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "82771348c6b64e03",
+   "trace_id": "d2b554d2d9fc4866aa08717097532469",
+   "parent_id": "d30df07ca39d4d29",
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_001:bf2ebf",
+   "name": "tool:find_winning_proposals",
+   "kind": "tool",
+   "start": 1794149701.3368979,
+   "end": 1794149701.3530965,
+   "status": "ok",
+   "attrs": {
+    "server": "portfolio",
+    "tool": "find_winning_proposals",
+    "args": {
+     "job_summary": "LoRA fine-tuning expert needed for media project faiss lora pandas",
+     "k": 2
+    },
+    "agent": "matcher",
+    "attempt": 0,
+    "result": {
+     "items": [
+      {
+       "id": "aiml:proposal:aiml-prop-147",
+       "outcome": "replied",
+       "text": "You need lora fine-tuning expert needed for a healthcare team, and I have shipped this before. For Corvid Logistics I built embedding-based search over 1200 products using Python, FAISS, Hugging Face Transformers; it search click-through up 33%. Happy to share a short plan on a call."
+      },
+      {
+       "id": "aiml:proposal:aiml-prop-061",
+       "outcome": "replied",
+       "text": "You need lora fine-tuning expert needed for a media team, and I have shipped this before. For Kestrel Real Estate I built agents that review contracts and flag risky clauses with human approval using LangGraph, Python, OpenAI API; it review time down 90%. Could you tell me more about your current setup?"
+      }
+     ]
+    }
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "99c0dbb95e644735",
+   "trace_id": "d2b554d2d9fc4866aa08717097532469",
+   "parent_id": null,
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_001:bf2ebf",
+   "name": "node:reconcile",
+   "kind": "node",
+   "start": 1794149729.3937693,
+   "end": 1794149729.3947613,
+   "status": "ok",
+   "attrs": {
+    "node": "reconcile",
+    "output_keys": [
+     "progress"
+    ]
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "0673bedb9dd34ac9",
+   "trace_id": "d2b554d2d9fc4866aa08717097532469",
+   "parent_id": "475f1e6da38e4b5f",
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_001:bf2ebf",
+   "name": "tool:get_policy",
+   "kind": "tool",
+   "start": 1794149729.5354834,
+   "end": 1794149729.642803,
+   "status": "ok",
+   "attrs": {
+    "server": "marketplace",
+    "tool": "get_policy",
+    "args": {},
+    "agent": "pricing",
+    "attempt": 0,
+    "result": {
+     "version": 1,
+     "effective": "[PHONE]",
+     "connects": {
+      "formula": "flat",
+      "flat": 6
+     },
+     "rules": [
+      "No off-platform contact or payment",
+      "No fabricated experience",
+      "No guarantees",
+      "Fair use of automation"
+     ]
+    }
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "475f1e6da38e4b5f",
+   "trace_id": "d2b554d2d9fc4866aa08717097532469",
+   "parent_id": null,
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_001:bf2ebf",
+   "name": "node:decide",
+   "kind": "node",
+   "start": 1794149729.5354834,
+   "end": 1794149729.6468012,
+   "status": "ok",
+   "attrs": {
+    "node": "decide",
+    "output_keys": [
+     "decision",
+     "progress",
+     "status"
+    ],
+    "status": "drafting"
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "09c8d1c12eac4218",
+   "trace_id": "d2b554d2d9fc4866aa08717097532469",
+   "parent_id": "4d6fab203fce480d",
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_001:bf2ebf",
+   "name": "tool:get_market_stats",
+   "kind": "tool",
+   "start": 1794149729.6528013,
+   "end": 1794149729.7000356,
+   "status": "ok",
+   "attrs": {
+    "server": "marketplace",
+    "tool": "get_market_stats",
+    "args": {
+     "category": "AI & Machine Learning",
+     "budget_type": "fixed"
+    },
+    "agent": "pricing",
+    "attempt": 0,
+    "result": {
+     "category": "AI & Machine Learning",
+     "budget_type": "fixed",
+     "n": 246,
+     "p10": 687.94,
+     "p25": 880.15,
+     "p50": 1130.26,
+     "p75": 1384.84,
+     "p90": 1743.38,
+     "avg_proposals": 31.0
+    }
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "4d6fab203fce480d",
+   "trace_id": "d2b554d2d9fc4866aa08717097532469",
+   "parent_id": null,
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_001:bf2ebf",
+   "name": "node:pricing",
+   "kind": "node",
+   "start": 1794149729.6528013,
+   "end": 1794149729.7000356,
+   "status": "ok",
+   "attrs": {
+    "node": "pricing",
+    "output_keys": [
+     "price",
+     "progress"
+    ]
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "5da1c8d8ab1e42f3",
+   "trace_id": "d2b554d2d9fc4866aa08717097532469",
+   "parent_id": "7c3fa87737604789",
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_001:bf2ebf",
+   "name": "tool:get_evidence",
+   "kind": "tool",
+   "start": 1794149729.7271159,
+   "end": 1794149729.753256,
+   "status": "ok",
+   "attrs": {
+    "server": "portfolio",
+    "tool": "get_evidence",
+    "args": {
+     "item_ids": [
+      "aiml:cs:rag-eval",
+      "aiml:cs:demand-forecast",
+      "aiml:cs:semantic-search-logistics"
+     ]
+    },
+    "agent": "writer",
+    "attempt": 0,
+    "result": "{\"items\": [{\"item_id\": \"aiml:cs:rag-eval\", \"type\": \"case_study\", \"project\": \"rag-eval\", \"title\": \"Evaluation harness for an LLM chatbot (legal)\", \"text\": \"# Evaluation harness for an LLM chatbot (legal)\\n\\n## Context\\nDriftwood Legal needed an offline evaluation set and metrics for answer faithfulness. The existing process was slow and error-prone.\\n\\n## What I built\\nI designed and delivered an offline evaluation set and metrics for answer faithfulness. The stack: Python, answers grounded in the company's own documents with citations, LangChain, cleaned and reshaped messy spreadsheets with dataframes, QLoRA.\\n\\nA core piece of the implementation:\\n\\n```\\ndef main() -> None:\\n    ...\\n```\\n\\n## Outcome\\nThe result caught 59% of regressions before release.\", \"project_skills\": [\"langchain\", \"lora\", \"pandas\", \"python\", \"rag\"], \"industry\": \"legal\"}, {\"item_id\": \"aiml:cs:demand-forecast\", \"type\": \"case_study\", \"project\": \"demand-forecast\", \"title\": \"Weekly demand forecasting for a logistics distributor\", \"text\": \"# Weekly demand forecasting for a logistics distributor\\n\\n## Context\\nLumen Logistics needed store-level demand forecasts with holiday effects. The existing process was slow and error-prone.\\n\\n## What I built\\nI designed and delivered store-level demand forecasts with holiday effects. The stack: predicted weekly demand per store with seasonality and holidays, scripting the whole backend end to end, cleaned and reshaped messy spreadsheets with dataframes, MLflow.\\n\\n## Outcome\\nThe result forecast error (MAPE) reduced to 67%.\", \"project_skills\": [\"forecasting\", \"mlflow\", \"pandas\", \"python\"], \"industry\": \"logistics\"}, {\"item_id\": \"aiml:cs:semantic-search-logistics\", \"type\": \"case_study\", \"project\": \"semantic-search-logistics\", \"title\": \"Semantic product search for a logistics marketplace\", \"text\": \"# Semantic product search for a logistics marketplace\\n\\n## Context\\nCorvid Logistics needed embedding-based search over 1200 products. The existing process was slow ...(truncated)"
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "7c3fa87737604789",
+   "trace_id": "d2b554d2d9fc4866aa08717097532469",
+   "parent_id": null,
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_001:bf2ebf",
+   "name": "node:writer",
+   "kind": "node",
+   "start": 1794149729.7271159,
+   "end": 1794149769.7259638,
+   "status": "ok",
+   "attrs": {
+    "node": "writer",
+    "output_keys": [
+     "drafts",
+     "progress",
+     "revision"
+    ]
+   },
+   "tokens_in": 644,
+   "tokens_out": 250,
+   "cost_usd": 0.0,
+   "model": "qwen3:1.7b"
+  },
+  {
+   "span_id": "7ac85168614941a2",
+   "trace_id": "d2b554d2d9fc4866aa08717097532469",
+   "parent_id": "d009116002cb4e14",
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_001:bf2ebf",
+   "name": "tool:search_evidence",
+   "kind": "tool",
+   "start": 1794149770.0494835,
+   "end": 1794149770.209613,
+   "status": "ok",
+   "attrs": {
+    "server": "portfolio",
+    "tool": "search_evidence",
+    "args": {
+     "requirement": "I have experience in LoRA fine-tuning and PEFT, with a proven track record of delivering results in media projects.",
+     "k": 2
+    },
+    "agent": "verifier",
+    "attempt": 0,
+    "result": {
+     "requirement": "I have experience in LoRA fine-tuning and PEFT, with a proven track record of delivering results in media projects.",
+     "variant": "best",
+     "status": "supported",
+     "items": [
+      {
+       "item_id": "aiml:repo:rag-eval",
+       "type": "repo_readme",
+       "source": "repo:rag-eval/README.md",
+       "date": "",
+       "outcome": null,
+       "project": "rag-eval",
+       "title": "rag-eval/README.md",
+       "client_industry": "",
+       "snippet": "# rag-eval\n\nAn offline evaluation set and metrics for answer faithfulness.\n\n## Stack\nPython, RAG, LangChain, pandas, LoRA fine-tuning\n\n## Results\nCaught 59% of regressions before release.\n",
+       "score": 0.0318,
+       "support": 1.0
+      },
+      {
+       "item_id": "aiml:cs:rag-eval",
+       "type": "case_study",
+       "source": "rag-eval.md",
+       "date": "2025-06",
+       "outcome": null,
+       "project": "rag-eval",
+       "title": "Evaluation harness for an LLM chatbot (legal)",
+       "client_industry": "legal",
+       "snippet": "# Evaluation harness for an LLM chatbot (legal)\n\n## Context\nDriftwood Legal needed an offline evaluation set and metrics for answer faithfulness. The existing process was slow and error-prone.\n\n## What I built\nI designed and delivered an offline evaluation set and metrics for answer faithfulness. The stack: Python, answers grounded in the company's own documents with citations, LangChain, cleaned ",
+       "score": 0.0318,
+       "support": 1.0
+      }
+     ]
+    }
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "d009116002cb4e14",
+   "trace_id": "d2b554d2d9fc4866aa08717097532469",
+   "parent_id": null,
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_001:bf2ebf",
+   "name": "node:verifier",
+   "kind": "node",
+   "start": 1794149770.0494835,
+   "end": 1794149770.478756,
+   "status": "ok",
+   "attrs": {
+    "node": "verifier",
+    "output_keys": [
+     "drafts",
+     "progress",
+     "verification"
+    ]
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "9f7e6a6dde4440d7",
+   "trace_id": "d2b554d2d9fc4866aa08717097532469",
+   "parent_id": "d009116002cb4e14",
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_001:bf2ebf",
+   "name": "tool:get_evidence",
+   "kind": "tool",
+   "start": 1794149770.299394,
+   "end": 1794149770.3215528,
+   "status": "ok",
+   "attrs": {
+    "server": "portfolio",
+    "tool": "get_evidence",
+    "args": {
+     "item_ids": [
+      "aiml:repo:rag-eval",
+      "aiml:cs:rag-eval"
+     ]
+    },
+    "agent": "verifier",
+    "attempt": 0,
+    "result": {
+     "items": [
+      {
+       "item_id": "aiml:repo:rag-eval",
+       "type": "repo_readme",
+       "project": "rag-eval",
+       "title": "rag-eval/README.md",
+       "text": "# rag-eval\n\nAn offline evaluation set and metrics for answer faithfulness.\n\n## Stack\nPython, RAG, LangChain, pandas, LoRA fine-tuning\n\n## Results\nCaught 59% of regressions before release.\n\n\"\"\"rag-eval - main module.\"\"\"\n\ndef main() -> None:\n    ...\n\ndocs = retriever.invoke(question)\nanswer = llm.invoke(prompt.format(context=docs))\n\nfrom langchain_core.prompts import ChatPromptTemplate\n\nimport pandas as pd\ndf = pd.read_csv(path)\n\nfrom peft import LoraConfig, get_peft_model\n",
+       "project_skills": [
+        "langchain",
+        "lora",
+        "pandas",
+        "python",
+        "rag"
+       ],
+       "industry": "legal"
+      },
+      {
+       "item_id": "aiml:cs:rag-eval",
+       "type": "case_study",
+       "project": "rag-eval",
+       "title": "Evaluation harness for an LLM chatbot (legal)",
+       "text": "# Evaluation harness for an LLM chatbot (legal)\n\n## Context\nDriftwood Legal needed an offline evaluation set and metrics for answer faithfulness. The existing process was slow and error-prone.\n\n## What I built\nI designed and delivered an offline evaluation set and metrics for answer faithfulness. The stack: Python, answers grounded in the company's own documents with citations, LangChain, cleaned and reshaped messy spreadsheets with dataframes, QLoRA.\n\nA core piece of the implementation:\n\n```\ndef main() -> None:\n    ...\n```\n\n## Outcome\nThe result caught 59% of regressions before release.",
+       "project_skills": [
+        "langchain",
+        "lora",
+        "pandas",
+        "python",
+        "rag"
+       ],
+       "industry": "legal"
+      }
+     ]
+    }
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "14b83e362b124343",
+   "trace_id": "d2b554d2d9fc4866aa08717097532469",
+   "parent_id": "d009116002cb4e14",
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_001:bf2ebf",
+   "name": "tool:get_evidence",
+   "kind": "tool",
+   "start": 1794149770.3766866,
+   "end": 1794149770.4290853,
+   "status": "ok",
+   "attrs": {
+    "server": "portfolio",
+    "tool": "get_evidence",
+    "args": {
+     "item_ids": [
+      "aiml:cs:semantic-search-logistics"
+     ]
+    },
+    "agent": "verifier",
+    "attempt": 0,
+    "result": {
+     "items": [
+      {
+       "item_id": "aiml:cs:semantic-search-logistics",
+       "type": "case_study",
+       "project": "semantic-search-logistics",
+       "title": "Semantic product search for a logistics marketplace",
+       "text": "# Semantic product search for a logistics marketplace\n\n## Context\nCorvid Logistics needed embedding-based search over 1200 products. The existing process was slow and error-prone.\n\n## What I built\nI designed and delivered embedding-based search over 1200 products. The stack: Python, approximate nearest-neighbour search over millions of embeddings in memory, transformers, an async Python API with automatic OpenAPI docs.\n\n## Outcome\nThe result search click-through up 33%.",
+       "project_skills": [
+        "faiss",
+        "fastapi",
+        "huggingface",
+        "python"
+       ],
+       "industry": "logistics"
+      }
+     ]
+    }
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "1641a97979fa40cf",
+   "trace_id": "d2b554d2d9fc4866aa08717097532469",
+   "parent_id": null,
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_001:bf2ebf",
+   "name": "node:critic",
+   "kind": "node",
+   "start": 1794149770.938917,
+   "end": 1794149801.9620032,
+   "status": "ok",
+   "attrs": {
+    "node": "critic",
+    "output_keys": [
+     "critiques",
+     "progress"
+    ]
+   },
+   "tokens_in": 272,
+   "tokens_out": 204,
+   "cost_usd": 0.0,
+   "model": "qwen3:1.7b"
+  },
+  {
+   "span_id": "2ae2c8425e6b4573",
+   "trace_id": "d2b554d2d9fc4866aa08717097532469",
+   "parent_id": null,
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_001:bf2ebf",
+   "name": "node:writer",
+   "kind": "node",
+   "start": 1794149802.003411,
+   "end": 1794149848.615834,
+   "status": "ok",
+   "attrs": {
+    "node": "writer",
+    "output_keys": [
+     "drafts",
+     "progress",
+     "revision"
+    ]
+   },
+   "tokens_in": 706,
+   "tokens_out": 290,
+   "cost_usd": 0.0,
+   "model": "qwen3:1.7b"
+  },
+  {
+   "span_id": "2e2d654ab6c64b17",
+   "trace_id": "d2b554d2d9fc4866aa08717097532469",
+   "parent_id": "2ae2c8425e6b4573",
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_001:bf2ebf",
+   "name": "tool:get_evidence",
+   "kind": "tool",
+   "start": 1794149802.0044117,
+   "end": 1794149802.0904367,
+   "status": "ok",
+   "attrs": {
+    "server": "portfolio",
+    "tool": "get_evidence",
+    "args": {
+     "item_ids": [
+      "aiml:cs:rag-eval",
+      "aiml:cs:demand-forecast",
+      "aiml:cs:semantic-search-logistics"
+     ]
+    },
+    "agent": "writer",
+    "attempt": 0,
+    "result": "{\"items\": [{\"item_id\": \"aiml:cs:rag-eval\", \"type\": \"case_study\", \"project\": \"rag-eval\", \"title\": \"Evaluation harness for an LLM chatbot (legal)\", \"text\": \"# Evaluation harness for an LLM chatbot (legal)\\n\\n## Context\\nDriftwood Legal needed an offline evaluation set and metrics for answer faithfulness. The existing process was slow and error-prone.\\n\\n## What I built\\nI designed and delivered an offline evaluation set and metrics for answer faithfulness. The stack: Python, answers grounded in the company's own documents with citations, LangChain, cleaned and reshaped messy spreadsheets with dataframes, QLoRA.\\n\\nA core piece of the implementation:\\n\\n```\\ndef main() -> None:\\n    ...\\n```\\n\\n## Outcome\\nThe result caught 59% of regressions before release.\", \"project_skills\": [\"langchain\", \"lora\", \"pandas\", \"python\", \"rag\"], \"industry\": \"legal\"}, {\"item_id\": \"aiml:cs:demand-forecast\", \"type\": \"case_study\", \"project\": \"demand-forecast\", \"title\": \"Weekly demand forecasting for a logistics distributor\", \"text\": \"# Weekly demand forecasting for a logistics distributor\\n\\n## Context\\nLumen Logistics needed store-level demand forecasts with holiday effects. The existing process was slow and error-prone.\\n\\n## What I built\\nI designed and delivered store-level demand forecasts with holiday effects. The stack: predicted weekly demand per store with seasonality and holidays, scripting the whole backend end to end, cleaned and reshaped messy spreadsheets with dataframes, MLflow.\\n\\n## Outcome\\nThe result forecast error (MAPE) reduced to 67%.\", \"project_skills\": [\"forecasting\", \"mlflow\", \"pandas\", \"python\"], \"industry\": \"logistics\"}, {\"item_id\": \"aiml:cs:semantic-search-logistics\", \"type\": \"case_study\", \"project\": \"semantic-search-logistics\", \"title\": \"Semantic product search for a logistics marketplace\", \"text\": \"# Semantic product search for a logistics marketplace\\n\\n## Context\\nCorvid Logistics needed embedding-based search over 1200 products. The existing process was slow ...(truncated)"
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "c2f5a655fc5340e7",
+   "trace_id": "d2b554d2d9fc4866aa08717097532469",
+   "parent_id": null,
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_001:bf2ebf",
+   "name": "node:verifier",
+   "kind": "node",
+   "start": 1794149848.6950097,
+   "end": 1794149848.9475152,
+   "status": "ok",
+   "attrs": {
+    "node": "verifier",
+    "output_keys": [
+     "drafts",
+     "progress",
+     "verification"
+    ]
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "a725034104bd45a1",
+   "trace_id": "d2b554d2d9fc4866aa08717097532469",
+   "parent_id": "c2f5a655fc5340e7",
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_001:bf2ebf",
+   "name": "tool:get_evidence",
+   "kind": "tool",
+   "start": 1794149848.6960077,
+   "end": 1794149848.8268514,
+   "status": "ok",
+   "attrs": {
+    "server": "portfolio",
+    "tool": "get_evidence",
+    "args": {
+     "item_ids": [
+      "aiml:cs:rag-eval",
+      "aiml:cs:demand-forecast"
+     ]
+    },
+    "agent": "verifier",
+    "attempt": 0,
+    "result": {
+     "items": [
+      {
+       "item_id": "aiml:cs:rag-eval",
+       "type": "case_study",
+       "project": "rag-eval",
+       "title": "Evaluation harness for an LLM chatbot (legal)",
+       "text": "# Evaluation harness for an LLM chatbot (legal)\n\n## Context\nDriftwood Legal needed an offline evaluation set and metrics for answer faithfulness. The existing process was slow and error-prone.\n\n## What I built\nI designed and delivered an offline evaluation set and metrics for answer faithfulness. The stack: Python, answers grounded in the company's own documents with citations, LangChain, cleaned and reshaped messy spreadsheets with dataframes, QLoRA.\n\nA core piece of the implementation:\n\n```\ndef main() -> None:\n    ...\n```\n\n## Outcome\nThe result caught 59% of regressions before release.",
+       "project_skills": [
+        "langchain",
+        "lora",
+        "pandas",
+        "python",
+        "rag"
+       ],
+       "industry": "legal"
+      },
+      {
+       "item_id": "aiml:cs:demand-forecast",
+       "type": "case_study",
+       "project": "demand-forecast",
+       "title": "Weekly demand forecasting for a logistics distributor",
+       "text": "# Weekly demand forecasting for a logistics distributor\n\n## Context\nLumen Logistics needed store-level demand forecasts with holiday effects. The existing process was slow and error-prone.\n\n## What I built\nI designed and delivered store-level demand forecasts with holiday effects. The stack: predicted weekly demand per store with seasonality and holidays, scripting the whole backend end to end, cleaned and reshaped messy spreadsheets with dataframes, MLflow.\n\n## Outcome\nThe result forecast error (MAPE) reduced to 67%.",
+       "project_skills": [
+        "forecasting",
+        "mlflow",
+        "pandas",
+        "python"
+       ],
+       "industry": "logistics"
+      }
+     ]
+    }
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "fb3681e2c26e4a12",
+   "trace_id": "d2b554d2d9fc4866aa08717097532469",
+   "parent_id": "c2f5a655fc5340e7",
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_001:bf2ebf",
+   "name": "tool:get_evidence",
+   "kind": "tool",
+   "start": 1794149848.891873,
+   "end": 1794149848.9160826,
+   "status": "ok",
+   "attrs": {
+    "server": "portfolio",
+    "tool": "get_evidence",
+    "args": {
+     "item_ids": [
+      "aiml:cs:semantic-search-logistics"
+     ]
+    },
+    "agent": "verifier",
+    "attempt": 0,
+    "result": {
+     "items": [
+      {
+       "item_id": "aiml:cs:semantic-search-logistics",
+       "type": "case_study",
+       "project": "semantic-search-logistics",
+       "title": "Semantic product search for a logistics marketplace",
+       "text": "# Semantic product search for a logistics marketplace\n\n## Context\nCorvid Logistics needed embedding-based search over 1200 products. The existing process was slow and error-prone.\n\n## What I built\nI designed and delivered embedding-based search over 1200 products. The stack: Python, approximate nearest-neighbour search over millions of embeddings in memory, transformers, an async Python API with automatic OpenAPI docs.\n\n## Outcome\nThe result search click-through up 33%.",
+       "project_skills": [
+        "faiss",
+        "fastapi",
+        "huggingface",
+        "python"
+       ],
+       "industry": "logistics"
+      }
+     ]
+    }
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "fa0e039ec6024908",
+   "trace_id": "d2b554d2d9fc4866aa08717097532469",
+   "parent_id": null,
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_001:bf2ebf",
+   "name": "node:critic",
+   "kind": "node",
+   "start": 1794149849.0091524,
+   "end": 1794149873.021985,
+   "status": "ok",
+   "attrs": {
+    "node": "critic",
+    "output_keys": [
+     "critiques",
+     "progress"
+    ]
+   },
+   "tokens_in": 293,
+   "tokens_out": 209,
+   "cost_usd": 0.0,
+   "model": "qwen3:1.7b"
+  },
+  {
+   "span_id": "cb2c527c41d24b79",
+   "trace_id": "d2b554d2d9fc4866aa08717097532469",
+   "parent_id": "9fe5141919a546b8",
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_001:bf2ebf",
+   "name": "tool:get_evidence",
+   "kind": "tool",
+   "start": 1794149873.0557883,
+   "end": 1794149873.0953405,
+   "status": "ok",
+   "attrs": {
+    "server": "portfolio",
+    "tool": "get_evidence",
+    "args": {
+     "item_ids": [
+      "aiml:cs:rag-eval",
+      "aiml:cs:demand-forecast",
+      "aiml:cs:semantic-search-logistics"
+     ]
+    },
+    "agent": "writer",
+    "attempt": 0,
+    "result": "{\"items\": [{\"item_id\": \"aiml:cs:rag-eval\", \"type\": \"case_study\", \"project\": \"rag-eval\", \"title\": \"Evaluation harness for an LLM chatbot (legal)\", \"text\": \"# Evaluation harness for an LLM chatbot (legal)\\n\\n## Context\\nDriftwood Legal needed an offline evaluation set and metrics for answer faithfulness. The existing process was slow and error-prone.\\n\\n## What I built\\nI designed and delivered an offline evaluation set and metrics for answer faithfulness. The stack: Python, answers grounded in the company's own documents with citations, LangChain, cleaned and reshaped messy spreadsheets with dataframes, QLoRA.\\n\\nA core piece of the implementation:\\n\\n```\\ndef main() -> None:\\n    ...\\n```\\n\\n## Outcome\\nThe result caught 59% of regressions before release.\", \"project_skills\": [\"langchain\", \"lora\", \"pandas\", \"python\", \"rag\"], \"industry\": \"legal\"}, {\"item_id\": \"aiml:cs:demand-forecast\", \"type\": \"case_study\", \"project\": \"demand-forecast\", \"title\": \"Weekly demand forecasting for a logistics distributor\", \"text\": \"# Weekly demand forecasting for a logistics distributor\\n\\n## Context\\nLumen Logistics needed store-level demand forecasts with holiday effects. The existing process was slow and error-prone.\\n\\n## What I built\\nI designed and delivered store-level demand forecasts with holiday effects. The stack: predicted weekly demand per store with seasonality and holidays, scripting the whole backend end to end, cleaned and reshaped messy spreadsheets with dataframes, MLflow.\\n\\n## Outcome\\nThe result forecast error (MAPE) reduced to 67%.\", \"project_skills\": [\"forecasting\", \"mlflow\", \"pandas\", \"python\"], \"industry\": \"logistics\"}, {\"item_id\": \"aiml:cs:semantic-search-logistics\", \"type\": \"case_study\", \"project\": \"semantic-search-logistics\", \"title\": \"Semantic product search for a logistics marketplace\", \"text\": \"# Semantic product search for a logistics marketplace\\n\\n## Context\\nCorvid Logistics needed embedding-based search over 1200 products. The existing process was slow ...(truncated)"
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "9fe5141919a546b8",
+   "trace_id": "d2b554d2d9fc4866aa08717097532469",
+   "parent_id": null,
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_001:bf2ebf",
+   "name": "node:writer",
+   "kind": "node",
+   "start": 1794149873.0557883,
+   "end": 1794149911.1845777,
+   "status": "ok",
+   "attrs": {
+    "node": "writer",
+    "output_keys": [
+     "drafts",
+     "progress",
+     "revision"
+    ]
+   },
+   "tokens_in": 710,
+   "tokens_out": 299,
+   "cost_usd": 0.0,
+   "model": "qwen3:1.7b"
+  },
+  {
+   "span_id": "9a821ecd3e9d467b",
+   "trace_id": "d2b554d2d9fc4866aa08717097532469",
+   "parent_id": null,
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_001:bf2ebf",
+   "name": "node:verifier",
+   "kind": "node",
+   "start": 1794149911.40921,
+   "end": 1794149912.055109,
+   "status": "ok",
+   "attrs": {
+    "node": "verifier",
+    "output_keys": [
+     "drafts",
+     "progress",
+     "verification"
+    ]
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "1e296fc8eea44d7c",
+   "trace_id": "d2b554d2d9fc4866aa08717097532469",
+   "parent_id": "9a821ecd3e9d467b",
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_001:bf2ebf",
+   "name": "tool:search_evidence",
+   "kind": "tool",
+   "start": 1794149911.4195244,
+   "end": 1794149911.782552,
+   "status": "ok",
+   "attrs": {
+    "server": "portfolio",
+    "tool": "search_evidence",
+    "args": {
+     "requirement": "I have experience in LoRA fine-tuning, PEFT, Pandas, and Faiss, and I can deliver an MVP for your media project.",
+     "k": 2
+    },
+    "agent": "verifier",
+    "attempt": 0,
+    "result": {
+     "requirement": "I have experience in LoRA fine-tuning, PEFT, Pandas, and Faiss, and I can deliver an MVP for your media project.",
+     "variant": "best",
+     "status": "supported",
+     "items": [
+      {
+       "item_id": "aiml:repo:rag-eval",
+       "type": "repo_readme",
+       "source": "repo:rag-eval/README.md",
+       "date": "",
+       "outcome": null,
+       "project": "rag-eval",
+       "title": "rag-eval/README.md",
+       "client_industry": "",
+       "snippet": "# rag-eval\n\nAn offline evaluation set and metrics for answer faithfulness.\n\n## Stack\nPython, RAG, LangChain, pandas, LoRA fine-tuning\n\n## Results\nCaught 59% of regressions before release.\n",
+       "score": 0.0318,
+       "support": 0.667
+      },
+      {
+       "item_id": "aiml:cs:rag-eval",
+       "type": "case_study",
+       "source": "rag-eval.md",
+       "date": "2025-06",
+       "outcome": null,
+       "project": "rag-eval",
+       "title": "Evaluation harness for an LLM chatbot (legal)",
+       "client_industry": "legal",
+       "snippet": "# Evaluation harness for an LLM chatbot (legal)\n\n## Context\nDriftwood Legal needed an offline evaluation set and metrics for answer faithfulness. The existing process was slow and error-prone.\n\n## What I built\nI designed and delivered an offline evaluation set and metrics for answer faithfulness. The stack: Python, answers grounded in the company's own documents with citations, LangChain, cleaned ",
+       "score": 0.0318,
+       "support": 0.667
+      }
+     ]
+    }
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "7bf787dc009d420b",
+   "trace_id": "d2b554d2d9fc4866aa08717097532469",
+   "parent_id": "9a821ecd3e9d467b",
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_001:bf2ebf",
+   "name": "tool:get_evidence",
+   "kind": "tool",
+   "start": 1794149911.852603,
+   "end": 1794149911.8946304,
+   "status": "ok",
+   "attrs": {
+    "server": "portfolio",
+    "tool": "get_evidence",
+    "args": {
+     "item_ids": [
+      "aiml:repo:rag-eval",
+      "aiml:cs:rag-eval"
+     ]
+    },
+    "agent": "verifier",
+    "attempt": 0,
+    "result": {
+     "items": [
+      {
+       "item_id": "aiml:repo:rag-eval",
+       "type": "repo_readme",
+       "project": "rag-eval",
+       "title": "rag-eval/README.md",
+       "text": "# rag-eval\n\nAn offline evaluation set and metrics for answer faithfulness.\n\n## Stack\nPython, RAG, LangChain, pandas, LoRA fine-tuning\n\n## Results\nCaught 59% of regressions before release.\n\n\"\"\"rag-eval - main module.\"\"\"\n\ndef main() -> None:\n    ...\n\ndocs = retriever.invoke(question)\nanswer = llm.invoke(prompt.format(context=docs))\n\nfrom langchain_core.prompts import ChatPromptTemplate\n\nimport pandas as pd\ndf = pd.read_csv(path)\n\nfrom peft import LoraConfig, get_peft_model\n",
+       "project_skills": [
+        "langchain",
+        "lora",
+        "pandas",
+        "python",
+        "rag"
+       ],
+       "industry": "legal"
+      },
+      {
+       "item_id": "aiml:cs:rag-eval",
+       "type": "case_study",
+       "project": "rag-eval",
+       "title": "Evaluation harness for an LLM chatbot (legal)",
+       "text": "# Evaluation harness for an LLM chatbot (legal)\n\n## Context\nDriftwood Legal needed an offline evaluation set and metrics for answer faithfulness. The existing process was slow and error-prone.\n\n## What I built\nI designed and delivered an offline evaluation set and metrics for answer faithfulness. The stack: Python, answers grounded in the company's own documents with citations, LangChain, cleaned and reshaped messy spreadsheets with dataframes, QLoRA.\n\nA core piece of the implementation:\n\n```\ndef main() -> None:\n    ...\n```\n\n## Outcome\nThe result caught 59% of regressions before release.",
+       "project_skills": [
+        "langchain",
+        "lora",
+        "pandas",
+        "python",
+        "rag"
+       ],
+       "industry": "legal"
+      }
+     ]
+    }
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "29a577abac2a4411",
+   "trace_id": "d2b554d2d9fc4866aa08717097532469",
+   "parent_id": "9a821ecd3e9d467b",
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_001:bf2ebf",
+   "name": "tool:get_evidence",
+   "kind": "tool",
+   "start": 1794149911.9909265,
+   "end": 1794149912.025252,
+   "status": "ok",
+   "attrs": {
+    "server": "portfolio",
+    "tool": "get_evidence",
+    "args": {
+     "item_ids": [
+      "aiml:cs:demand-forecast"
+     ]
+    },
+    "agent": "verifier",
+    "attempt": 0,
+    "result": {
+     "items": [
+      {
+       "item_id": "aiml:cs:demand-forecast",
+       "type": "case_study",
+       "project": "demand-forecast",
+       "title": "Weekly demand forecasting for a logistics distributor",
+       "text": "# Weekly demand forecasting for a logistics distributor\n\n## Context\nLumen Logistics needed store-level demand forecasts with holiday effects. The existing process was slow and error-prone.\n\n## What I built\nI designed and delivered store-level demand forecasts with holiday effects. The stack: predicted weekly demand per store with seasonality and holidays, scripting the whole backend end to end, cleaned and reshaped messy spreadsheets with dataframes, MLflow.\n\n## Outcome\nThe result forecast error (MAPE) reduced to 67%.",
+       "project_skills": [
+        "forecasting",
+        "mlflow",
+        "pandas",
+        "python"
+       ],
+       "industry": "logistics"
+      }
+     ]
+    }
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "25ade6eaf9664028",
+   "trace_id": "d2b554d2d9fc4866aa08717097532469",
+   "parent_id": "9a821ecd3e9d467b",
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_001:bf2ebf",
+   "name": "tool:get_evidence",
+   "kind": "tool",
+   "start": 1794149912.0392323,
+   "end": 1794149912.055109,
+   "status": "ok",
+   "attrs": {
+    "server": "portfolio",
+    "tool": "get_evidence",
+    "args": {
+     "item_ids": [
+      "aiml:cs:semantic-search-logistics"
+     ]
+    },
+    "agent": "verifier",
+    "attempt": 0,
+    "result": {
+     "items": [
+      {
+       "item_id": "aiml:cs:semantic-search-logistics",
+       "type": "case_study",
+       "project": "semantic-search-logistics",
+       "title": "Semantic product search for a logistics marketplace",
+       "text": "# Semantic product search for a logistics marketplace\n\n## Context\nCorvid Logistics needed embedding-based search over 1200 products. The existing process was slow and error-prone.\n\n## What I built\nI designed and delivered embedding-based search over 1200 products. The stack: Python, approximate nearest-neighbour search over millions of embeddings in memory, transformers, an async Python API with automatic OpenAPI docs.\n\n## Outcome\nThe result search click-through up 33%.",
+       "project_skills": [
+        "faiss",
+        "fastapi",
+        "huggingface",
+        "python"
+       ],
+       "industry": "logistics"
+      }
+     ]
+    }
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "94d4ad0a9daf4318",
+   "trace_id": "d2b554d2d9fc4866aa08717097532469",
+   "parent_id": null,
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_001:bf2ebf",
+   "name": "node:critic",
+   "kind": "node",
+   "start": 1794149912.1034214,
+   "end": 1794149934.8913493,
+   "status": "ok",
+   "attrs": {
+    "node": "critic",
+    "output_keys": [
+     "critiques",
+     "progress"
+    ]
+   },
+   "tokens_in": 303,
+   "tokens_out": 188,
+   "cost_usd": 0.0,
+   "model": "qwen3:1.7b"
+  },
+  {
+   "span_id": "13ec406ac10740a3",
+   "trace_id": "d2b554d2d9fc4866aa08717097532469",
+   "parent_id": null,
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_001:bf2ebf",
+   "name": "node:compliance",
+   "kind": "node",
+   "start": 1794149935.1872804,
+   "end": 1794149935.2188032,
+   "status": "ok",
+   "attrs": {
+    "node": "compliance",
+    "output_keys": [
+     "compliance",
+     "drafts",
+     "progress"
+    ]
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "e881b2b1ec0c47d1",
+   "trace_id": "d2b554d2d9fc4866aa08717097532469",
+   "parent_id": "e9321e09f3974b2d",
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_001:bf2ebf",
+   "name": "tool:create_proposal_draft",
+   "kind": "tool",
+   "start": 1794149935.440686,
+   "end": 1794149935.5509953,
+   "status": "ok",
+   "attrs": {
+    "server": "marketplace",
+    "tool": "create_proposal_draft",
+    "args": {
+     "proposal": {
+      "job_id": "dev_aiml_001",
+      "cover_letter": "In, I evaluated a dataset using LoRA to improve model performance, catching 59% of regressions before release. In, I used Pandas to build store-level demand forecasts with holiday effects, reducing MAPE to 67%. In, I implemented FAISS for embedding-based search over 1200 products, increasing click-through rates by 33%. I can tailor my approach to your specific needs and deliver an MVP that meets your requirements.",
+      "bid_amount": 1648.99,
+      "screening_answers": [
+       "For this project, I would use LoRA fine-tuning to optimize model performance, PEFT for efficient parameter tuning, Pandas for data manipulation, and Faiss for fast similarity searches. These tools align with your requirements and have been proven in past projects.",
+       "In, I built store-level demand forecasts using Pandas, reducing MAPE to 67%. This experience aligns with your need for accurate forecasting in a media context. I can adapt this approach to your specific data and goals.",
+       "I handle changing requirements by maintaining flexibility in my workflow and prioritizing key deliverables. My experience with dynamic projects and iterative improvements ensures I can adjust to new needs while delivering a high-quality MVP."
+      ],
+      "idempotency_key": "bid:demo-user:dev_aiml_001:bf2ebf:v3:2b81b54753ee:draft",
+      "dry_run": true
+     }
+    },
+    "agent": "submitter",
+    "attempt": 0,
+    "result": {
+     "status": "dry_run",
+     "preview": {
+      "job_id": "dev_aiml_001",
+      "job_title": "LoRA fine-tuning expert needed for media project",
+      "cover_letter": "In, I evaluated a dataset using LoRA to improve model performance, catching 59% of regressions before release. In, I used Pandas to build store-level demand forecasts with holiday effects, reducing MAPE to 67%. In, I implemented FAISS for embedding-based search over 1200 products, increasing click-through rates by 33%. I can tailor my approach to your specific needs and deliver an MVP that meets your requirements.",
+      "bid_amount": 1648.99,
+      "screening_answers": [
+       "For this project, I would use LoRA fine-tuning to optimize model performance, PEFT for efficient parameter tuning, Pandas for data manipulation, and Faiss for fast similarity searches. These tools align with your requirements and have been proven in past projects.",
+       "In, I built store-level demand forecasts using Pandas, reducing MAPE to 67%. This experience aligns with your need for accurate forecasting in a media context. I can adapt this approach to your specific data and goals.",
+       "I handle changing requirements by maintaining flexibility in my workflow and prioritizing key deliverables. My experience with dynamic projects and iterative improvements ensures I can adjust to new needs while delivering a high-quality MVP."
+      ],
+      "policy_version": 1
+     },
+     "connects_cost": 6,
+     "connects_balance_after": 99994,
+     "result": {},
+     "idempotency_key": "bid:demo-user:dev_aiml_001:bf2ebf:v3:2b81b54753ee:draft"
+    }
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "e9321e09f3974b2d",
+   "trace_id": "d2b554d2d9fc4866aa08717097532469",
+   "parent_id": null,
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_001:bf2ebf",
+   "name": "node:preview",
+   "kind": "node",
+   "start": 1794149935.440686,
+   "end": 1794149935.6013737,
+   "status": "ok",
+   "attrs": {
+    "node": "preview",
+    "output_keys": [
+     "preview",
+     "progress",
+     "status"
+    ],
+    "status": "awaiting_approval"
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  }
+ ],
+ "critic_rounds": 3,
+ "issues": [
+  [
+   "too short (44 words)",
+   "no question back to the client",
+   "Generic opening: The proposal lacks personalization and specific reference to the client's deliverables (e.g., LoRA fine-tuning, PEFT, Pandas, Faiss).",
+   "Claims without citations: The statements about improving answer faithfulness and search click-through are not supported by any evidence or references."
+  ],
+  [
+   "too short (61 words)",
+   "no question back to the client",
+   "Generic opening: The proposal lacks personalization and specific reference to the client's deliverables (e.g., LoRA fine-tuning, PEFT, Pandas, Faiss).",
+   "No question back to the client: The proposal does not address the screening questions explicitly, such as 'Which tools would you use for this and why?' or 'Describe a similar project you delivered and its result.'"
+  ],
+  [
+   "too short (65 words)",
+   "no question back to the client",
+   "Generic opening: The draft starts with 'In, I evaluated...' which is too generic and lacks personalization to the client's specific project.",
+   "No personalized touch: The proposal does not reference the client's deliverables (e.g., LoRA fine-tuning, PEFT, Pandas, Faiss) or their specific requirements."
+  ]
+ ],
+ "writer_models": [
+  "qwen3:1.7b"
+ ],
+ "profile": "open_local"
+}

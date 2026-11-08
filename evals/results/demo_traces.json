@@ -51,6 +51,38 @@
     "requested_rate": null
    },
    "reply": "Thanks, happy to talk! I'm free at: Mon 09 Nov, 11:00 (Asia/Karachi); Tue 10 Nov, 11:00 (Asia/Karachi); Wed 11 Nov, 11:00 (Asia/Karachi). Let me know which works and I'll keep it on my calendar here."
+  },
+  {
+   "scenario": "3_critic_loop",
+   "trace_id": "d2b554d2d9fc4866aa08717097532469",
+   "thread_id": "bid:demo-user:dev_aiml_001:bf2ebf",
+   "status": "awaiting_approval",
+   "file": "docs/traces/3_critic_loop.json",
+   "critic_rounds": 3,
+   "issues": [
+    [
+     "too short (44 words)",
+     "no question back to the client",
+     "Generic opening: The proposal lacks personalization and specific reference to the client's deliverables (e.g., LoRA fine-tuning, PEFT, Pandas, Faiss).",
+     "Claims without citations: The statements about improving answer faithfulness and search click-through are not supported by any evidence or references."
+    ],
+    [
+     "too short (61 words)",
+     "no question back to the client",
+     "Generic opening: The proposal lacks personalization and specific reference to the client's deliverables (e.g., LoRA fine-tuning, PEFT, Pandas, Faiss).",
+     "No question back to the client: The proposal does not address the screening questions explicitly, such as 'Which tools would you use for this and why?' or 'Describe a similar project you delivered and its result.'"
+    ],
+    [
+     "too short (65 words)",
+     "no question back to the client",
+     "Generic opening: The draft starts with 'In, I evaluated...' which is too generic and lacks personalization to the client's specific project.",
+     "No personalized touch: The proposal does not reference the client's deliverables (e.g., LoRA fine-tuning, PEFT, Pandas, Faiss) or their specific requirements."
+    ]
+   ],
+   "writer_models": [
+    "qwen3:1.7b"
+   ],
+   "profile": "open_local"
   }
  ]
 }
