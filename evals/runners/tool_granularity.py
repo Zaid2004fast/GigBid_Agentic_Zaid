@@ -14,7 +14,6 @@ from __future__ import annotations
 import argparse
 import asyncio
 import json
-import re
 import time
 
 from evals.runners.harness import ROOT

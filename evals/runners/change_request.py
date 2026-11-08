@@ -51,7 +51,8 @@ def main() -> None:
     ap.add_argument("--n", type=int, default=60)
     ap.add_argument("--commit", default=None, help="the change-request commit, for diff stats")
     a = ap.parse_args()
-    from gigsim.app import POLICIES, W, connects_cost as gigsim_cost
+    from gigsim.app import POLICIES, W
+    from gigsim.app import connects_cost as gigsim_cost
     W.policy_version = 2
     policy_v2 = POLICIES[2]
     jobs = [r["job"] for p in ("aiml", "web", "data") for r in load(p) if r["job"]["screening_questions"]][: a.n]

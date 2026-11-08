@@ -1,0 +1,10 @@
+{
+ "scams": 124,
+ "caught_before": 112,
+ "caught_after": 124,
+ "legit": 476,
+ "legit_blocked_before": 0,
+ "legit_blocked_after": 0,
+ "recall_before": 0.9032,
+ "recall_after": 1.0
+}

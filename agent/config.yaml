@@ -95,6 +95,7 @@ decision:
   watch_band: [0.35, 0.45]   # fit inside -> watch
   max_risk_bid: 0.55         # risk score above -> skip
   scam_block: 0.6            # scam probability above -> hard skip
+  hard_skip_flags: [free_work, off_platform_payment, upfront_fee]   # policy violations: skip whatever the score (failure analysis, round 2)
   ev_threshold: 1.0          # expected-value / connects-cost ratio needed to bid (before pacing)
   pacing_strength: 1.5       # how hard the threshold rises when spending ahead of schedule
   avg_contract_value_usd: {"AI & Machine Learning": 1800, "Web Development": 1400, "Data Analytics": 900, "Other": 600}

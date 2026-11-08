@@ -95,9 +95,10 @@ async def decide(state: dict, ctx: NodeCtx) -> dict:
         policy = None
     cost = connects_cost(job, policy)
     action = None
-    if risk.scam_probability >= cfg("decision.scam_block", 0.6):
+    hard = [f.code for f in risk.flags if f.severity == "high" and f.code in cfg("decision.hard_skip_flags", [])]
+    if risk.scam_probability >= cfg("decision.scam_block", 0.6) or hard:
         action = "skip"
-        reasons.append(f"likely scam ({risk.rationale})")
+        reasons.append(f"likely scam ({risk.rationale})" + (f"; policy hard-stop: {', '.join(hard)}" if hard else ""))
     elif risk.risk_score > cfg("decision.max_risk_bid", 0.55):
         action = "skip"
         reasons.append(f"risk too high ({risk.risk_score:.2f}): {risk.rationale}")

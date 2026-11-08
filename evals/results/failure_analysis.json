@@ -1,32 +1,10 @@
 {
  "jobs": 600,
- "failed_jobs": 142,
+ "failed_jobs": 129,
  "taxonomy": {
   "wrong skip": {
-   "count": 104,
+   "count": 67,
    "examples": [
-    {
-     "job_id": "dev_aiml_006",
-     "persona": "aiml",
-     "kind": "fit",
-     "fit": 0.538,
-     "action": "watch",
-     "reasons": [
-      "borderline fit 0.54"
-     ],
-     "trace_id": "f8f2a53f956c4d418253a518eeb97346"
-    },
-    {
-     "job_id": "dev_aiml_011",
-     "persona": "aiml",
-     "kind": "fit",
-     "fit": 0.5,
-     "action": "watch",
-     "reasons": [
-      "borderline fit 0.50"
-     ],
-     "trace_id": "ea38fd7add9b4f919bcf8f5d5c1603f0"
-    },
     {
      "job_id": "dev_aiml_013",
      "persona": "aiml",
@@ -34,37 +12,37 @@
      "fit": 0.25,
      "action": "skip",
      "reasons": [
-      "fit 0.25 below 0.4: gaps Looking for someone experience, Ideally you know gradient boos, Ideally you know image preproc"
+      "fit 0.25 below 0.35: gaps Looking for someone experience, Ideally you know gradient boos, Ideally you know image preproc"
      ],
-     "trace_id": "03ef5b7f9c534eeb80f5d2c64c45e2c0"
+     "trace_id": "9da9d0ab734d47f3b8cee95a98b189b3"
+    },
+    {
+     "job_id": "dev_aiml_018",
+     "persona": "aiml",
+     "kind": "fit",
+     "fit": 0.25,
+     "action": "skip",
+     "reasons": [
+      "fit 0.25 below 0.35: gaps Looking for someone experience, Ideally you know scripting the, Ideally you know trained the n"
+     ],
+     "trace_id": "142e7dc57d644d0f9b5f270170e28ea6"
+    },
+    {
+     "job_id": "dev_aiml_023",
+     "persona": "aiml",
+     "kind": "fit",
+     "fit": 0.4,
+     "action": "watch",
+     "reasons": [
+      "borderline fit 0.40"
+     ],
+     "trace_id": "d109e2ccc96049f9b578eac575a0e5b7"
     }
    ]
   },
   "missed evidence": {
-   "count": 104,
+   "count": 67,
    "examples": [
-    {
-     "job_id": "dev_aiml_006",
-     "persona": "aiml",
-     "kind": "fit",
-     "fit": 0.538,
-     "action": "watch",
-     "reasons": [
-      "borderline fit 0.54"
-     ],
-     "trace_id": "f8f2a53f956c4d418253a518eeb97346"
-    },
-    {
-     "job_id": "dev_aiml_011",
-     "persona": "aiml",
-     "kind": "fit",
-     "fit": 0.5,
-     "action": "watch",
-     "reasons": [
-      "borderline fit 0.50"
-     ],
-     "trace_id": "ea38fd7add9b4f919bcf8f5d5c1603f0"
-    },
     {
      "job_id": "dev_aiml_013",
      "persona": "aiml",
@@ -72,14 +50,36 @@
      "fit": 0.25,
      "action": "skip",
      "reasons": [
-      "fit 0.25 below 0.4: gaps Looking for someone experience, Ideally you know gradient boos, Ideally you know image preproc"
+      "fit 0.25 below 0.35: gaps Looking for someone experience, Ideally you know gradient boos, Ideally you know image preproc"
      ],
-     "trace_id": "03ef5b7f9c534eeb80f5d2c64c45e2c0"
+     "trace_id": "9da9d0ab734d47f3b8cee95a98b189b3"
+    },
+    {
+     "job_id": "dev_aiml_018",
+     "persona": "aiml",
+     "kind": "fit",
+     "fit": 0.25,
+     "action": "skip",
+     "reasons": [
+      "fit 0.25 below 0.35: gaps Looking for someone experience, Ideally you know scripting the, Ideally you know trained the n"
+     ],
+     "trace_id": "142e7dc57d644d0f9b5f270170e28ea6"
+    },
+    {
+     "job_id": "dev_aiml_023",
+     "persona": "aiml",
+     "kind": "fit",
+     "fit": 0.4,
+     "action": "watch",
+     "reasons": [
+      "borderline fit 0.40"
+     ],
+     "trace_id": "d109e2ccc96049f9b578eac575a0e5b7"
     }
    ]
   },
   "mispriced": {
-   "count": 30,
+   "count": 36,
    "examples": [
     {
      "job_id": "dev_aiml_017",
@@ -90,7 +90,18 @@
      "reasons": [
       "fit 0.67, p(reply)=0.06 (prior), EV $14 for 6 Connects (pacing off)"
      ],
-     "trace_id": "6e0661448d954d058301d6cc070377ba"
+     "trace_id": "44ec7b1a0c01475fa68b87a5290e8499"
+    },
+    {
+     "job_id": "dev_aiml_029",
+     "persona": "aiml",
+     "kind": "fit",
+     "fit": 0.5,
+     "action": "bid",
+     "reasons": [
+      "fit 0.50, p(reply)=0.15 (prior), EV $250 for 6 Connects (pacing off)"
+     ],
+     "trace_id": "3cd93b7393084380bb00a437c8c3803c"
     },
     {
      "job_id": "dev_aiml_049",
@@ -101,61 +112,12 @@
      "reasons": [
       "fit 0.67, p(reply)=0.06 (prior), EV $16 for 6 Connects (pacing off)"
      ],
-     "trace_id": "fa7d2b1edeb74e789076b5ad91abd899"
-    },
-    {
-     "job_id": "dev_aiml_078",
-     "persona": "aiml",
-     "kind": "fit",
-     "fit": 0.75,
-     "action": "bid",
-     "reasons": [
-      "fit 0.75, p(reply)=0.14 (prior), EV $58 for 6 Connects (pacing off)"
-     ],
-     "trace_id": "2640de73f7084547bae8460310ca69dc"
-    }
-   ]
-  },
-  "scam missed": {
-   "count": 6,
-   "examples": [
-    {
-     "job_id": "dev_aiml_077",
-     "persona": "aiml",
-     "kind": "scam",
-     "fit": 1.0,
-     "action": "bid",
-     "reasons": [
-      "fit 1.00, p(reply)=0.22 (prior), EV $56 for 6 Connects (pacing off)"
-     ],
-     "trace_id": "0c5955a783404dec8fc61abd1a42caff"
-    },
-    {
-     "job_id": "dev_aiml_085",
-     "persona": "aiml",
-     "kind": "scam",
-     "fit": 1.0,
-     "action": "bid",
-     "reasons": [
-      "fit 1.00, p(reply)=0.10 (prior), EV $19 for 6 Connects (pacing off)"
-     ],
-     "trace_id": "df0c2d50abb44758854ea0f5e9a1d75d"
-    },
-    {
-     "job_id": "dev_aiml_167",
-     "persona": "aiml",
-     "kind": "scam",
-     "fit": 1.0,
-     "action": "bid",
-     "reasons": [
-      "fit 1.00, p(reply)=0.08 (prior), EV $27 for 6 Connects (pacing off)"
-     ],
-     "trace_id": "b0916d8000c5481ca32be8bbb547890b"
+     "trace_id": "6ba42935d5364cc1bcd6a51e99fcf22a"
     }
    ]
   },
   "wrong bid": {
-   "count": 2,
+   "count": 19,
    "examples": [
     {
      "job_id": "dev_aiml_008",
@@ -166,18 +128,67 @@
      "reasons": [
       "fit 0.60, p(reply)=0.20 (prior), EV $31 for 6 Connects (pacing off)"
      ],
-     "trace_id": "6cdd378fa29b4cae9947b27af372d8d3"
+     "trace_id": "46408ac4a6994425bea10e0f17e13436"
     },
     {
-     "job_id": "dev_aiml_166",
+     "job_id": "dev_aiml_081",
      "persona": "aiml",
      "kind": "partial",
+     "fit": 0.5,
+     "action": "bid",
+     "reasons": [
+      "fit 0.50, p(reply)=0.05 (prior), EV $53 for 6 Connects (pacing off)"
+     ],
+     "trace_id": "a6a701e2016240cea85eb729af3ed70d"
+    },
+    {
+     "job_id": "dev_aiml_089",
+     "persona": "aiml",
+     "kind": "partial",
+     "fit": 0.5,
+     "action": "bid",
+     "reasons": [
+      "fit 0.50, p(reply)=0.08 (prior), EV $101 for 6 Connects (pacing off)"
+     ],
+     "trace_id": "74ba6b5dfa5b406791bc45bcd869234c"
+    }
+   ]
+  },
+  "scam missed": {
+   "count": 7,
+   "examples": [
+    {
+     "job_id": "dev_aiml_077",
+     "persona": "aiml",
+     "kind": "scam",
      "fit": 1.0,
      "action": "bid",
      "reasons": [
-      "fit 1.00, p(reply)=0.21 (prior), EV $47 for 6 Connects (pacing off)"
+      "fit 1.00, p(reply)=0.22 (prior), EV $56 for 6 Connects (pacing off)"
      ],
-     "trace_id": "a5ccb41ebd474689a4db7d5fb9871de2"
+     "trace_id": "9f2bbd75cba64c26be220a69d6fb5902"
+    },
+    {
+     "job_id": "dev_aiml_085",
+     "persona": "aiml",
+     "kind": "scam",
+     "fit": 1.0,
+     "action": "bid",
+     "reasons": [
+      "fit 1.00, p(reply)=0.10 (prior), EV $19 for 6 Connects (pacing off)"
+     ],
+     "trace_id": "edada7d47d3c49e19488b956744bcc5b"
+    },
+    {
+     "job_id": "dev_aiml_167",
+     "persona": "aiml",
+     "kind": "scam",
+     "fit": 1.0,
+     "action": "bid",
+     "reasons": [
+      "fit 1.00, p(reply)=0.08 (prior), EV $27 for 6 Connects (pacing off)"
+     ],
+     "trace_id": "d05f5cba32ff4389b5c0066165c4fb53"
     }
    ]
   }
@@ -185,25 +196,25 @@
  "fix_fit_threshold_sweep": [
   {
    "min_fit_bid": 0.45,
-   "precision": 0.8941,
+   "precision": 0.8976,
    "recall": 0.7729,
-   "f1": 0.8291,
-   "accuracy": 0.8433,
+   "f1": 0.8306,
+   "accuracy": 0.845,
    "tp": 228,
-   "fp": 27,
+   "fp": 26,
    "fn": 67,
-   "tn": 278
+   "tn": 279
   },
   {
    "min_fit_bid": 0.5,
-   "precision": 0.8917,
+   "precision": 0.8954,
    "recall": 0.7254,
-   "f1": 0.8,
-   "accuracy": 0.8217,
+   "f1": 0.8015,
+   "accuracy": 0.8233,
    "tp": 214,
-   "fp": 26,
+   "fp": 25,
    "fn": 81,
-   "tn": 279
+   "tn": 280
   },
   {
    "min_fit_bid": 0.55,

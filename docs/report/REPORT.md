@@ -170,7 +170,7 @@ to the user and for the gaps it exposes, not for reply rate.
 
 **Judge calibration.** The rubric judge (`agent/prompts/judge.md`) is used only after calibration
 against 30 human labels (`evals/runners/judge_calibration.py`). Cohen's κ =
-{{judge_calibration.json:cohen_kappa}} (n = {{judge_calibration.json:n|int}}). Judge scores are not used
+{{judge_calibration.json:cohen_kappa}} (n = {{judge_calibration.json:n|int}}; `n/a` means the author's 30 human labels are still pending, and the judge's scores are in `judge_scores.json`). Judge scores are not used
 for any decision until κ ≥ 0.4.
 
 **What ships.** BM25 + skill graph + multi-vector + outcome boost (no dense ranking, no reranker),
@@ -236,7 +236,19 @@ experiment keeps running on live traffic (`docs/EXTENSION.md`).
 {{failure_analysis.json:failed_jobs|int}} of {{failure_analysis.json:jobs|int}} dev jobs failed at least one check
 (`failure_analysis.json`; each example carries a trace id for replay).
 
-<!--FAILURE-TABLE-->
+| Category | Count | Example (trace) | Root cause | Fix tried | Worked? |
+|---|---|---|---|---|---|
+| wrong skip / missed evidence | {{failure_analysis.json:taxonomy.wrong skip.count|int}} | `dev_aiml_013` (`9da9d0ab…`): fit 0.25, gaps "Ideally you know gradient boos…" | capability-phrased requirements carry no taxonomy skill ({{requirement_coverage.json:all.share|pct}} of all), so they score as partial or none | fit threshold 0.55 → 0.45, swept on recorded runs (`failure_analysis_round1.json`) | partly: F1 {{decision_eval_round1.json:summary.bid_skip.f1}} → {{decision_eval.json:summary.bid_skip.f1}}, wrong skips {{failure_analysis_round1.json:taxonomy.wrong skip.count|int}} → {{failure_analysis.json:taxonomy.wrong skip.count|int}} |
+| mispriced | {{failure_analysis.json:taxonomy.mispriced.count|int}} | `dev_aiml_017` (`44ec7b1a…`) | fixed-price bid blends the category median with the client budget; small or oversized budgets fall outside the 0.75-1.25× fair band | none yet; candidate: anchor fixed bids on the client budget alone when market n is low | not tried |
+| wrong bid | {{failure_analysis.json:taxonomy.wrong bid.count|int}} | `dev_aiml_008` (`46408ac4…`): partial job, fit 0.60 | the cost of the lower threshold: partial-coverage jobs now clear it | EV/pacing gate (off in eval) would filter low-EV ones in production | partly (precision 0.96 → 0.89) |
+| scam missed | {{failure_analysis.json:taxonomy.scam missed.count|int}} | `dev_aiml_077` (`9f2bbd75…`): "complete a test task for free" | the free-work flag alone scored 0.55, just under the 0.6 auto-skip | policy hard-stop: high-severity free-work / off-platform-payment / upfront-fee flags skip regardless of score (`hard_skip_flags`) | **yes**: scam recall {{scam_gate_check.json:recall_before}} → {{scam_gate_check.json:recall_after}}, 0 of {{scam_gate_check.json:legit|int}} legit jobs blocked (`scam_gate_check.json`) |
+| unsupported claim | 0 | - | verifier removes or repairs before the Critic | - | - |
+| generic opening, compliance miss, injection, tool error | 0 | - | quarantine + policy pack + retries | - | - |
+
+The taxonomy is dominated by one root cause, a *requirements* problem rather than a retrieval problem: the
+graph cannot score what the taxonomy cannot name. The next fix is LLM-assisted requirement-to-skill mapping
+in the Analyst (already wired, off in the offline profile), with taxonomy-less requirements weighted down
+instead of counted as gaps.
 
 ## 9. Safety and platform respect
 
@@ -280,7 +292,17 @@ of the deployed configuration and will be re-run on the hidden set (`decision_ev
 Decision quality: bid/skip F1 {{decision_eval.json:summary.bid_skip.f1}}; price inside the fair band
 {{decision_eval.json:summary.price_in_band}}; GigSim reply rate {{decision_eval.json:summary.reply_rate}} and hire
 rate {{decision_eval.json:summary.hire_rate}} on {{decision_eval.json:summary.submitted|int}} submitted proposals.
-<!--BUDGET-NOTE-->
+**Budget miss, without excuses.** p95 latency per job analysed is over the 20 s budget (it was 19.2 s in
+round 1, before the lower threshold sent more jobs down the proposal path). Per-node timing in the records
+shows no single slow model. Every node spends 1-3 s, even deterministic ones (Risk averages 2.2 s for regexes
+plus one client-history call). That points at plumbing: a fresh in-memory MCP session per tool call and
+synchronous span writes to SQLite, multiplied by 4 concurrent jobs on an 8-thread laptop. **Optimisation that
+helped:** choosing the retrieval design by measurement removed the cross-encoder and dense ranking and cut
+retrieval p95 from ~5 s to 0.02 s per query (`rag_retrieval.json`). Scams and off-domain jobs also exit after
+`decide`, so they never pay for writing. **Next:** persistent MCP sessions per run and batched span writes.
+Cost: the deployed open profile calls a hosted open model only in the analyst / risk grey zone / writer / critic.
+The offline dev run reports $0 because every node was deterministic, so the USD budget is unmeasured on dev and
+will be reported from the live run's per-node token counts.
 
 <!-- pagebreak -->
 
