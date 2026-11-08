@@ -60,6 +60,8 @@ async def run_one(graph, store, row: dict, *, approve: bool, strategy: str = "ev
     ver = v.get("verification") or {}
     rec = {
         "job_id": job["id"], "persona": persona, "gold": gold, "action": dec, "status": res["status"],
+        "reasons": (v.get("decision") or {}).get("reasons"), "p_reply": (v.get("decision") or {}).get("p_reply"),
+        "thread_id": res["thread_id"], "trace_id": res["trace_id"],
         "scam_p": (v.get("risk") or {}).get("scam_probability"), "risk": (v.get("risk") or {}).get("risk_score"),
         "injection_detected": (v.get("risk") or {}).get("injection_detected"), "fit": (v.get("fit") or {}).get("fit_score"),
         "gaps": len((v.get("fit") or {}).get("gaps") or []), "price": (v.get("price") or {}).get("amount"),

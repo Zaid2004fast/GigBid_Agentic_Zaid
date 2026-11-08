@@ -1,0 +1,61 @@
+{
+ "meta": {
+  "generated_at": "2026-11-08T16:33:59",
+  "model": "qwen3:1.7b",
+  "graph_profile": "offline",
+  "jobs_per_persona": 1
+ },
+ "systems": {
+  "react": {
+   "summary": {
+    "n": 3,
+    "bid_skip_accuracy": 1.0,
+    "scams_bid_on": 0,
+    "unsupported_per_proposal": 0.333,
+    "compliance_violations_sent": 0,
+    "reply_rate": 0.3333,
+    "tokens_per_job": 1854.3,
+    "p95_latency_s": 106.51,
+    "errors": 0
+   },
+   "records": [
+    {
+     "job_id": "dev_aiml_001",
+     "persona": "aiml",
+     "action": "bid",
+     "unsupported": 0,
+     "violations": [],
+     "replied": true,
+     "tokens": 1920,
+     "latency_s": 112.17,
+     "error": null,
+     "gold_bid": true
+    },
+    {
+     "job_id": "dev_web_000",
+     "persona": "web",
+     "action": "bid",
+     "unsupported": 1,
+     "violations": [],
+     "replied": false,
+     "tokens": 1784,
+     "latency_s": 38.83,
+     "error": null,
+     "gold_bid": true
+    },
+    {
+     "job_id": "dev_data_001",
+     "persona": "data",
+     "action": "bid",
+     "unsupported": 0,
+     "violations": [],
+     "replied": false,
+     "tokens": 1859,
+     "latency_s": 55.61,
+     "error": null,
+     "gold_bid": true
+    }
+   ]
+  }
+ }
+}

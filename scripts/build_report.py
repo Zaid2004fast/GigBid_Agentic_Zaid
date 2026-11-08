@@ -47,8 +47,40 @@ def table(lines: list[str]):
     return t
 
 
+RESULTS = ROOT / "evals" / "results"
+_REF = re.compile(r"\{\{([\w.-]+\.json):([^}|]+)(?:\|(\w+))?\}\}")
+
+
+def fill(text: str) -> str:
+    """{{file.json:a.b.0.c|fmt}} -> value from evals/results/file.json (fmt: pct, int, 1, 2, 4, raw)."""
+    cache: dict = {}
+
+    def rep(m):
+        f, path, fmt = m.group(1), m.group(2), m.group(3) or "3"
+        if f not in cache:
+            p = RESULTS / f
+            cache[f] = __import__("json").loads(p.read_text()) if p.exists() else None
+        v = cache[f]
+        for k in path.split("."):
+            if v is None:
+                break
+            v = v[int(k)] if isinstance(v, list) and k.isdigit() else (v.get(k) if isinstance(v, dict) else None)
+        if v is None:
+            return "n/a"
+        if fmt == "pct":
+            return f"{float(v) * 100:.1f}%"
+        if fmt == "int":
+            return str(int(v))
+        if fmt == "raw" or not isinstance(v, (int, float)):
+            return str(v)
+        return f"{float(v):.{int(fmt)}f}"
+    return _REF.sub(rep, text)
+
+
 def build() -> None:
-    lines = SRC.read_text(encoding="utf-8").splitlines()
+    filled = fill(SRC.read_text(encoding="utf-8"))
+    (SRC.parent / "REPORT.filled.md").write_text(filled, encoding="utf-8")
+    lines = filled.splitlines()
     story, i, para = [], 0, []
 
     def flush():

@@ -1,6 +1,6 @@
 {
  "meta": {
-  "generated_at": "2026-11-08T16:37:17",
+  "generated_at": "2026-11-08T16:41:50",
   "limit_per_persona": null,
   "embedding": "BAAI/bge-small-en-v1.5",
   "reranker": "Xenova/ms-marco-MiniLM-L-6-v2"
@@ -998,68 +998,68 @@
   },
   "best": {
    "persona:aiml": {
-    "recall@5": 0.9289,
-    "mrr": 0.9572,
-    "ndcg@10": 0.7902,
+    "recall@5": 0.9432,
+    "mrr": 0.9588,
+    "ndcg@10": 0.8119,
     "n": 161
    },
    "all": {
-    "recall@5": 0.9331,
-    "mrr": 0.9676,
-    "ndcg@10": 0.8019,
+    "recall@5": 0.9487,
+    "mrr": 0.9649,
+    "ndcg@10": 0.8301,
     "n": 494
    },
    "kind:fit": {
-    "recall@5": 0.9402,
-    "mrr": 0.967,
-    "ndcg@10": 0.7831,
+    "recall@5": 0.9504,
+    "mrr": 0.9662,
+    "ndcg@10": 0.8109,
     "n": 276
    },
    "req>=4": {
-    "recall@5": 0.9486,
-    "mrr": 0.9767,
-    "ndcg@10": 0.7662,
+    "recall@5": 0.9623,
+    "mrr": 0.978,
+    "ndcg@10": 0.7999,
     "n": 247
    },
    "kind:scam": {
-    "recall@5": 0.9323,
-    "mrr": 0.9744,
-    "ndcg@10": 0.7875,
+    "recall@5": 0.9516,
+    "mrr": 0.9613,
+    "ndcg@10": 0.8116,
     "n": 124
    },
    "kind:partial": {
-    "recall@5": 0.9133,
-    "mrr": 0.9601,
-    "ndcg@10": 0.876,
+    "recall@5": 0.9399,
+    "mrr": 0.9658,
+    "ndcg@10": 0.911,
     "n": 94
    },
    "implicit": {
-    "recall@5": 0.9199,
-    "mrr": 0.9559,
-    "ndcg@10": 0.7779,
+    "recall@5": 0.9384,
+    "mrr": 0.9624,
+    "ndcg@10": 0.8173,
     "n": 146
    },
    "vague": {
-    "recall@5": 0.9089,
-    "mrr": 0.9532,
-    "ndcg@10": 0.7724,
+    "recall@5": 0.9356,
+    "mrr": 0.9674,
+    "ndcg@10": 0.7845,
     "n": 45
    },
    "persona:web": {
-    "recall@5": 0.9471,
-    "mrr": 0.9716,
-    "ndcg@10": 0.7949,
+    "recall@5": 0.96,
+    "mrr": 0.9639,
+    "ndcg@10": 0.8289,
     "n": 170
    },
    "persona:data": {
-    "recall@5": 0.9227,
-    "mrr": 0.9736,
-    "ndcg@10": 0.8208,
+    "recall@5": 0.9423,
+    "mrr": 0.9719,
+    "ndcg@10": 0.8493,
     "n": 163
    },
    "latency_s": {
-    "p50": 0.03,
-    "p95": 0.0623
+    "p50": 0.007,
+    "p95": 0.0194
    }
   }
  }

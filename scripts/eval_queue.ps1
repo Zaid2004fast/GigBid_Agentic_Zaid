@@ -7,7 +7,7 @@ $env:HF_HUB_DISABLE_SYMLINKS_WARNING = "1"
 $env:GIGBID_PROFILE = "offline"
 Set-Location $env:PYTHONPATH
 $steps = @(
-  @("rag_rest",   "-m evals.runners.rag_eval --variants best C4 V8 C7"),
+  @("rag_best",   "-m evals.runners.rag_eval --variants best"),
   @("ablation",   "-m evals.runners.ablation"),
   @("decision",   "-m evals.runners.decision_eval --per-persona 200"),
   @("outcomes",   "-m evals.runners.gigsim_outcomes --variants V0 V2 C1 best --per-persona 20"),
@@ -18,6 +18,9 @@ $steps = @(
   @("multiagent", "-m evals.runners.multiagent_compare --n 8"),
   @("judge",      "-m evals.runners.judge_calibration sample --n 30"),
   @("judge2",     "-m evals.runners.judge_calibration judge"),
+  @("single",     "scripts/single_agent_proposal.py"),
+  @("failures",   "-m evals.runners.failure_analysis"),
+  @("rag_slow",   "-m evals.runners.rag_eval --variants C4 V8 C7"),
   @("tables",     "-m evals.runners.make_results_table")
 )
 foreach ($s in $steps) {

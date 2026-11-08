@@ -25,7 +25,7 @@ def main() -> None:
     ap.add_argument("--limit", type=int, default=None, help="dev jobs per persona for retrieval metrics")
     ap.add_argument("--e2e-per-persona", type=int, default=0, help="0 = skip the end-to-end reply-rate ablation")
     a = ap.parse_args()
-    variants = ["best"] + [f"best-{f}" for f in ABLATION_FLAGS]
+    variants = ["best"] + [f"best-{f}" if v is False else f"best+{f}" for f, v in ABLATION_FLAGS.items()]
     retrieval = evaluate(variants, a.limit)
     e2e = {}
     if a.e2e_per_persona:

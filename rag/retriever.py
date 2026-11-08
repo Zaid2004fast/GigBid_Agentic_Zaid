@@ -14,11 +14,13 @@ VARIANT_MODULES = {
     "V5": "v5_multivector", "V6": "v6_contextual", "V7": "v7_hyde", "V8": "v8_corrective", "V9": "v9_skill_graph",
 }
 
-# "best" = the shipped composite, chosen by measurement (evals/results/rag_retrieval*.json, ADR 0003):
-# C5 = hybrid BM25+dense (V2) + multi-vector projects (V5) + outcome boost (V4) + skill graph (V9).
-BEST = PipelineSpec("best", bm25=True, multivector=True, outcome=True, graph=True)
-# ablation: drop one component at a time
-ABLATION_FLAGS = {"bm25": False, "multivector": False, "outcome": False, "graph": False, "dense": False}
+# "best" = the shipped composite, chosen by measurement (evals/results/rag_retrieval*.json, ADR 0003).
+# Round 1 picked C5 (BM25+dense hybrid + multi-vector + outcome + skill graph); its ablation
+# (ablation_round1.json) showed that removing the dense ranking IMPROVED every slice, because the
+# embeddings already do their semantic work inside the skill extractor feeding the graph. Shipped:
+BEST = PipelineSpec("best", dense=False, bm25=True, multivector=True, outcome=True, graph=True)
+# ablation of the shipped pipeline: drop one component at a time ("dense": True = add the dense ranking back)
+ABLATION_FLAGS = {"bm25": False, "multivector": False, "outcome": False, "graph": False, "dense": True}
 
 
 # Composite candidates assembled from components that helped individually (see rag_retrieval.json).
@@ -41,8 +43,8 @@ def spec_for(name: str) -> PipelineSpec:
         return BEST
     if name == "V0e":   # control: V0 but over evidence documents only (isolates corpus contamination)
         return PipelineSpec("V0e", chunks="fixed_all", evidence_only=True)
-    if name.startswith("best-"):
-        flag = name.removeprefix("best-")
+    if name.startswith(("best-", "best+")):
+        flag = name[5:]
         return replace(BEST, name=name, **{flag: ABLATION_FLAGS[flag]})
     mod = importlib.import_module(f"rag.variants.{VARIANT_MODULES[name]}")
     return mod.SPEC

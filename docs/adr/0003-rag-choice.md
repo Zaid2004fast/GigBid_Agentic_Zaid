@@ -6,8 +6,18 @@
 C1 to C7, and evaluated them all on every dev job with gold evidence (about 470 jobs, three
 personas), using Recall@5, MRR, nDCG@10 and p95 latency.
 
-**Decision.** Ship **C5 = hybrid BM25+dense with RRF (V2) + multi-vector project aggregation (V5) +
-outcome-aware boost (V4) + skill-graph fusion (V9)**, as `rag.variant: best`.
+**Decision (two rounds).**
+
+1. Round 1 picked **C5 = hybrid BM25+dense with RRF (V2) + multi-vector project aggregation (V5) +
+   outcome-aware boost (V4) + skill-graph fusion (V9)**, the best of all variants and composites.
+2. Its one-at-a-time ablation (`ablation_round1.json`) showed that **removing the dense ranking
+   improved Recall@5 and nDCG@10 on every persona and every hard slice** (vague posts,
+   implied skills, ≥4 requirements). The embeddings still matter, but they already do their
+   semantic work inside the skill extractor that maps requirements and documents onto the
+   graph. A separate dense ranking only adds near-duplicate noise to the fusion.
+
+Shipped as `rag.variant: best`: **BM25 + skill graph + multi-vector + outcome boost, no dense
+ranking**. The round-2 ablation of this pipeline is `ablation.json`.
 
 **Why.**
 

@@ -149,6 +149,8 @@ class Pipeline:
                 lists.append(self.c.dense(self.s.chunks).search(qv, n, self._where()))
             if self.s.bm25:
                 lists.append(self.c.bm25(self.s.chunks).search(t, n, self._where()))
+        if not lists:          # e.g. graph-only ablation: no text ranking at all
+            return []
         if self.s.multivector:
             lists = [self._multivector(lst) for lst in lists]
         return rrf(lists, cfg("rag.rrf_k", 60)) if len(lists) > 1 else lists[0]
