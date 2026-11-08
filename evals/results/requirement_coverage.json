@@ -1,0 +1,28 @@
+{
+ "aiml": {
+  "requirements": 780,
+  "without_taxonomy_skill": 230,
+  "share": 0.2949,
+  "jobs_with_such_a_requirement": 115,
+  "jobs": 200
+ },
+ "web": {
+  "requirements": 807,
+  "without_taxonomy_skill": 227,
+  "share": 0.2813,
+  "jobs_with_such_a_requirement": 114,
+  "jobs": 200
+ },
+ "data": {
+  "requirements": 749,
+  "without_taxonomy_skill": 169,
+  "share": 0.2256,
+  "jobs_with_such_a_requirement": 103,
+  "jobs": 200
+ },
+ "all": {
+  "requirements": 2336,
+  "without_taxonomy_skill": 626,
+  "share": 0.268
+ }
+}
