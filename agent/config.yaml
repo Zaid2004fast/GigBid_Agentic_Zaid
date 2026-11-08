@@ -40,13 +40,14 @@ profiles:
     default: {provider: heuristic, model: rules-v1}
     nodes: {}
   open:
-    default: {provider: ollama, model: "${OLLAMA_SMALL_MODEL:-qwen3:1.7b}"}
+    # SMALL_PROVIDER=groq + SMALL_MODEL=openai/gpt-oss-20b on GPU-less hosts; ollama + qwen3 locally
+    default: {provider: "${SMALL_PROVIDER:-ollama}", model: "${SMALL_MODEL:-qwen3:1.7b}"}
     nodes:
-      analyst:    {provider: ollama, model: "${OLLAMA_SMALL_MODEL:-qwen3:1.7b}", fallback: {provider: heuristic, model: rules-v1}}
-      risk:       {provider: ollama, model: "${OLLAMA_SMALL_MODEL:-qwen3:1.7b}", fallback: {provider: heuristic, model: rules-v1}}
-      intent:     {provider: ollama, model: "${OLLAMA_SMALL_MODEL:-qwen3:1.7b}", fallback: {provider: heuristic, model: rules-v1}}
+      analyst:    {provider: "${SMALL_PROVIDER:-ollama}", model: "${SMALL_MODEL:-qwen3:1.7b}", fallback: {provider: heuristic, model: rules-v1}}
+      risk:       {provider: "${SMALL_PROVIDER:-ollama}", model: "${SMALL_MODEL:-qwen3:1.7b}", fallback: {provider: heuristic, model: rules-v1}}
+      intent:     {provider: "${SMALL_PROVIDER:-ollama}", model: "${SMALL_MODEL:-qwen3:1.7b}", fallback: {provider: heuristic, model: rules-v1}}
       compliance: {provider: heuristic, model: rules-v1}
-      writer:     {provider: "${WRITER_PROVIDER:-groq}", model: "${WRITER_MODEL:-openai/gpt-oss-120b}", fallback: {provider: ollama, model: "${OLLAMA_SMALL_MODEL:-qwen3:1.7b}"}}
+      writer:     {provider: "${WRITER_PROVIDER:-groq}", model: "${WRITER_MODEL:-openai/gpt-oss-120b}", fallback: {provider: heuristic, model: rules-v1}}
       critic:     {provider: "${WRITER_PROVIDER:-groq}", model: "${CRITIC_MODEL:-openai/gpt-oss-20b}", fallback: {provider: heuristic, model: rules-v1}}
       verifier:   {provider: heuristic, model: rules-v1}
       liaison:    {provider: "${WRITER_PROVIDER:-groq}", model: "${WRITER_MODEL:-openai/gpt-oss-120b}", fallback: {provider: heuristic, model: rules-v1}}

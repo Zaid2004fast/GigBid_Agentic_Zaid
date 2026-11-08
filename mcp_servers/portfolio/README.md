@@ -38,7 +38,7 @@ my-portfolio/
 
 ```bash
 # uvx (no install)
-uvx --from "git+https://github.com/<you>/gigbid" gigbid-portfolio-mcp
+uvx --from "git+https://github.com/Zaid2004fast/GigBid_Agentic_Zaid" gigbid-portfolio-mcp
 
 # Docker
 docker run -i --rm -v ~/my-portfolio:/portfolio -e PORTFOLIO_DIR=/portfolio -e PORTFOLIO_PERSONA=me \
@@ -49,7 +49,7 @@ Claude Desktop (`claude_desktop_config.json`):
 
 ```json
 {"mcpServers": {"portfolio": {"command": "uvx",
-  "args": ["--from", "git+https://github.com/<you>/gigbid", "gigbid-portfolio-mcp"],
+  "args": ["--from", "git+https://github.com/Zaid2004fast/GigBid_Agentic_Zaid", "gigbid-portfolio-mcp"],
   "env": {"PORTFOLIO_DIR": "/Users/me/my-portfolio", "PORTFOLIO_PERSONA": "me"}}}}
 ```
 

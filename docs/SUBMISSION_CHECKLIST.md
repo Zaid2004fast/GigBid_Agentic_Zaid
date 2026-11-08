@@ -14,7 +14,7 @@ voice or judgement, and cannot be produced by code.
 | 7 | MCP Inspector screenshots | `npx @modelcontextprotocol/inspector python -m mcp_servers.portfolio.server` (and marketplace, workspace). Screenshot the tool list + one call each into `docs/images/inspector_*.png`. | 10 min |
 | 8 | 3-minute demo video | Script in `docs/report/VIDEO_SCRIPT.md`: inbox → approved proposal → scam caught → injection ignored → client reply. OBS / Windows Game Bar. Upload unlisted to YouTube. | 30 min |
 | 9 | Demo GIF (README top) | 30 s screen capture → `docs/images/demo.gif` (ScreenToGif on Windows). | 15 min |
-| 10 | Publish the Portfolio MCP server | It is already installable with `uvx --from git+https://github.com/<you>/gigbid gigbid-portfolio-mcp` once the repo is public. Optionally `python -m build && twine upload dist/*` to PyPI. Put the link in the submission. | 10 min |
+| 10 | Publish the Portfolio MCP server | It is already installable with `uvx --from git+https://github.com/Zaid2004fast/GigBid_Agentic_Zaid gigbid-portfolio-mcp` once the repo is public. Optionally `python -m build && twine upload dist/*` to PyPI. Put the link in the submission. | 10 min |
 | 11 | Technical write-up (1,200-1,800 words) | Draft in `docs/report/WRITEUP.md`. Edit it in your own voice, then post on LinkedIn / Medium. | 45 min |
 | 12 | R&D report PDF | `docs/report/GigBid_RnD_Report.pdf` (regenerate after step 5 with `python scripts/build_report.py`). | 2 min |
 | 13 | ZIP of the source | `python scripts/run.py zip` → `../gigbid-submission.zip` (no .venv, node_modules, .env, models). | 1 min |
