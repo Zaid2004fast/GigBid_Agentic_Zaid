@@ -28,6 +28,12 @@ before that.** When a client replies, it drafts the answer and offers interview 
 - **Memory you can audit.** Style rules are learned from your edits only after 3 edits across 2 jobs,
   each with its provenance, and you can delete any of them in Settings.
 
+## Screens
+
+| Inbox | Proposal studio (evidence on hover) | Agent run |
+|---|---|---|
+| ![](docs/images/ui_01_inbox.png) | ![](docs/images/ui_04_evidence_hover.png) | ![](docs/images/ui_05_run_viewer.png) |
+
 ## Architecture
 
 ```mermaid
