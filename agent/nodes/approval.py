@@ -46,6 +46,9 @@ def approval_payload(state: dict) -> dict:
     d = state["drafts"][-1]
     ev = state.get("evidence") or {}
     claims = [{**c, "evidence": [ev.get(i) or {"item_id": i} for i in c.get("evidence_ids", [])]} for c in d.get("claims", [])]
+    cited = [ev.get(i) or {"item_id": i} for i in d.get("evidence_labels", {}).values()]   # every cited item, for hover fallback
+    if cited:
+        claims.append({"id": "cited", "text": "", "status": "supported", "evidence_ids": [], "evidence": cited})
     return {"kind": "proposal", "thread_id": state["thread_id"], "job_id": state["job_id"], "job_title": state["job"].get("title"),
             "draft": d, "claims": claims, "evidence_labels": d.get("evidence_labels", {}), "risk": state.get("risk"),
             "price": state.get("price"), "decision": state.get("decision"), "preview": state.get("preview"),

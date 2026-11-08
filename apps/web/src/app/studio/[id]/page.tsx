@@ -82,7 +82,12 @@ export default function StudioPage() {
             <p className="draft" data-testid="draft">
               {sentences.map((s, i) => {
                 const label = (s.match(/\[(E\d+)\]/) ?? [])[1];
-                const c = byText.get(strip(s));
+                // match by text first, then by the evidence item the label points to
+                const itemId = label ? (d.evidence_labels ?? {})[label] : undefined;
+                const c = byText.get(strip(s)) ?? claims.find((x) => itemId && x.evidence_ids?.includes(itemId)) ??
+                  (itemId ? { id: `lbl-${i}`, text: strip(s), status: "supported", evidence_ids: [itemId],
+                              evidence: [(p.claims?.flatMap((x: Claim) => x.evidence ?? []) ?? []).find((e: any) => e.item_id === itemId)
+                                         ?? { item_id: itemId }] } as Claim : undefined);
                 return (
                   <span key={i}>
                     {c || label ? <EvidenceHover text={strip(s)} claim={c} label={label} /> : strip(s)}

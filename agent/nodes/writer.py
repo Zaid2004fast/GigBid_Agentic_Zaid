@@ -153,6 +153,7 @@ async def writer(state: dict, ctx: NodeCtx) -> dict:
     plan, labels = claim_plan(fit)
     tools = ctx.tools("writer")
     facts: dict[str, dict] = {}
+    details: dict[str, dict] = {}
     if labels:
         # facts come from the exact evidence item each label cites, so claim and citation always agree
         try:
@@ -193,11 +194,18 @@ async def writer(state: dict, ctx: NodeCtx) -> dict:
             text, answers = deterministic_letter(spec, fit, price, plan, facts, strategy, crit, settings)
     else:
         text, answers = deterministic_letter(spec, fit, price, plan, facts, strategy, crit, settings)
+    # LLMs often cite after the full stop ("...done.[E1]"); normalise to "...done [E1]." so the verifier and
+    # the UI split sentences the same way and every claim keeps its citation
+    text = re.sub(r"([.!?])\s*((?:\[E\d+\]\s*)+)", lambda m: " " + " ".join(m.group(2).split()) + m.group(1), text)
     text = apply_style(text, rules)
     answers = [strip_citations(a) for a in (answers + [""] * len(spec.screening_questions))[: len(spec.screening_questions)]]
     draft = ProposalDraft(job_id=spec.job_id, version=revision + 1, text=text, screening_answers=answers, bid_amount=price.amount,
                           strategy=strategy, writer_model=model, word_count=len(strip_citations(text).split()),
                           evidence_labels=labels, sendable_text=strip_citations(text))
     ctx.emit(f"draft v{draft.version}: {draft.word_count} words")
-    return {"drafts": [draft.model_dump()], "revision": revision + 1,
+    # the exact items the draft cites, so the approval screen can show them on hover
+    cited = {item_id: {"item_id": item_id, "type": (details.get(item_id) or {}).get("type"),
+                       "title": (details.get(item_id) or {}).get("title"), "project": (details.get(item_id) or {}).get("project"),
+                       "snippet": ((details.get(item_id) or {}).get("text") or "")[:400]} for item_id in labels.values()} if labels else {}
+    return {"drafts": [draft.model_dump()], "revision": revision + 1, "evidence": cited,
             "progress": [f"Writer: draft v{draft.version} ({draft.word_count} words, {len(labels)} evidence items, {model})"]}
