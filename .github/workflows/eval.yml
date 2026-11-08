@@ -1,0 +1,18 @@
+name: eval
+on: [pull_request, workflow_dispatch]
+jobs:
+  smoke-eval:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.11", cache: pip}
+      - run: pip install "."
+      - uses: actions/cache@v4
+        with: {path: .models, key: models-bge-small-minilm}
+      - name: 30-job smoke eval - fails if bid/skip F1 drops or unsupported claims rise past thresholds
+        run: python scripts/run.py smoke
+        env: {GIGBID_PROFILE: offline}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with: {name: smoke-eval, path: evals/results/smoke_eval.json}

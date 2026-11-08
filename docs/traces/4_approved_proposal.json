@@ -1,0 +1,1076 @@
+{
+ "scenario": "4_approved_proposal",
+ "thread_id": "bid:demo-user:dev_aiml_001:b7ed7c",
+ "trace_id": "7b4b70b8ff45467ca4e6a9847b520824",
+ "status": "submitted",
+ "progress": [
+  "Scout: job dev_aiml_001 'LoRA fine-tuning expert needed for media project' taken in",
+  "Job Analyst: 3 requirements, budget fixed 1830.0",
+  "Risk Assessor: low risk, scam p=0.00",
+  "Fit Matcher: fit 1.00 (3/3 requirements evidenced)",
+  "Reconcile: analyst and matcher agree on requirements",
+  "Decision: BID - fit 1.00, p(reply)=0.34 (prior), EV $184 for 6 Connects (pacing off)",
+  "Pricing: fixed $1649 (market fixed p25/p50/p75 = 880/1130/1385 (246 jobs))",
+  "Writer: draft v1 (113 words, 2 evidence items, rules-v1)",
+  "Verifier: 2 claims, unsupported 0->0, 0 rewritten, 0 removed",
+  "Critic: pass (score 1.00)",
+  "Compliance: allowed (no issues)",
+  "Dry run: 6 Connects, balance after 114",
+  "Human: approve",
+  "Submitted proposal prop_f9a47cf1a4 (submitted, 6 Connects)"
+ ],
+ "decision": {
+  "job_id": "dev_aiml_001",
+  "action": "bid",
+  "reasons": [
+   "fit 1.00, p(reply)=0.34 (prior), EV $184 for 6 Connects (pacing off)"
+  ],
+  "expected_value_usd": 184.21,
+  "p_reply": 0.3355,
+  "connects_cost": 6,
+  "pacing_threshold": 1.0,
+  "auto": false
+ },
+ "spans": [
+  {
+   "span_id": "c0e861a6fd0d4690",
+   "trace_id": "7b4b70b8ff45467ca4e6a9847b520824",
+   "parent_id": null,
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_001:b7ed7c",
+   "name": "node:intake",
+   "kind": "node",
+   "start": 1794136547.1299653,
+   "end": 1794136547.1299653,
+   "status": "ok",
+   "attrs": {
+    "node": "intake",
+    "output_keys": [
+     "job",
+     "job_id",
+     "progress",
+     "revision",
+     "settings",
+     "status"
+    ],
+    "status": "analysing"
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "518e91600fec49d3",
+   "trace_id": "7b4b70b8ff45467ca4e6a9847b520824",
+   "parent_id": null,
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_001:b7ed7c",
+   "name": "node:analyst",
+   "kind": "node",
+   "start": 1794136547.184918,
+   "end": 1794136547.1964521,
+   "status": "ok",
+   "attrs": {
+    "node": "analyst",
+    "output_keys": [
+     "job_spec",
+     "progress"
+    ]
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "f8f4c23db96543aa",
+   "trace_id": "7b4b70b8ff45467ca4e6a9847b520824",
+   "parent_id": "8013b70f612c49cd",
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_001:b7ed7c",
+   "name": "tool:get_client_history",
+   "kind": "tool",
+   "start": 1794136547.1883783,
+   "end": 1794136547.3177705,
+   "status": "ok",
+   "attrs": {
+    "server": "marketplace",
+    "tool": "get_client_history",
+    "args": {
+     "client_id": "cl_0266"
+    },
+    "agent": "risk",
+    "attempt": 0,
+    "result": {
+     "id": "cl_0266",
+     "name": "Quarry Group",
+     "country": "UK",
+     "industry": "media",
+     "payment_verified": true,
+     "member_since": 2024,
+     "total_spent": 15000,
+     "jobs_posted": 66,
+     "hire_rate": 0.43,
+     "avg_rating": 4.7,
+     "freelancer_reviews": [
+      {
+       "rating": 5.0,
+       "text": "Clear brief, paid promptly."
+      },
+      {
+       "rating": 5.0,
+       "text": "Clear brief, paid promptly."
+      },
+      {
+       "rating": 3.0,
+       "text": "Asked for lots of unpaid extra work."
+      },
+      {
+       "rating": 4.5,
+       "text": "Clear brief, paid promptly."
+      },
+      {
+       "rating": 4.5,
+       "text": "Great to work with."
+      }
+     ]
+    }
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "8013b70f612c49cd",
+   "trace_id": "7b4b70b8ff45467ca4e6a9847b520824",
+   "parent_id": null,
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_001:b7ed7c",
+   "name": "node:risk",
+   "kind": "node",
+   "start": 1794136547.1883783,
+   "end": 1794136547.3783622,
+   "status": "ok",
+   "attrs": {
+    "node": "risk",
+    "output_keys": [
+     "client",
+     "progress",
+     "risk"
+    ]
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "190c8a10a6e64480",
+   "trace_id": "7b4b70b8ff45467ca4e6a9847b520824",
+   "parent_id": null,
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_001:b7ed7c",
+   "name": "node:matcher",
+   "kind": "node",
+   "start": 1794136547.1944382,
+   "end": 1794136550.4280865,
+   "status": "ok",
+   "attrs": {
+    "node": "matcher",
+    "output_keys": [
+     "evidence",
+     "fit",
+     "progress"
+    ]
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "b2299fcbc98b421d",
+   "trace_id": "7b4b70b8ff45467ca4e6a9847b520824",
+   "parent_id": "190c8a10a6e64480",
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_001:b7ed7c",
+   "name": "tool:search_evidence",
+   "kind": "tool",
+   "start": 1794136547.2469726,
+   "end": 1794136548.431076,
+   "status": "ok",
+   "attrs": {
+    "server": "portfolio",
+    "tool": "search_evidence",
+    "args": {
+     "requirement": "PEFT",
+     "k": 4
+    },
+    "agent": "matcher",
+    "attempt": 0,
+    "result": {
+     "requirement": "PEFT",
+     "variant": "best",
+     "status": "supported",
+     "items": [
+      {
+       "item_id": "aiml:repo:ticket-triage-saas",
+       "type": "repo_code",
+       "source": "repo:ticket-triage-saas/src/main.py",
+       "date": "",
+       "outcome": null,
+       "project": "ticket-triage-saas",
+       "title": "ticket-triage-saas/src/main.py",
+       "client_industry": "",
+       "snippet": "from peft import LoraConfig, get_peft_model",
+       "score": 3.4545,
+       "support": 1.0
+      },
+      {
+       "item_id": "aiml:repo:rag-eval",
+       "type": "repo_code",
+       "source": "repo:rag-eval/src/main.py",
+       "date": "",
+       "outcome": null,
+       "project": "rag-eval",
+       "title": "rag-eval/src/main.py",
+       "client_industry": "",
+       "snippet": "from peft import LoraConfig, get_peft_model\n",
+       "score": 3.4545,
+       "support": 1.0
+      },
+      {
+       "item_id": "aiml:repo:ticket-triage",
+       "type": "repo_code",
+       "source": "repo:ticket-triage/src/main.py",
+       "date": "",
+       "outcome": null,
+       "project": "ticket-triage",
+       "title": "ticket-triage/src/main.py",
+       "client_industry": "",
+       "snippet": "from peft import LoraConfig, get_peft_model",
+       "score": 3.4545,
+       "support": 1.0
+      },
+      {
+       "item_id": "aiml:cv:ticket-triage-saas",
+       "type": "cv",
+       "source": "cv.pdf",
+       "date": "2023",
+       "outcome": null,
+       "project": "ticket-triage-saas",
+       "title": "Support ticket triage with a fine-tuned language model",
+       "client_industry": "saas",
+       "snippet": "Support ticket triage with a fine-tuned language model (SaaS) (2023): a fine-tuned classifier that routes tickets to the right queue; routing accuracy of 43% on 800 tickets. Tools: Hugging Face Transformers, LoRA fine-tuning, PyTorch. [github.com/ayesha-ml/ticket-triage-saas]",
+       "score": -10.398,
+       "support": 1.0
+      }
+     ]
+    }
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "de47d0e614694d8f",
+   "trace_id": "7b4b70b8ff45467ca4e6a9847b520824",
+   "parent_id": "190c8a10a6e64480",
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_001:b7ed7c",
+   "name": "tool:search_evidence",
+   "kind": "tool",
+   "start": 1794136547.2479815,
+   "end": 1794136549.3395467,
+   "status": "ok",
+   "attrs": {
+    "server": "portfolio",
+    "tool": "search_evidence",
+    "args": {
+     "requirement": "Pandas",
+     "k": 4
+    },
+    "agent": "matcher",
+    "attempt": 0,
+    "result": {
+     "requirement": "Pandas",
+     "variant": "best",
+     "status": "supported",
+     "items": [
+      {
+       "item_id": "aiml:repo:rag-eval-media",
+       "type": "repo_code",
+       "source": "repo:rag-eval-media/src/main.py",
+       "date": "",
+       "outcome": null,
+       "project": "rag-eval-media",
+       "title": "rag-eval-media/src/main.py",
+       "client_industry": "",
+       "snippet": "import pandas as pd\ndf = pd.read_csv(path)\n",
+       "score": 2.1833,
+       "support": 1.0
+      },
+      {
+       "item_id": "aiml:repo:rag-eval",
+       "type": "repo_code",
+       "source": "repo:rag-eval/src/main.py",
+       "date": "",
+       "outcome": null,
+       "project": "rag-eval",
+       "title": "rag-eval/src/main.py",
+       "client_industry": "",
+       "snippet": "import pandas as pd\ndf = pd.read_csv(path)",
+       "score": 2.1833,
+       "support": 1.0
+      },
+      {
+       "item_id": "aiml:repo:demand-forecast",
+       "type": "repo_code",
+       "source": "repo:demand-forecast/src/main.py",
+       "date": "",
+       "outcome": null,
+       "project": "demand-forecast",
+       "title": "demand-forecast/src/main.py",
+       "client_industry": "",
+       "snippet": "import pandas as pd\ndf = pd.read_csv(path)",
+       "score": 2.1833,
+       "support": 1.0
+      },
+      {
+       "item_id": "aiml:repo:demand-forecast-manufacturing",
+       "type": "repo_code",
+       "source": "repo:demand-forecast-manufacturing/src/main.py",
+       "date": "",
+       "outcome": null,
+       "project": "demand-forecast-manufacturing",
+       "title": "demand-forecast-manufacturing/src/main.py",
+       "client_industry": "",
+       "snippet": "import pandas as pd\ndf = pd.read_csv(path)",
+       "score": 2.1833,
+       "support": 1.0
+      }
+     ]
+    }
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "743b1620e8f44976",
+   "trace_id": "7b4b70b8ff45467ca4e6a9847b520824",
+   "parent_id": "190c8a10a6e64480",
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_001:b7ed7c",
+   "name": "tool:search_evidence",
+   "kind": "tool",
+   "start": 1794136547.2479815,
+   "end": 1794136550.3857522,
+   "status": "ok",
+   "attrs": {
+    "server": "portfolio",
+    "tool": "search_evidence",
+    "args": {
+     "requirement": "faiss",
+     "k": 4
+    },
+    "agent": "matcher",
+    "attempt": 0,
+    "result": {
+     "requirement": "faiss",
+     "variant": "best",
+     "status": "supported",
+     "items": [
+      {
+       "item_id": "aiml:repo:semantic-search-logistics",
+       "type": "repo_code",
+       "source": "repo:semantic-search-logistics/src/main.py",
+       "date": "",
+       "outcome": null,
+       "project": "semantic-search-logistics",
+       "title": "semantic-search-logistics/src/main.py",
+       "client_industry": "",
+       "snippet": "import faiss\nindex = faiss.IndexFlatIP(dim)",
+       "score": 6.0972,
+       "support": 1.0
+      },
+      {
+       "item_id": "aiml:cv:semantic-search",
+       "type": "cv",
+       "source": "cv.pdf",
+       "date": "2023",
+       "outcome": null,
+       "project": "semantic-search",
+       "title": "Semantic product search for a legal marketplace",
+       "client_industry": "legal",
+       "snippet": "Semantic product search for a legal marketplace (2023): embedding-based search over 20000 products; search click-through up 44%. Tools: Python, FAISS, Hugging Face Transformers. [portfolio/semantic-search]",
+       "score": 1.4006,
+       "support": 1.0
+      },
+      {
+       "item_id": "aiml:cv:semantic-search-logistics",
+       "type": "cv",
+       "source": "cv.pdf",
+       "date": "2022",
+       "outcome": null,
+       "project": "semantic-search-logistics",
+       "title": "Semantic product search for a logistics marketplace",
+       "client_industry": "logistics",
+       "snippet": "Semantic product search for a logistics marketplace (2022): embedding-based search over 1200 products; search click-through up 33%. Tools: Python, FAISS, Hugging Face Transformers. [github.com/ayesha-ml/semantic-search-logistics]",
+       "score": 1.2902,
+       "support": 1.0
+      }
+     ]
+    }
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "5aece09504754f69",
+   "trace_id": "7b4b70b8ff45467ca4e6a9847b520824",
+   "parent_id": "190c8a10a6e64480",
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_001:b7ed7c",
+   "name": "tool:find_winning_proposals",
+   "kind": "tool",
+   "start": 1794136550.3963346,
+   "end": 1794136550.4260678,
+   "status": "ok",
+   "attrs": {
+    "server": "portfolio",
+    "tool": "find_winning_proposals",
+    "args": {
+     "job_summary": "LoRA fine-tuning expert needed for media project faiss lora pandas",
+     "k": 2
+    },
+    "agent": "matcher",
+    "attempt": 0,
+    "result": {
+     "items": [
+      {
+       "id": "aiml:proposal:aiml-prop-147",
+       "outcome": "replied",
+       "text": "You need lora fine-tuning expert needed for a healthcare team, and I have shipped this before. For Corvid Logistics I built embedding-based search over 1200 products using Python, FAISS, Hugging Face Transformers; it search click-through up 33%. Happy to share a short plan on a call."
+      },
+      {
+       "id": "aiml:proposal:aiml-prop-061",
+       "outcome": "replied",
+       "text": "You need lora fine-tuning expert needed for a media team, and I have shipped this before. For Kestrel Real Estate I built agents that review contracts and flag risky clauses with human approval using LangGraph, Python, OpenAI API; it review time down 90%. Could you tell me more about your current setup?"
+      }
+     ]
+    }
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "26964062db9048ee",
+   "trace_id": "7b4b70b8ff45467ca4e6a9847b520824",
+   "parent_id": null,
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_001:b7ed7c",
+   "name": "node:reconcile",
+   "kind": "node",
+   "start": 1794136550.4788368,
+   "end": 1794136550.4788368,
+   "status": "ok",
+   "attrs": {
+    "node": "reconcile",
+    "output_keys": [
+     "progress"
+    ]
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "27598651035d4a0c",
+   "trace_id": "7b4b70b8ff45467ca4e6a9847b520824",
+   "parent_id": null,
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_001:b7ed7c",
+   "name": "node:decide",
+   "kind": "node",
+   "start": 1794136550.523925,
+   "end": 1794136550.5641284,
+   "status": "ok",
+   "attrs": {
+    "node": "decide",
+    "output_keys": [
+     "decision",
+     "progress",
+     "status"
+    ],
+    "status": "drafting"
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "8e3c0a75b8b94b29",
+   "trace_id": "7b4b70b8ff45467ca4e6a9847b520824",
+   "parent_id": "27598651035d4a0c",
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_001:b7ed7c",
+   "name": "tool:get_policy",
+   "kind": "tool",
+   "start": 1794136550.5243552,
+   "end": 1794136550.54902,
+   "status": "ok",
+   "attrs": {
+    "server": "marketplace",
+    "tool": "get_policy",
+    "args": {},
+    "agent": "pricing",
+    "attempt": 0,
+    "result": {
+     "version": 1,
+     "effective": "[PHONE]",
+     "connects": {
+      "formula": "flat",
+      "flat": 6
+     },
+     "rules": [
+      "No off-platform contact or payment",
+      "No fabricated experience",
+      "No guarantees",
+      "Fair use of automation"
+     ]
+    }
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "cd8cef168d02486c",
+   "trace_id": "7b4b70b8ff45467ca4e6a9847b520824",
+   "parent_id": "aedf9694f65e42e8",
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_001:b7ed7c",
+   "name": "tool:get_market_stats",
+   "kind": "tool",
+   "start": 1794136550.6103992,
+   "end": 1794136550.6505659,
+   "status": "ok",
+   "attrs": {
+    "server": "marketplace",
+    "tool": "get_market_stats",
+    "args": {
+     "category": "AI & Machine Learning",
+     "budget_type": "fixed"
+    },
+    "agent": "pricing",
+    "attempt": 0,
+    "result": {
+     "category": "AI & Machine Learning",
+     "budget_type": "fixed",
+     "n": 246,
+     "p10": 687.94,
+     "p25": 880.15,
+     "p50": 1130.26,
+     "p75": 1384.84,
+     "p90": 1743.38,
+     "avg_proposals": 31.0
+    }
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "aedf9694f65e42e8",
+   "trace_id": "7b4b70b8ff45467ca4e6a9847b520824",
+   "parent_id": null,
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_001:b7ed7c",
+   "name": "node:pricing",
+   "kind": "node",
+   "start": 1794136550.6103992,
+   "end": 1794136550.6587033,
+   "status": "ok",
+   "attrs": {
+    "node": "pricing",
+    "output_keys": [
+     "price",
+     "progress"
+    ]
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "06826035e12a484e",
+   "trace_id": "7b4b70b8ff45467ca4e6a9847b520824",
+   "parent_id": null,
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_001:b7ed7c",
+   "name": "node:writer",
+   "kind": "node",
+   "start": 1794136550.692002,
+   "end": 1794136550.7593138,
+   "status": "ok",
+   "attrs": {
+    "node": "writer",
+    "output_keys": [
+     "drafts",
+     "progress",
+     "revision"
+    ]
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "f5ad6383cd8242f0",
+   "trace_id": "7b4b70b8ff45467ca4e6a9847b520824",
+   "parent_id": "06826035e12a484e",
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_001:b7ed7c",
+   "name": "tool:get_evidence",
+   "kind": "tool",
+   "start": 1794136550.6930027,
+   "end": 1794136550.7593138,
+   "status": "ok",
+   "attrs": {
+    "server": "portfolio",
+    "tool": "get_evidence",
+    "args": {
+     "item_ids": [
+      "aiml:cs:rag-eval",
+      "aiml:cs:semantic-search-logistics"
+     ]
+    },
+    "agent": "writer",
+    "attempt": 0,
+    "result": {
+     "items": [
+      {
+       "item_id": "aiml:cs:rag-eval",
+       "type": "case_study",
+       "project": "rag-eval",
+       "title": "Evaluation harness for an LLM chatbot (legal)",
+       "text": "# Evaluation harness for an LLM chatbot (legal)\n\n## Context\nDriftwood Legal needed an offline evaluation set and metrics for answer faithfulness. The existing process was slow and error-prone.\n\n## What I built\nI designed and delivered an offline evaluation set and metrics for answer faithfulness. The stack: Python, answers grounded in the company's own documents with citations, LangChain, cleaned and reshaped messy spreadsheets with dataframes, QLoRA.\n\nA core piece of the implementation:\n\n```\ndef main() -> None:\n    ...\n```\n\n## Outcome\nThe result caught 59% of regressions before release.",
+       "project_skills": [
+        "langchain",
+        "lora",
+        "pandas",
+        "python",
+        "rag"
+       ],
+       "industry": "legal"
+      },
+      {
+       "item_id": "aiml:cs:semantic-search-logistics",
+       "type": "case_study",
+       "project": "semantic-search-logistics",
+       "title": "Semantic product search for a logistics marketplace",
+       "text": "# Semantic product search for a logistics marketplace\n\n## Context\nCorvid Logistics needed embedding-based search over 1200 products. The existing process was slow and error-prone.\n\n## What I built\nI designed and delivered embedding-based search over 1200 products. The stack: Python, approximate nearest-neighbour search over millions of embeddings in memory, transformers, an async Python API with automatic OpenAPI docs.\n\n## Outcome\nThe result search click-through up 33%.",
+       "project_skills": [
+        "faiss",
+        "fastapi",
+        "huggingface",
+        "python"
+       ],
+       "industry": "logistics"
+      }
+     ]
+    }
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "bf9a55d349aa4d6e",
+   "trace_id": "7b4b70b8ff45467ca4e6a9847b520824",
+   "parent_id": null,
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_001:b7ed7c",
+   "name": "node:verifier",
+   "kind": "node",
+   "start": 1794136550.822741,
+   "end": 1794136550.960415,
+   "status": "ok",
+   "attrs": {
+    "node": "verifier",
+    "output_keys": [
+     "drafts",
+     "progress",
+     "verification"
+    ]
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "1f5c43eeb3fc46a0",
+   "trace_id": "7b4b70b8ff45467ca4e6a9847b520824",
+   "parent_id": "bf9a55d349aa4d6e",
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_001:b7ed7c",
+   "name": "tool:get_evidence",
+   "kind": "tool",
+   "start": 1794136550.825015,
+   "end": 1794136550.887535,
+   "status": "ok",
+   "attrs": {
+    "server": "portfolio",
+    "tool": "get_evidence",
+    "args": {
+     "item_ids": [
+      "aiml:cs:rag-eval"
+     ]
+    },
+    "agent": "verifier",
+    "attempt": 0,
+    "result": {
+     "items": [
+      {
+       "item_id": "aiml:cs:rag-eval",
+       "type": "case_study",
+       "project": "rag-eval",
+       "title": "Evaluation harness for an LLM chatbot (legal)",
+       "text": "# Evaluation harness for an LLM chatbot (legal)\n\n## Context\nDriftwood Legal needed an offline evaluation set and metrics for answer faithfulness. The existing process was slow and error-prone.\n\n## What I built\nI designed and delivered an offline evaluation set and metrics for answer faithfulness. The stack: Python, answers grounded in the company's own documents with citations, LangChain, cleaned and reshaped messy spreadsheets with dataframes, QLoRA.\n\nA core piece of the implementation:\n\n```\ndef main() -> None:\n    ...\n```\n\n## Outcome\nThe result caught 59% of regressions before release.",
+       "project_skills": [
+        "langchain",
+        "lora",
+        "pandas",
+        "python",
+        "rag"
+       ],
+       "industry": "legal"
+      }
+     ]
+    }
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "6cc43d3d73134a86",
+   "trace_id": "7b4b70b8ff45467ca4e6a9847b520824",
+   "parent_id": "bf9a55d349aa4d6e",
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_001:b7ed7c",
+   "name": "tool:get_evidence",
+   "kind": "tool",
+   "start": 1794136550.9023015,
+   "end": 1794136550.953755,
+   "status": "ok",
+   "attrs": {
+    "server": "portfolio",
+    "tool": "get_evidence",
+    "args": {
+     "item_ids": [
+      "aiml:cs:semantic-search-logistics"
+     ]
+    },
+    "agent": "verifier",
+    "attempt": 0,
+    "result": {
+     "items": [
+      {
+       "item_id": "aiml:cs:semantic-search-logistics",
+       "type": "case_study",
+       "project": "semantic-search-logistics",
+       "title": "Semantic product search for a logistics marketplace",
+       "text": "# Semantic product search for a logistics marketplace\n\n## Context\nCorvid Logistics needed embedding-based search over 1200 products. The existing process was slow and error-prone.\n\n## What I built\nI designed and delivered embedding-based search over 1200 products. The stack: Python, approximate nearest-neighbour search over millions of embeddings in memory, transformers, an async Python API with automatic OpenAPI docs.\n\n## Outcome\nThe result search click-through up 33%.",
+       "project_skills": [
+        "faiss",
+        "fastapi",
+        "huggingface",
+        "python"
+       ],
+       "industry": "logistics"
+      }
+     ]
+    }
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "a55fe9a33373486b",
+   "trace_id": "7b4b70b8ff45467ca4e6a9847b520824",
+   "parent_id": null,
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_001:b7ed7c",
+   "name": "node:critic",
+   "kind": "node",
+   "start": 1794136551.015947,
+   "end": 1794136551.015947,
+   "status": "ok",
+   "attrs": {
+    "node": "critic",
+    "output_keys": [
+     "critiques",
+     "progress"
+    ]
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "9c4bae8ce0584158",
+   "trace_id": "7b4b70b8ff45467ca4e6a9847b520824",
+   "parent_id": null,
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_001:b7ed7c",
+   "name": "node:compliance",
+   "kind": "node",
+   "start": 1794136551.0746536,
+   "end": 1794136551.0746536,
+   "status": "ok",
+   "attrs": {
+    "node": "compliance",
+    "output_keys": [
+     "compliance",
+     "drafts",
+     "progress"
+    ]
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "054df25470a74d43",
+   "trace_id": "7b4b70b8ff45467ca4e6a9847b520824",
+   "parent_id": "f9efb51fd7d245d3",
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_001:b7ed7c",
+   "name": "tool:create_proposal_draft",
+   "kind": "tool",
+   "start": 1794136551.1277406,
+   "end": 1794136551.1870058,
+   "status": "ok",
+   "attrs": {
+    "server": "marketplace",
+    "tool": "create_proposal_draft",
+    "args": {
+     "proposal": {
+      "job_id": "dev_aiml_001",
+      "cover_letter": "For your media project (\"LoRA fine-tuning expert needed for media project\") you need MVP built on LoRA fine-tuning, pandas, FAISS, delivered in reviewable steps. I built an offline evaluation set and metrics for answer faithfulness for a legal client using LoRA fine-tuning, pandas (result: caught 59% of regressions before release). I built embedding-based search over 1200 products for a logistics client using FAISS (result: search click-through up 33%). My plan: start with an MVP as a paid first milestone, then ship in small weekly increments you can review. I can deliver this for $1,649. What does your current setup look like, and what would make the first milestone a clear win for you?",
+      "bid_amount": 1648.99,
+      "screening_answers": [
+       "I would use FAISS, LoRA fine-tuning, pandas, because that is what I have shipped with and it fits your requirements.",
+       "I built an offline evaluation set and metrics for answer faithfulness for a legal client using LoRA fine-tuning, pandas (result: caught 59% of regressions before release).",
+       "I work in short milestones with a written scope per milestone, so changes are agreed, priced and reviewed weekly instead of piling up."
+      ],
+      "idempotency_key": "bid:demo-user:dev_aiml_001:b7ed7c:v1:9700d8883d3e:draft",
+      "dry_run": true
+     }
+    },
+    "agent": "submitter",
+    "attempt": 0,
+    "result": {
+     "status": "dry_run",
+     "preview": {
+      "job_id": "dev_aiml_001",
+      "job_title": "LoRA fine-tuning expert needed for media project",
+      "cover_letter": "For your media project (\"LoRA fine-tuning expert needed for media project\") you need MVP built on LoRA fine-tuning, pandas, FAISS, delivered in reviewable steps. I built an offline evaluation set and metrics for answer faithfulness for a legal client using LoRA fine-tuning, pandas (result: caught 59% of regressions before release). I built embedding-based search over 1200 products for a logistics client using FAISS (result: search click-through up 33%). My plan: start with an MVP as a paid first milestone, then ship in small weekly increments you can review. I can deliver this for $1,649. What does your current setup look like, and what would make the first milestone a clear win for you?",
+      "bid_amount": 1648.99,
+      "screening_answers": [
+       "I would use FAISS, LoRA fine-tuning, pandas, because that is what I have shipped with and it fits your requirements.",
+       "I built an offline evaluation set and metrics for answer faithfulness for a legal client using LoRA fine-tuning, pandas (result: caught 59% of regressions before release).",
+       "I work in short milestones with a written scope per milestone, so changes are agreed, priced and reviewed weekly instead of piling up."
+      ],
+      "policy_version": 1
+     },
+     "connects_cost": 6,
+     "connects_balance_after": 114,
+     "result": {},
+     "idempotency_key": "bid:demo-user:dev_aiml_001:b7ed7c:v1:9700d8883d3e:draft"
+    }
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "f9efb51fd7d245d3",
+   "trace_id": "7b4b70b8ff45467ca4e6a9847b520824",
+   "parent_id": null,
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_001:b7ed7c",
+   "name": "node:preview",
+   "kind": "node",
+   "start": 1794136551.1277406,
+   "end": 1794136551.2025666,
+   "status": "ok",
+   "attrs": {
+    "node": "preview",
+    "output_keys": [
+     "preview",
+     "progress",
+     "status"
+    ],
+    "status": "awaiting_approval"
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "58cebd1596eb4f77",
+   "trace_id": "7b4b70b8ff45467ca4e6a9847b520824",
+   "parent_id": "ed3eb62534a341da",
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_001:b7ed7c",
+   "name": "tool:create_proposal_draft",
+   "kind": "tool",
+   "start": 1794136551.2768497,
+   "end": 1794136551.4421258,
+   "status": "ok",
+   "attrs": {
+    "server": "marketplace",
+    "tool": "create_proposal_draft",
+    "args": {
+     "proposal": {
+      "job_id": "dev_aiml_001",
+      "cover_letter": "For your media project (\"LoRA fine-tuning expert needed for media project\") you need MVP built on LoRA fine-tuning, pandas, FAISS, delivered in reviewable steps. I built an offline evaluation set and metrics for answer faithfulness for a legal client using LoRA fine-tuning, pandas (result: caught 59% of regressions before release). I built embedding-based search over 1200 products for a logistics client using FAISS (result: search click-through up 33%). My plan: start with an MVP as a paid first milestone, then ship in small weekly increments you can review. I can deliver this for $1,649. What does your current setup look like, and what would make the first milestone a clear win for you?",
+      "bid_amount": 1648.99,
+      "screening_answers": [
+       "I would use FAISS, LoRA fine-tuning, pandas, because that is what I have shipped with and it fits your requirements.",
+       "I built an offline evaluation set and metrics for answer faithfulness for a legal client using LoRA fine-tuning, pandas (result: caught 59% of regressions before release).",
+       "I work in short milestones with a written scope per milestone, so changes are agreed, priced and reviewed weekly instead of piling up."
+      ],
+      "idempotency_key": "bid:demo-user:dev_aiml_001:b7ed7c:v1:9700d8883d3e:draft"
+     }
+    },
+    "agent": "submitter",
+    "attempt": 0,
+    "result": {
+     "status": "draft_created",
+     "preview": {
+      "job_id": "dev_aiml_001",
+      "job_title": "LoRA fine-tuning expert needed for media project",
+      "cover_letter": "For your media project (\"LoRA fine-tuning expert needed for media project\") you need MVP built on LoRA fine-tuning, pandas, FAISS, delivered in reviewable steps. I built an offline evaluation set and metrics for answer faithfulness for a legal client using LoRA fine-tuning, pandas (result: caught 59% of regressions before release). I built embedding-based search over 1200 products for a logistics client using FAISS (result: search click-through up 33%). My plan: start with an MVP as a paid first milestone, then ship in small weekly increments you can review. I can deliver this for $1,649. What does your current setup look like, and what would make the first milestone a clear win for you?",
+      "bid_amount": 1648.99,
+      "screening_answers": [
+       "I would use FAISS, LoRA fine-tuning, pandas, because that is what I have shipped with and it fits your requirements.",
+       "I built an offline evaluation set and metrics for answer faithfulness for a legal client using LoRA fine-tuning, pandas (result: caught 59% of regressions before release).",
+       "I work in short milestones with a written scope per milestone, so changes are agreed, priced and reviewed weekly instead of piling up."
+      ],
+      "policy_version": 1
+     },
+     "connects_cost": 6,
+     "connects_balance_after": null,
+     "result": {
+      "proposal_id": "prop_f9a47cf1a4",
+      "status": "draft",
+      "connects_cost": 6
+     },
+     "idempotency_key": "bid:demo-user:dev_aiml_001:b7ed7c:v1:9700d8883d3e:draft"
+    }
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "ed3eb62534a341da",
+   "trace_id": "7b4b70b8ff45467ca4e6a9847b520824",
+   "parent_id": null,
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_001:b7ed7c",
+   "name": "node:submit",
+   "kind": "node",
+   "start": 1794136551.2768497,
+   "end": 1794136551.7790785,
+   "status": "ok",
+   "attrs": {
+    "node": "submit",
+    "output_keys": [
+     "progress",
+     "status",
+     "submission"
+    ],
+    "status": "submitted"
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "8ef73cce19a4475c",
+   "trace_id": "7b4b70b8ff45467ca4e6a9847b520824",
+   "parent_id": "ed3eb62534a341da",
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_001:b7ed7c",
+   "name": "tool:submit_proposal",
+   "kind": "tool",
+   "start": 1794136551.4915047,
+   "end": 1794136551.674387,
+   "status": "ok",
+   "attrs": {
+    "server": "marketplace",
+    "tool": "submit_proposal",
+    "args": {
+     "submission": {
+      "proposal_id": "prop_f9a47cf1a4",
+      "job_id": "dev_aiml_001",
+      "idempotency_key": "bid:demo-user:dev_aiml_001:b7ed7c:v1:9700d8883d3e:submit"
+     }
+    },
+    "agent": "submitter",
+    "attempt": 0,
+    "result": {
+     "status": "submitted",
+     "preview": {
+      "proposal_id": "prop_f9a47cf1a4",
+      "job_id": "dev_aiml_001"
+     },
+     "connects_cost": 6,
+     "connects_balance_after": 114,
+     "result": {
+      "proposal_id": "prop_f9a47cf1a4",
+      "status": "submitted",
+      "connects_spent": 6,
+      "balance": 114
+     },
+     "idempotency_key": "bid:demo-user:dev_aiml_001:b7ed7c:v1:9700d8883d3e:submit"
+    }
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  }
+ ],
+ "proposal_id": "prop_f9a47cf1a4"
+}

@@ -1,0 +1,1082 @@
+{
+ "scenario": "5_crash_and_resume",
+ "thread_id": "bid:demo-user:dev_aiml_011:bbf03e",
+ "trace_id": "69376a60df534281b1e4623187effd7a",
+ "status": "submitted",
+ "progress": [
+  "Scout: job dev_aiml_011 'AI & Machine Learning freelancer - a proof of concept' taken in",
+  "Job Analyst: 4 requirements, budget hourly 80.0",
+  "Risk Assessor: low risk, scam p=0.00",
+  "Fit Matcher: fit 0.75 (4/4 requirements evidenced)",
+  "Reconcile: analyst and matcher agree on requirements",
+  "Decision: BID - fit 0.75, p(reply)=0.33 (prior), EV $626 for 6 Connects (pacing off)",
+  "Pricing: hourly $56 (market hourly p25/p50/p75 = 50/57/67 (131 jobs))",
+  "Writer: draft v1 (168 words, 3 evidence items, rules-v1)",
+  "Verifier: 3 claims, unsupported 0->0, 0 rewritten, 0 removed",
+  "Critic: pass (score 1.00)",
+  "Compliance: allowed (no issues)",
+  "Dry run: 6 Connects, balance after 108",
+  "Human: approve",
+  "Submitted proposal prop_e49702a9c7 (submitted, 6 Connects)"
+ ],
+ "decision": {
+  "job_id": "dev_aiml_011",
+  "action": "bid",
+  "reasons": [
+   "fit 0.75, p(reply)=0.33 (prior), EV $626 for 6 Connects (pacing off)"
+  ],
+  "expected_value_usd": 625.61,
+  "p_reply": 0.3258,
+  "connects_cost": 6,
+  "pacing_threshold": 1.0,
+  "auto": false
+ },
+ "spans": [
+  {
+   "span_id": "c0360d55736944f9",
+   "trace_id": "69376a60df534281b1e4623187effd7a",
+   "parent_id": null,
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_011:bbf03e",
+   "name": "node:intake",
+   "kind": "node",
+   "start": 1794136552.263341,
+   "end": 1794136552.263341,
+   "status": "ok",
+   "attrs": {
+    "node": "intake",
+    "output_keys": [
+     "job",
+     "job_id",
+     "progress",
+     "revision",
+     "settings",
+     "status"
+    ],
+    "status": "analysing"
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "fcaf9845bda946c9",
+   "trace_id": "69376a60df534281b1e4623187effd7a",
+   "parent_id": null,
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_011:bbf03e",
+   "name": "node:analyst",
+   "kind": "node",
+   "start": 1794136552.3044717,
+   "end": 1794136552.317334,
+   "status": "ok",
+   "attrs": {
+    "node": "analyst",
+    "output_keys": [
+     "job_spec",
+     "progress"
+    ]
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "5fbca7cba79c498d",
+   "trace_id": "69376a60df534281b1e4623187effd7a",
+   "parent_id": "151aa9cf91ac4db6",
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_011:bbf03e",
+   "name": "tool:get_client_history",
+   "kind": "tool",
+   "start": 1794136552.3057365,
+   "end": 1794136552.460428,
+   "status": "ok",
+   "attrs": {
+    "server": "marketplace",
+    "tool": "get_client_history",
+    "args": {
+     "client_id": "cl_0325"
+    },
+    "agent": "risk",
+    "attempt": 0,
+    "result": {
+     "id": "cl_0325",
+     "name": "Harbor Group",
+     "country": "Netherlands",
+     "industry": "legal",
+     "payment_verified": true,
+     "member_since": 2022,
+     "total_spent": 0,
+     "jobs_posted": 4,
+     "hire_rate": 0.5,
+     "avg_rating": 4.6,
+     "freelancer_reviews": [
+      {
+       "rating": 4.5,
+       "text": "Clear brief, paid promptly."
+      }
+     ]
+    }
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "151aa9cf91ac4db6",
+   "trace_id": "69376a60df534281b1e4623187effd7a",
+   "parent_id": null,
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_011:bbf03e",
+   "name": "node:risk",
+   "kind": "node",
+   "start": 1794136552.3057365,
+   "end": 1794136552.5323074,
+   "status": "ok",
+   "attrs": {
+    "node": "risk",
+    "output_keys": [
+     "client",
+     "progress",
+     "risk"
+    ]
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "245e13f848854349",
+   "trace_id": "69376a60df534281b1e4623187effd7a",
+   "parent_id": null,
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_011:bbf03e",
+   "name": "node:matcher",
+   "kind": "node",
+   "start": 1794136552.3132908,
+   "end": 1794136561.2785628,
+   "status": "ok",
+   "attrs": {
+    "node": "matcher",
+    "output_keys": [
+     "evidence",
+     "fit",
+     "progress"
+    ]
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "4ac31e5c997b49a9",
+   "trace_id": "69376a60df534281b1e4623187effd7a",
+   "parent_id": "245e13f848854349",
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_011:bbf03e",
+   "name": "tool:search_evidence",
+   "kind": "tool",
+   "start": 1794136552.326235,
+   "end": 1794136559.5460117,
+   "status": "ok",
+   "attrs": {
+    "server": "portfolio",
+    "tool": "search_evidence",
+    "args": {
+     "requirement": "Looking for someone experienced who can figure out the right approach and deliver a proof of concept.",
+     "k": 4
+    },
+    "agent": "matcher",
+    "attempt": 0,
+    "result": {
+     "requirement": "Looking for someone experienced who can figure out the right approach and deliver a proof of concept.",
+     "variant": "best",
+     "status": "partial",
+     "items": [
+      {
+       "item_id": "aiml:cv:summary",
+       "type": "cv",
+       "source": "cv.pdf",
+       "date": "",
+       "outcome": null,
+       "project": "",
+       "title": "CV summary",
+       "client_industry": "",
+       "snippet": "# Ayesha Raza",
+       "score": -9.2092,
+       "support": 0.3
+      },
+      {
+       "item_id": "aiml:cs:ticket-triage-saas",
+       "type": "case_study",
+       "source": "ticket-triage-saas.md",
+       "date": "2023-12",
+       "outcome": null,
+       "project": "ticket-triage-saas",
+       "title": "Support ticket triage with a fine-tuned language model (SaaS)",
+       "client_industry": "SaaS",
+       "snippet": "mentation:",
+       "score": -9.2997,
+       "support": 0.3
+      },
+      {
+       "item_id": "aiml:repo:docs-assistant",
+       "type": "repo_code",
+       "source": "repo:docs-assistant/src/main.py",
+       "date": "",
+       "outcome": null,
+       "project": "docs-assistant",
+       "title": "docs-assistant/src/main.py",
+       "client_industry": "",
+       "snippet": "def main() -> None:\n    ...",
+       "score": -10.0118,
+       "support": 0.3
+      },
+      {
+       "item_id": "aiml:cs:rag-eval",
+       "type": "case_study",
+       "source": "rag-eval.md",
+       "date": "2025-06",
+       "outcome": null,
+       "project": "rag-eval",
+       "title": "Evaluation harness for an LLM chatbot (legal)",
+       "client_industry": "legal",
+       "snippet": "def main() -> None:\n    ...",
+       "score": -10.0118,
+       "support": 0.3
+      }
+     ]
+    }
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "9ed74962a1f44f88",
+   "trace_id": "69376a60df534281b1e4623187effd7a",
+   "parent_id": "245e13f848854349",
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_011:bbf03e",
+   "name": "tool:search_evidence",
+   "kind": "tool",
+   "start": 1794136552.3312523,
+   "end": 1794136555.6581697,
+   "status": "ok",
+   "attrs": {
+    "server": "portfolio",
+    "tool": "search_evidence",
+    "args": {
+     "requirement": "Ideally you know YOLOv8.",
+     "k": 4
+    },
+    "agent": "matcher",
+    "attempt": 0,
+    "result": {
+     "requirement": "Ideally you know YOLOv8.",
+     "variant": "best",
+     "status": "supported",
+     "items": [
+      {
+       "item_id": "aiml:cs:shelf-vision",
+       "type": "case_study",
+       "source": "shelf-vision.md",
+       "date": "2026-11",
+       "outcome": null,
+       "project": "shelf-vision",
+       "title": "Real-time shelf monitoring with computer vision for media retail",
+       "client_industry": "media",
+       "snippet": "Real-time shelf monitoring with computer vision for media retail\n## What I built\nI designed and delivered a detector that flags empty shelves from store cameras. The stack: YOLOv8, image preprocessing: deskewing, thresholding and contour detection, torch, docker-compose.",
+       "score": -2.5755,
+       "support": 1.0
+      }
+     ]
+    }
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "328c2662c0bc417c",
+   "trace_id": "69376a60df534281b1e4623187effd7a",
+   "parent_id": "245e13f848854349",
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_011:bbf03e",
+   "name": "tool:search_evidence",
+   "kind": "tool",
+   "start": 1794136552.3370237,
+   "end": 1794136561.2407436,
+   "status": "ok",
+   "attrs": {
+    "server": "portfolio",
+    "tool": "search_evidence",
+    "args": {
+     "requirement": "Ideally you know gradient boosted trees with cross-validated hyper-parameters.",
+     "k": 4
+    },
+    "agent": "matcher",
+    "attempt": 0,
+    "result": {
+     "requirement": "Ideally you know gradient boosted trees with cross-validated hyper-parameters.",
+     "variant": "best",
+     "status": "partial",
+     "items": [
+      {
+       "item_id": "aiml:repo:ticket-triage-saas",
+       "type": "repo_code",
+       "source": "repo:ticket-triage-saas/src/main.py",
+       "date": "",
+       "outcome": null,
+       "project": "ticket-triage-saas",
+       "title": "ticket-triage-saas/src/main.py",
+       "client_industry": "",
+       "snippet": "def main() -> None:\n    ...",
+       "score": -10.4195,
+       "support": 0.3
+      },
+      {
+       "item_id": "aiml:repo:rag-eval",
+       "type": "repo_code",
+       "source": "repo:rag-eval/src/main.py",
+       "date": "",
+       "outcome": null,
+       "project": "rag-eval",
+       "title": "rag-eval/src/main.py",
+       "client_industry": "",
+       "snippet": "def main() -> None:\n    ...",
+       "score": -10.4195,
+       "support": 0.3
+      },
+      {
+       "item_id": "aiml:repo:ticket-triage",
+       "type": "repo_code",
+       "source": "repo:ticket-triage/src/main.py",
+       "date": "",
+       "outcome": null,
+       "project": "ticket-triage",
+       "title": "ticket-triage/src/main.py",
+       "client_industry": "",
+       "snippet": "def main() -> None:\n    ...",
+       "score": -10.4195,
+       "support": 0.3
+      },
+      {
+       "item_id": "aiml:repo:rag-eval-media",
+       "type": "repo_code",
+       "source": "repo:rag-eval-media/src/main.py",
+       "date": "",
+       "outcome": null,
+       "project": "rag-eval-media",
+       "title": "rag-eval-media/src/main.py",
+       "client_industry": "",
+       "snippet": "def main() -> None:\n    ...",
+       "score": -10.4195,
+       "support": 0.3
+      }
+     ]
+    }
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "974c1f48a74b4b83",
+   "trace_id": "69376a60df534281b1e4623187effd7a",
+   "parent_id": "245e13f848854349",
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_011:bbf03e",
+   "name": "tool:search_evidence",
+   "kind": "tool",
+   "start": 1794136552.3410532,
+   "end": 1794136558.0291483,
+   "status": "ok",
+   "attrs": {
+    "server": "portfolio",
+    "tool": "search_evidence",
+    "args": {
+     "requirement": "Qdrant",
+     "k": 4
+    },
+    "agent": "matcher",
+    "attempt": 0,
+    "result": "{\"requirement\": \"Qdrant\", \"variant\": \"best\", \"status\": \"supported\", \"items\": [{\"item_id\": \"aiml:repo:docs-assistant\", \"type\": \"repo_code\", \"source\": \"repo:docs-assistant/src/main.py\", \"date\": \"\", \"outcome\": null, \"project\": \"docs-assistant\", \"title\": \"docs-assistant/src/main.py\", \"client_industry\": \"\", \"snippet\": \"from qdrant_client import QdrantClient\", \"score\": 5.2567, \"support\": 1.0}, {\"item_id\": \"aiml:repo:ticket-triage\", \"type\": \"repo_code\", \"source\": \"repo:ticket-triage/src/main.py\", \"date\": \"\", \"outcome\": null, \"project\": \"ticket-triage\", \"title\": \"ticket-triage/src/main.py\", \"client_industry\": \"\", \"snippet\": \"from qdrant_client import QdrantClient\\n\", \"score\": 5.2567, \"support\": 1.0}, {\"item_id\": \"aiml:cs:ticket-triage\", \"type\": \"case_study\", \"source\": \"ticket-triage.md\", \"date\": \"2024-08\", \"outcome\": null, \"project\": \"ticket-triage\", \"title\": \"Support ticket triage with a fine-tuned language model (media)\", \"client_industry\": \"media\", \"snippet\": \"Support ticket triage with a fine-tuned language model (media)\\n## What I built\\nI designed and delivered a fine-tuned classifier that routes tickets to the right queue. The stack: fine-tuned a pretrained encoder from the model hub, QLoRA, torch, classified free-text support tickets by intent, scripting the whole backend end to end, Qdrant.\", \"score\": 2.6533, \"support\": 1.0}, {\"item_id\": \"aiml:cs:docs-assistant-e-commerce\", \"type\": \"case_study\", \"source\": \"docs-assistant-e-commerce.md\", \"date\": \"2026-09\", \"outcome\": null, \"project\": \"docs-assistant-e-commerce\", \"title\": \"Internal knowledge assistant for a e-commerce company\", \"client_industry\": \"e-commerce\", \"snippet\": \"Internal knowledge assistant for a e-commerce company\\n## What I built\\nI designed and delivered a chat assistant that answers staff questions from 800 internal documents. The stack: scripting the whole backend end to end, LangChain, answers grounded in the company's own documents with citations, Qdrant, an async Python API with automatic OpenAPI do...(truncated)"
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "94953c176c924fcc",
+   "trace_id": "69376a60df534281b1e4623187effd7a",
+   "parent_id": "245e13f848854349",
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_011:bbf03e",
+   "name": "tool:find_winning_proposals",
+   "kind": "tool",
+   "start": 1794136561.2475631,
+   "end": 1794136561.2725637,
+   "status": "ok",
+   "attrs": {
+    "server": "portfolio",
+    "tool": "find_winning_proposals",
+    "args": {
+     "job_summary": "AI & Machine Learning freelancer - a proof of concept qdrant yolo",
+     "k": 2
+    },
+    "agent": "matcher",
+    "attempt": 0,
+    "result": {
+     "items": [
+      {
+       "id": "aiml:proposal:aiml-prop-011",
+       "outcome": "replied",
+       "text": "You need ai & machine learning freelancer - a proof of concept for a media team, and I have shipped this before. For Kestrel Real Estate I built agents that review contracts and flag risky clauses with human approval using LangGraph, Python, OpenAI API; it review time down 90%. For Corvid Edtech I built a chat assistant that answers staff questions from 1200 internal documents using Python, LangChain, RAG; it cut average search time from 7 minutes to 16 seconds. I have extensive experience with OpenCV, Qdrant and always deliver high quality. Looking forward to hearing from you."
+      },
+      {
+       "id": "aiml:proposal:aiml-prop-028",
+       "outcome": "won",
+       "text": "You need ai & machine learning freelancer - a proof of concept for a edtech team, and I have shipped this before. For Corvid Media I built an offline evaluation set and metrics for answer faithfulness using Python, RAG, LangChain; it caught 76% of regressions before release. For Lumen Logistics I built store-level demand forecasts with holiday effects using Time-series forecasting, Python, pandas; it forecast error (MAPE) reduced to 67%. I have extensive experience with MLflow, LangChain and always deliver high quality. Looking forward to hearing from you."
+      }
+     ]
+    }
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "7687a28bd56544c7",
+   "trace_id": "69376a60df534281b1e4623187effd7a",
+   "parent_id": null,
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_011:bbf03e",
+   "name": "node:reconcile",
+   "kind": "node",
+   "start": 1794136561.3162286,
+   "end": 1794136561.3162286,
+   "status": "ok",
+   "attrs": {
+    "node": "reconcile",
+    "output_keys": [
+     "progress"
+    ]
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "1e7b2a7313534d4c",
+   "trace_id": "69376a60df534281b1e4623187effd7a",
+   "parent_id": null,
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_011:bbf03e",
+   "name": "node:decide",
+   "kind": "node",
+   "start": 1794136561.344239,
+   "end": 1794136561.4419217,
+   "status": "ok",
+   "attrs": {
+    "node": "decide",
+    "output_keys": [
+     "decision",
+     "progress",
+     "status"
+    ],
+    "status": "drafting"
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "4d3111d895234999",
+   "trace_id": "69376a60df534281b1e4623187effd7a",
+   "parent_id": "1e7b2a7313534d4c",
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_011:bbf03e",
+   "name": "tool:get_policy",
+   "kind": "tool",
+   "start": 1794136561.3452384,
+   "end": 1794136561.405583,
+   "status": "ok",
+   "attrs": {
+    "server": "marketplace",
+    "tool": "get_policy",
+    "args": {},
+    "agent": "pricing",
+    "attempt": 0,
+    "result": {
+     "version": 1,
+     "effective": "[PHONE]",
+     "connects": {
+      "formula": "flat",
+      "flat": 6
+     },
+     "rules": [
+      "No off-platform contact or payment",
+      "No fabricated experience",
+      "No guarantees",
+      "Fair use of automation"
+     ]
+    }
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "84d070a77c744160",
+   "trace_id": "69376a60df534281b1e4623187effd7a",
+   "parent_id": "5dbd8a3382fa40dc",
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_011:bbf03e",
+   "name": "tool:get_market_stats",
+   "kind": "tool",
+   "start": 1794136561.5297034,
+   "end": 1794136561.5751736,
+   "status": "ok",
+   "attrs": {
+    "server": "marketplace",
+    "tool": "get_market_stats",
+    "args": {
+     "category": "AI & Machine Learning",
+     "budget_type": "hourly"
+    },
+    "agent": "pricing",
+    "attempt": 0,
+    "result": {
+     "category": "AI & Machine Learning",
+     "budget_type": "hourly",
+     "n": 131,
+     "p10": 43.84,
+     "p25": 49.61,
+     "p50": 57.49,
+     "p75": 66.55,
+     "p90": 75.36,
+     "avg_proposals": 31.0
+    }
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "5dbd8a3382fa40dc",
+   "trace_id": "69376a60df534281b1e4623187effd7a",
+   "parent_id": null,
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_011:bbf03e",
+   "name": "node:pricing",
+   "kind": "node",
+   "start": 1794136561.5297034,
+   "end": 1794136561.5874724,
+   "status": "ok",
+   "attrs": {
+    "node": "pricing",
+    "output_keys": [
+     "price",
+     "progress"
+    ]
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "a62af395cf4a4eb7",
+   "trace_id": "69376a60df534281b1e4623187effd7a",
+   "parent_id": "af75ed13810f4153",
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_011:bbf03e",
+   "name": "tool:get_evidence",
+   "kind": "tool",
+   "start": 1794136561.6708279,
+   "end": 1794136561.7579646,
+   "status": "ok",
+   "attrs": {
+    "server": "portfolio",
+    "tool": "get_evidence",
+    "args": {
+     "item_ids": [
+      "aiml:cs:docs-assistant",
+      "aiml:cs:ticket-triage",
+      "aiml:cs:shelf-vision"
+     ]
+    },
+    "agent": "writer",
+    "attempt": 0,
+    "result": "{\"items\": [{\"item_id\": \"aiml:cs:docs-assistant\", \"type\": \"case_study\", \"project\": \"docs-assistant\", \"title\": \"Internal knowledge assistant for a edtech company\", \"text\": \"# Internal knowledge assistant for a edtech company\\n\\n## Context\\nCorvid Edtech needed a chat assistant that answers staff questions from 1200 internal documents. The existing process was slow and error-prone.\\n\\n## What I built\\nI designed and delivered a chat assistant that answers staff questions from 1200 internal documents. The stack: scripting the whole backend end to end, LangChain, retrieval-augmented generation, Qdrant, FastAPI, OpenAI API, docker-compose.\\n\\n## Outcome\\nThe result cut average search time from 7 minutes to 16 seconds.\", \"project_skills\": [\"docker\", \"fastapi\", \"langchain\", \"openai-api\", \"python\", \"qdrant\", \"rag\"], \"industry\": \"edtech\"}, {\"item_id\": \"aiml:cs:ticket-triage\", \"type\": \"case_study\", \"project\": \"ticket-triage\", \"title\": \"Support ticket triage with a fine-tuned language model (media)\", \"text\": \"# Support ticket triage with a fine-tuned language model (media)\\n\\n## Context\\nHarbor Media needed a fine-tuned classifier that routes tickets to the right queue. The existing process was slow and error-prone.\\n\\n## What I built\\nI designed and delivered a fine-tuned classifier that routes tickets to the right queue. The stack: fine-tuned a pretrained encoder from the model hub, QLoRA, torch, classified free-text support tickets by intent, scripting the whole backend end to end, Qdrant.\\n\\n## Outcome\\nThe result routing accuracy of 83% on 800 tickets.\", \"project_skills\": [\"huggingface\", \"lora\", \"nlp\", \"python\", \"pytorch\", \"qdrant\"], \"industry\": \"media\"}, {\"item_id\": \"aiml:cs:shelf-vision\", \"type\": \"case_study\", \"project\": \"shelf-vision\", \"title\": \"Real-time shelf monitoring with computer vision for media retail\", \"text\": \"# Real-time shelf monitoring with computer vision for media retail\\n\\n## Context\\nJuniper Media needed a detector that flags empty shelves from store ca...(truncated)"
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "af75ed13810f4153",
+   "trace_id": "69376a60df534281b1e4623187effd7a",
+   "parent_id": null,
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_011:bbf03e",
+   "name": "node:writer",
+   "kind": "node",
+   "start": 1794136561.6708279,
+   "end": 1794136561.9366972,
+   "status": "ok",
+   "attrs": {
+    "node": "writer",
+    "output_keys": [
+     "drafts",
+     "progress",
+     "revision"
+    ]
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "5707b1c04f31489e",
+   "trace_id": "69376a60df534281b1e4623187effd7a",
+   "parent_id": null,
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_011:bbf03e",
+   "name": "node:verifier",
+   "kind": "node",
+   "start": 1794136562.035262,
+   "end": 1794136562.2708995,
+   "status": "ok",
+   "attrs": {
+    "node": "verifier",
+    "output_keys": [
+     "drafts",
+     "progress",
+     "verification"
+    ]
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "8c0489ea3d514d5b",
+   "trace_id": "69376a60df534281b1e4623187effd7a",
+   "parent_id": "5707b1c04f31489e",
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_011:bbf03e",
+   "name": "tool:get_evidence",
+   "kind": "tool",
+   "start": 1794136562.0372767,
+   "end": 1794136562.111719,
+   "status": "ok",
+   "attrs": {
+    "server": "portfolio",
+    "tool": "get_evidence",
+    "args": {
+     "item_ids": [
+      "aiml:cs:docs-assistant"
+     ]
+    },
+    "agent": "verifier",
+    "attempt": 0,
+    "result": {
+     "items": [
+      {
+       "item_id": "aiml:cs:docs-assistant",
+       "type": "case_study",
+       "project": "docs-assistant",
+       "title": "Internal knowledge assistant for a edtech company",
+       "text": "# Internal knowledge assistant for a edtech company\n\n## Context\nCorvid Edtech needed a chat assistant that answers staff questions from 1200 internal documents. The existing process was slow and error-prone.\n\n## What I built\nI designed and delivered a chat assistant that answers staff questions from 1200 internal documents. The stack: scripting the whole backend end to end, LangChain, retrieval-augmented generation, Qdrant, FastAPI, OpenAI API, docker-compose.\n\n## Outcome\nThe result cut average search time from 7 minutes to 16 seconds.",
+       "project_skills": [
+        "docker",
+        "fastapi",
+        "langchain",
+        "openai-api",
+        "python",
+        "qdrant",
+        "rag"
+       ],
+       "industry": "edtech"
+      }
+     ]
+    }
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "69690201c3d5497e",
+   "trace_id": "69376a60df534281b1e4623187effd7a",
+   "parent_id": "5707b1c04f31489e",
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_011:bbf03e",
+   "name": "tool:get_evidence",
+   "kind": "tool",
+   "start": 1794136562.1335232,
+   "end": 1794136562.1924975,
+   "status": "ok",
+   "attrs": {
+    "server": "portfolio",
+    "tool": "get_evidence",
+    "args": {
+     "item_ids": [
+      "aiml:cs:ticket-triage"
+     ]
+    },
+    "agent": "verifier",
+    "attempt": 0,
+    "result": {
+     "items": [
+      {
+       "item_id": "aiml:cs:ticket-triage",
+       "type": "case_study",
+       "project": "ticket-triage",
+       "title": "Support ticket triage with a fine-tuned language model (media)",
+       "text": "# Support ticket triage with a fine-tuned language model (media)\n\n## Context\nHarbor Media needed a fine-tuned classifier that routes tickets to the right queue. The existing process was slow and error-prone.\n\n## What I built\nI designed and delivered a fine-tuned classifier that routes tickets to the right queue. The stack: fine-tuned a pretrained encoder from the model hub, QLoRA, torch, classified free-text support tickets by intent, scripting the whole backend end to end, Qdrant.\n\n## Outcome\nThe result routing accuracy of 83% on 800 tickets.",
+       "project_skills": [
+        "huggingface",
+        "lora",
+        "nlp",
+        "python",
+        "pytorch",
+        "qdrant"
+       ],
+       "industry": "media"
+      }
+     ]
+    }
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "c43fdbce3e094708",
+   "trace_id": "69376a60df534281b1e4623187effd7a",
+   "parent_id": "5707b1c04f31489e",
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_011:bbf03e",
+   "name": "tool:get_evidence",
+   "kind": "tool",
+   "start": 1794136562.2022626,
+   "end": 1794136562.2584682,
+   "status": "ok",
+   "attrs": {
+    "server": "portfolio",
+    "tool": "get_evidence",
+    "args": {
+     "item_ids": [
+      "aiml:cs:shelf-vision"
+     ]
+    },
+    "agent": "verifier",
+    "attempt": 0,
+    "result": {
+     "items": [
+      {
+       "item_id": "aiml:cs:shelf-vision",
+       "type": "case_study",
+       "project": "shelf-vision",
+       "title": "Real-time shelf monitoring with computer vision for media retail",
+       "text": "# Real-time shelf monitoring with computer vision for media retail\n\n## Context\nJuniper Media needed a detector that flags empty shelves from store cameras. The existing process was slow and error-prone.\n\n## What I built\nI designed and delivered a detector that flags empty shelves from store cameras. The stack: YOLOv8, image preprocessing: deskewing, thresholding and contour detection, torch, docker-compose.\n\n## Outcome\nThe result 71% detection mAP at 8 frames per second.",
+       "project_skills": [
+        "docker",
+        "opencv",
+        "pytorch",
+        "yolo"
+       ],
+       "industry": "media"
+      }
+     ]
+    }
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "c2a20fe4470a4d41",
+   "trace_id": "69376a60df534281b1e4623187effd7a",
+   "parent_id": null,
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_011:bbf03e",
+   "name": "node:critic",
+   "kind": "node",
+   "start": 1794136562.317314,
+   "end": 1794136562.3183172,
+   "status": "ok",
+   "attrs": {
+    "node": "critic",
+    "output_keys": [
+     "critiques",
+     "progress"
+    ]
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "ffb616c240014640",
+   "trace_id": "69376a60df534281b1e4623187effd7a",
+   "parent_id": null,
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_011:bbf03e",
+   "name": "node:compliance",
+   "kind": "node",
+   "start": 1794136562.3646657,
+   "end": 1794136562.3707025,
+   "status": "ok",
+   "attrs": {
+    "node": "compliance",
+    "output_keys": [
+     "compliance",
+     "drafts",
+     "progress"
+    ]
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "bac55d5c9f004acf",
+   "trace_id": "69376a60df534281b1e4623187effd7a",
+   "parent_id": null,
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_011:bbf03e",
+   "name": "node:preview",
+   "kind": "node",
+   "start": 1794136562.4122071,
+   "end": 1794136562.502081,
+   "status": "ok",
+   "attrs": {
+    "node": "preview",
+    "output_keys": [
+     "preview",
+     "progress",
+     "status"
+    ],
+    "status": "awaiting_approval"
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "73fb445532014174",
+   "trace_id": "69376a60df534281b1e4623187effd7a",
+   "parent_id": "bac55d5c9f004acf",
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_011:bbf03e",
+   "name": "tool:create_proposal_draft",
+   "kind": "tool",
+   "start": 1794136562.4132204,
+   "end": 1794136562.486887,
+   "status": "ok",
+   "attrs": {
+    "server": "marketplace",
+    "tool": "create_proposal_draft",
+    "args": {
+     "proposal": {
+      "job_id": "dev_aiml_011",
+      "cover_letter": "For your legal project (\"AI & Machine Learning freelancer - a proof of concept\") you need proof of concept built on YOLO object detection, Qdrant, delivered in reviewable steps. I built a chat assistant that answers staff questions from 1200 internal documents for a edtech client using Qdrant (result: cut average search time from 7 minutes to 16 seconds). I built a fine-tuned classifier that routes tickets to the right queue for a media client using Qdrant (result: routing accuracy of 83% on 800 tickets). I built a detector that flags empty shelves from store cameras for a media client using YOLO object detection (result: 71% detection mAP at 8 frames per second). My plan: start with client is unsure of the approach; propose a concrete plan and first milestone as a paid first milestone, then ship in small weekly increments you can review. My rate for this is $56/hr. What is the one outcome that would make this project a success for you in the first month?",
+      "bid_amount": 56.34,
+      "screening_answers": [
+       "I would use Qdrant, YOLO object detection, because that is what I have shipped with and it fits your requirements.",
+       "About 30 hours per week, with overlap in your working hours for calls.",
+       "I work in short milestones with a written scope per milestone, so changes are agreed, priced and reviewed weekly instead of piling up."
+      ],
+      "idempotency_key": "bid:demo-user:dev_aiml_011:bbf03e:v1:7371ac2e6ea2:draft",
+      "dry_run": true
+     }
+    },
+    "agent": "submitter",
+    "attempt": 0,
+    "result": {
+     "status": "dry_run",
+     "preview": {
+      "job_id": "dev_aiml_011",
+      "job_title": "AI & Machine Learning freelancer - a proof of concept",
+      "cover_letter": "For your legal project (\"AI & Machine Learning freelancer - a proof of concept\") you need proof of concept built on YOLO object detection, Qdrant, delivered in reviewable steps. I built a chat assistant that answers staff questions from 1200 internal documents for a edtech client using Qdrant (result: cut average search time from 7 minutes to 16 seconds). I built a fine-tuned classifier that routes tickets to the right queue for a media client using Qdrant (result: routing accuracy of 83% on 800 tickets). I built a detector that flags empty shelves from store cameras for a media client using YOLO object detection (result: 71% detection mAP at 8 frames per second). My plan: start with client is unsure of the approach; propose a concrete plan and first milestone as a paid first milestone, then ship in small weekly increments you can review. My rate for this is $56/hr. What is the one outcome that would make this project a success for you in the first month?",
+      "bid_amount": 56.34,
+      "screening_answers": [
+       "I would use Qdrant, YOLO object detection, because that is what I have shipped with and it fits your requirements.",
+       "About 30 hours per week, with overlap in your working hours for calls.",
+       "I work in short milestones with a written scope per milestone, so changes are agreed, priced and reviewed weekly instead of piling up."
+      ],
+      "policy_version": 1
+     },
+     "connects_cost": 6,
+     "connects_balance_after": 108,
+     "result": {},
+     "idempotency_key": "bid:demo-user:dev_aiml_011:bbf03e:v1:7371ac2e6ea2:draft"
+    }
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "0e33031087b04c77",
+   "trace_id": "69376a60df534281b1e4623187effd7a",
+   "parent_id": "c7e52883b41c447c",
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_011:bbf03e",
+   "name": "tool:create_proposal_draft",
+   "kind": "tool",
+   "start": 1794136562.8308282,
+   "end": 1794136563.0551264,
+   "status": "ok",
+   "attrs": {
+    "server": "marketplace",
+    "tool": "create_proposal_draft",
+    "args": {
+     "proposal": {
+      "job_id": "dev_aiml_011",
+      "cover_letter": "For your legal project (\"AI & Machine Learning freelancer - a proof of concept\") you need proof of concept built on YOLO object detection, Qdrant, delivered in reviewable steps. I built a chat assistant that answers staff questions from 1200 internal documents for a edtech client using Qdrant (result: cut average search time from 7 minutes to 16 seconds). I built a fine-tuned classifier that routes tickets to the right queue for a media client using Qdrant (result: routing accuracy of 83% on 800 tickets). I built a detector that flags empty shelves from store cameras for a media client using YOLO object detection (result: 71% detection mAP at 8 frames per second). My plan: start with client is unsure of the approach; propose a concrete plan and first milestone as a paid first milestone, then ship in small weekly increments you can review. My rate for this is $56/hr. What is the one outcome that would make this project a success for you in the first month?",
+      "bid_amount": 56.34,
+      "screening_answers": [
+       "I would use Qdrant, YOLO object detection, because that is what I have shipped with and it fits your requirements.",
+       "About 30 hours per week, with overlap in your working hours for calls.",
+       "I work in short milestones with a written scope per milestone, so changes are agreed, priced and reviewed weekly instead of piling up."
+      ],
+      "idempotency_key": "bid:demo-user:dev_aiml_011:bbf03e:v1:7371ac2e6ea2:draft"
+     }
+    },
+    "agent": "submitter",
+    "attempt": 0,
+    "result": {
+     "status": "draft_created",
+     "preview": {
+      "job_id": "dev_aiml_011",
+      "job_title": "AI & Machine Learning freelancer - a proof of concept",
+      "cover_letter": "For your legal project (\"AI & Machine Learning freelancer - a proof of concept\") you need proof of concept built on YOLO object detection, Qdrant, delivered in reviewable steps. I built a chat assistant that answers staff questions from 1200 internal documents for a edtech client using Qdrant (result: cut average search time from 7 minutes to 16 seconds). I built a fine-tuned classifier that routes tickets to the right queue for a media client using Qdrant (result: routing accuracy of 83% on 800 tickets). I built a detector that flags empty shelves from store cameras for a media client using YOLO object detection (result: 71% detection mAP at 8 frames per second). My plan: start with client is unsure of the approach; propose a concrete plan and first milestone as a paid first milestone, then ship in small weekly increments you can review. My rate for this is $56/hr. What is the one outcome that would make this project a success for you in the first month?",
+      "bid_amount": 56.34,
+      "screening_answers": [
+       "I would use Qdrant, YOLO object detection, because that is what I have shipped with and it fits your requirements.",
+       "About 30 hours per week, with overlap in your working hours for calls.",
+       "I work in short milestones with a written scope per milestone, so changes are agreed, priced and reviewed weekly instead of piling up."
+      ],
+      "policy_version": 1
+     },
+     "connects_cost": 6,
+     "connects_balance_after": null,
+     "result": {
+      "proposal_id": "prop_e49702a9c7",
+      "status": "draft",
+      "connects_cost": 6
+     },
+     "idempotency_key": "bid:demo-user:dev_aiml_011:bbf03e:v1:7371ac2e6ea2:draft"
+    }
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "c7e52883b41c447c",
+   "trace_id": "69376a60df534281b1e4623187effd7a",
+   "parent_id": null,
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_011:bbf03e",
+   "name": "node:submit",
+   "kind": "node",
+   "start": 1794136562.8308282,
+   "end": 1794136563.3104453,
+   "status": "ok",
+   "attrs": {
+    "node": "submit",
+    "output_keys": [
+     "progress",
+     "status",
+     "submission"
+    ],
+    "status": "submitted"
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "34ccbbf6ea6d4777",
+   "trace_id": "69376a60df534281b1e4623187effd7a",
+   "parent_id": "c7e52883b41c447c",
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_011:bbf03e",
+   "name": "tool:submit_proposal",
+   "kind": "tool",
+   "start": 1794136563.0653002,
+   "end": 1794136563.2987728,
+   "status": "ok",
+   "attrs": {
+    "server": "marketplace",
+    "tool": "submit_proposal",
+    "args": {
+     "submission": {
+      "proposal_id": "prop_e49702a9c7",
+      "job_id": "dev_aiml_011",
+      "idempotency_key": "bid:demo-user:dev_aiml_011:bbf03e:v1:7371ac2e6ea2:submit"
+     }
+    },
+    "agent": "submitter",
+    "attempt": 0,
+    "result": {
+     "status": "submitted",
+     "preview": {
+      "proposal_id": "prop_e49702a9c7",
+      "job_id": "dev_aiml_011"
+     },
+     "connects_cost": 6,
+     "connects_balance_after": 108,
+     "result": {
+      "proposal_id": "prop_e49702a9c7",
+      "status": "submitted",
+      "connects_spent": 6,
+      "balance": 108
+     },
+     "idempotency_key": "bid:demo-user:dev_aiml_011:bbf03e:v1:7371ac2e6ea2:submit"
+    }
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  }
+ ],
+ "second_resume_status": "submitted",
+ "connects_spent": 6,
+ "connects_cost": 6,
+ "submitted_exactly_once": true
+}

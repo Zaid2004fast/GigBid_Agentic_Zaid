@@ -98,10 +98,17 @@ async def apply_edit(state: dict, ctx: NodeCtx) -> dict:
 @node("submit")
 async def submit(state: dict, ctx: NodeCtx) -> dict:
     d = ProposalDraft.model_validate(state["drafts"][-1])
+    from agent.mcp_client import ToolError
     port = get_port(ctx.hub, agent="submitter")
-    draft = await port.create_proposal_draft(d.job_id, d.sendable_text, d.bid_amount, d.screening_answers, idem_key(state, "draft"))
-    pid = draft["result"]["proposal_id"]
-    res = await port.submit_proposal(pid, d.job_id, idem_key(state, "submit"))
+    try:
+        draft = await port.create_proposal_draft(d.job_id, d.sendable_text, d.bid_amount, d.screening_answers, idem_key(state, "draft"))
+        pid = draft["result"]["proposal_id"]
+        res = await port.submit_proposal(pid, d.job_id, idem_key(state, "submit"))
+    except ToolError as e:
+        # business rejection (not enough Connects, platform policy, job closed): visible, not a crash
+        reason = str(e).split("submit_proposal:")[-1].split("create_proposal_draft:")[-1].strip()[:300]
+        return {"status": "needs_attention", "attention_reason": f"marketplace rejected the submission: {reason}",
+                "progress": [f"Submit rejected by marketplace: {reason}"]}
     try:
         from common.db import engine, submissions
         with engine().begin() as c:

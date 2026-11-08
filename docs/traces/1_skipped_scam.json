@@ -1,0 +1,598 @@
+{
+ "scenario": "1_skipped_scam",
+ "thread_id": "bid:demo-user:dev_aiml_034:374d0b",
+ "trace_id": "7060002998de46a8aa5293904c9b3d86",
+ "status": "skipped",
+ "progress": [
+  "Scout: job dev_aiml_034 'Looking for PyTorch developer' taken in",
+  "Job Analyst: 5 requirements, budget fixed 990.0",
+  "Risk Assessor: high risk, scam p=0.77",
+  "Fit Matcher: fit 0.89 (5/5 requirements evidenced)",
+  "Reconcile: analyst and matcher agree on requirements",
+  "Decision: SKIP - likely scam (unverified_payment (medium); new_client (low); off_platform_payment (high))"
+ ],
+ "decision": {
+  "job_id": "dev_aiml_034",
+  "action": "skip",
+  "reasons": [
+   "likely scam (unverified_payment (medium); new_client (low); off_platform_payment (high))"
+  ],
+  "expected_value_usd": 17.73,
+  "p_reply": 0.0597,
+  "connects_cost": 6,
+  "pacing_threshold": 1.0,
+  "auto": false
+ },
+ "spans": [
+  {
+   "span_id": "fa53ee66fcd348c2",
+   "trace_id": "7060002998de46a8aa5293904c9b3d86",
+   "parent_id": null,
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_034:374d0b",
+   "name": "node:intake",
+   "kind": "node",
+   "start": 1794136848.5411978,
+   "end": 1794136848.5411978,
+   "status": "ok",
+   "attrs": {
+    "node": "intake",
+    "output_keys": [
+     "job",
+     "job_id",
+     "progress",
+     "revision",
+     "settings",
+     "status"
+    ],
+    "status": "analysing"
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "3ee30ceeae6b45d4",
+   "trace_id": "7060002998de46a8aa5293904c9b3d86",
+   "parent_id": null,
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_034:374d0b",
+   "name": "node:analyst",
+   "kind": "node",
+   "start": 1794136848.912169,
+   "end": 1794136854.8235407,
+   "status": "ok",
+   "attrs": {
+    "node": "analyst",
+    "output_keys": [
+     "job_spec",
+     "progress"
+    ]
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "a97d241f821d4192",
+   "trace_id": "7060002998de46a8aa5293904c9b3d86",
+   "parent_id": "d9d23b55900d4084",
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_034:374d0b",
+   "name": "tool:get_client_history",
+   "kind": "tool",
+   "start": 1794136848.9218318,
+   "end": 1794136855.3176045,
+   "status": "ok",
+   "attrs": {
+    "server": "marketplace",
+    "tool": "get_client_history",
+    "args": {
+     "client_id": "cl_0369"
+    },
+    "agent": "risk",
+    "attempt": 0,
+    "result": {
+     "id": "cl_0369",
+     "name": "Harbor Digital",
+     "country": "US",
+     "industry": "media",
+     "payment_verified": false,
+     "member_since": 2026,
+     "total_spent": 0,
+     "jobs_posted": 1,
+     "hire_rate": 0.15,
+     "avg_rating": null,
+     "freelancer_reviews": []
+    }
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "d9d23b55900d4084",
+   "trace_id": "7060002998de46a8aa5293904c9b3d86",
+   "parent_id": null,
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_034:374d0b",
+   "name": "node:risk",
+   "kind": "node",
+   "start": 1794136848.9218318,
+   "end": 1794136855.3572545,
+   "status": "ok",
+   "attrs": {
+    "node": "risk",
+    "output_keys": [
+     "client",
+     "progress",
+     "risk"
+    ]
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "0f47070103304909",
+   "trace_id": "7060002998de46a8aa5293904c9b3d86",
+   "parent_id": null,
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_034:374d0b",
+   "name": "node:matcher",
+   "kind": "node",
+   "start": 1794136851.756441,
+   "end": 1794136866.4520535,
+   "status": "ok",
+   "attrs": {
+    "node": "matcher",
+    "output_keys": [
+     "evidence",
+     "fit",
+     "progress"
+    ]
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "6f4affcb28a04d39",
+   "trace_id": "7060002998de46a8aa5293904c9b3d86",
+   "parent_id": "0f47070103304909",
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_034:374d0b",
+   "name": "tool:search_evidence",
+   "kind": "tool",
+   "start": 1794136854.849204,
+   "end": 1794136866.3492439,
+   "status": "ok",
+   "attrs": {
+    "server": "portfolio",
+    "tool": "search_evidence",
+    "args": {
+     "requirement": "trained the network with a custom training loop on GPUs",
+     "k": 4
+    },
+    "agent": "matcher",
+    "attempt": 0,
+    "result": "{\"requirement\": \"trained the network with a custom training loop on GPUs\", \"variant\": \"best\", \"status\": \"partial\", \"items\": [{\"item_id\": \"aiml:cs:ticket-triage-saas\", \"type\": \"case_study\", \"source\": \"ticket-triage-saas.md\", \"date\": \"2023-12\", \"outcome\": null, \"project\": \"ticket-triage-saas\", \"title\": \"Support ticket triage with a fine-tuned language model (SaaS)\", \"client_industry\": \"SaaS\", \"snippet\": \"Support ticket triage with a fine-tuned language model (SaaS)\\n## What I built\\nI designed and delivered a fine-tuned classifier that routes tickets to the right queue. The stack: fine-tuned a pretrained encoder from the model hub, adapted an open-weight LLM with low-rank adapters on a single GPU, PyTorch, text classification, scripting the whole backend end to end, chained prompts, retrievers and o\", \"score\": -8.4055, \"support\": 0.3}, {\"item_id\": \"aiml:cs:churn-model\", \"type\": \"case_study\", \"source\": \"churn-model.md\", \"date\": \"2023-02\", \"outcome\": null, \"project\": \"churn-model\", \"title\": \"Customer churn prediction for a edtech subscription business\", \"client_industry\": \"edtech\", \"snippet\": \"Customer churn prediction for a edtech subscription business\\n## What I built\\nI designed and delivered a churn model with weekly scoring and retention playbooks. The stack: python3, sklearn, pandas, experiment tracking and a model registry for reproducible training runs, SQL.\", \"score\": -11.0305, \"support\": 0.3}, {\"item_id\": \"aiml:repo:ticket-triage\", \"type\": \"repo_code\", \"source\": \"repo:ticket-triage/src/main.py\", \"date\": \"\", \"outcome\": null, \"project\": \"ticket-triage\", \"title\": \"ticket-triage/src/main.py\", \"client_industry\": \"\", \"snippet\": \"def main() -> None:\\n    ...\", \"score\": -11.0753, \"support\": 0.3}, {\"item_id\": \"aiml:repo:ticket-triage-saas\", \"type\": \"repo_code\", \"source\": \"repo:ticket-triage-saas/src/main.py\", \"date\": \"\", \"outcome\": null, \"project\": \"ticket-triage-saas\", \"title\": \"ticket-triage-saas/src/main.py\", \"client_industry\": \"\", \"snippet\": \"def main() -> None:\\n ...(truncated)"
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "cbfb6fd455d548dd",
+   "trace_id": "7060002998de46a8aa5293904c9b3d86",
+   "parent_id": "0f47070103304909",
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_034:374d0b",
+   "name": "tool:search_evidence",
+   "kind": "tool",
+   "start": 1794136854.9958642,
+   "end": 1794136861.7158158,
+   "status": "ok",
+   "attrs": {
+    "server": "portfolio",
+    "tool": "search_evidence",
+    "args": {
+     "requirement": "LangChain",
+     "k": 4
+    },
+    "agent": "matcher",
+    "attempt": 0,
+    "result": {
+     "requirement": "LangChain",
+     "variant": "best",
+     "status": "supported",
+     "items": [
+      {
+       "item_id": "aiml:repo:rag-eval-media",
+       "type": "repo_code",
+       "source": "repo:rag-eval-media/src/main.py",
+       "date": "",
+       "outcome": null,
+       "project": "rag-eval-media",
+       "title": "rag-eval-media/src/main.py",
+       "client_industry": "",
+       "snippet": "from langchain_core.prompts import ChatPromptTemplate",
+       "score": 3.9454,
+       "support": 1.0
+      },
+      {
+       "item_id": "aiml:repo:rag-eval",
+       "type": "repo_code",
+       "source": "repo:rag-eval/src/main.py",
+       "date": "",
+       "outcome": null,
+       "project": "rag-eval",
+       "title": "rag-eval/src/main.py",
+       "client_industry": "",
+       "snippet": "from langchain_core.prompts import ChatPromptTemplate",
+       "score": 3.9454,
+       "support": 1.0
+      },
+      {
+       "item_id": "aiml:repo:docs-assistant",
+       "type": "repo_code",
+       "source": "repo:docs-assistant/src/main.py",
+       "date": "",
+       "outcome": null,
+       "project": "docs-assistant",
+       "title": "docs-assistant/src/main.py",
+       "client_industry": "",
+       "snippet": "from langchain_core.prompts import ChatPromptTemplate",
+       "score": 3.9454,
+       "support": 1.0
+      },
+      {
+       "item_id": "aiml:cs:ticket-triage-saas",
+       "type": "case_study",
+       "source": "ticket-triage-saas.md",
+       "date": "2023-12",
+       "outcome": null,
+       "project": "ticket-triage-saas",
+       "title": "Support ticket triage with a fine-tuned language model (SaaS)",
+       "client_industry": "SaaS",
+       "snippet": "from langchain_core.prompts import ChatPromptTemplate",
+       "score": 3.9454,
+       "support": 1.0
+      }
+     ]
+    }
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "d5a65460d0334679",
+   "trace_id": "7060002998de46a8aa5293904c9b3d86",
+   "parent_id": "0f47070103304909",
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_034:374d0b",
+   "name": "tool:search_evidence",
+   "kind": "tool",
+   "start": 1794136855.0009067,
+   "end": 1794136860.312045,
+   "status": "ok",
+   "attrs": {
+    "server": "portfolio",
+    "tool": "search_evidence",
+    "args": {
+     "requirement": "FastAPI",
+     "k": 4
+    },
+    "agent": "matcher",
+    "attempt": 0,
+    "result": {
+     "requirement": "FastAPI",
+     "variant": "best",
+     "status": "supported",
+     "items": [
+      {
+       "item_id": "aiml:repo:invoice-extractor",
+       "type": "repo_code",
+       "source": "repo:invoice-extractor/src/main.py",
+       "date": "",
+       "outcome": null,
+       "project": "invoice-extractor",
+       "title": "invoice-extractor/src/main.py",
+       "client_industry": "",
+       "snippet": "from fastapi import FastAPI\napp = FastAPI()",
+       "score": 6.2439,
+       "support": 1.0
+      },
+      {
+       "item_id": "aiml:repo:invoice-extractor-media",
+       "type": "repo_code",
+       "source": "repo:invoice-extractor-media/src/main.py",
+       "date": "",
+       "outcome": null,
+       "project": "invoice-extractor-media",
+       "title": "invoice-extractor-media/src/main.py",
+       "client_industry": "",
+       "snippet": "from fastapi import FastAPI\napp = FastAPI()",
+       "score": 6.2439,
+       "support": 1.0
+      },
+      {
+       "item_id": "aiml:repo:semantic-search-logistics",
+       "type": "repo_code",
+       "source": "repo:semantic-search-logistics/src/main.py",
+       "date": "",
+       "outcome": null,
+       "project": "semantic-search-logistics",
+       "title": "semantic-search-logistics/src/main.py",
+       "client_industry": "",
+       "snippet": "from fastapi import FastAPI\napp = FastAPI()\n",
+       "score": 6.2439,
+       "support": 1.0
+      },
+      {
+       "item_id": "aiml:repo:docs-assistant",
+       "type": "repo_code",
+       "source": "repo:docs-assistant/src/main.py",
+       "date": "",
+       "outcome": null,
+       "project": "docs-assistant",
+       "title": "docs-assistant/src/main.py",
+       "client_industry": "",
+       "snippet": "from fastapi import FastAPI\napp = FastAPI()",
+       "score": 6.2439,
+       "support": 1.0
+      }
+     ]
+    }
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "fd18d773e6234f58",
+   "trace_id": "7060002998de46a8aa5293904c9b3d86",
+   "parent_id": "0f47070103304909",
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_034:374d0b",
+   "name": "tool:search_evidence",
+   "kind": "tool",
+   "start": 1794136855.004939,
+   "end": 1794136859.0602639,
+   "status": "ok",
+   "attrs": {
+    "server": "portfolio",
+    "tool": "search_evidence",
+    "args": {
+     "requirement": "Python",
+     "k": 4
+    },
+    "agent": "matcher",
+    "attempt": 0,
+    "result": {
+     "requirement": "Python",
+     "variant": "best",
+     "status": "supported",
+     "items": [
+      {
+       "item_id": "aiml:repo:invoice-extractor",
+       "type": "repo_code",
+       "source": "repo:invoice-extractor/src/main.py",
+       "date": "",
+       "outcome": null,
+       "project": "invoice-extractor",
+       "title": "invoice-extractor/src/main.py",
+       "client_industry": "",
+       "snippet": "FROM python:3.11-slim",
+       "score": 2.3042,
+       "support": 1.0
+      },
+      {
+       "item_id": "aiml:repo:invoice-extractor-media",
+       "type": "repo_code",
+       "source": "repo:invoice-extractor-media/src/main.py",
+       "date": "",
+       "outcome": null,
+       "project": "invoice-extractor-media",
+       "title": "invoice-extractor-media/src/main.py",
+       "client_industry": "",
+       "snippet": "FROM python:3.11-slim\n",
+       "score": 2.3042,
+       "support": 1.0
+      },
+      {
+       "item_id": "aiml:repo:docs-assistant",
+       "type": "repo_code",
+       "source": "repo:docs-assistant/src/main.py",
+       "date": "",
+       "outcome": null,
+       "project": "docs-assistant",
+       "title": "docs-assistant/src/main.py",
+       "client_industry": "",
+       "snippet": "FROM python:3.11-slim\n",
+       "score": 2.3042,
+       "support": 1.0
+      },
+      {
+       "item_id": "aiml:repo:sentiment-api",
+       "type": "repo_code",
+       "source": "repo:sentiment-api/src/main.py",
+       "date": "",
+       "outcome": null,
+       "project": "sentiment-api",
+       "title": "sentiment-api/src/main.py",
+       "client_industry": "",
+       "snippet": "FROM python:3.11-slim",
+       "score": 2.3042,
+       "support": 1.0
+      }
+     ]
+    }
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "13fdc48469854a7a",
+   "trace_id": "7060002998de46a8aa5293904c9b3d86",
+   "parent_id": "0f47070103304909",
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_034:374d0b",
+   "name": "tool:search_evidence",
+   "kind": "tool",
+   "start": 1794136855.010371,
+   "end": 1794136862.93301,
+   "status": "ok",
+   "attrs": {
+    "server": "portfolio",
+    "tool": "search_evidence",
+    "args": {
+     "requirement": "PyTorch",
+     "k": 4
+    },
+    "agent": "matcher",
+    "attempt": 0,
+    "result": "{\"requirement\": \"PyTorch\", \"variant\": \"best\", \"status\": \"supported\", \"items\": [{\"item_id\": \"aiml:cv:ticket-triage-saas\", \"type\": \"cv\", \"source\": \"cv.pdf\", \"date\": \"2023\", \"outcome\": null, \"project\": \"ticket-triage-saas\", \"title\": \"Support ticket triage with a fine-tuned language model\", \"client_industry\": \"saas\", \"snippet\": \"Support ticket triage with a fine-tuned language model (SaaS) (2023): a fine-tuned classifier that routes tickets to the right queue; routing accuracy of 43% on 800 tickets. Tools: Hugging Face Transformers, LoRA fine-tuning, PyTorch. [github.com/ayesha-ml/ticket-triage-saas]\", \"score\": 1.9254, \"support\": 1.0}, {\"item_id\": \"aiml:cv:invoice-extractor-media\", \"type\": \"cv\", \"source\": \"cv.pdf\", \"date\": \"2024\", \"outcome\": null, \"project\": \"invoice-extractor-media\", \"title\": \"Invoice data extraction pipeline for a media firm\", \"client_industry\": \"media\", \"snippet\": \"Invoice data extraction pipeline for a media firm (2024): an OCR and layout model that extracts line items from scanned invoices; reduced manual entry by 53% across 800 invoices a month. Tools: Python, OpenCV, PyTorch. [github.com/ayesha-ml/invoice-extractor-media]\", \"score\": 1.2289, \"support\": 1.0}, {\"item_id\": \"aiml:cs:invoice-extractor-media\", \"type\": \"case_study\", \"source\": \"invoice-extractor-media.md\", \"date\": \"2024-08\", \"outcome\": null, \"project\": \"invoice-extractor-media\", \"title\": \"Invoice data extraction pipeline for a media firm\", \"client_industry\": \"media\", \"snippet\": \"Invoice data extraction pipeline for a media firm\\n## What I built\\nI designed and delivered an OCR and layout model that extracts line items from scanned invoices. The stack: scripting the whole backend end to end, cv2, PyTorch, an async Python API with automatic OpenAPI docs, Docker.\", \"score\": 1.194, \"support\": 1.0}, {\"item_id\": \"aiml:cv:invoice-extractor\", \"type\": \"cv\", \"source\": \"cv.pdf\", \"date\": \"2026\", \"outcome\": null, \"project\": \"invoice-extractor\", \"title\": \"Invoice data extraction pipeline for a e-commer...(truncated)"
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "89dc5b07502e498e",
+   "trace_id": "7060002998de46a8aa5293904c9b3d86",
+   "parent_id": "0f47070103304909",
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_034:374d0b",
+   "name": "tool:find_winning_proposals",
+   "kind": "tool",
+   "start": 1794136866.4111629,
+   "end": 1794136866.4343739,
+   "status": "ok",
+   "attrs": {
+    "server": "portfolio",
+    "tool": "find_winning_proposals",
+    "args": {
+     "job_summary": "Looking for PyTorch developer fastapi langchain python pytorch",
+     "k": 2
+    },
+    "agent": "matcher",
+    "attempt": 0,
+    "result": {
+     "items": [
+      {
+       "id": "aiml:proposal:aiml-prop-111",
+       "outcome": "replied",
+       "text": "You need looking for a logistics team, and I have shipped this before. For Atlas Healthcare I built an API that scores customer reviews and extracts complaint themes using NLP, Hugging Face Transformers, FastAPI; it processes 20000 reviews per day. For Pioneer E-Commerce I built an OCR and layout model that extracts line items from scanned invoices using Python, OpenCV, PyTorch; it reduced manual entry by 66% across 800 invoices a month. Looking forward to hearing from you."
+      },
+      {
+       "id": "aiml:proposal:aiml-prop-045",
+       "outcome": "replied",
+       "text": "You need looking for a legal team, and I have shipped this before. For Corvid Edtech I built a chat assistant that answers staff questions from 1200 internal documents using Python, LangChain, RAG; it cut average search time from 7 minutes to 16 seconds. For Juniper Logistics I built agents that review contracts and flag risky clauses with human approval using LangGraph, Python, OpenAI API; it review time down 87%. I have extensive experience with NLP, PyTorch and always deliver high quality. Looking forward to hearing from you."
+      }
+     ]
+    }
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "1833d5a138c24eca",
+   "trace_id": "7060002998de46a8aa5293904c9b3d86",
+   "parent_id": null,
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_034:374d0b",
+   "name": "node:reconcile",
+   "kind": "node",
+   "start": 1794136866.538794,
+   "end": 1794136866.538794,
+   "status": "ok",
+   "attrs": {
+    "node": "reconcile",
+    "output_keys": [
+     "progress"
+    ]
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "ba179c2e0a1d4715",
+   "trace_id": "7060002998de46a8aa5293904c9b3d86",
+   "parent_id": "d1578fa5d88842c2",
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_034:374d0b",
+   "name": "tool:get_policy",
+   "kind": "tool",
+   "start": 1794136866.6042132,
+   "end": 1794136866.9866867,
+   "status": "ok",
+   "attrs": {
+    "server": "marketplace",
+    "tool": "get_policy",
+    "args": {},
+    "agent": "pricing",
+    "attempt": 0,
+    "result": {
+     "version": 1,
+     "effective": "[PHONE]",
+     "connects": {
+      "formula": "flat",
+      "flat": 6
+     },
+     "rules": [
+      "No off-platform contact or payment",
+      "No fabricated experience",
+      "No guarantees",
+      "Fair use of automation"
+     ]
+    }
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  },
+  {
+   "span_id": "d1578fa5d88842c2",
+   "trace_id": "7060002998de46a8aa5293904c9b3d86",
+   "parent_id": null,
+   "user_id": "demo-user",
+   "thread_id": "bid:demo-user:dev_aiml_034:374d0b",
+   "name": "node:decide",
+   "kind": "node",
+   "start": 1794136866.6042132,
+   "end": 1794136866.9995635,
+   "status": "ok",
+   "attrs": {
+    "node": "decide",
+    "output_keys": [
+     "decision",
+     "progress",
+     "status"
+    ],
+    "status": "skipped"
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "cost_usd": 0.0,
+   "model": null
+  }
+ ]
+}

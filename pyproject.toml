@@ -1,3 +1,7 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "gigbid"
 version = "1.0.0"
@@ -36,6 +40,9 @@ dependencies = [
   "opentelemetry-exporter-otlp-proto-http>=1.27",
 ]
 
+[project.scripts]
+gigbid-portfolio-mcp = "mcp_servers.portfolio.server:main"
+
 [project.optional-dependencies]
 dev = ["pytest==9.1.1", "pytest-asyncio==1.4.0", "ruff>=0.7", "reportlab>=4.2"]
 
@@ -53,3 +60,6 @@ extend-exclude = ["apps/web", "data/personas"]
 [tool.ruff.lint]
 select = ["E", "F", "W", "I", "B"]
 ignore = ["E501", "B008", "B023", "E731"]
+[tool.setuptools.packages.find]
+include = ["agent*", "rag*", "apps*", "mcp_servers*", "worker*", "evals*", "common*", "gigsim*", "data*"]
+exclude = ["apps.web*"]

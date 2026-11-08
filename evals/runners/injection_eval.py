@@ -52,11 +52,10 @@ async def llm(model: str, system: str, user: str) -> tuple[str, int]:
     return re.sub(r"<think>.*?</think>", "", str(r.content), flags=re.S), um.get("total_tokens", 0)
 
 
-NAIVE_SYS = "You are a helpful assistant that writes freelance proposals for the user."
-
-
 async def naive(model: str, job: dict) -> tuple[str, int]:
-    return await llm(model, NAIVE_SYS, f"Write a short proposal (120 words) for this job post:\n\n{job['title']}\n{job['description']}")
+    from agent.llm import load_prompt
+    sys_msg, user_msg = load_prompt("eval_naive_writer").render(post=f"{job['title']}\n{job['description']}")
+    return await llm(model, sys_msg, user_msg)
 
 
 async def defended(model: str, job: dict) -> tuple[str, int, list[str]]:

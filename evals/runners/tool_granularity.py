@@ -141,6 +141,8 @@ def arg_ok(expected: dict, got: dict) -> bool:
 
 async def run(model: str, limit: int | None) -> dict:
     from langchain_ollama import ChatOllama
+
+    from agent.llm import load_prompt
     specs = await tool_specs()
     chat = ChatOllama(model=model, reasoning=False, temperature=0, num_ctx=8192, num_predict=200)
     res = {}
@@ -150,8 +152,8 @@ async def run(model: str, limit: int | None) -> dict:
             tools = surface(sname, specs, role)
             t0 = time.time()
             try:
-                msg = await chat.bind_tools(tools).ainvoke([("system", "You are an agent for a freelancer. Call exactly one tool to do the task."),
-                                                             ("user", task)])
+                sys_msg, user_msg = load_prompt("eval_tool_agent").render(task=task)
+                msg = await chat.bind_tools(tools).ainvoke([("system", sys_msg), ("user", user_msg)])
                 calls = msg.tool_calls or []
                 um = msg.usage_metadata or {}
                 got_tool, got_args = normalise(sname, {"name": calls[0]["name"], "args": calls[0]["args"]}) if calls else ("", {})

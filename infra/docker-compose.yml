@@ -1,0 +1,68 @@
+# docker compose -f infra/docker-compose.yml up --build
+# Starts: web, api, worker, 3 MCP servers, GigSim, Postgres (+pgvector = the vector store),
+# Redis, Ollama (open profile) and Arize Phoenix (tracing).
+name: gigbid
+x-app-env: &app-env
+  env_file: [../.env]
+  environment:
+    DATABASE_URL: postgresql://gigbid:gigbid@postgres:5432/gigbid
+    REDIS_URL: redis://redis:6379
+    GIGSIM_URL: http://gigsim:8100
+    MCP_TRANSPORT: http
+    PORTFOLIO_MCP_URL: http://mcp-portfolio:8201/mcp
+    MARKETPLACE_MCP_URL: http://mcp-marketplace:8202/mcp
+    WORKSPACE_MCP_URL: http://mcp-workspace:8203/mcp
+    OLLAMA_BASE_URL: http://ollama:11434
+    PHOENIX_COLLECTOR_ENDPOINT: http://phoenix:6006
+    VECTOR_STORE: pgvector
+
+services:
+  postgres:
+    image: pgvector/pgvector:pg16
+    environment: {POSTGRES_USER: gigbid, POSTGRES_PASSWORD: gigbid, POSTGRES_DB: gigbid}
+    volumes: [pgdata:/var/lib/postgresql/data]
+    healthcheck: {test: ["CMD-SHELL", "pg_isready -U gigbid"], interval: 5s, retries: 20}
+  redis:
+    image: redis:7-alpine
+  ollama:
+    image: ollama/ollama:0.5.7
+    volumes: [ollama:/root/.ollama]
+    entrypoint: ["/bin/sh", "-c", "ollama serve & sleep 3; ollama pull ${OLLAMA_SMALL_MODEL:-qwen3:1.7b}; wait"]
+  phoenix:
+    image: arizephoenix/phoenix:version-8.0.0
+    ports: ["6006:6006"]
+  gigsim:
+    build: {context: .., dockerfile: infra/docker/gigsim.Dockerfile}
+    env_file: [../.env]
+    volumes: [gigsim:/app/gigsim/state]
+  mcp-portfolio:
+    build: {context: .., dockerfile: infra/docker/mcp-portfolio.Dockerfile}
+    <<: *app-env
+  mcp-marketplace:
+    build: {context: .., dockerfile: infra/docker/mcp-marketplace.Dockerfile}
+    <<: *app-env
+    volumes: [audit:/app/data/processed]
+    depends_on: [gigsim]
+  mcp-workspace:
+    build: {context: .., dockerfile: infra/docker/mcp-workspace.Dockerfile}
+    <<: *app-env
+  api:
+    build: {context: .., dockerfile: infra/docker/api.Dockerfile}
+    <<: *app-env
+    ports: ["8000:8000"]
+    depends_on:
+      postgres: {condition: service_healthy}
+      redis: {condition: service_started}
+      mcp-portfolio: {condition: service_started}
+      mcp-marketplace: {condition: service_started}
+      mcp-workspace: {condition: service_started}
+  worker:
+    build: {context: .., dockerfile: infra/docker/worker.Dockerfile}
+    <<: *app-env
+    depends_on: [api]
+  web:
+    build: {context: .., dockerfile: infra/docker/web.Dockerfile}
+    ports: ["8080:80"]
+    depends_on: [api]
+
+volumes: {pgdata: {}, ollama: {}, gigsim: {}, audit: {}}
