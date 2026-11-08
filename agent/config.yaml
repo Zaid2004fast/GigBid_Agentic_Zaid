@@ -104,7 +104,7 @@ pricing:
   # Connects cost model. v1 = flat. The 2 Nov "platform policy update" is absorbed here
   # (see docs/EXTENSION.md#change-request and the diff in the report).
   connects:
-    formula: flat                  # flat | tiered
+    formula: tiered                # flat | tiered  (2 Nov policy update: Connects tiered by job budget)
     flat: 6
     tiers:                         # used when formula == tiered (GigSim policy v2)
       - {max_budget: 500, cost: 4}

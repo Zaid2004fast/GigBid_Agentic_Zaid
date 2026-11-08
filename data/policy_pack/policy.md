@@ -1,4 +1,4 @@
-# GigSim Marketplace Policy Pack (v1)
+# GigSim Marketplace Policy Pack (v2 - updated 2026-11-02)
 
 > Stand-in written for this project because the instructor's policy pack was not distributed.
 > It mirrors the four themes named in the brief. The machine-readable form the Compliance
@@ -28,3 +28,6 @@ No unrelated links, no keyword stuffing, no copying the job post back to the cli
 ## P-6 Free work
 Freelancers should not perform substantial unpaid work as part of a proposal. Short
 screening answers are fine; complete deliverables are not.
+
+## P-7 Screening questions (added 2 Nov 2026)
+Every screening question must be answered. Connects cost is now tiered by job budget (<= $500: 4, <= $2,000: 8, above: 12).

@@ -3,7 +3,7 @@
 #   forbid_regex  - any match violates; action redact removes the match, block stops the draft
 #   expr          - safe boolean expression over {draft, job, verification, price}; false violates
 # applies_to: proposal | message
-version: 1
+version: 2
 rules:
   - id: P1-contact
     policy: P-1
@@ -78,3 +78,13 @@ rules:
         - '\b(system prompt|hidden instructions|as an ai (language )?model)\b'
     action: block
     message: Draft leaks automation internals (policy P-4).
+
+  # 2026-11-02 platform policy update (GigSim v2): every screening question must be answered
+  - id: P7-screening
+    policy: P-7
+    applies_to: [proposal]
+    check:
+      type: expr
+      expr: "len(nonempty(draft.screening_answers)) >= len(job.screening_questions)"
+    action: block
+    message: Answer every screening question - the platform now rejects proposals with missing answers (policy update 2 Nov).
