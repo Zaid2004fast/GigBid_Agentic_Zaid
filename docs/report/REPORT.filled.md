@@ -2,6 +2,8 @@
 
 AI-4016 R&D Assignment. Individual submission.
 
+**Zaid Bin Umer** · Roll No. **23i-0671** · Section **C**
+
 Every number in this report is read automatically from the results files in `evals/results/` when the
 PDF is built (`python scripts/build_report.py`). The file each number comes from is named in the text.
 
