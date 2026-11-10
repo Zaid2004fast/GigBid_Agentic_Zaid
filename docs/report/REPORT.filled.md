@@ -180,6 +180,13 @@ proposal went from 0.016 to
 0.48 per proposal, and the checker also
 brought that to 0.0 (`claims_eval.json`).
 
+**Human panel.** 3 classmates each compared 21 anonymised pairs (63 votes),
+blind: for the same job, one proposal from GigBid's writer and one from the careless "experience list" writer, in
+random order (`pairwise_panel.json`). GigBid's proposal was preferred in 90.5% of votes
+(sign test p < 0.001); the raters agreed with each other on
+87.3% of pairs. The baseline is deliberately weak, so this shows that
+people clearly notice vague, unproven claims, not that GigBid is better than a careful human writer.
+
 **AI judge.** We built an AI judge that scores proposals from 1 to 5, and checked it against 30 proposals that
 the author scored by hand (`judge_calibration.json`). **The judge did not agree with the human.** The small local
 judge (qwen3:1.7b) reached a Cohen's kappa of -0.03

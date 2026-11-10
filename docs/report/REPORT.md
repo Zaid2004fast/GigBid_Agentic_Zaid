@@ -180,6 +180,13 @@ proposal went from {{decision_eval.json:summary.unsupported_before_per_proposal|
 {{claims_eval.json:summary.naive.unsupported_per_proposal_before|2}} per proposal, and the checker also
 brought that to {{claims_eval.json:summary.naive.unsupported_per_proposal_after|1}} (`claims_eval.json`).
 
+**Human panel.** {{pairwise_panel.json:raters|int}} classmates each compared 21 anonymised pairs ({{pairwise_panel.json:votes|int}} votes),
+blind: for the same job, one proposal from GigBid's writer and one from the careless "experience list" writer, in
+random order (`pairwise_panel.json`). GigBid's proposal was preferred in {{pairwise_panel.json:win_rate|pct}} of votes
+(sign test p {{pairwise_panel.json:sign_test_p_text|raw}}); the raters agreed with each other on
+{{pairwise_panel.json:mean_pairwise_agreement|pct}} of pairs. The baseline is deliberately weak, so this shows that
+people clearly notice vague, unproven claims, not that GigBid is better than a careful human writer.
+
 **AI judge.** We built an AI judge that scores proposals from 1 to 5, and checked it against 30 proposals that
 the author scored by hand (`judge_calibration.json`). **The judge did not agree with the human.** The small local
 judge ({{judge_calibration.json:best_judge|raw}}) reached a Cohen's kappa of {{judge_calibration.json:cohen_kappa|2}}

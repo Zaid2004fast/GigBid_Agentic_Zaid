@@ -33,5 +33,3 @@ Thumbs.db
 .vscode/
 .idea/
 
-# keep the blind-panel answer key private until raters have voted
-evals/datasets/pairwise_panel_key.json

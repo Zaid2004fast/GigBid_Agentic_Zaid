@@ -70,7 +70,17 @@ def score() -> None:
     n = sum(1 for v in votes if v["vote"].strip().upper() in ("A", "B"))
     k = min(wins, n - wins)
     p = min(1.0, 2 * sum(math.comb(n, i) for i in range(k + 1)) / 2 ** n) if n else 1.0
-    res = {"votes": n, "shipped_wins": wins, "win_rate": round(wins / n, 4) if n else None, "sign_test_p": round(p, 5)}
+    from collections import defaultdict
+    by = defaultdict(dict)
+    for v in votes:
+        by[v.get("rater", "r")][v["id"]] = v["vote"].strip().upper()
+    raters = list(by)
+    pairs = [(a, b) for i, a in enumerate(raters) for b in raters[i + 1:]]
+    agree = [sum(by[a][k] == by[b].get(k) for k in by[a]) / len(by[a]) for a, b in pairs]
+    res = {"votes": n, "raters": len(raters), "shipped_wins": wins, "win_rate": round(wins / n, 4) if n else None,
+           "sign_test_p": p, "sign_test_p_text": "< 0.001" if p < 0.001 else f"{p:.3f}",
+           "per_rater_win_rate": [round(sum(key[k] == x for k, x in by[r].items()) / len(by[r]), 4) for r in raters],
+           "mean_pairwise_agreement": round(sum(agree) / len(agree), 4) if agree else None}
     (ROOT / "evals" / "results" / "pairwise_panel.json").write_text(json.dumps(res, indent=1))
     print(res)
 

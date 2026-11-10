@@ -1,0 +1,14 @@
+{
+ "votes": 63,
+ "raters": 3,
+ "shipped_wins": 57,
+ "win_rate": 0.9048,
+ "sign_test_p": 1.6395687108330947e-11,
+ "sign_test_p_text": "< 0.001",
+ "per_rater_win_rate": [
+  1.0,
+  0.9048,
+  0.8095
+ ],
+ "mean_pairwise_agreement": 0.873
+}
