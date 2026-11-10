@@ -80,3 +80,14 @@ bounded retries with exponential backoff and jitter, and a circuit breaker per s
 `queued_degraded`, `/api/health` reports `degraded`, the UI shows the
 "Marketplace unavailable" banner, and the scheduler re-queues the work once the breaker
 closes. Code: `agent/mcp_client.py`, `agent/runtime.py`, `worker/engine.py::tick`.
+
+## MCP Inspector
+
+All three servers connected in the official MCP Inspector (v0.17.2) over stdio via `scripts/run_mcp.py`:
+
+| Server | Tool list | A tool call |
+|---|---|---|
+| portfolio | ![](images/inspector_portfolio_tools.png) | ![](images/inspector_portfolio_call.png) |
+| marketplace | ![](images/inspector_marketplace_tools.png) | ![](images/inspector_marketplace_call.png) |
+| workspace | ![](images/inspector_workspace_tools.png) | ![](images/inspector_workspace_call.png) |
+

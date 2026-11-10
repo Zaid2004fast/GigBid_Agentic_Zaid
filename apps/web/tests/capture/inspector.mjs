@@ -4,7 +4,7 @@ import { chromium } from "@playwright/test";
 
 const { URL, PY, RUNNER, OUT } = process.env;
 const browser = await chromium.launch();
-const calls = { portfolio: ["search_evidence", { requirement: "background workers that process uploads" }],
+const calls = { portfolio: ["list_skills", {}],
                 marketplace: ["get_policy", {}], workspace: ["free_slots", {}] };
 
 for (const server of ["portfolio", "marketplace", "workspace"]) {
