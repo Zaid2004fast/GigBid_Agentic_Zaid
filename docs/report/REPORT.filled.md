@@ -180,9 +180,17 @@ proposal went from 0.016 to
 0.48 per proposal, and the checker also
 brought that to 0.0 (`claims_eval.json`).
 
-**AI judge.** We built an AI judge that scores proposals from 1 to 5, but we only trust it after it
-agrees with a human. The 30 human labels needed for that check are still pending, so the agreement
-score is n/a and no decision in this report relies on the judge.
+**AI judge.** We built an AI judge that scores proposals from 1 to 5, and checked it against 30 proposals that
+the author scored by hand (`judge_calibration.json`). **The judge did not agree with the human.** The small local
+judge (qwen3:1.7b) reached a Cohen's kappa of -0.03
+(no better than chance). The larger gpt-oss-120b judge was no better, at
+-0.03. Both were far more generous than the human: the human's average score was
+2.77, the small judge's 3.97, and the large judge's
+4.67. The judges reward proposals for ticking the rubric's
+boxes (evidence, honest gap, closing question), while the human marked down awkward, template-like wording that
+the judges ignore. Because of this, **no result in this report relies on the AI judge**. Proposal quality is
+measured instead by unsupported claims and simulated client replies. Making the judge trustworthy would need a
+rubric that penalises template phrasing, plus a few scored examples in its prompt.
 
 ## 5. Question C: is a team of agents worth it?
 

@@ -57,16 +57,20 @@ def label() -> None:
             f.flush()
 
 
-def judge(model: str) -> None:
+def judge(model: str, provider: str = "ollama") -> None:
     import asyncio
+    import os
 
     from langchain_ollama import ChatOllama
+    from langchain_openai import ChatOpenAI
 
     from agent.llm import load_prompt
     p = load_prompt("judge")
 
     async def run():
-        llm = ChatOllama(model=model, reasoning=False, temperature=0, num_predict=120)
+        llm = (ChatOpenAI(model=model, base_url="https://api.groq.com/openai/v1", api_key=os.environ["GROQ_API_KEY"], temperature=0,
+                          max_tokens=1500, max_retries=6, reasoning_effort="low") if provider == "groq"
+               else ChatOllama(model=model, reasoning=False, temperature=0, num_predict=120))
         out = {}
         for it in _jsonl(ITEMS):
             s, u = p.render(job=it["job"], proposal=it["proposal"])
@@ -76,24 +80,39 @@ def judge(model: str) -> None:
             print(it["id"], out[it["id"]]["score"], flush=True)
         return out
     res = asyncio.run(run())
-    JUDGE.write_text(json.dumps({"model": model, "prompt_version": p.version, "scores": res}, indent=1))
+    out = JUDGE if provider == "ollama" else OUT / f"judge_scores_{provider}.json"
+    out.write_text(json.dumps({"model": model, "provider": provider, "prompt_version": p.version, "scores": res}, indent=1))
 
 
 def report() -> None:
     h = {x["id"]: x["score"] for x in _jsonl(HUMAN)}
-    j = json.loads(JUDGE.read_text())["scores"] if JUDGE.exists() else {}
+    results = {}
+    for f in [JUDGE, *sorted(OUT.glob("judge_scores_*.json"))]:
+        if f.exists():
+            meta = json.loads(f.read_text())
+            results[meta["model"]] = _agreement(h, meta["scores"])
+    if not results:
+        print("no judge scores yet")
+        return
+    best = max(results, key=lambda m: results[m].get("cohen_kappa", -9))
+    res = {**results[best], "best_judge": best, "judges": results,
+           "human_mean": round(sum(h.values()) / len(h), 3)}
+    (OUT / "judge_calibration.json").write_text(json.dumps(res, indent=1))
+    print(json.dumps({k: v for k, v in res.items() if k != "biggest_disagreements"}, indent=1))
+
+
+def _agreement(h: dict, j: dict) -> dict:
     ids = sorted(set(h) & set(j))
     if len(ids) < 10:
-        print(f"only {len(ids)} items have both a human label and a judge score - label more first")
-        return
+        return {"n": len(ids)}
     a, b = [h[i] for i in ids], [j[i]["score"] for i in ids]
     res = {"n": len(ids), "cohen_kappa": round(cohen_kappa(a, b), 4),
            "exact_agreement": round(sum(x == y for x, y in zip(a, b)) / len(ids), 4),
            "within_1": round(sum(abs(x - y) <= 1 for x, y in zip(a, b)) / len(ids), 4),
            "biggest_disagreements": sorted(({"id": i, "human": h[i], "judge": j[i]["score"], "judge_said": j[i]["raw"][:160]} for i in ids),
-                                           key=lambda x: -abs(x["human"] - x["judge"]))[:4]}
-    (OUT / "judge_calibration.json").write_text(json.dumps(res, indent=1))
-    print(json.dumps(res, indent=1))
+                                           key=lambda x: -abs(x["human"] - x["judge"]))[:4],
+           "judge_mean": round(sum(b) / len(b), 3)}
+    return res
 
 
 if __name__ == "__main__":
@@ -101,5 +120,6 @@ if __name__ == "__main__":
     ap.add_argument("cmd", choices=["sample", "label", "judge", "report"])
     ap.add_argument("--n", type=int, default=30)
     ap.add_argument("--model", default="qwen3:1.7b")
+    ap.add_argument("--provider", default="ollama", choices=["ollama", "groq"])
     a = ap.parse_args()
-    {"sample": lambda: sample(a.n), "label": label, "judge": lambda: judge(a.model), "report": report}[a.cmd]()
+    {"sample": lambda: sample(a.n), "label": label, "judge": lambda: judge(a.model, a.provider), "report": report}[a.cmd]()

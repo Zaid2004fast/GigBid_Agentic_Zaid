@@ -1,0 +1,127 @@
+{
+ "model": "openai/gpt-oss-120b",
+ "provider": "groq",
+ "prompt_version": "judge-v2",
+ "scores": {
+  "j00": {
+   "score": 4,
+   "raw": "SCORE: 4 - The proposal is detailed and addresses most requirements, but admits lacking direct experience with server\u2011rendered file\u2011based routing, which is a notable gap."
+  },
+  "j01": {
+   "score": 5,
+   "raw": "SCORE: 5 - The proposal directly addresses all required skills, provides concrete relevant examples, acknowledges a gap honestly, offers a clear plan and ends with a clarifying question."
+  },
+  "j02": {
+   "score": 5,
+   "raw": "SCORE: 5 - The proposal directly addresses the required ELT, Snowflake, and BigQuery work, provides concrete past results, outlines a milestone plan, and ends with a clarifying question."
+  },
+  "j03": {
+   "score": 4,
+   "raw": "SCORE: 4 - The proposal is specific and asks a relevant question, but the pricing and some details are misaligned with the job description."
+  },
+  "j04": {
+   "score": 5,
+   "raw": "SCORE: 5 - The proposal directly addresses all required technologies, provides concrete relevant experience, outlines a clear milestone plan, and ends with a clarifying question."
+  },
+  "j05": {
+   "score": 5,
+   "raw": "SCORE: 5 - The proposal is specific to the client\u2019s needs, provides concrete relevant experience, answers the requirements, is appropriately sized, and ends with a clarifying question."
+  },
+  "j06": {
+   "score": 4,
+   "raw": "SCORE: 4 - The proposal is specific and addresses most requirements, but includes irrelevant Django mention and admits limited direct experience with spreadsheet cleaning."
+  },
+  "j07": {
+   "score": 5,
+   "raw": "SCORE: 5 - The proposal directly addresses both forecasting and text classification with concrete past results, outlines a clear milestone plan, and ends with a relevant question."
+  },
+  "j08": {
+   "score": 5,
+   "raw": "SCORE: 5 - The proposal directly addresses the client\u2019s needs, cites relevant experience, acknowledges a gap, offers a concrete plan, and ends with a clarifying question."
+  },
+  "j09": {
+   "score": 5,
+   "raw": "SCORE: 5 - The proposal directly addresses the client\u2019s FAISS and RAG needs with concrete relevant experience, acknowledges a gap, offers a clear milestone plan, and ends with a clarifying question."
+  },
+  "j10": {
+   "score": 5,
+   "raw": "SCORE: 5 - The proposal directly addresses the client\u2019s requirements, provides concrete relevant experience, acknowledges a gap with a plan, and ends with a clarifying question."
+  },
+  "j11": {
+   "score": 4,
+   "raw": "SCORE: 4 - The proposal is specific and asks a clarifying question, but it lacks direct mention of real-time bounding-box detection on video frames, which is a key requirement."
+  },
+  "j12": {
+   "score": 4,
+   "raw": "SCORE: 4 - The proposal is specific and addresses the client\u2019s needs with relevant experience, but the budget request exceeds the stated $690, which is a notable weakness."
+  },
+  "j13": {
+   "score": 5,
+   "raw": "SCORE: 5 - The proposal directly addresses all client requirements, provides concrete relevant experience, acknowledges a gap with a realistic plan, and ends with a clarifying question."
+  },
+  "j14": {
+   "score": 5,
+   "raw": "SCORE: 5 - The proposal directly addresses the client\u2019s needs with concrete Airflow/ETL experience, outlines a clear milestone plan, and ends with a relevant question."
+  },
+  "j15": {
+   "score": 5,
+   "raw": "SCORE: 5 - The proposal directly addresses YOLO and pandas with concrete relevant experience, outlines a clear milestone plan, and ends with a clarifying question."
+  },
+  "j16": {
+   "score": 4,
+   "raw": "SCORE: 4 - The proposal is specific and addresses the client\u2019s needs with concrete experience and a closing question, but it includes an irrelevant Django mention and admits limited experience in \u201cfiguring out the right approach,\u201d which slightly weakens its fit."
+  },
+  "j17": {
+   "score": 5,
+   "raw": "SCORE: 5 - The proposal directly addresses the client\u2019s requirements, provides concrete relevant experience, acknowledges a gap honestly, offers a clear plan, stays concise, and ends with a clarifying question."
+  },
+  "j18": {
+   "score": 5,
+   "raw": "SCORE: 5 - The proposal directly addresses the client\u2019s GA, SQL, and AWS needs with concrete past results, acknowledges a gap and offers a plan, and ends with a clarifying question."
+  },
+  "j19": {
+   "score": 5,
+   "raw": "SCORE: 5 - The proposal directly addresses Tailwind CSS and Socket.IO, outlines a milestone plan, includes concrete past results, and ends with a clarifying question."
+  },
+  "j20": {
+   "score": 5,
+   "raw": "SCORE: 5 - The proposal directly addresses the client\u2019s requirements with concrete experience, acknowledges a gap, offers a clear plan, and ends with a clarifying question."
+  },
+  "j21": {
+   "score": 4,
+   "raw": "SCORE: 4 - The proposal is specific, cites relevant experience with YOLO, LangGraph, and PyTorch, and ends with a question, but the quoted price exceeds the client\u2019s budget, which is a notable weakness."
+  },
+  "j22": {
+   "score": 5,
+   "raw": "SCORE: 5 - The proposal directly addresses all required technologies, provides concrete relevant experience, outlines a clear plan and pricing, and ends with a clarifying question."
+  },
+  "j23": {
+   "score": 5,
+   "raw": "SCORE: 5 - The proposal directly addresses the client\u2019s requirements with concrete relevant experience, acknowledges a minor gap, asks clarifying questions, and ends with a question."
+  },
+  "j24": {
+   "score": 5,
+   "raw": "SCORE: 5 - The proposal directly addresses Docker and TypeScript, outlines a concrete milestone plan, provides relevant experience, and ends with a clarifying question."
+  },
+  "j25": {
+   "score": 5,
+   "raw": "SCORE: 5 - The proposal directly addresses the required technologies, provides concrete relevant experience, outlines a clear plan, and ends with a clarifying question."
+  },
+  "j26": {
+   "score": 4,
+   "raw": "SCORE: 4 - The proposal is specific, addresses most requirements and ends with a question, but includes irrelevant Python experience and admits limited AWS production experience."
+  },
+  "j27": {
+   "score": 5,
+   "raw": "SCORE: 5 - The proposal directly addresses the client\u2019s requirements with concrete relevant experience, acknowledges a gap honestly, offers a clear plan and ends with a clarifying question."
+  },
+  "j28": {
+   "score": 4,
+   "raw": "SCORE: 4 - The proposal is specific, addresses most tech requirements and ends with a question, but admits limited experience with relational database migrations and tuning, which is a notable weakness."
+  },
+  "j29": {
+   "score": 4,
+   "raw": "SCORE: 4 - The proposal is specific and addresses most requirements, but admits no prior production experience with utility\u2011first styling/design\u2011token config, which is a notable weakness."
+  }
+ }
+}

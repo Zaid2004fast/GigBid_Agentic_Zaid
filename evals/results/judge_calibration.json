@@ -1,0 +1,103 @@
+{
+ "n": 30,
+ "cohen_kappa": -0.0274,
+ "exact_agreement": 0.1667,
+ "within_1": 0.6667,
+ "biggest_disagreements": [
+  {
+   "id": "j02",
+   "human": 2,
+   "judge": 5,
+   "judge_said": "SCORE: 5 - The proposal is specific to the client's requirements, demonstrates concrete achievements with measurable results, and clearly outlines a plan for a "
+  },
+  {
+   "id": "j03",
+   "human": 3,
+   "judge": 5,
+   "judge_said": "SCORE: 5 - The proposal is specific to the client's needs, clearly outlines the required technologies (Lambda and Celery), provides concrete results from simila"
+  },
+  {
+   "id": "j05",
+   "human": 3,
+   "judge": 5,
+   "judge_said": "SCORE: 5 - The proposal is highly specific to the client's needs, demonstrating relevant experience with Power BI, Airflow, and SQL, and clearly outlines a plan"
+  },
+  {
+   "id": "j06",
+   "human": 2,
+   "judge": 4,
+   "judge_said": "SCORE: 4 - The proposal is specific to the client's problem, but it lacks concrete details about the current setup and does not fully address the need for a clo"
+  }
+ ],
+ "judge_mean": 3.967,
+ "best_judge": "qwen3:1.7b",
+ "judges": {
+  "qwen3:1.7b": {
+   "n": 30,
+   "cohen_kappa": -0.0274,
+   "exact_agreement": 0.1667,
+   "within_1": 0.6667,
+   "biggest_disagreements": [
+    {
+     "id": "j02",
+     "human": 2,
+     "judge": 5,
+     "judge_said": "SCORE: 5 - The proposal is specific to the client's requirements, demonstrates concrete achievements with measurable results, and clearly outlines a plan for a "
+    },
+    {
+     "id": "j03",
+     "human": 3,
+     "judge": 5,
+     "judge_said": "SCORE: 5 - The proposal is specific to the client's needs, clearly outlines the required technologies (Lambda and Celery), provides concrete results from simila"
+    },
+    {
+     "id": "j05",
+     "human": 3,
+     "judge": 5,
+     "judge_said": "SCORE: 5 - The proposal is highly specific to the client's needs, demonstrating relevant experience with Power BI, Airflow, and SQL, and clearly outlines a plan"
+    },
+    {
+     "id": "j06",
+     "human": 2,
+     "judge": 4,
+     "judge_said": "SCORE: 4 - The proposal is specific to the client's problem, but it lacks concrete details about the current setup and does not fully address the need for a clo"
+    }
+   ],
+   "judge_mean": 3.967
+  },
+  "openai/gpt-oss-120b": {
+   "n": 30,
+   "cohen_kappa": -0.0345,
+   "exact_agreement": 0.0,
+   "within_1": 0.3,
+   "biggest_disagreements": [
+    {
+     "id": "j02",
+     "human": 2,
+     "judge": 5,
+     "judge_said": "SCORE: 5 - The proposal directly addresses the required ELT, Snowflake, and BigQuery work, provides concrete past results, outlines a milestone plan, and ends w"
+    },
+    {
+     "id": "j08",
+     "human": 2,
+     "judge": 5,
+     "judge_said": "SCORE: 5 - The proposal directly addresses the client\u2019s needs, cites relevant experience, acknowledges a gap, offers a concrete plan, and ends with a clarifying"
+    },
+    {
+     "id": "j20",
+     "human": 2,
+     "judge": 5,
+     "judge_said": "SCORE: 5 - The proposal directly addresses the client\u2019s requirements with concrete experience, acknowledges a gap, offers a clear plan, and ends with a clarifyi"
+    },
+    {
+     "id": "j23",
+     "human": 2,
+     "judge": 5,
+     "judge_said": "SCORE: 5 - The proposal directly addresses the client\u2019s requirements with concrete relevant experience, acknowledges a minor gap, asks clarifying questions, and"
+    }
+   ],
+   "judge_mean": 4.667
+  }
+ },
+ "human_mean": 2.767
+}

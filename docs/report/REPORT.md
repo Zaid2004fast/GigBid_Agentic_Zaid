@@ -180,9 +180,17 @@ proposal went from {{decision_eval.json:summary.unsupported_before_per_proposal|
 {{claims_eval.json:summary.naive.unsupported_per_proposal_before|2}} per proposal, and the checker also
 brought that to {{claims_eval.json:summary.naive.unsupported_per_proposal_after|1}} (`claims_eval.json`).
 
-**AI judge.** We built an AI judge that scores proposals from 1 to 5, but we only trust it after it
-agrees with a human. The 30 human labels needed for that check are still pending, so the agreement
-score is {{judge_calibration.json:cohen_kappa}} and no decision in this report relies on the judge.
+**AI judge.** We built an AI judge that scores proposals from 1 to 5, and checked it against 30 proposals that
+the author scored by hand (`judge_calibration.json`). **The judge did not agree with the human.** The small local
+judge ({{judge_calibration.json:best_judge|raw}}) reached a Cohen's kappa of {{judge_calibration.json:cohen_kappa|2}}
+(no better than chance). The larger gpt-oss-120b judge was no better, at
+{{judge_calibration.json:judges.openai/gpt-oss-120b.cohen_kappa|2}}. Both were far more generous than the human: the human's average score was
+{{judge_calibration.json:human_mean|2}}, the small judge's {{judge_calibration.json:judge_mean|2}}, and the large judge's
+{{judge_calibration.json:judges.openai/gpt-oss-120b.judge_mean|2}}. The judges reward proposals for ticking the rubric's
+boxes (evidence, honest gap, closing question), while the human marked down awkward, template-like wording that
+the judges ignore. Because of this, **no result in this report relies on the AI judge**. Proposal quality is
+measured instead by unsupported claims and simulated client replies. Making the judge trustworthy would need a
+rubric that penalises template phrasing, plus a few scored examples in its prompt.
 
 ## 5. Question C: is a team of agents worth it?
 
